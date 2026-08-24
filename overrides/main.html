@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block announce %}
+  {% if page and page.meta and page.meta.announce %}
+  <div>{{ page.meta.announce }}</div>
+  {% endif %}
+{% endblock %}

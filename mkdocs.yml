@@ -1,0 +1,225 @@
+site_name: Python Mastery
+site_description: From first variable to compiler design — a complete Python learning resource
+site_author: Python Mastery
+site_url: https://pythonmastery.dev
+repo_name: pythonmastery
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.png
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - toc.follow
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/extra.js
+
+plugins:
+  - search:
+      lang: en
+  - minify:
+      minify_html: true
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      title: On this page
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/pythonmastery
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/pythonmastery
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+  generator: false
+
+nav:
+  - Home: index.md
+  - Roadmap: roadmap.md
+  - Levels:
+    - levels/index.md
+    - "1 · Beginner": levels/beginner.md
+    - "2 · Competent": levels/competent.md
+    - "3 · Intermediate": levels/intermediate.md
+    - "4 · Proficient": levels/proficient.md
+    - "5 · Advanced": levels/advanced.md
+    - "6 · Expert": levels/expert.md
+    - "7 · Research": levels/research.md
+  - Tracks:
+    - tracks/index.md
+    - "🐍 Core Python": tracks/core-python.md
+    - "🌐 Web & APIs": tracks/web-apis.md
+    - "📊 Data & AI": tracks/data-ai.md
+    - "⚙️ Performance": tracks/performance.md
+    - "🔒 Security & DevOps": tracks/security-devops.md
+    - "🔬 Research & Compilers": tracks/research-compilers.md
+  - Core Python:
+    - core/index.md
+    - Beginner:
+      - core/beginner/python-basics.md
+      - core/beginner/control-flow.md
+      - core/beginner/functions.md
+      - core/beginner/data-structures.md
+      - core/beginner/file-handling.md
+      - core/beginner/pythonic-idioms.md
+    - Competent:
+      - core/competent/modules-packages.md
+      - core/competent/oop-fundamentals.md
+      - core/competent/error-handling.md
+      - core/competent/debugging.md
+      - core/competent/standard-library.md
+      - core/competent/unicode-text.md
+      - core/competent/dataclasses.md
+      - core/competent/comprehensions.md
+    - Intermediate:
+      - core/intermediate/iterators-generators.md
+      - core/intermediate/decorators.md
+      - core/intermediate/context-managers.md
+      - core/intermediate/typing.md
+      - core/intermediate/functional-programming.md
+      - core/intermediate/data-serialization.md
+    - Advanced:
+      - core/advanced/descriptors.md
+      - core/advanced/metaclasses.md
+      - core/advanced/execution-model.md
+      - core/advanced/import-system.md
+      - core/advanced/bytecode.md
+      - core/advanced/cpython-internals.md
+      - core/advanced/memory-model.md
+      - core/advanced/garbage-collection.md
+      - core/advanced/ast-manipulation.md
+      - core/advanced/code-generation.md
+  - Web & APIs:
+    - web/index.md
+    - web/competent/cli-tools.md
+    - web/competent/packaging.md
+    - web/proficient/frameworks.md
+    - web/proficient/apis-http.md
+    - web/proficient/web-scraping.md
+    - web/proficient/databases.md
+    - web/proficient/orms.md
+    - web/expert/microservices.md
+    - web/expert/clean-architecture.md
+    - web/expert/ddd.md
+  - Data & AI:
+    - data/index.md
+    - data/intermediate/numpy.md
+    - data/intermediate/pandas.md
+    - data/intermediate/matplotlib.md
+    - data/intermediate/statistics.md
+    - data/proficient/scikit-learn.md
+    - data/proficient/ml-pipelines.md
+    - data/research/jax.md
+    - data/research/distributed-training.md
+    - data/research/ml-deployment.md
+  - Performance:
+    - systems/index.md
+    - systems/proficient/threading.md
+    - systems/proficient/multiprocessing.md
+    - systems/proficient/asyncio.md
+    - systems/proficient/concurrency-patterns.md
+    - systems/advanced/profiling.md
+    - systems/advanced/cython.md
+    - systems/advanced/numba.md
+    - systems/advanced/rust-extensions.md
+    - systems/research/hpc.md
+    - systems/research/ebpf.md
+  - Security & DevOps:
+    - security/index.md
+    - security/proficient/devops.md
+    - security/proficient/cloud.md
+    - security/expert/cryptography.md
+    - security/expert/sandboxing.md
+    - security/expert/secrets.md
+    - security/expert/distributed-theory.md
+    - security/expert/microservices-patterns.md
+  - Research:
+    - research/index.md
+    - research/jit.md
+    - research/bytecode-rewriting.md
+    - research/peg-parser.md
+    - research/python-vm.md
+    - research/transpilers.md
+    - research/quantum.md
+    - research/pep-tracker.md
+  - Reference:
+    - reference/index.md
+    - reference/cheatsheets.md
+    - reference/glossary.md
+    - reference/projects.md
+    - reference/resources.md
