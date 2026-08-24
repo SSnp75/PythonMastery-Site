@@ -9,6 +9,66 @@
          <lastmod>2026-08-24</lastmod>
     </url>
     <url>
+         <loc>https://pythonmastery.dev/ai/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/ai/computer-vision/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/ai/embeddings/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/ai/fine-tuning/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/ai/llm-apis/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/ai/nlp/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/ai/rag/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/algorithms/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/algorithms/dynamic-programming/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/algorithms/graphs/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/algorithms/recursion/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/algorithms/sorting/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/auth/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/auth/jwt-auth/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/auth/oauth2/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
          <loc>https://pythonmastery.dev/core/</loc>
          <lastmod>2026-08-24</lastmod>
     </url>
@@ -173,6 +233,70 @@
          <lastmod>2026-08-24</lastmod>
     </url>
     <url>
+         <loc>https://pythonmastery.dev/data-engineering/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/data-engineering/airflow/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/data-engineering/etl/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/data-engineering/spark/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/data-engineering/streaming/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/databases/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/databases/design/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/databases/nosql/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/databases/sql-advanced/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/deployment/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/deployment/cicd/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/deployment/docker/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/deployment/kubernetes/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/gui/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/gui/textual/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/gui/tkinter/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
          <loc>https://pythonmastery.dev/levels/</loc>
          <lastmod>2026-08-24</lastmod>
     </url>
@@ -202,6 +326,62 @@
     </url>
     <url>
          <loc>https://pythonmastery.dev/levels/research/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/networking/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/networking/graphql/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/networking/grpc/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/networking/sockets/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/networking/websockets/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/observability/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/observability/logging/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/observability/metrics/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/observability/tracing/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/patterns/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/patterns/behavioral/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/patterns/creational/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/patterns/pythonic/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/patterns/structural/</loc>
          <lastmod>2026-08-24</lastmod>
     </url>
     <url>
@@ -289,6 +469,22 @@
          <lastmod>2026-08-24</lastmod>
     </url>
     <url>
+         <loc>https://pythonmastery.dev/skills/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/skills/debugging/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/skills/reading-code/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/skills/system-design/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
          <loc>https://pythonmastery.dev/systems/</loc>
          <lastmod>2026-08-24</lastmod>
     </url>
@@ -330,6 +526,34 @@
     </url>
     <url>
          <loc>https://pythonmastery.dev/systems/research/hpc/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/testing/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/testing/code-quality/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/testing/coverage/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/testing/mocking/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/testing/property-based/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/testing/pytest/</loc>
+         <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/testing/tdd/</loc>
          <lastmod>2026-08-24</lastmod>
     </url>
     <url>

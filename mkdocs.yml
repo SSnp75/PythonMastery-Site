@@ -217,6 +217,74 @@ nav:
     - research/transpilers.md
     - research/quantum.md
     - research/pep-tracker.md
+  - Testing:
+    - testing/index.md
+    - testing/pytest.md
+    - testing/mocking.md
+    - testing/tdd.md
+    - testing/coverage.md
+    - testing/property-based.md
+    - testing/code-quality.md
+  - Design Patterns:
+    - patterns/index.md
+    - patterns/creational.md
+    - patterns/structural.md
+    - patterns/behavioral.md
+    - patterns/pythonic.md
+  - AI & LLMs:
+    - ai/index.md
+    - ai/llm-apis.md
+    - ai/rag.md
+    - ai/embeddings.md
+    - ai/nlp.md
+    - ai/fine-tuning.md
+    - ai/computer-vision.md
+  - Observability:
+    - observability/index.md
+    - observability/logging.md
+    - observability/metrics.md
+    - observability/tracing.md
+  - Networking:
+    - networking/index.md
+    - networking/sockets.md
+    - networking/websockets.md
+    - networking/grpc.md
+    - networking/graphql.md
+  - Data Engineering:
+    - data-engineering/index.md
+    - data-engineering/etl.md
+    - data-engineering/airflow.md
+    - data-engineering/spark.md
+    - data-engineering/streaming.md
+  - Databases (Deep):
+    - databases/index.md
+    - databases/sql-advanced.md
+    - databases/nosql.md
+    - databases/design.md
+  - Deployment:
+    - deployment/index.md
+    - deployment/docker.md
+    - deployment/cicd.md
+    - deployment/kubernetes.md
+  - Algorithms:
+    - algorithms/index.md
+    - algorithms/sorting.md
+    - algorithms/recursion.md
+    - algorithms/dynamic-programming.md
+    - algorithms/graphs.md
+  - Auth:
+    - auth/index.md
+    - auth/jwt-auth.md
+    - auth/oauth2.md
+  - GUI:
+    - gui/index.md
+    - gui/tkinter.md
+    - gui/textual.md
+  - Soft Skills:
+    - skills/index.md
+    - skills/reading-code.md
+    - skills/debugging.md
+    - skills/system-design.md
   - Reference:
     - reference/index.md
     - reference/cheatsheets.md
