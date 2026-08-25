@@ -510,3 +510,42 @@
   .pm-level-card { grid-template-columns: auto 1fr; }
   .pm-level-card .level-stats { display: none; }
 }
+
+
+/* ============================
+   GISCUS COMMENTS SECTION
+=============================== */
+.pm-comments-section {
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 2px solid rgba(128, 128, 128, 0.15);
+}
+
+.pm-comments-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.pm-comments-intro {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 24px;
+}
+
+/* Giscus frame styling */
+.giscus {
+  max-width: 100%;
+}
+
+.giscus-frame {
+  border: none;
+  width: 100%;
+  min-height: 150px;
+}
+
+/* Dark mode adaptation */
+[data-md-color-scheme="slate"] .pm-comments-section {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}

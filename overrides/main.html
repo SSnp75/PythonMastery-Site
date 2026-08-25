@@ -5,3 +5,10 @@
   <div>{{ page.meta.announce }}</div>
   {% endif %}
 {% endblock %}
+
+{% block content %}
+  {{ super() }}
+
+  <!-- Giscus comments section -->
+  {% include "partials/comments.html" %}
+{% endblock %}

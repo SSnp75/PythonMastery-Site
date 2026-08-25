@@ -1,0 +1,26 @@
+<!-- Giscus Comments Integration -->
+<!-- Docs: https://giscus.app -->
+{% if page and page.file and page.file.src_path != "index.md" and not (page.meta and page.meta.get("hide_comments")) %}
+<div class="pm-comments-section">
+  <h2 id="discussion">💬 Discussion</h2>
+  <p class="pm-comments-intro">Have a question about this topic? Found an error? Share your thoughts below.</p>
+
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="YOUR_GITHUB_USERNAME/pythonmastery"
+    data-repo-id=""
+    data-category="Comments"
+    data-category-id=""
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+</div>
+{% endif %}
