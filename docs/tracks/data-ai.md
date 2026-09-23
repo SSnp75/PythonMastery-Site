@@ -11,41 +11,41 @@ description: From NumPy arrays to distributed ML training and deployment
 
 ## Prerequisites
 
-<div class="pm-prereqs">
-<strong>⚠️ Prerequisites</strong>
-<a href="../core/beginner/functions/">Functions</a>
-<a href="../core/beginner/data-structures/">Data Structures</a>
-<a href="../core/intermediate/functional-programming/">Functional Programming</a>
+<div class="pm-prereqs" markdown="1">
+**⚠️ Prerequisites**
+[Functions](../core/beginner/functions.md)
+[Data Structures](../core/beginner/data-structures.md)
+[Functional Programming](../core/intermediate/functional-programming.md)
 </div>
 
 ---
 
 ## Intermediate <span class="pm-badge pm-badge-intermediate">Level 3</span>
 
-<ul class="pm-subtopics">
-  <li><a href="../data/intermediate/numpy/">🔢 NumPy</a></li>
-  <li><a href="../data/intermediate/pandas/">🐼 Pandas</a></li>
-  <li><a href="../data/intermediate/matplotlib/">📈 Matplotlib</a></li>
-  <li><a href="../data/intermediate/statistics/">📊 Statistics</a></li>
+<ul class="pm-subtopics" markdown="1">
+- [🔢 NumPy](../data/intermediate/numpy.md)
+- [🐼 Pandas](../data/intermediate/pandas.md)
+- [📈 Matplotlib](../data/intermediate/matplotlib.md)
+- [📊 Statistics](../data/intermediate/statistics.md)
 </ul>
 
 ---
 
 ## Proficient <span class="pm-badge pm-badge-proficient">Level 4</span>
 
-<ul class="pm-subtopics">
-  <li><a href="../data/proficient/scikit-learn/">🤖 Scikit-Learn</a></li>
-  <li><a href="../data/proficient/ml-pipelines/">🔄 ML Pipelines</a></li>
+<ul class="pm-subtopics" markdown="1">
+- [🤖 Scikit-Learn](../data/proficient/scikit-learn.md)
+- [🔄 ML Pipelines](../data/proficient/ml-pipelines.md)
 </ul>
 
 ---
 
 ## Research <span class="pm-badge pm-badge-research">Level 7</span>
 
-<ul class="pm-subtopics">
-  <li><a href="../data/research/jax/">⚡ JAX Internals</a></li>
-  <li><a href="../data/research/distributed-training/">🌐 Distributed Training</a></li>
-  <li><a href="../data/research/ml-deployment/">🚀 ML Deployment</a></li>
+<ul class="pm-subtopics" markdown="1">
+- [⚡ JAX Internals](../data/research/jax.md)
+- [🌐 Distributed Training](../data/research/distributed-training.md)
+- [🚀 ML Deployment](../data/research/ml-deployment.md)
 </ul>
 
 ---

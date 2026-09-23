@@ -24,58 +24,58 @@ This is the foundation track. Everything else on this site builds on what you le
 
 ## Beginner <span class="pm-badge pm-badge-beginner">Level 1</span>
 
-<ul class="pm-subtopics">
-  <li><a href="../core/beginner/python-basics/">📘 Python Basics</a></li>
-  <li><a href="../core/beginner/control-flow/">🔀 Control Flow</a></li>
-  <li><a href="../core/beginner/functions/">⚡ Functions</a></li>
-  <li><a href="../core/beginner/data-structures/">📦 Data Structures</a></li>
-  <li><a href="../core/beginner/file-handling/">📁 File Handling</a></li>
-  <li><a href="../core/beginner/pythonic-idioms/">✨ Pythonic Idioms</a></li>
+<ul class="pm-subtopics" markdown="1">
+- [📘 Python Basics](../core/beginner/python-basics.md)
+- [🔀 Control Flow](../core/beginner/control-flow.md)
+- [⚡ Functions](../core/beginner/functions.md)
+- [📦 Data Structures](../core/beginner/data-structures.md)
+- [📁 File Handling](../core/beginner/file-handling.md)
+- [✨ Pythonic Idioms](../core/beginner/pythonic-idioms.md)
 </ul>
 
 ---
 
 ## Competent <span class="pm-badge pm-badge-competent">Level 2</span>
 
-<ul class="pm-subtopics">
-  <li><a href="../core/competent/modules-packages/">📦 Modules & Packages</a></li>
-  <li><a href="../core/competent/oop-fundamentals/">🏗️ OOP Fundamentals</a></li>
-  <li><a href="../core/competent/error-handling/">🚨 Error Handling</a></li>
-  <li><a href="../core/competent/debugging/">🐛 Debugging</a></li>
-  <li><a href="../core/competent/standard-library/">📚 Standard Library</a></li>
-  <li><a href="../core/competent/unicode-text/">🔤 Unicode & Text</a></li>
-  <li><a href="../core/competent/dataclasses/">🗂️ Dataclasses</a></li>
-  <li><a href="../core/competent/comprehensions/">🔁 Comprehensions</a></li>
+<ul class="pm-subtopics" markdown="1">
+- [📦 Modules & Packages](../core/competent/modules-packages.md)
+- [🏗️ OOP Fundamentals](../core/competent/oop-fundamentals.md)
+- [🚨 Error Handling](../core/competent/error-handling.md)
+- [🐛 Debugging](../core/competent/debugging.md)
+- [📚 Standard Library](../core/competent/standard-library.md)
+- [🔤 Unicode & Text](../core/competent/unicode-text.md)
+- [🗂️ Dataclasses](../core/competent/dataclasses.md)
+- [🔁 Comprehensions](../core/competent/comprehensions.md)
 </ul>
 
 ---
 
 ## Intermediate <span class="pm-badge pm-badge-intermediate">Level 3</span>
 
-<ul class="pm-subtopics">
-  <li><a href="../core/intermediate/iterators-generators/">🔄 Iterators & Generators</a></li>
-  <li><a href="../core/intermediate/decorators/">🎨 Decorators</a></li>
-  <li><a href="../core/intermediate/context-managers/">🔐 Context Managers</a></li>
-  <li><a href="../core/intermediate/typing/">🏷️ Typing & Type Hints</a></li>
-  <li><a href="../core/intermediate/functional-programming/">λ Functional Programming</a></li>
-  <li><a href="../core/intermediate/data-serialization/">💾 Data Serialization</a></li>
+<ul class="pm-subtopics" markdown="1">
+- [🔄 Iterators & Generators](../core/intermediate/iterators-generators.md)
+- [🎨 Decorators](../core/intermediate/decorators.md)
+- [🔐 Context Managers](../core/intermediate/context-managers.md)
+- [🏷️ Typing & Type Hints](../core/intermediate/typing.md)
+- [λ Functional Programming](../core/intermediate/functional-programming.md)
+- [💾 Data Serialization](../core/intermediate/data-serialization.md)
 </ul>
 
 ---
 
 ## Advanced <span class="pm-badge pm-badge-advanced">Level 5</span>
 
-<ul class="pm-subtopics">
-  <li><a href="../core/advanced/descriptors/">🔩 Descriptors</a></li>
-  <li><a href="../core/advanced/metaclasses/">🧬 Metaclasses</a></li>
-  <li><a href="../core/advanced/execution-model/">⚙️ Execution Model</a></li>
-  <li><a href="../core/advanced/import-system/">📥 Import System</a></li>
-  <li><a href="../core/advanced/bytecode/">🔢 Bytecode</a></li>
-  <li><a href="../core/advanced/cpython-internals/">🔬 CPython Internals</a></li>
-  <li><a href="../core/advanced/memory-model/">🧠 Memory Model</a></li>
-  <li><a href="../core/advanced/garbage-collection/">🗑️ Garbage Collection</a></li>
-  <li><a href="../core/advanced/ast-manipulation/">🌳 AST Manipulation</a></li>
-  <li><a href="../core/advanced/code-generation/">⚡ Code Generation</a></li>
+<ul class="pm-subtopics" markdown="1">
+- [🔩 Descriptors](../core/advanced/descriptors.md)
+- [🧬 Metaclasses](../core/advanced/metaclasses.md)
+- [⚙️ Execution Model](../core/advanced/execution-model.md)
+- [📥 Import System](../core/advanced/import-system.md)
+- [🔢 Bytecode](../core/advanced/bytecode.md)
+- [🔬 CPython Internals](../core/advanced/cpython-internals.md)
+- [🧠 Memory Model](../core/advanced/memory-model.md)
+- [🗑️ Garbage Collection](../core/advanced/garbage-collection.md)
+- [🌳 AST Manipulation](../core/advanced/ast-manipulation.md)
+- [⚡ Code Generation](../core/advanced/code-generation.md)
 </ul>
 
 ---

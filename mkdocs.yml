@@ -6,6 +6,12 @@ repo_name: pythonmastery
 docs_dir: docs
 site_dir: site
 
+validation:
+  links:
+    absolute_links: warn
+    unrecognized_links: warn
+    anchors: warn
+
 theme:
   name: material
   custom_dir: overrides
@@ -131,6 +137,7 @@ nav:
   - Core Python:
     - core/index.md
     - Beginner:
+      - core/beginner/index.md
       - core/beginner/python-basics.md
       - core/beginner/control-flow.md
       - core/beginner/functions.md
@@ -138,6 +145,7 @@ nav:
       - core/beginner/file-handling.md
       - core/beginner/pythonic-idioms.md
     - Competent:
+      - core/competent/index.md
       - core/competent/modules-packages.md
       - core/competent/oop-fundamentals.md
       - core/competent/error-handling.md
@@ -147,6 +155,7 @@ nav:
       - core/competent/dataclasses.md
       - core/competent/comprehensions.md
     - Intermediate:
+      - core/intermediate/index.md
       - core/intermediate/iterators-generators.md
       - core/intermediate/decorators.md
       - core/intermediate/context-managers.md
@@ -154,6 +163,7 @@ nav:
       - core/intermediate/functional-programming.md
       - core/intermediate/data-serialization.md
     - Advanced:
+      - core/advanced/index.md
       - core/advanced/descriptors.md
       - core/advanced/metaclasses.md
       - core/advanced/execution-model.md
@@ -176,38 +186,114 @@ nav:
     - web/expert/microservices.md
     - web/expert/clean-architecture.md
     - web/expert/ddd.md
+    - web/expert/hexagonal-architecture.md
+    - web/expert/event-driven-architecture.md
+    - web/expert/multi-tenant-systems.md
+    - web/expert/plugin-based-architectures.md
+    - web/expert/monorepos.md
+    - web/expert/hot-swappable-components.md
+    - web/expert/codebase-evolution.md
+  - Automation:
+    - automation/index.md
+    - automation/scripting.md
+    - automation/desktop.md
+    - automation/browser.md
   - Data & AI:
     - data/index.md
     - data/intermediate/numpy.md
     - data/intermediate/pandas.md
     - data/intermediate/matplotlib.md
+    - data/intermediate/seaborn.md
     - data/intermediate/statistics.md
+    - data/intermediate/feature-engineering.md
+    - data/intermediate/data-cleaning.md
+    - data/intermediate/data-visualization.md
     - data/proficient/scikit-learn.md
     - data/proficient/ml-pipelines.md
     - data/research/jax.md
     - data/research/distributed-training.md
     - data/research/ml-deployment.md
+    - data/research/pytorch-cpp-ops.md
+    - data/research/model-parallelism.md
+    - data/research/pipeline-parallelism.md
+    - data/research/quantization.md
+    - data/research/onnx-tensorrt.md
+    - data/research/ml-inference-graphs.md
+    - data/research/ml-monitoring.md
   - Performance:
     - systems/index.md
     - systems/proficient/threading.md
     - systems/proficient/multiprocessing.md
     - systems/proficient/asyncio.md
     - systems/proficient/concurrency-patterns.md
+    - systems/proficient/event-loop-internals.md
+    - systems/proficient/futures-executors.md
+    - systems/proficient/actor-model.md
+    - systems/proficient/green-threads.md
+    - systems/proficient/fibers.md
+    - systems/proficient/lock-free-structures.md
     - systems/advanced/profiling.md
     - systems/advanced/cython.md
     - systems/advanced/numba.md
     - systems/advanced/rust-extensions.md
+    - systems/advanced/pypy.md
+    - systems/advanced/vectorization.md
+    - systems/advanced/gpu-kernels-triton.md
+    - systems/advanced/cpp-extensions.md
+    - systems/advanced/memory-profiling.md
+    - systems/advanced/performance-antipatterns.md
     - systems/research/hpc.md
     - systems/research/ebpf.md
+  - Distributed Systems:
+    - distributed/index.md
+    - distributed/raft.md
+    - distributed/paxos.md
+    - distributed/crdts.md
+    - distributed/tracing.md
+    - distributed/caching.md
+    - distributed/queues.md
+    - distributed/schedulers.md
+    - distributed/multi-region-consistency.md
+    - distributed/event-sourcing-cqrs.md
+    - distributed/saga.md
+    - distributed/service-discovery.md
+  - Scientific Computing:
+    - scientific/index.md
+    - scientific/blas-lapack.md
+    - scientific/sparse-tensors.md
+    - scientific/simulation-frameworks.md
+    - scientific/computational-physics.md
+    - scientific/computational-biology.md
+    - scientific/scientific-visualization.md
+    - scientific/numerical-optimization.md
+    - scientific/custom-autograd.md
+  - Embedded & Systems:
+    - embedded/index.md
+    - embedded/firmware-testing.md
+    - embedded/embedded-python.md
+    - embedded/robotics-middleware.md
+    - embedded/real-time-systems.md
+    - embedded/hardware-simulation.md
+    - embedded/kernel-tracing.md
+    - embedded/system-monitoring.md
+    - embedded/networking-automation.md
+    - embedded/embedded-linux.md
   - Security & DevOps:
     - security/index.md
     - security/proficient/devops.md
     - security/proficient/cloud.md
+    - security/proficient/vulnerability-scanning.md
+    - security/proficient/malware-analysis.md
     - security/expert/cryptography.md
     - security/expert/sandboxing.md
     - security/expert/secrets.md
     - security/expert/distributed-theory.md
     - security/expert/microservices-patterns.md
+    - security/expert/secure-enclaves.md
+    - security/expert/smpc.md
+    - security/expert/homomorphic-encryption.md
+    - security/expert/bytecode-obfuscation.md
+    - security/expert/secure-plugin-systems.md
   - Research:
     - research/index.md
     - research/jit.md
@@ -217,6 +303,11 @@ nav:
     - research/transpilers.md
     - research/quantum.md
     - research/pep-tracker.md
+    - research/llvm-ir.md
+    - research/mlir.md
+    - research/interpreter-forking.md
+    - research/grammar-modification.md
+    - research/static-analysis-engines.md
   - Testing:
     - testing/index.md
     - testing/pytest.md
@@ -285,9 +376,35 @@ nav:
     - skills/reading-code.md
     - skills/debugging.md
     - skills/system-design.md
+  - Domains:
+    - domains/index.md
+    - domains/finance.md
+    - domains/bioinformatics.md
+    - domains/gis.md
+    - domains/simulation.md
+    - domains/game-development.md
+    - domains/iot.md
+    - domains/robotics.md
+    - domains/quantum-research.md
+  - Projects:
+    - projects/index.md
+    - projects/beginner.md
+    - projects/intermediate.md
+    - projects/advanced.md
+    - projects/systems.md
+    - projects/research.md
+  - Emerging:
+    - emerging/index.md
+    - emerging/emerging-features.md
+    - emerging/runtime-evolution.md
+    - emerging/experimental-libraries.md
+    - emerging/research-papers.md
   - Reference:
     - reference/index.md
     - reference/cheatsheets.md
+    - reference/code-snippets.md
+    - reference/templates.md
+    - reference/tools.md
     - reference/glossary.md
     - reference/projects.md
     - reference/resources.md

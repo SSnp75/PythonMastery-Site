@@ -11,26 +11,26 @@ description: JIT compilers, bytecode rewriting, interpreter forking and language
 
 ## Prerequisites
 
-<div class="pm-prereqs">
-<strong>⚠️ Prerequisites</strong>
-<a href="../core/advanced/bytecode/">Bytecode</a>
-<a href="../core/advanced/cpython-internals/">CPython Internals</a>
-<a href="../core/advanced/ast-manipulation/">AST Manipulation</a>
-<a href="../core/advanced/execution-model/">Execution Model</a>
+<div class="pm-prereqs" markdown="1">
+**⚠️ Prerequisites**
+[Bytecode](../core/advanced/bytecode.md)
+[CPython Internals](../core/advanced/cpython-internals.md)
+[AST Manipulation](../core/advanced/ast-manipulation.md)
+[Execution Model](../core/advanced/execution-model.md)
 </div>
 
 ---
 
 ## Advanced / Research <span class="pm-badge pm-badge-research">Level 7</span>
 
-<ul class="pm-subtopics">
-  <li><a href="../research/jit/">⚡ Custom JIT Compilers</a></li>
-  <li><a href="../research/bytecode-rewriting/">🔄 Bytecode Rewriting</a></li>
-  <li><a href="../research/peg-parser/">📝 PEG Parser Internals</a></li>
-  <li><a href="../research/python-vm/">🖥️ Building a Python VM</a></li>
-  <li><a href="../research/transpilers/">🔀 Transpilers</a></li>
-  <li><a href="../research/quantum/">⚛️ Quantum Computing</a></li>
-  <li><a href="../research/pep-tracker/">📋 PEP Tracker</a></li>
+<ul class="pm-subtopics" markdown="1">
+- [⚡ Custom JIT Compilers](../research/jit.md)
+- [🔄 Bytecode Rewriting](../research/bytecode-rewriting.md)
+- [📝 PEG Parser Internals](../research/peg-parser.md)
+- [🖥️ Building a Python VM](../research/python-vm.md)
+- [🔀 Transpilers](../research/transpilers.md)
+- [⚛️ Quantum Computing](../research/quantum.md)
+- [📋 PEP Tracker](../research/pep-tracker.md)
 </ul>
 
 ---

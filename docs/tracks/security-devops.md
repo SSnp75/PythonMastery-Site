@@ -11,32 +11,32 @@ description: Secure, deploy and operate Python systems at scale
 
 ## Prerequisites
 
-<div class="pm-prereqs">
-<strong>⚠️ Prerequisites</strong>
-<a href="../web/proficient/frameworks/">Web Frameworks</a>
-<a href="../systems/proficient/asyncio/">Asyncio</a>
-<a href="../core/advanced/cpython-internals/">CPython Internals</a> (for security track)
+<div class="pm-prereqs" markdown="1">
+**⚠️ Prerequisites**
+[Web Frameworks](../web/proficient/frameworks.md)
+[Asyncio](../systems/proficient/asyncio.md)
+[CPython Internals](../core/advanced/cpython-internals.md) (for security track)
 </div>
 
 ---
 
 ## Proficient <span class="pm-badge pm-badge-proficient">Level 4</span>
 
-<ul class="pm-subtopics">
-  <li><a href="../security/proficient/devops/">🔧 Python for DevOps</a></li>
-  <li><a href="../security/proficient/cloud/">☁️ Cloud Engineering</a></li>
+<ul class="pm-subtopics" markdown="1">
+- [🔧 Python for DevOps](../security/proficient/devops.md)
+- [☁️ Cloud Engineering](../security/proficient/cloud.md)
 </ul>
 
 ---
 
 ## Expert <span class="pm-badge pm-badge-expert">Level 6</span>
 
-<ul class="pm-subtopics">
-  <li><a href="../security/expert/cryptography/">🔐 Cryptography</a></li>
-  <li><a href="../security/expert/sandboxing/">📦 Sandboxing</a></li>
-  <li><a href="../security/expert/secrets/">🗝️ Secrets Management</a></li>
-  <li><a href="../security/expert/distributed-theory/">🌐 Distributed Systems Theory</a></li>
-  <li><a href="../security/expert/microservices-patterns/">🏗️ Microservices Patterns</a></li>
+<ul class="pm-subtopics" markdown="1">
+- [🔐 Cryptography](../security/expert/cryptography.md)
+- [📦 Sandboxing](../security/expert/sandboxing.md)
+- [🗝️ Secrets Management](../security/expert/secrets.md)
+- [🌐 Distributed Systems Theory](../security/expert/distributed-theory.md)
+- [🏗️ Microservices Patterns](../security/expert/microservices-patterns.md)
 </ul>
 
 ---

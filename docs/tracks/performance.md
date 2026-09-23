@@ -11,42 +11,42 @@ description: Make Python fast with threading, asyncio, Cython, Rust and GPU kern
 
 ## Prerequisites
 
-<div class="pm-prereqs">
-<strong>⚠️ Prerequisites</strong>
-<a href="../core/intermediate/iterators-generators/">Generators</a>
-<a href="../core/intermediate/decorators/">Decorators</a>
-<a href="../core/intermediate/context-managers/">Context Managers</a>
+<div class="pm-prereqs" markdown="1">
+**⚠️ Prerequisites**
+[Generators](../core/intermediate/iterators-generators.md)
+[Decorators](../core/intermediate/decorators.md)
+[Context Managers](../core/intermediate/context-managers.md)
 </div>
 
 ---
 
 ## Proficient <span class="pm-badge pm-badge-proficient">Level 4</span>
 
-<ul class="pm-subtopics">
-  <li><a href="../systems/proficient/threading/">🧵 Threading</a></li>
-  <li><a href="../systems/proficient/multiprocessing/">🔀 Multiprocessing</a></li>
-  <li><a href="../systems/proficient/asyncio/">⚡ Asyncio</a></li>
-  <li><a href="../systems/proficient/concurrency-patterns/">🔄 Concurrency Patterns</a></li>
+<ul class="pm-subtopics" markdown="1">
+- [🧵 Threading](../systems/proficient/threading.md)
+- [🔀 Multiprocessing](../systems/proficient/multiprocessing.md)
+- [⚡ Asyncio](../systems/proficient/asyncio.md)
+- [🔄 Concurrency Patterns](../systems/proficient/concurrency-patterns.md)
 </ul>
 
 ---
 
 ## Advanced <span class="pm-badge pm-badge-advanced">Level 5</span>
 
-<ul class="pm-subtopics">
-  <li><a href="../systems/advanced/profiling/">📊 Profiling</a></li>
-  <li><a href="../systems/advanced/cython/">🚀 Cython</a></li>
-  <li><a href="../systems/advanced/numba/">⚡ Numba</a></li>
-  <li><a href="../systems/advanced/rust-extensions/">🦀 Rust Extensions</a></li>
+<ul class="pm-subtopics" markdown="1">
+- [📊 Profiling](../systems/advanced/profiling.md)
+- [🚀 Cython](../systems/advanced/cython.md)
+- [⚡ Numba](../systems/advanced/numba.md)
+- [🦀 Rust Extensions](../systems/advanced/rust-extensions.md)
 </ul>
 
 ---
 
 ## Research <span class="pm-badge pm-badge-research">Level 7</span>
 
-<ul class="pm-subtopics">
-  <li><a href="../systems/research/hpc/">🖥️ HPC Clusters</a></li>
-  <li><a href="../systems/research/ebpf/">🔍 eBPF</a></li>
+<ul class="pm-subtopics" markdown="1">
+- [🖥️ HPC Clusters](../systems/research/hpc.md)
+- [🔍 eBPF](../systems/research/ebpf.md)
 </ul>
 
 ---

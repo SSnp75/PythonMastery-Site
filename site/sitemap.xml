@@ -2,630 +2,1046 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://pythonmastery.dev/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/roadmap/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/ai/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/ai/computer-vision/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/ai/embeddings/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/ai/fine-tuning/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/ai/llm-apis/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/ai/nlp/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/ai/rag/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/algorithms/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/algorithms/dynamic-programming/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/algorithms/graphs/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/algorithms/recursion/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/algorithms/sorting/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/auth/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/auth/jwt-auth/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/auth/oauth2/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/automation/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/automation/browser/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/automation/desktop/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/automation/scripting/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/core/advanced/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/advanced/ast-manipulation/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/advanced/bytecode/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/advanced/code-generation/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/advanced/cpython-internals/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/advanced/descriptors/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/advanced/execution-model/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/advanced/garbage-collection/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/advanced/import-system/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/advanced/memory-model/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/advanced/metaclasses/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/core/beginner/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/beginner/control-flow/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/beginner/data-structures/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/beginner/file-handling/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/beginner/functions/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/beginner/python-basics/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/beginner/pythonic-idioms/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/core/competent/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/competent/comprehensions/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/competent/dataclasses/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/competent/debugging/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/competent/error-handling/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/competent/modules-packages/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/competent/oop-fundamentals/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/competent/standard-library/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/competent/unicode-text/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/core/intermediate/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/intermediate/context-managers/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/intermediate/data-serialization/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/intermediate/decorators/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/intermediate/functional-programming/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/intermediate/iterators-generators/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/core/intermediate/typing/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/data/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/data/intermediate/data-cleaning/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/data/intermediate/data-visualization/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/data/intermediate/feature-engineering/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/data/intermediate/matplotlib/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/data/intermediate/numpy/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/data/intermediate/pandas/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/data/intermediate/seaborn/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/data/intermediate/statistics/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/data/proficient/ml-pipelines/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/data/proficient/scikit-learn/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/data/research/distributed-training/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/data/research/jax/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/data/research/ml-deployment/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/data/research/ml-inference-graphs/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/data/research/ml-monitoring/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/data/research/model-parallelism/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/data/research/onnx-tensorrt/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/data/research/pipeline-parallelism/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/data/research/pytorch-cpp-ops/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/data/research/quantization/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/data-engineering/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/data-engineering/airflow/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/data-engineering/etl/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/data-engineering/spark/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/data-engineering/streaming/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/databases/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/databases/design/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/databases/nosql/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/databases/sql-advanced/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/deployment/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/deployment/cicd/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/deployment/docker/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/deployment/kubernetes/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/distributed/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/distributed/caching/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/distributed/crdts/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/distributed/event-sourcing-cqrs/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/distributed/multi-region-consistency/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/distributed/paxos/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/distributed/queues/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/distributed/raft/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/distributed/saga/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/distributed/schedulers/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/distributed/service-discovery/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/distributed/tracing/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/domains/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/domains/bioinformatics/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/domains/finance/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/domains/game-development/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/domains/gis/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/domains/iot/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/domains/quantum-research/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/domains/robotics/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/domains/simulation/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/embedded/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/embedded/embedded-linux/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/embedded/embedded-python/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/embedded/firmware-testing/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/embedded/hardware-simulation/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/embedded/kernel-tracing/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/embedded/networking-automation/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/embedded/real-time-systems/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/embedded/robotics-middleware/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/embedded/system-monitoring/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/emerging/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/emerging/emerging-features/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/emerging/experimental-libraries/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/emerging/research-papers/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/emerging/runtime-evolution/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/gui/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/gui/textual/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/gui/tkinter/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/levels/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/levels/advanced/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/levels/beginner/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/levels/competent/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/levels/expert/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/levels/intermediate/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/levels/proficient/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/levels/research/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/networking/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/networking/graphql/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/networking/grpc/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/networking/sockets/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/networking/websockets/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/observability/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/observability/logging/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/observability/metrics/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/observability/tracing/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/patterns/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/patterns/behavioral/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/patterns/creational/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/patterns/pythonic/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/patterns/structural/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/projects/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/projects/advanced/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/projects/beginner/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/projects/intermediate/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/projects/research/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/projects/systems/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/reference/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/reference/cheatsheets/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/reference/code-snippets/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/reference/glossary/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/reference/projects/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/reference/resources/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/reference/templates/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/reference/tools/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/research/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/research/bytecode-rewriting/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/research/grammar-modification/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/research/interpreter-forking/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/research/jit/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/research/llvm-ir/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/research/mlir/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/research/peg-parser/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/research/pep-tracker/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/research/python-vm/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/research/quantum/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/research/static-analysis-engines/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/research/transpilers/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/scientific/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/scientific/blas-lapack/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/scientific/computational-biology/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/scientific/computational-physics/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/scientific/custom-autograd/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/scientific/numerical-optimization/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/scientific/scientific-visualization/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/scientific/simulation-frameworks/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/scientific/sparse-tensors/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/security/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/security/expert/bytecode-obfuscation/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/security/expert/cryptography/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/security/expert/distributed-theory/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/security/expert/homomorphic-encryption/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/security/expert/microservices-patterns/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/security/expert/sandboxing/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/security/expert/secrets/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/security/expert/secure-enclaves/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/security/expert/secure-plugin-systems/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/security/expert/smpc/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/security/proficient/cloud/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/security/proficient/devops/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/security/proficient/malware-analysis/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/security/proficient/vulnerability-scanning/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/skills/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/skills/debugging/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/skills/reading-code/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/skills/system-design/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/systems/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/systems/advanced/cpp-extensions/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/systems/advanced/cython/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/systems/advanced/gpu-kernels-triton/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/systems/advanced/memory-profiling/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/systems/advanced/numba/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/systems/advanced/performance-antipatterns/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/systems/advanced/profiling/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/systems/advanced/pypy/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/systems/advanced/rust-extensions/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/systems/advanced/vectorization/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/systems/proficient/actor-model/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/systems/proficient/asyncio/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/systems/proficient/concurrency-patterns/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/systems/proficient/event-loop-internals/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/systems/proficient/fibers/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/systems/proficient/futures-executors/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/systems/proficient/green-threads/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/systems/proficient/lock-free-structures/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/systems/proficient/multiprocessing/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/systems/proficient/threading/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/systems/research/ebpf/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/systems/research/hpc/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/testing/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/testing/code-quality/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/testing/coverage/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/testing/mocking/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/testing/property-based/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/testing/pytest/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/testing/tdd/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/tracks/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/tracks/core-python/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/tracks/data-ai/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/tracks/performance/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/tracks/research-compilers/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/tracks/security-devops/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/tracks/web-apis/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/web/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/web/competent/cli-tools/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/web/competent/packaging/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/web/expert/clean-architecture/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/web/expert/codebase-evolution/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/web/expert/ddd/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/web/expert/event-driven-architecture/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/web/expert/hexagonal-architecture/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/web/expert/hot-swappable-components/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/web/expert/microservices/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/web/expert/monorepos/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/web/expert/multi-tenant-systems/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://pythonmastery.dev/web/expert/plugin-based-architectures/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/web/proficient/apis-http/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/web/proficient/databases/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/web/proficient/frameworks/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/web/proficient/orms/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
          <loc>https://pythonmastery.dev/web/proficient/web-scraping/</loc>
-         <lastmod>2026-08-24</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
 </urlset>
