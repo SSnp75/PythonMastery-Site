@@ -1,7 +1,7 @@
 site_name: Python Mastery
 site_description: From first variable to compiler design — a complete Python learning resource
 site_author: Python Mastery
-site_url: https://pythonmastery.dev
+site_url: https://ssnp75.github.io/PythonMastery-Site/
 repo_name: pythonmastery
 docs_dir: docs
 site_dir: site
