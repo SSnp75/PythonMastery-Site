@@ -1,0 +1,4 @@
+# GitHub Sponsors funding config.
+# Adds a "Sponsor" button to the repository page.
+# Becomes active once GitHub Sponsors is approved for the account.
+github: [SSnp75]

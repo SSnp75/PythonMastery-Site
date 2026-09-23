@@ -619,3 +619,33 @@
     align-items: flex-start;
   }
 }
+
+
+/* ── Footer support / sponsor link ────────────────────────── */
+.pm-footer-support {
+  background: var(--md-footer-bg-color--dark, #1a1a1a);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 0.6rem 1rem;
+}
+
+.pm-footer-support__inner {
+  max-width: 61rem;
+  margin: 0 auto;
+}
+
+.pm-footer-support a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pm-footer-support a:hover {
+  text-decoration: underline;
+}
+
+.pm-footer-sep {
+  margin: 0 0.4rem;
+  opacity: 0.5;
+}

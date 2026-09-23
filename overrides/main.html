@@ -9,3 +9,16 @@
 {% block content %}
   {{ super() }}
 {% endblock %}
+
+{% block footer %}
+  {{ super() }}
+  <div class="pm-footer-support">
+    <div class="pm-footer-support__inner">
+      <a href="https://github.com/sponsors/SSnp75" target="_blank" rel="noopener">
+        ❤️ Support this project
+      </a>
+      <span class="pm-footer-sep">·</span>
+      <span>Free &amp; open-source · Python Mastery</span>
+    </div>
+  </div>
+{% endblock %}
