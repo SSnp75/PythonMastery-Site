@@ -9,6 +9,9 @@
 {% block content %}
   {{ super() }}
 
+  <!-- Share this page (QR + email + copy) -->
+  {% include "partials/share.html" %}
+
   <!-- Giscus comments section -->
   {% include "partials/comments.html" %}
 {% endblock %}

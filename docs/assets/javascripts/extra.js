@@ -111,3 +111,61 @@ document.addEventListener('click', function (e) {
     setTimeout(() => { btn.innerHTML = original; }, 1500);
   }
 });
+
+/* ── Share this page: QR code + email + copy link ─────────── */
+function initShare() {
+  const section = document.querySelector('[data-pm-share]');
+  if (!section) return;
+
+  const url = window.location.href.split('#')[0];
+  const title = document.title;
+
+  // Show the plain URL
+  const urlEl = section.querySelector('[data-pm-url]');
+  if (urlEl) urlEl.textContent = url;
+
+  // Email link (mailto opens the user's mail app pre-filled)
+  const emailEl = section.querySelector('[data-pm-email]');
+  if (emailEl) {
+    const subject = encodeURIComponent(title);
+    const body = encodeURIComponent(title + '\n\n' + url);
+    emailEl.setAttribute('href', `mailto:?subject=${subject}&body=${body}`);
+  }
+
+  // Copy link button
+  const copyBtn = section.querySelector('[data-pm-copy]');
+  if (copyBtn && !copyBtn.dataset.bound) {
+    copyBtn.dataset.bound = '1';
+    copyBtn.addEventListener('click', function () {
+      navigator.clipboard.writeText(url).then(() => {
+        const original = copyBtn.textContent;
+        copyBtn.textContent = '✓ Copied!';
+        setTimeout(() => { copyBtn.textContent = original; }, 1500);
+      });
+    });
+  }
+
+  // QR code — render once the library is available
+  const qrEl = section.querySelector('[data-pm-qr]');
+  if (qrEl && !qrEl.dataset.rendered) {
+    let tries = 0;
+    const render = () => {
+      if (typeof QRCode !== 'undefined') {
+        qrEl.innerHTML = '';
+        new QRCode(qrEl, { text: url, width: 160, height: 160,
+                           colorDark: '#000000', colorLight: '#ffffff' });
+        qrEl.dataset.rendered = '1';
+      } else if (tries++ < 40) {
+        setTimeout(render, 100);   // wait for the deferred CDN script
+      }
+    };
+    render();
+  }
+}
+
+// Run on first load and on Material's instant navigation.
+if (typeof document$ !== 'undefined' && document$.subscribe) {
+  document$.subscribe(function () { initShare(); });
+} else {
+  document.addEventListener('DOMContentLoaded', initShare);
+}

@@ -549,3 +549,73 @@
 [data-md-color-scheme="slate"] .pm-comments-section {
   border-top-color: rgba(255, 255, 255, 0.1);
 }
+
+
+/* ── Share this page ──────────────────────────────────────── */
+.pm-share-section {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.pm-share-intro {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.pm-share-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.pm-share-qr {
+  flex: 0 0 auto;
+  padding: 8px;
+  background: #ffffff;          /* QR needs a light background to scan reliably */
+  border-radius: 8px;
+  line-height: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+.pm-share-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-width: 200px;
+}
+
+.pm-share-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--md-primary-bg-color, #fff);
+  background: var(--md-primary-fg-color, #4051b5);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.pm-share-btn:hover {
+  opacity: 0.85;
+}
+
+.pm-share-url {
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
+  word-break: break-all;
+}
+
+/* Stack vertically on narrow screens */
+@media (max-width: 480px) {
+  .pm-share-grid {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
