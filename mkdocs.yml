@@ -110,14 +110,13 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/pythonmastery
   # ── Analytics ──────────────────────────────────────────────
-  # To activate: create a free Google Analytics 4 property at
-  # https://analytics.google.com, copy your Measurement ID
-  # (looks like G-ABC123XYZ), and replace the placeholder below.
-  # Material for MkDocs reads this and injects the GA4 snippet on
-  # every page automatically — no other change needed.
+  # Google Analytics 4. Material for MkDocs injects the GA4 snippet
+  # on every page automatically. Analytics only fire on the live
+  # public site (https://ssnp75.github.io/PythonMastery-Site/),
+  # not on localhost. To change the property, replace the ID below.
   analytics:
     provider: google
-    property: !ENV [GA_MEASUREMENT_ID, "G-XXXXXXXXXX"]
+    property: "G-DXCBRYP07C"
     # Feedback widget: lets readers rate whether a page helped.
     feedback:
       title: Was this page helpful?
