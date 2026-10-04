@@ -206,7 +206,7 @@ a = np.array([[1, 2, 3], [4, 5, 6]])
 # Global
 print(a.sum())        # 21
 print(a.mean())       # 3.5
-print(a.std())        # 1.707
+print(a.std())        # 1.708
 print(a.min())        # 1
 print(a.max())        # 6
 print(a.prod())       # 720
@@ -285,7 +285,7 @@ print(norm(A))             # Frobenius norm
 # Solve linear system: Ax = b
 b = np.array([1, 2])
 x = solve(A, b)           # x such that A @ x = b
-print(x)                   # [-0., 0.5]
+print(x)                   # [0.0, 0.5]
 
 # Eigenvalues
 eigenvalues, eigenvectors = eig(A)

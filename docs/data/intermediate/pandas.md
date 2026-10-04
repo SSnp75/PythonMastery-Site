@@ -290,7 +290,7 @@ df_clean = df.dropna(subset=["salary", "age"])   # only check these columns
 # Fill missing values
 df["salary"] = df["salary"].fillna(df["salary"].median())
 df["city"] = df["city"].fillna("Unknown")
-df["age"] = df["age"].fillna(method="ffill")   # forward fill
+df["age"] = df["age"].ffill()                  # forward fill (fillna(method=...) was removed)
 
 # Interpolation (for time series)
 df["value"] = df["value"].interpolate(method="linear")
