@@ -224,12 +224,12 @@ print(project.name)     # main.py
 print(project.stem)     # main
 print(project.suffix)   # .py
 
-# Querying
+# Querying — results depend on the actual filesystem
 path = Path("some_file.txt")
-print(path.exists())
-print(path.is_file())
-print(path.is_dir())
-print(path.stat().st_size)   # file size in bytes
+print(path.exists())         # True/False — does the path exist?
+print(path.is_file())        # True if it's a regular file
+print(path.is_dir())         # True if it's a directory
+print(path.stat().st_size)   # file size in bytes (int)
 
 # Reading/Writing
 content = Path("data.txt").read_text(encoding="utf-8")

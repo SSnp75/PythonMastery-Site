@@ -33,8 +33,7 @@ class CountUp:
             raise StopIteration
         return self.current
 
-for n in CountUp(5):
-    print(n)   # 1, 2, 3, 4, 5
+print(list(CountUp(5)))   # [1, 2, 3, 4, 5]
 ```
 
 ---
@@ -48,8 +47,7 @@ def count_up(max_val):
         yield current      # pause here, resume on next()
         current += 1
 
-for n in count_up(5):
-    print(n)
+print(list(count_up(5)))   # [1, 2, 3, 4, 5]
 ```
 
 ---
@@ -64,7 +62,7 @@ def flatten(nested):
         else:
             yield item
 
-list(flatten([1, [2, 3], [4, [5, 6]]]))
+print(list(flatten([1, [2, 3], [4, [5, 6]]])))
 # [1, 2, 3, 4, 5, 6]
 ```
 
@@ -98,19 +96,30 @@ for line in pipeline:
 ## itertools highlights
 
 ```python
-from itertools import chain, islice, groupby, product, permutations
+from itertools import chain, islice, groupby
 
 # chain — concatenate iterables
-list(chain([1, 2], [3, 4]))   # [1, 2, 3, 4]
+print(list(chain([1, 2], [3, 4])))      # [1, 2, 3, 4]
 
-# islice — slice any iterable
-list(islice(count_up(100), 5))   # [1, 2, 3, 4, 5]
+# islice — slice any iterable (even an infinite/large one)
+print(list(islice(count_up(100), 5)))   # [1, 2, 3, 4, 5]
 
-# groupby — group consecutive equal elements
+# groupby — group CONSECUTIVE equal keys (sort first!)
+students = [
+    {"name": "Alice", "grade": "A"},
+    {"name": "Bob", "grade": "B"},
+    {"name": "Charlie", "grade": "A"},
+]
 data = sorted(students, key=lambda s: s["grade"])
 for grade, group in groupby(data, key=lambda s: s["grade"]):
-    print(f"Grade {grade}: {list(group)}")
+    print(grade, [s["name"] for s in group])
+# A ['Alice', 'Charlie']
+# B ['Bob']
 ```
+
+!!! warning "groupby needs sorted input"
+    `itertools.groupby` only groups **consecutive** equal keys. Sort by the same key first,
+    or you'll get fragmented groups.
 
 ---
 
