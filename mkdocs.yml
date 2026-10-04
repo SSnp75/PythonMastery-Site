@@ -420,6 +420,7 @@ nav:
     - reference/index.md
     - reference/cheatsheets.md
     - reference/generators-decorators-filter.md
+    - reference/lambda-reduce-functions.md
     - reference/code-snippets.md
     - reference/templates.md
     - reference/tools.md
