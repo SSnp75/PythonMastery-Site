@@ -23,6 +23,8 @@ description: Machine learning models, pipelines, cross-validation, hyperparamete
 
 ## The sklearn workflow
 
+*The consistent fit/predict/score loop every estimator follows.*
+
 ```
 Load Data → Split → Preprocess → Train → Predict → Evaluate
 ```
@@ -74,6 +76,8 @@ Accuracy: 1.0000
 
 ## Pipelines — the right way
 
+*Chain preprocessing and model so the same steps apply in train and inference — and avoid data leakage.*
+
 Pipelines prevent data leakage and simplify deployment:
 
 ```python
@@ -121,6 +125,8 @@ print(f"Accuracy: {score:.4f}")
 
 ## Cross-validation
 
+*Estimate real-world performance by evaluating across multiple train/test splits.*
+
 ```python
 from sklearn.model_selection import cross_val_score, StratifiedKFold
 
@@ -148,6 +154,8 @@ print(f"Test F1: {results['test_f1_macro'].mean():.4f}")
 ---
 
 ## Hyperparameter tuning
+
+*Search parameter combinations (grid/random) to improve a model systematically.*
 
 ### GridSearchCV
 
@@ -204,6 +212,8 @@ random_search.fit(X_train, y_train)
 
 ## Model evaluation
 
+*Pick the right metric (accuracy, F1, ROC-AUC) for the problem and read the confusion matrix.*
+
 ### Classification metrics
 
 ```python
@@ -243,6 +253,8 @@ print(f"R²:   {r2_score(y_test, y_pred):.4f}")
 ---
 
 ## Feature importance
+
+*Find which features drive predictions to interpret and trim a model.*
 
 ```python
 # Tree-based models have built-in feature importance
@@ -284,6 +296,8 @@ for i in perm_importance.importances_mean.argsort()[::-1][:10]:
 ---
 
 ## Saving and loading models
+
+*Persist a trained model with joblib so you can serve it later.*
 
 ```python
 import joblib

@@ -23,6 +23,8 @@ description: scipy.stats, distributions, hypothesis testing, correlation and reg
 
 ## Descriptive statistics
 
+*Summarize data with mean, median, variance, and quantiles — the first look at any dataset.*
+
 ```python
 import numpy as np
 from scipy import stats
@@ -53,6 +55,8 @@ print(f"Kurtosis: {stats.kurtosis(data):.4f}")   # ~0 for normal-like
 ---
 
 ## Probability distributions
+
+*Model randomness with common distributions for sampling and inference.*
 
 ```python
 from scipy.stats import norm, t, chi2, binom, poisson, expon
@@ -91,6 +95,8 @@ print(poisson.pmf(k=5, mu=3))          # P(5 events when average is 3)
 ---
 
 ## Hypothesis testing
+
+*Decide whether an observed effect is real or chance with t-tests and friends.*
 
 ### One-sample t-test
 
@@ -158,6 +164,8 @@ print(f"p-value: {p_value:.6f}")
 
 ## Correlation
 
+*Measure how two variables move together — but remember correlation isn't causation.*
+
 ```python
 import numpy as np
 from scipy import stats
@@ -187,6 +195,8 @@ print(df.corr())
 ---
 
 ## Linear regression
+
+*Fit a line to model and predict a numeric outcome from features.*
 
 ```python
 from scipy.stats import linregress
@@ -221,6 +231,8 @@ plt.show()
 
 ## Confidence intervals
 
+*Quantify uncertainty around an estimate instead of a single point.*
+
 ```python
 # CI for the mean
 data = np.array([23, 25, 28, 30, 26, 24, 27, 29, 31, 22])
@@ -250,6 +262,8 @@ print(f"Bootstrap 95% CI: ({ci_boot[0]:.2f}, {ci_boot[1]:.2f})")
 ---
 
 ## A/B Testing
+
+*Compare two variants statistically to decide if a change actually helped.*
 
 ```python
 # Conversion rates: variant A vs variant B

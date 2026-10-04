@@ -23,6 +23,8 @@ description: DataFrames, Series, groupby, merge, pivot, window functions and dat
 
 ## DataFrame basics
 
+*Create and load tabular data from dicts, CSV, JSON, or SQL — the DataFrame is the core object.*
+
 ```python
 import pandas as pd
 import numpy as np
@@ -60,6 +62,8 @@ df = pd.read_sql("SELECT * FROM users", conn)
 
 ## Inspecting data
 
+*Get a quick feel for a dataset — shape, types, summary stats, and null counts.*
+
 ```python
 print(df.shape)        # (5, 4) — rows, columns
 print(df.dtypes)       # data types per column
@@ -76,6 +80,8 @@ print(df.isnull().sum())  # null count per column
 ---
 
 ## Selecting data
+
+*Pick columns and rows by label (`loc`) or position (`iloc`) — the foundation of analysis.*
 
 ```python
 # ─── Column selection ─────────────────────────────
@@ -107,6 +113,8 @@ df.query("salary > @threshold")   # use variables with @
 
 ## Modifying data
 
+*Add/rename/drop columns, sort, and set conditional values to shape a dataset.*
+
 ```python
 # ─── Add/modify columns ──────────────────────────
 df["bonus"] = df["salary"] * 0.1
@@ -136,6 +144,8 @@ df = df.reset_index(drop=True)
 ---
 
 ## GroupBy — split-apply-combine
+
+*Aggregate by category — the single most useful analysis operation in pandas.*
 
 ```python
 # ─── Basic groupby ────────────────────────────────
@@ -182,6 +192,8 @@ result = df.groupby("city").apply(top_earner).reset_index(drop=True)
 
 ## Merge / Join
 
+*Combine DataFrames on keys like SQL joins — for linking related tables.*
+
 ```python
 # ─── merge (SQL-style join) ───────────────────────
 orders = pd.DataFrame({
@@ -219,6 +231,8 @@ horizontal = pd.concat([df1, df2], axis=1)             # side by side
 
 ## Pivot tables and reshaping
 
+*Reshape between wide and long form and summarize into matrices.*
+
 ```python
 # ─── pivot_table — aggregate and reshape ──────────
 sales = pd.DataFrame({
@@ -250,6 +264,8 @@ pd.crosstab(df["city"], df["senior"])
 ---
 
 ## Window functions (rolling, expanding)
+
+*Compute moving averages, running totals, and lags over ordered/time data.*
 
 ```python
 # Time series data
@@ -284,6 +300,8 @@ df["salary_rank_by_city"] = df.groupby("city")["salary"].rank(ascending=False)
 
 ## Handling missing data
 
+*Detect, drop, fill, or interpolate NaNs before analysis or modeling.*
+
 ```python
 # Check for nulls
 print(df.isnull().sum())
@@ -306,6 +324,8 @@ df["value"] = df["value"].interpolate(method="linear")
 
 ## String operations
 
+*Vectorized text methods via `.str` for cleaning and extracting from text columns.*
+
 ```python
 # .str accessor for vectorized string operations
 df["name_lower"] = df["name"].str.lower()
@@ -320,6 +340,8 @@ df["city_clean"] = df["city"].str.strip().str.title()
 ---
 
 ## Performance optimization
+
+*Use categoricals, vectorization, and column selection to handle large datasets.*
 
 ```python
 # 1. Use appropriate dtypes
@@ -346,6 +368,8 @@ for chunk in pd.read_csv("huge.csv", chunksize=10000):
 ---
 
 ## Saving data
+
+*Write results to CSV, Parquet, Excel, JSON, or SQL for downstream use.*
 
 ```python
 # CSV

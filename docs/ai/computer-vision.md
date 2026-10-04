@@ -23,6 +23,8 @@ description: OpenCV, image processing, object detection, YOLO and image classifi
 
 ## OpenCV basics
 
+*Load, transform, and manipulate images — the workhorse CV library.*
+
 ```python
 import cv2
 import numpy as np
@@ -57,6 +59,8 @@ cv2.line(canvas, (400, 50), (550, 350), (0, 0, 255), 3)            # red line
 
 ## Image processing
 
+*Filters, edges, thresholds, and transforms for preparing images.*
+
 ```python
 # ─── Color spaces ─────────────────────────────────
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -88,6 +92,8 @@ print(f"Best match at {max_loc} with score {max_val:.4f}")
 ---
 
 ## Object detection with YOLO
+
+*Locate and label objects in images/video with a fast detector.*
 
 ```python
 from ultralytics import YOLO
@@ -125,6 +131,8 @@ for frame_result in results:
 ---
 
 ## Image classification with PyTorch
+
+*Train or fine-tune a model to categorize images.*
 
 ```python
 import torch

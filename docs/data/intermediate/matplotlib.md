@@ -23,6 +23,8 @@ description: Plotting, figures, subplots, styling, annotations and publication-q
 
 ## Two APIs: pyplot vs OO
 
+*Prefer the object-oriented `fig, ax` API for control; use pyplot for quick throwaway plots.*
+
 ```python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -50,6 +52,8 @@ plt.show()
 ---
 
 ## Common plot types
+
+*Line, bar, scatter, histogram — pick based on what the data represents.*
 
 ```python
 fig, axes = plt.subplots(2, 3, figsize=(14, 8))
@@ -98,6 +102,8 @@ plt.show()
 
 ## Subplots and layouts
 
+*Arrange multiple plots in a grid to compare views side by side.*
+
 ```python
 # ─── Regular grid ─────────────────────────────────
 fig, axes = plt.subplots(2, 2, figsize=(10, 8))
@@ -131,6 +137,8 @@ plt.show()
 
 ## Styling and customization
 
+*Control colors, labels, legends, and limits to make a figure readable.*
+
 ```python
 # ─── Built-in styles ─────────────────────────────
 print(plt.style.available)   # list all styles
@@ -161,6 +169,8 @@ plt.show()
 ---
 
 ## Annotations and text
+
+*Call out key points with labels and arrows directly on the plot.*
 
 ```python
 fig, ax = plt.subplots(figsize=(8, 5))
@@ -195,6 +205,8 @@ plt.show()
 ---
 
 ## Colormaps and heatmaps
+
+*Encode a third dimension with color — for matrices and density.*
 
 ```python
 # Heatmap
@@ -269,6 +281,8 @@ plt.show()
 ---
 
 ## Saving publication-quality figures
+
+*Export at the right size and DPI for papers and slides.*
 
 ```python
 fig, ax = plt.subplots(figsize=(8, 5))

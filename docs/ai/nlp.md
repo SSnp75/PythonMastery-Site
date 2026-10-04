@@ -23,6 +23,8 @@ description: Tokenization, text preprocessing, spaCy, transformers and text clas
 
 ## Text preprocessing pipeline
 
+*Clean, tokenize, and normalize text before analysis or modeling.*
+
 ```python
 import re
 from collections import Counter
@@ -50,6 +52,8 @@ print(freq.most_common(5))
 ---
 
 ## spaCy — industrial NLP
+
+*Fast, production-ready NLP for tokenization, POS, NER, and dependency parsing.*
 
 ```python
 import spacy
@@ -92,6 +96,8 @@ print(f"Different: {doc1.similarity(doc3):.3f}")   # ~0.2
 ---
 
 ## Hugging Face Transformers
+
+*Use pretrained transformer models for classification, QA, and generation.*
 
 ```python
 from transformers import pipeline
@@ -137,6 +143,8 @@ print(result)   # {'answer': 'Paris', 'score': 0.99, 'start': 42, 'end': 47}
 ---
 
 ## Text classification from scratch
+
+*Build a classifier end to end to see how the pieces fit.*
 
 ```python
 from sklearn.feature_extraction.text import TfidfVectorizer

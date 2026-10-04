@@ -23,6 +23,8 @@ description: OpenAI, Anthropic, local models, structured output, streaming and p
 
 ## OpenAI API
 
+*Send prompts and get completions from OpenAI models — the baseline for LLM features.*
+
 ```python
 from openai import OpenAI
 
@@ -51,6 +53,8 @@ print(f"Tokens used: {response.usage.total_tokens}")   # e.g. 87
 
 ## Streaming responses
 
+*Receive tokens as they're generated for responsive, chat-like UX.*
+
 ```python
 # Stream for real-time display (like ChatGPT)
 stream = client.chat.completions.create(
@@ -71,6 +75,8 @@ print()   # newline after streaming complete
 ---
 
 ## Structured output (JSON mode)
+
+*Force the model to return valid JSON so you can parse it reliably.*
 
 ```python
 from pydantic import BaseModel
@@ -103,6 +109,8 @@ print(review.keywords)    # ['visuals', 'stunning', 'Chalamet']
 
 ## Anthropic (Claude) API
 
+*Call Claude models with the Anthropic SDK — similar shape, different provider.*
+
 ```python
 from anthropic import Anthropic
 
@@ -124,6 +132,8 @@ print(f"Output tokens: {message.usage.output_tokens}")
 ---
 
 ## Tool calling / Function calling
+
+*Let the model request your functions so it can take actions and fetch data.*
 
 ```python
 import json
@@ -177,6 +187,8 @@ print(final_response.choices[0].message.content)
 
 ## Local models with Ollama
 
+*Run open models locally for privacy, cost, and offline use.*
+
 ```python
 import httpx
 
@@ -200,6 +212,8 @@ response = local_client.chat.completions.create(
 ---
 
 ## Production patterns
+
+*Retries, timeouts, cost control, and prompt management for reliable LLM apps.*
 
 ### Retry with exponential backoff
 

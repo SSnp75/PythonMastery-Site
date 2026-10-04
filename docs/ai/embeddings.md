@@ -53,6 +53,8 @@ print(f"Cat vs finance: {cosine_sim(vecs[0], vecs[2]):.4f}")  # ~0.15 (low!)
 
 ## Local embeddings (no API needed)
 
+*Generate embeddings on your own machine with sentence-transformers — free and private.*
+
 ```python
 from sentence_transformers import SentenceTransformer
 
@@ -68,6 +70,8 @@ print(embeddings.shape)   # (3, 384)
 ---
 
 ## ChromaDB (local vector database)
+
+*A simple local vector store for semantic search and RAG prototypes.*
 
 ```python
 import chromadb
@@ -98,6 +102,8 @@ results = collection.query(
 ---
 
 ## pgvector (PostgreSQL extension)
+
+*Store vectors alongside relational data and query them with SQL.*
 
 ```python
 import psycopg
@@ -137,6 +143,8 @@ for content, similarity in results:
 
 ## Pinecone (managed cloud vector DB)
 
+*A hosted vector database for production scale without managing infrastructure.*
+
 ```python
 from pinecone import Pinecone
 
@@ -158,6 +166,8 @@ for match in results["matches"]:
 ---
 
 ## Choosing a vector database
+
+*Match the store to your scale, latency, and ops constraints.*
 
 | Database | Type | Best for | Scale |
 |---|---|---|---|

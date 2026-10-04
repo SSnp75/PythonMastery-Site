@@ -36,6 +36,8 @@ description: End-to-end machine learning workflows from data to deployment with 
 
 ## Custom transformers
 
+*Wrap your own preprocessing as sklearn-compatible steps so they fit into pipelines.*
+
 ```python
 from sklearn.base import BaseEstimator, TransformerMixin
 import numpy as np
@@ -109,6 +111,8 @@ class TargetEncoder(BaseEstimator, TransformerMixin):
 
 ## Full production pipeline
 
+*Assemble preprocessing + model into one reproducible, serializable object.*
+
 ```python
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
@@ -164,6 +168,8 @@ pipeline.fit(X_train, y_train)
 
 ## Experiment tracking with MLflow
 
+*Log parameters, metrics, and artifacts so experiments are comparable and reproducible.*
+
 ```python
 import mlflow
 import mlflow.sklearn
@@ -206,6 +212,8 @@ with mlflow.start_run(run_name="gradient_boosting_v3"):
 
 ## Model versioning and registry
 
+*Track model versions and promote them through stages to production.*
+
 ```python
 # Register a model
 model_uri = f"runs:/{run_id}/model"
@@ -228,6 +236,8 @@ predictions = model.predict(new_data)
 ---
 
 ## Data validation
+
+*Catch schema and distribution problems in incoming data before they corrupt predictions.*
 
 ```python
 import pandas as pd
@@ -267,6 +277,8 @@ def validate_input(df: pd.DataFrame) -> tuple[bool, list[str]]:
 ---
 
 ## Model serving
+
+*Expose a trained model behind an API for real-time predictions.*
 
 ```python
 # FastAPI model serving

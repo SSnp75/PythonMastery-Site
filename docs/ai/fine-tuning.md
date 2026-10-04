@@ -36,6 +36,8 @@ Fine-tune when: consistent output format, domain-specific jargon, reducing promp
 
 ## OpenAI fine-tuning
 
+*Specialize a hosted model on your examples when prompting plateaus.*
+
 ```python
 from openai import OpenAI
 import json
@@ -95,6 +97,8 @@ print(response.choices[0].message.content)
 ---
 
 ## LoRA (Low-Rank Adaptation)
+
+*Fine-tune cheaply by training small adapter weights instead of the whole model.*
 
 LoRA freezes the base model and trains small adapter matrices — 1000x fewer parameters.
 
@@ -166,6 +170,8 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 ---
 
 ## QLoRA (Quantized LoRA) — fit on consumer GPUs
+
+*Combine quantization with LoRA to fine-tune large models on modest hardware.*
 
 ```python
 from transformers import BitsAndBytesConfig

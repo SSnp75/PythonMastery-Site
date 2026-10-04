@@ -50,6 +50,8 @@ print(f"NumPy: {time.perf_counter() - start:.4f}s")  # ~0.002s (75x faster!)
 
 ## Creating arrays
 
+*Make arrays from lists or with builders (`zeros`, `arange`, `linspace`, random) — the starting point for all numeric work.*
+
 ```python
 import numpy as np
 
@@ -87,6 +89,8 @@ integers = rng.integers(0, 100, (4,))    # random ints
 
 ## Array properties
 
+*Inspect shape, dtype, and size to understand and debug your data's structure.*
+
 ```python
 a = np.array([[1, 2, 3], [4, 5, 6]])
 
@@ -102,6 +106,8 @@ print(a.T)          # transposed view
 ---
 
 ## Indexing and slicing
+
+*Select elements, rows, columns, and subarrays — plus boolean masks and fancy indexing for filtering.*
 
 ```python
 a = np.arange(20).reshape(4, 5)
@@ -135,6 +141,8 @@ result = np.where(a > 10, a, 0)   # keep if > 10, else 0
 
 ## Vectorized operations
 
+*Apply math to whole arrays at once (no Python loop) — the source of NumPy's speed.*
+
 All arithmetic is element-wise by default:
 
 ```python
@@ -164,6 +172,8 @@ print(np.maximum(a, 3))  # [3, 3, 3, 4, 5]
 ---
 
 ## Broadcasting
+
+*Operate on arrays of different shapes by auto-expanding dimensions — avoids manual tiling.*
 
 Broadcasting lets NumPy operate on arrays of different shapes by automatically expanding dimensions:
 
@@ -206,6 +216,8 @@ Result: (2, 3) → [[11, 12, 13], [24, 25, 26]]
 
 ## Aggregation (reduction)
 
+*Collapse arrays to summaries (sum, mean, min/max) globally or along an axis.*
+
 ```python
 a = np.array([[1, 2, 3], [4, 5, 6]])
 
@@ -234,6 +246,8 @@ print(np.cumprod([1, 2, 3, 4]))  # [1, 2, 6, 24]
 ---
 
 ## Reshaping and stacking
+
+*Change an array's shape or combine arrays — for preparing data for models and plots.*
 
 ```python
 a = np.arange(12)
@@ -267,6 +281,8 @@ left, right = np.hsplit(a, 2)     # split into 2 columns
 ---
 
 ## Linear Algebra
+
+*Matrix multiply, solve systems, decompositions — the math behind ML and scientific computing.*
 
 ```python
 # Matrix multiplication
@@ -305,6 +321,8 @@ U, S, Vt = svd(A)
 
 ## Performance tips
 
+*Use views, pre-allocation, and the right dtype to keep numeric code fast and lean.*
+
 ```python
 # 1. Avoid Python loops — use vectorized operations
 # BAD
@@ -333,6 +351,8 @@ print(b.base is a)   # True if b is a view of a
 ---
 
 ## Structured arrays (table-like data)
+
+*Give array columns names and types for record-style data without pandas.*
 
 ```python
 dt = np.dtype([

@@ -33,6 +33,8 @@ User Question → Embed → Search Vector DB → Top K chunks → LLM (question 
 
 ## Full RAG pipeline from scratch
 
+*Chunk, embed, retrieve, and prompt — the end-to-end flow with no framework.*
+
 ### Step 1: Load and chunk documents
 
 ```python
@@ -171,6 +173,8 @@ print(answer)
 
 ## Using a vector database (ChromaDB)
 
+*Store and search embeddings efficiently instead of a Python list.*
+
 ```python
 import chromadb
 from chromadb.utils.embedding_functions import OpenAIEmbeddingFunction
@@ -200,6 +204,8 @@ for doc, meta, distance in zip(results["documents"][0], results["metadatas"][0],
 ---
 
 ## LangChain RAG (higher-level)
+
+*Assemble a RAG pipeline from prebuilt components for faster iteration.*
 
 ```python
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
@@ -236,6 +242,8 @@ for doc in result["source_documents"]:
 ---
 
 ## RAG optimization techniques
+
+*Improve retrieval quality with better chunking, reranking, and hybrid search.*
 
 | Technique | What it does |
 |---|---|
