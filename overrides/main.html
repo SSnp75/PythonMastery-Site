@@ -1,5 +1,76 @@
 {% extends "base.html" %}
 
+{% block extrahead %}
+  {{ super() }}
+
+  {# ── SEO / social metadata ─────────────────────────────────
+     Built on Material/MkDocs template variables. GA4 is handled
+     separately via mkdocs.yml `extra.analytics` — nothing here
+     touches analytics. #}
+
+  {# Resolve reusable values with sensible fallbacks.
+     `page` is None on some generated pages (e.g. 404.html), so guard it. #}
+  {% set page_title = (page.meta.title if page and page.meta else none) | default((page.title if page else none), true) | default(config.site_name, true) %}
+  {% set page_desc  = (page.meta.description if page and page.meta else none) | default(config.site_description, true) %}
+  {% set page_url   = (page.canonical_url if page else none) | default(config.site_url, true) %}
+  {% set social_image = (page.meta.image if page and page.meta else none) | default('assets/images/logo.png', true) %}
+  {% set image_url = social_image if social_image.startswith('http') else (config.site_url ~ social_image) %}
+
+  <link rel="canonical" href="{{ page_url }}">
+
+  {# ── Open Graph ── #}
+  <meta property="og:site_name" content="{{ config.site_name }}">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_desc }}">
+  <meta property="og:url" content="{{ page_url }}">
+  <meta property="og:image" content="{{ image_url }}">
+  {% if page and page.is_homepage %}
+  <meta property="og:type" content="website">
+  {% else %}
+  <meta property="og:type" content="article">
+  {% endif %}
+
+  {# ── Twitter card ── #}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title }}">
+  <meta name="twitter:description" content="{{ page_desc }}">
+  <meta name="twitter:image" content="{{ image_url }}">
+
+  {# ── JSON-LD structured data ── #}
+  {% if page and page.is_homepage %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": {{ config.site_name | tojson }},
+    "description": {{ config.site_description | tojson }},
+    "url": {{ config.site_url | tojson }}
+  }
+  </script>
+  {% else %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": {{ page_title | tojson }},
+    "description": {{ page_desc | tojson }},
+    "url": {{ page_url | tojson }},
+    "image": {{ image_url | tojson }},
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": {{ config.site_name | tojson }},
+      "url": {{ config.site_url | tojson }}
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": {{ config.site_name | tojson }}
+    }
+  }
+  </script>
+  {% endif %}
+{% endblock %}
+
 {% block announce %}
   {% if page and page.meta and page.meta.announce %}
   <div>{{ page.meta.announce }}</div>

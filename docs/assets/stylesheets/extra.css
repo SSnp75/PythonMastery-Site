@@ -649,3 +649,35 @@
   margin: 0 0.4rem;
   opacity: 0.5;
 }
+
+/* ── Cheat-sheet section heading links ────────────────────── */
+/* Applied via {.pm-cheat-link} on cheat-sheet "##" headings so each
+   section title doubles as a link to its full track/lesson page. */
+.md-typeset h2 a.pm-cheat-link {
+  color: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  transition: color 0.15s ease;
+}
+
+/* The trailing arrow is hidden until hover/focus, then slides in. */
+.md-typeset h2 a.pm-cheat-link::after {
+  content: "→";
+  font-weight: 400;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.md-typeset h2 a.pm-cheat-link:hover,
+.md-typeset h2 a.pm-cheat-link:focus-visible {
+  color: var(--md-primary-fg-color);
+}
+
+.md-typeset h2 a.pm-cheat-link:hover::after,
+.md-typeset h2 a.pm-cheat-link:focus-visible::after {
+  opacity: 0.8;
+  transform: translateX(0);
+}
