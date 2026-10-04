@@ -35,6 +35,8 @@ Quantum computing is an emerging field where Python is the primary language for 
 
 ## Bits vs qubits
 
+*Bits vs qubits in Python for Quantum Research — what it is and when to use it.*
+
 A classical **bit** is 0 or 1. A **qubit** can be in a *superposition* — a combination of both at once, described by two complex amplitudes:
 
 ```
@@ -46,6 +48,8 @@ A classical **bit** is 0 or 1. A **qubit** can be in a *superposition* — a com
 ---
 
 ## Simulating one qubit (tested)
+
+*Simulating one qubit in Python for Quantum Research — what it is and when to use it.*
 
 A single qubit's state is just two numbers, and gates are small matrix multiplications — pure math you can do with the standard library. Here's the **Hadamard gate**, which puts `|0⟩` into an equal superposition. Runnable:
 

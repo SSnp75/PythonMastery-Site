@@ -38,6 +38,8 @@ description: Statistical data visualization built on Matplotlib
 
 ## What Seaborn adds
 
+*A core question explored in Seaborn: What Seaborn adds.*
+
 Matplotlib is powerful but low-level — a statistical plot can take many lines. Seaborn wraps common statistical visualizations into single calls, adds attractive defaults, and speaks DataFrames:
 
 ```python

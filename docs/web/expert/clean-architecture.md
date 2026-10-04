@@ -307,6 +307,8 @@ def get_create_user_use_case(
 
 ## Testing — the real benefit
 
+*Testing — the real benefit, part of Clean Architecture.*
+
 ```python
 # tests/test_create_user.py
 import pytest

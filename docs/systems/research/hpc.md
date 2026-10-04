@@ -251,6 +251,8 @@ if rank == 0:
 
 ## Performance considerations
 
+*Performance considerations in HPC Clusters — what it is and when to use it.*
+
 | Factor | Recommendation |
 |---|---|
 | Communication overhead | Minimize MPI calls, send large messages |

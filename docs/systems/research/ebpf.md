@@ -23,6 +23,8 @@ description: Kernel tracing, observability, bcc tools and system-level Python in
 
 ## What is eBPF?
 
+*Introduces eBPF and where it fits in eBPF.*
+
 eBPF (extended Berkeley Packet Filter) runs **sandboxed programs inside the Linux kernel** without modifying kernel source or loading modules. It's used for:
 
 - **Observability** — trace any kernel/userspace function
@@ -33,6 +35,8 @@ eBPF (extended Berkeley Packet Filter) runs **sandboxed programs inside the Linu
 ---
 
 ## Python + eBPF with bcc
+
+*Python + eBPF with bcc in eBPF — what it is and when to use it.*
 
 ```python
 #!/usr/bin/env python3
@@ -81,6 +85,8 @@ while True:
 
 ## bcc tools for Python profiling
 
+*bcc tools for Python profiling in eBPF — what it is and when to use it.*
+
 ```bash
 # Trace Python function calls (requires CPython with DTrace support)
 sudo /usr/share/bcc/tools/pythoncalls -p $(pgrep python3)
@@ -96,6 +102,8 @@ flamegraph.pl out.stacks > python_flamegraph.svg
 ---
 
 ## Tracing CPython internals with USDT
+
+*Tracing CPython internals with USDT in eBPF — what it is and when to use it.*
 
 CPython 3.12+ has built-in USDT (User Statically Defined Tracing) probes:
 
@@ -134,6 +142,8 @@ b.trace_print()
 ---
 
 ## Use cases
+
+*Use cases in eBPF — what it is and when to use it.*
 
 | Use case | Tool/approach |
 |---|---|

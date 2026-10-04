@@ -27,6 +27,8 @@ A practical map of the tools that make Python development productive. Where the 
 
 ## Editors & IDEs
 
+*Editors & IDEs in Tools — what it is and when to use it.*
+
 | Tool | Notes |
 |---|---|
 | **VS Code** | Free, huge extension ecosystem, the Python extension + Pylance is excellent. The common default. |
@@ -37,6 +39,8 @@ A practical map of the tools that make Python development productive. Where the 
 ---
 
 ## Package & environment management
+
+*Package & environment management in Tools — what it is and when to use it.*
 
 | Tool | What it does | Notes |
 |---|---|---|
@@ -120,6 +124,8 @@ See the Testing section for depth.
 
 ## Debuggers & profilers
 
+*Debuggers & profilers in Tools — what it is and when to use it.*
+
 | Tool | Role |
 |---|---|
 | **pdb / breakpoint()** | Built-in interactive debugger (`breakpoint()` drops you in). |
@@ -137,6 +143,8 @@ See [Profiling](../systems/advanced/profiling.md) and [Debugging](../core/compet
 ---
 
 ## CI/CD
+
+*CI/CD in Tools — what it is and when to use it.*
 
 | Tool | Notes |
 |---|---|
@@ -162,6 +170,8 @@ See the Deployment section's CI/CD topic.
 
 ## A recommended modern starter stack
 
+*A recommended modern starter stack — a key concept in Tools.*
+
 For a new project in 2026, a clean, fast setup:
 
 - **Environment/packages:** uv
@@ -176,6 +186,8 @@ This gives you speed, correctness checks, and automation with minimal configurat
 ---
 
 ## Related
+
+*Related in Tools — what it is and when to use it.*
 
 - [Templates](templates.md) — project layout and configs
 - [Python Packaging](../web/competent/packaging.md)

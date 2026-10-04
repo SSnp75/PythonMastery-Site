@@ -279,6 +279,8 @@ for i in perm_importance.importances_mean.argsort()[::-1][:10]:
 
 ## Common algorithms cheat sheet
 
+*Common algorithms cheat sheet in Scikit-Learn — what it is and when to use it.*
+
 | Algorithm | Type | Use case |
 |---|---|---|
 | `LogisticRegression` | Classification | Linear boundary, baseline |

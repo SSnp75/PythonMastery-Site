@@ -23,6 +23,8 @@ description: Build systems that ground LLM responses in your own data — chunki
 
 ## What is RAG?
 
+*Introduces RAG and where it fits in RAG (Retrieval-Augmented Generation).*
+
 RAG combines retrieval (search your documents) with generation (LLM produces answer) so the model responds using **your data** instead of hallucinating.
 
 ```

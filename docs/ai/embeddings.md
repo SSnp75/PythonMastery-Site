@@ -23,6 +23,8 @@ description: Text embeddings, similarity search, ChromaDB, Pinecone, pgvector an
 
 ## What are embeddings?
 
+*Introduces embeddings and where it fits in Embeddings & Vector Databases.*
+
 Embeddings are **dense vector representations** of text (or images, audio) where semantically similar items are close in vector space.
 
 ```python

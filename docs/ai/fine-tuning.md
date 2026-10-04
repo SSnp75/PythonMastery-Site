@@ -23,6 +23,8 @@ description: Adapt pre-trained models to your data — OpenAI fine-tuning, LoRA,
 
 ## When to fine-tune vs prompt engineering
 
+*A core question explored in Fine-tuning & LoRA: When to fine-tune vs prompt engineering.*
+
 | Approach | Best for | Cost |
 |---|---|---|
 | **Prompt engineering** | Most tasks, quick iteration | Low (API calls) |

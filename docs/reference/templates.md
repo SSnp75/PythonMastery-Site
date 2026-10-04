@@ -27,6 +27,8 @@ Reusable starting points so you don't reinvent structure every time. Copy, adapt
 
 ## Modern Python project layout
 
+*Modern Python project layout in Templates — what it is and when to use it.*
+
 The current standard uses `pyproject.toml` and a `src/` layout:
 
 ```
@@ -69,6 +71,8 @@ line-length = 88
 
 ## Test file template (pytest)
 
+*Test file template (pytest) in Templates — what it is and when to use it.*
+
 ```python
 import pytest
 from myproject.core import my_function
@@ -94,26 +98,38 @@ See the Testing section for depth on fixtures, mocking, and parametrization.
 
 ## Architecture Decision Record (ADR)
 
+*Architecture Decision Record (ADR) in Templates — what it is and when to use it.*
+
 A short doc capturing *why* a significant decision was made. Store these in `docs/adr/NNNN-title.md`. Template:
 
 ```markdown
 # ADR 0001: Use PostgreSQL for primary storage
 
 ## Status
+
+*Status in Templates — what it is and when to use it.*
 Accepted — 2026-01-15
 
 ## Context
+
+*Context in Templates — what it is and when to use it.*
 We need a primary datastore. Data is relational, we need
 transactions and complex queries, and the team knows SQL.
 
 ## Decision
+
+*Decision in Templates — what it is and when to use it.*
 Use PostgreSQL as the primary database.
 
 ## Alternatives considered
+
+*Alternatives considered in Templates — what it is and when to use it.*
 - MongoDB — rejected: our data is strongly relational.
 - SQLite — rejected: won't handle our concurrency needs.
 
 ## Consequences
+
+*Consequences in Templates — what it is and when to use it.*
 - Gain: strong consistency, mature tooling, rich queries.
 - Cost: must run and operate a Postgres server.
 ```
@@ -124,21 +140,31 @@ Use PostgreSQL as the primary database.
 
 ## Experiment log (for research/data work)
 
+*Experiment log (for research/data work) in Templates — what it is and when to use it.*
+
 ```markdown
 # Experiment: <name>   —   <date>
 
 ## Hypothesis
+
+*Hypothesis in Templates — what it is and when to use it.*
 What you expect to happen and why.
 
 ## Setup
+
+*Setup in Templates — what it is and when to use it.*
 - Data / inputs:
 - Parameters:
 - Environment / versions:
 
 ## Result
+
+*Result in Templates — what it is and when to use it.*
 - What actually happened (metrics, output).
 
 ## Conclusion
+
+*Conclusion in Templates — what it is and when to use it.*
 - Confirmed / rejected? Next step?
 ```
 
@@ -148,19 +174,29 @@ Keeping a dated log turns scattered trial-and-error into a traceable record — 
 
 ## Daily note / learning log
 
+*Daily note / learning log in Templates — what it is and when to use it.*
+
 ```markdown
 # <date>
 
 ## Learned
+
+*Learned in Templates — what it is and when to use it.*
 - 
 
 ## Built / did
+
+*Built / did in Templates — what it is and when to use it.*
 - 
 
 ## Blocked on
+
+*Blocked on in Templates — what it is and when to use it.*
 - 
 
 ## Tomorrow
+
+*Tomorrow in Templates — what it is and when to use it.*
 - 
 ```
 
@@ -169,6 +205,8 @@ A lightweight habit that compounds — a searchable history of what you learned 
 ---
 
 ## `.gitignore` starter (Python)
+
+*.gitignore starter in Templates — what it is and when to use it.*
 
 ```gitignore
 __pycache__/
@@ -188,6 +226,8 @@ build/
 ---
 
 ## Related
+
+*Related in Templates — what it is and when to use it.*
 
 - [Python Packaging](../web/competent/packaging.md) — publishing projects
 - [Tools](tools.md) — editors, linters, formatters

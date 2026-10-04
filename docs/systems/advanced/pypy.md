@@ -37,6 +37,8 @@ description: An alternative Python with a JIT compiler for big speedups
 
 ## CPython vs PyPy
 
+*CPython vs PyPy in PyPy — what it is and when to use it.*
+
 - **CPython** — the reference implementation (what you normally run). Interprets bytecode; simple and universally compatible, but the interpreter loop has overhead.
 - **PyPy** — implements the same Python language but adds a **Just-In-Time compiler**. It runs your code, notices hot loops, and compiles them to machine code on the fly.
 
@@ -50,6 +52,8 @@ Both run the *same* Python source. PyPy is a drop-in alternative for most pure-P
 ---
 
 ## How the tracing JIT works
+
+*A core question explored in PyPy: How the tracing JIT works.*
 
 PyPy's JIT is a **tracing** JIT:
 
@@ -76,6 +80,8 @@ This is why PyPy excels at **long-running, loop-heavy** pure-Python code — the
 ---
 
 ## Compatibility
+
+*Compatibility in PyPy — what it is and when to use it.*
 
 PyPy aims for high CPython compatibility and runs most pure-Python code unchanged. The main friction:
 

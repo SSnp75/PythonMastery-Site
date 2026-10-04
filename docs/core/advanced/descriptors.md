@@ -29,6 +29,8 @@ description: "__get__, __set__, __delete__ — the mechanism behind @property, c
 
 ## What is a descriptor?
 
+*Introduces a descriptor and where it fits in Descriptors.*
+
 A descriptor is any object that defines at least one of:
 
 - `__get__(self, obj, objtype=None)` — intercept attribute read
@@ -215,6 +217,8 @@ print(Point.x.public_name)  # 'x'
 
 ## Practical Use Case 1: Type-Validated Fields
 
+*Practical Use Case 1: Type-Validated Fields in Descriptors — what it is and when to use it.*
+
 ```python
 class Typed:
     def __init__(self, expected_type):
@@ -269,6 +273,8 @@ except TypeError as ex:
 
 ## Practical Use Case 2: Range-Validated Fields
 
+*Practical Use Case 2: Range-Validated Fields in Descriptors — what it is and when to use it.*
+
 ```python
 class RangeChecked:
     def __init__(self, min_val=None, max_val=None):
@@ -314,6 +320,8 @@ except ValueError as ex:
 ---
 
 ## Practical Use Case 3: Lazy/Cached Properties
+
+*Practical Use Case 3: Lazy/Cached Properties in Descriptors — what it is and when to use it.*
 
 ```python
 class Lazy:

@@ -38,6 +38,8 @@ description: Split a model across GPUs like an assembly line, with micro-batchin
 
 ## The assembly-line idea
 
+*The assembly-line idea — a key concept in Pipeline Parallelism.*
+
 Split the model's layers into **stages**, one per GPU:
 
 ```
@@ -117,6 +119,8 @@ Documented (not installed here):
 ---
 
 ## Where it fits
+
+*A core question explored in Pipeline Parallelism: Where it fits.*
 
 Pipeline parallelism is one tool in large-model training, usually **combined** with data parallelism and tensor parallelism ("3D parallelism") for the biggest models. Use pipeline parallelism when a model's layers won't fit on one GPU but split cleanly into sequential stages. See [Model Parallelism](model-parallelism.md) for the broader picture and [Distributed Training](distributed-training.md) for data parallelism.
 

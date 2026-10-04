@@ -35,6 +35,8 @@ description: Making Python harder to reverse-engineer — techniques, limits and
 
 ## Why obfuscate
 
+*A core question explored in Bytecode Obfuscation: Why obfuscate.*
+
 Legitimate motivations:
 - **Protect intellectual property** in shipped Python (algorithms, business logic).
 - **Slow down reverse engineering** of a commercial product.
@@ -45,6 +47,8 @@ The key word is *slow down* — a determined analyst with time will get through.
 ---
 
 ## Python exposes a lot (tested)
+
+*Python exposes a lot in Bytecode Obfuscation — what it is and when to use it.*
 
 The reason Python is hard to protect: it ships (or compiles to) **bytecode**, which is highly recoverable. Even without source, `dis` reveals the logic:
 
@@ -75,6 +79,8 @@ Anyone with a `.pyc` file can disassemble it like this and read the operations �
 
 ## Common techniques
 
+*Common techniques in Bytecode Obfuscation — what it is and when to use it.*
+
 Obfuscators combine several tactics:
 
 - **Renaming** — turn meaningful names into `_a`, `_b`, `l1l1` (removes intent, keeps logic).
@@ -89,6 +95,8 @@ Tools: **PyArmor** (the most capable commercial one), **pyminifier** (light), an
 
 ## Why it's fundamentally limited
 
+*A core question explored in Bytecode Obfuscation: Why it's fundamentally limited.*
+
 !!! warning "Obfuscation is not encryption or security"
     The code *must run*, which means the machine *must* have everything needed to execute it — the bytecode, and any decryption keys, are present at runtime. A determined attacker can:
     - Dump the deobfuscated bytecode from memory after it's unpacked.
@@ -100,6 +108,8 @@ Tools: **PyArmor** (the most capable commercial one), **pyminifier** (light), an
 ---
 
 ## Better alternatives
+
+*Better alternatives in Bytecode Obfuscation — what it is and when to use it.*
 
 Depending on what you're actually trying to protect:
 

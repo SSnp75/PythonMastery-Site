@@ -38,6 +38,8 @@ GPUs run thousands of threads in parallel, making them ideal for the massively-p
 
 ## Why GPUs are fast (and different)
 
+*A core question explored in GPU Kernels (Triton): Why GPUs are fast (and different).*
+
 A CPU has a few powerful cores optimized for sequential work. A GPU has *thousands* of simpler cores optimized for doing the **same operation on lots of data at once** (SIMT — single instruction, multiple threads).
 
 ```

@@ -35,6 +35,8 @@ description: Safely loading and running third-party plugins with isolation and t
 
 ## The core problem
 
+*The core problem — a key concept in Secure Plugin Systems.*
+
 When your app loads a plugin, that plugin's code runs with **all the privileges your app has** — it can read your files, access your data, make network calls, and use any secret your process holds. A malicious or compromised plugin is a full compromise.
 
 ```
@@ -49,6 +51,8 @@ So plugin security is about answering two questions: **is this plugin who it cla
 ---
 
 ## Signature verification (tested)
+
+*Signature verification in Secure Plugin Systems — what it is and when to use it.*
 
 Before running a plugin, verify it hasn't been tampered with and comes from a trusted source. The mechanism is a cryptographic signature; here's the *integrity* half — verifying a plugin's hash matches an expected value. Runnable:
 

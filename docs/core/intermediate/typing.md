@@ -23,6 +23,8 @@ description: Annotations, generics, Protocol, TypeVar, overload, ParamSpec and m
 
 ## Why type hints?
 
+*A core question explored in Typing & Type Hints: Why type hints.*
+
 - Catch bugs **before runtime** with tools like `mypy`
 - Serve as **living documentation**
 - Enable **IDE autocompletion** and refactoring

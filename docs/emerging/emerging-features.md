@@ -35,6 +35,8 @@ The examples here are **verified on Python 3.13** (the version this site is buil
 
 ## Structural pattern matching (3.10+)
 
+*Structural pattern matching in Emerging Python Features — what it is and when to use it.*
+
 The `match` statement brings powerful, readable branching — far beyond a simple switch. It can match values, guards, and *structure*. Runnable:
 
 ```python

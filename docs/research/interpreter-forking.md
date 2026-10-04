@@ -36,6 +36,8 @@ description: Fork and modify CPython — custom builds, new opcodes and experime
 
 ## What "forking the interpreter" means
 
+*A core question explored in Interpreter Forking: What "forking the interpreter" means.*
+
 CPython — the reference Python implementation — is a C program that reads your bytecode and executes it. **Forking** it means taking that C source, changing how the language works at its core, and building your own `python` binary. This is the deepest level of language hacking: below your code, below the bytecode, into the machine that runs it.
 
 People fork CPython to **experiment** with language features, performance ideas, or research questions that can't be expressed from within Python. Most forks are experiments; a few graduate into CPython itself.
@@ -110,6 +112,8 @@ Many CPython performance wins (the "Faster CPython" project, specializing adapti
 ---
 
 ## Why it's a last resort
+
+*A core question explored in Interpreter Forking: Why it's a last resort.*
 
 !!! warning "Forking fragments the ecosystem"
     A forked interpreter runs code that standard Python can't, and standard tools may not understand your changes. Maintaining a fork means tracking upstream CPython forever. For almost everything, prefer C extensions, `importlib` import hooks ([Import System](../core/advanced/import-system.md)), or AST rewriting ([AST Manipulation](../core/advanced/ast-manipulation.md)) — they extend behavior without forking the language. Fork only for genuine language/runtime *research*, and ideally contribute findings back upstream rather than maintaining a permanent fork.

@@ -35,6 +35,8 @@ GIS (Geographic Information Systems) analyzes data tied to locations — maps, r
 
 ## The distance problem (tested)
 
+*The distance problem — a key concept in Python for GIS.*
+
 A deceptively hard basic task: how far apart are two lat/long points? Because Earth is (roughly) a sphere, you can't just use flat-plane distance — you need the **haversine formula**. Runnable pure Python:
 
 ```python

@@ -23,6 +23,8 @@ description: Implement a bytecode virtual machine from scratch that executes Pyt
 
 ## Architecture of a Python VM
 
+*Architecture of a Python VM in Building a Python VM — what it is and when to use it.*
+
 ```
 ┌─────────────────────────────────────────┐
 │            Python VM                     │

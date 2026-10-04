@@ -44,6 +44,8 @@ Simulation lets you study systems too complex, expensive, or dangerous to experi
 
 ## Agent-based model (tested)
 
+*Agent-based model in Python for Simulation — what it is and when to use it.*
+
 Conway's Game of Life is the classic agent-based model: each cell lives or dies based on its neighbors. A cell survives with 2-3 neighbors, is born with exactly 3. Runnable:
 
 ```python

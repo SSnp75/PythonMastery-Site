@@ -22,6 +22,8 @@ description: Hashing, symmetric/asymmetric encryption, digital signatures, TLS a
 
 ## Hashing — one-way functions
 
+*Hashing — one-way functions, part of Cryptography.*
+
 ```python
 import hashlib
 

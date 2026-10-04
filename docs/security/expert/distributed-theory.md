@@ -65,6 +65,8 @@ Eventual consistency (weakest)
 
 ## Raft consensus algorithm (simplified Python)
 
+*Raft consensus algorithm (simplified Python) in Distributed Systems Theory — what it is and when to use it.*
+
 ```python
 from enum import Enum
 from dataclasses import dataclass, field
@@ -130,6 +132,8 @@ class RaftNode:
 ---
 
 ## Vector clocks — tracking causality
+
+*Vector clocks — tracking causality, part of Distributed Systems Theory.*
 
 ```python
 from collections import defaultdict

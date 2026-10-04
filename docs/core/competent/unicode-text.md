@@ -23,6 +23,8 @@ description: Strings, encoding, bytes, regex, text normalization and real-world 
 
 ## str vs bytes — the fundamental distinction
 
+*str vs bytes — the fundamental distinction, part of Unicode & Text Processing.*
+
 ```python
 # str — sequence of Unicode code points (text)
 text = "Hello, 世界! 🐍"
@@ -48,6 +50,8 @@ print(decoded == text)   # True
 ---
 
 ## Encoding schemes
+
+*Encoding schemes in Unicode & Text Processing — what it is and when to use it.*
 
 | Encoding | Bytes/char | Coverage | Use case |
 |---|---|---|---|
@@ -75,6 +79,8 @@ text.encode("ascii", errors="xmlcharrefreplace")  # b'Caf&#233; &#9749;'
 
 ## Unicode code points and names
 
+*Unicode code points and names in Unicode & Text Processing — what it is and when to use it.*
+
 ```python
 # Every character has a code point (integer) and a name
 print(ord("A"))          # 65
@@ -100,6 +106,8 @@ print(unicodedata.category("!"))   # Po (Punctuation, other)
 ---
 
 ## Text normalization
+
+*Text normalization in Unicode & Text Processing — what it is and when to use it.*
 
 The same visual character can have different byte representations:
 
@@ -146,6 +154,8 @@ print(unicodedata.normalize("NFKC", "Ⅳ"))    # IV (Roman numeral → letters)
 ---
 
 ## String methods — complete reference
+
+*String methods — complete reference, part of Unicode & Text Processing.*
 
 ### Searching
 
@@ -241,6 +251,8 @@ s.strip(" !")      # "Hello, World"  — strip these chars
 
 ## f-strings — advanced formatting
 
+*f-strings — advanced formatting, part of Unicode & Text Processing.*
+
 ```python
 name = "Alice"
 score = 95.678
@@ -285,6 +297,8 @@ f"{'hello':^{width}}"             # "       hello        "
 ---
 
 ## Real-world text processing patterns
+
+*Real-world text processing patterns in Unicode & Text Processing — what it is and when to use it.*
 
 ### Slug generation (URL-safe strings)
 

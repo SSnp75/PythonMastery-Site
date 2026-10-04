@@ -22,6 +22,8 @@ description: Modern terminal user interfaces — rich widgets, CSS styling and a
 
 ## What is Textual?
 
+*Introduces Textual and where it fits in Textual (TUI).*
+
 Textual builds beautiful terminal applications with CSS-like styling, mouse support and rich widgets — like a web framework for the terminal.
 
 ```python

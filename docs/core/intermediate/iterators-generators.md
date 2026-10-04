@@ -17,6 +17,8 @@ description: yield, yield from, generator pipelines, itertools mastery
 
 ## The Iterator Protocol
 
+*The Iterator Protocol — a key concept in Iterators & Generators.*
+
 ```python
 class CountUp:
     """Custom iterator that counts from 1 to max."""
@@ -40,6 +42,8 @@ print(list(CountUp(5)))   # [1, 2, 3, 4, 5]
 
 ## Generators — the easy way
 
+*Generators — the easy way, part of Iterators & Generators.*
+
 ```python
 def count_up(max_val):
     current = 1
@@ -53,6 +57,8 @@ print(list(count_up(5)))   # [1, 2, 3, 4, 5]
 ---
 
 ## yield from
+
+*yield from in Iterators & Generators — what it is and when to use it.*
 
 ```python
 def flatten(nested):
@@ -69,6 +75,8 @@ print(list(flatten([1, [2, 3], [4, [5, 6]]])))
 ---
 
 ## Generator Pipelines
+
+*Generator Pipelines in Iterators & Generators — what it is and when to use it.*
 
 ```python
 def read_lines(path):
@@ -94,6 +102,8 @@ for line in pipeline:
 ---
 
 ## itertools highlights
+
+*itertools highlights in Iterators & Generators — what it is and when to use it.*
 
 ```python
 from itertools import chain, islice, groupby

@@ -50,6 +50,8 @@ This is why strong CS fundamentals transfer directly. Let's see the most central
 
 ## Sequence alignment scoring (tested)
 
+*Sequence alignment scoring in Computational Biology — what it is and when to use it.*
+
 Comparing two DNA/protein sequences means finding their best alignment — and the core is a **dynamic programming** score, essentially edit distance. Here's the minimum edit distance (Levenshtein) between two sequences, pure Python:
 
 ```python

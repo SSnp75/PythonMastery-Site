@@ -35,6 +35,8 @@ description: Shrink and speed up models with lower-precision numbers
 
 ## Why quantization
 
+*A core question explored in Quantization: Why quantization.*
+
 A trained neural network is millions/billions of `float32` weights. That's a lot of memory and compute:
 
 - **Size** — `float32` → `int8` is a **4× reduction**. A 400 MB model becomes ~100 MB.
@@ -46,6 +48,8 @@ The catch: fewer bits means less precision, so you trade a little accuracy for b
 ---
 
 ## The quantize/dequantize math (tested)
+
+*The quantize/dequantize math — a key concept in Quantization.*
 
 Quantization maps a float range onto a small integer range using a **scale** and a **zero-point**. Runnable:
 
@@ -93,6 +97,8 @@ Rule of thumb: try PTQ first (cheap); if accuracy drops too much, use QAT.
 ---
 
 ## The accuracy tradeoff
+
+*The accuracy tradeoff — a key concept in Quantization.*
 
 !!! warning "Quantization is lossy — validate it"
     Lower precision *will* change outputs. For most models the accuracy drop from int8 is small (often <1%), but not always — some models and layers are sensitive. **Always measure accuracy after quantizing** on your validation set. Sometimes a mixed approach (keep sensitive layers in higher precision) is the right balance. Never ship a quantized model without checking it still performs.

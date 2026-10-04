@@ -22,6 +22,8 @@ description: Structural pattern matching with match/case (PEP 634) — literals,
 
 ## Literal matching
 
+*Literal matching in Pattern Matching — what it is and when to use it.*
+
 ```python
 def http_label(code):
     match code:
@@ -42,6 +44,8 @@ print(http_label(999))   # Unknown
 
 ## Or-patterns and value capture
 
+*Or-patterns and value capture in Pattern Matching — what it is and when to use it.*
+
 ```python
 def kind(ch):
     match ch:
@@ -60,6 +64,8 @@ print(kind("7"))   # other
 ---
 
 ## Sequence patterns (with capture & star)
+
+*Sequence patterns (with capture & star) in Pattern Matching — what it is and when to use it.*
 
 ```python
 def describe(seq):
@@ -80,6 +86,8 @@ print(describe([1, 2, 3]))   # first=1, rest=[2, 3]
 
 ## Mapping patterns
 
+*Mapping patterns in Pattern Matching — what it is and when to use it.*
+
 Match specific keys in a dict; extra keys are ignored.
 
 ```python
@@ -99,6 +107,8 @@ print(route({"type": "key", "key": "Enter"}))        # key Enter
 ---
 
 ## Class patterns
+
+*Class patterns in Pattern Matching — what it is and when to use it.*
 
 Destructure objects by type and attributes. Dataclasses work especially well.
 
@@ -131,6 +141,8 @@ print(quadrant(Point(0, 5)))   # on y-axis
 ---
 
 ## Guards
+
+*Guards in Pattern Matching — what it is and when to use it.*
 
 A `if` after a pattern adds an extra condition that must also hold:
 

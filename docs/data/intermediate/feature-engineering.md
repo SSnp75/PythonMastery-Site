@@ -35,6 +35,8 @@ description: Turn raw data into features that make models work
 
 ## Encoding categorical data (tested)
 
+*Encoding categorical data in Feature Engineering — what it is and when to use it.*
+
 Models need numbers, but data has categories ("red", "blue"). **One-hot encoding** turns each category into its own 0/1 column, avoiding a false ordering. Runnable:
 
 ```python
@@ -59,6 +61,8 @@ Each color becomes a pair of 0/1 columns. **Why one-hot and not just "red=1, blu
 ---
 
 ## Scaling and normalization (tested)
+
+*Scaling and normalization in Feature Engineering — what it is and when to use it.*
 
 Features on different scales (age 0-100 vs income 0-1,000,000) can bias models that use distances or gradients. Two standard fixes:
 

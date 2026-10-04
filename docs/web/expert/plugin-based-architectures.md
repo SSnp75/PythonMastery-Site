@@ -33,6 +33,8 @@ description: Build extensible systems where features plug in without touching th
 
 ## The idea
 
+*The idea — a key concept in Plugin-based Architectures.*
+
 A plugin architecture lets you add features **without modifying the core**. The core defines *extension points* (what a plugin must provide) and a *registry* (how plugins announce themselves). New capabilities arrive as self-contained plugins that snap in.
 
 You've used this everywhere: pytest fixtures/plugins, Flask extensions, VS Code extensions, Django apps. The core stays small and stable; the ecosystem grows around it.

@@ -53,6 +53,8 @@ Everything — a platformer, a puzzle, a shooter — is variations on this loop.
 
 ## Physics with a fixed timestep (tested)
 
+*Physics with a fixed timestep in Python for Game Development — what it is and when to use it.*
+
 The "update" phase advances the simulation by a time delta (`dt`). Here's gravity acting on a falling object — pure Python, runnable:
 
 ```python

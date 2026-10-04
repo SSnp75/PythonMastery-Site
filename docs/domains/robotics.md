@@ -35,6 +35,8 @@ Robotics combines sensing, decision-making, and physical action. Python is widel
 
 ## Sense → Plan → Act
 
+*Sense → Plan → Act in Python for Robotics — what it is and when to use it.*
+
 Every robot runs a version of this loop:
 
 ```
@@ -49,6 +51,8 @@ The [Robotics Middleware](../embedded/robotics-middleware.md) page shows how ROS
 ---
 
 ## A PID controller (tested)
+
+*A PID controller — a key concept in Python for Robotics.*
 
 The workhorse of robot control is the **PID controller** — it drives a system toward a target by reacting to the error (how far off you are), summing past error, and anticipating future error. It's how a robot holds a speed, a drone stays level, a thermostat hits a temperature. Runnable pure Python:
 

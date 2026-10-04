@@ -22,6 +22,8 @@ most of `os.path` with cleaner, cross-platform code.
 
 ## Building paths
 
+*Building paths in Pathlib — what it is and when to use it.*
+
 The `/` operator joins path segments — no manual separators:
 
 ```python
@@ -34,6 +36,8 @@ print(p.as_posix())   # project/src/main.py  (forward slashes on any OS)
 ---
 
 ## Inspecting a path
+
+*Inspecting a path in Pathlib — what it is and when to use it.*
 
 ```python
 from pathlib import PurePosixPath
@@ -56,6 +60,8 @@ print(p.parts)     # ('/', 'home', 'user', 'report.final.txt')
 
 ## Changing parts
 
+*Changing parts in Pathlib — what it is and when to use it.*
+
 ```python
 from pathlib import Path
 
@@ -69,6 +75,8 @@ print(p.with_stem("final").as_posix())       # data/final.csv  (3.9+)
 
 ## Current, home, absolute
 
+*Current, home, absolute in Pathlib — what it is and when to use it.*
+
 ```python
 from pathlib import Path
 
@@ -80,6 +88,8 @@ print(Path("x").resolve().is_absolute())   # True
 ---
 
 ## Existence & type checks
+
+*Existence & type checks in Pathlib — what it is and when to use it.*
 
 ```python
 from pathlib import Path
@@ -93,6 +103,8 @@ print(p.is_file())   # False
 ---
 
 ## Reading & writing (one-liners)
+
+*Reading & writing (one-liners) in Pathlib — what it is and when to use it.*
 
 ```python
 from pathlib import Path
@@ -112,6 +124,8 @@ print(f.read_bytes())                      # b'\x00\x01'
 
 ## Globbing
 
+*Globbing in Pathlib — what it is and when to use it.*
+
 ```python
 from pathlib import Path
 import tempfile
@@ -130,6 +144,8 @@ Use `rglob("*.py")` for a recursive search through all subdirectories.
 ---
 
 ## Creating & removing
+
+*Creating & removing in Pathlib — what it is and when to use it.*
 
 ```python
 from pathlib import Path

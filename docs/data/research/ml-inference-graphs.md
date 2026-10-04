@@ -34,6 +34,8 @@ Real-world ML inference is rarely a single model call. A request flows through p
 
 ## Inference is a pipeline, not one call
 
+*Inference is a pipeline, not one call in ML Inference Graphs — what it is and when to use it.*
+
 Serving a prediction usually involves multiple stages:
 
 ```
@@ -47,6 +49,8 @@ For example: tokenize text → embed it → run a classifier *and* a sentiment m
 ---
 
 ## Modeling a pipeline as a DAG (tested)
+
+*Modeling a pipeline as a DAG in ML Inference Graphs — what it is and when to use it.*
 
 At its core, orchestrating this is topological execution of a dependency graph — the same idea as a build system or [data pipeline](../../projects/advanced.md). Runnable:
 

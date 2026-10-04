@@ -250,6 +250,8 @@ del p   # p can be freed, c._parent_ref() returns None
 
 ## GC callbacks — monitoring collection
 
+*GC callbacks — monitoring collection, part of Garbage Collection.*
+
 ```python
 import gc
 

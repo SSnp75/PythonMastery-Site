@@ -158,6 +158,8 @@ def my_context():
 
 ## Real-world patterns
 
+*Real-world patterns in Context Managers — what it is and when to use it.*
+
 ### Temporary working directory
 
 ```python
@@ -346,6 +348,8 @@ with (
 ---
 
 ## Async context managers
+
+*Async context managers in Context Managers — what it is and when to use it.*
 
 ```python
 import asyncio

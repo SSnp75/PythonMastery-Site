@@ -36,6 +36,8 @@ description: Build robot software with ROS 2 — nodes, topics, services and Pyt
 
 ## The problem middleware solves
 
+*The problem middleware solves — a key concept in Robotics Middleware.*
+
 A robot is many components that must cooperate: cameras, LIDAR, motors, a planner, a controller. Wiring them together directly — each part knowing about every other — is unmanageable. **Robotics middleware** provides the plumbing: a standard way for components to find each other and exchange messages, so you build the robot from independent, reusable pieces.
 
 **ROS (Robot Operating System)** — really a middleware and toolset, not an OS — is the dominant framework. **ROS 2** is the modern version (production-ready, real-time-friendly, no central master). Its core abstraction is a graph of **nodes** that communicate over **topics**.

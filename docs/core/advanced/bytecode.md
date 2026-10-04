@@ -17,6 +17,8 @@ description: dis module, .pyc files, opcodes and understanding compiled Python
 
 ## What is bytecode?
 
+*Introduces bytecode and where it fits in Bytecode.*
+
 Python source is compiled to **bytecode** — a low-level, platform-independent instruction set executed by the CPython virtual machine. Each instruction is 2 bytes: an opcode + an argument.
 
 ```python

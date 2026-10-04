@@ -22,6 +22,8 @@ description: Environment variables, HashiCorp Vault, AWS Secrets Manager and sec
 
 ## The rules
 
+*The rules — a key concept in Secrets Management.*
+
 1. **NEVER** hardcode secrets in source code
 2. **NEVER** commit `.env` files to git
 3. **ALWAYS** use environment variables or a secrets manager

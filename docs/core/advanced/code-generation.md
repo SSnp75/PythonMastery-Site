@@ -17,6 +17,8 @@ description: compile(), exec(), dynamic code creation, template codegen and meta
 
 ## `compile()` — turning source/AST into executable code
 
+*compile() — turning source/AST into executable code, part of Code Generation.*
+
 ```python
 # From string
 code = compile("x = 2 + 3", "<string>", "exec")

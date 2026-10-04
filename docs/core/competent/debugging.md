@@ -68,6 +68,8 @@ Use `%s` placeholders (not f-strings) so the string is only formatted if the lev
 
 ## Post-mortem: inspect a crash after it happens
 
+*Post-mortem: inspect a crash after it happens in Debugging — what it is and when to use it.*
+
 ```python
 import pdb
 
@@ -89,6 +91,8 @@ locals (`x` here) without re-running.
 
 ## Reading tracebacks programmatically
 
+*Reading tracebacks programmatically in Debugging — what it is and when to use it.*
+
 ```python
 import traceback
 
@@ -104,6 +108,8 @@ except IndexError:
 ---
 
 ## Quick inspection helpers
+
+*Quick inspection helpers in Debugging — what it is and when to use it.*
 
 ```python
 # What attributes/methods does an object have?
@@ -121,6 +127,8 @@ print(str(inspect.signature(f)))   # (a, b=2)
 ---
 
 ## Debugging checklist
+
+*Debugging checklist in Debugging — what it is and when to use it.*
 
 !!! tip "A systematic approach"
     1. Reproduce it reliably first.

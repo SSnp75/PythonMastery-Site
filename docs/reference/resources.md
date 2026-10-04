@@ -11,6 +11,8 @@ Curated tools, books and communities.
 
 ## Books
 
+*Books in Resources — what it is and when to use it.*
+
 | Level | Book |
 |---|---|
 | Beginner | *Automate the Boring Stuff* — Al Sweigart |
@@ -23,6 +25,8 @@ Curated tools, books and communities.
 
 ## Online resources
 
+*Online resources in Resources — what it is and when to use it.*
+
 | Resource | What it is |
 |---|---|
 | [docs.python.org](https://docs.python.org) | Official documentation |
@@ -34,6 +38,8 @@ Curated tools, books and communities.
 ---
 
 ## Tools
+
+*Tools in Resources — what it is and when to use it.*
 
 | Tool | Purpose |
 |---|---|
@@ -48,6 +54,8 @@ Curated tools, books and communities.
 
 ## Communities
 
+*Communities in Resources — what it is and when to use it.*
+
 - r/learnpython and r/Python
 - Python Discord
 - PyCon (conferences worldwide)
@@ -56,6 +64,8 @@ Curated tools, books and communities.
 ---
 
 ## Video courses & channels
+
+*Video courses & channels in Resources — what it is and when to use it.*
 
 | Resource | What it is |
 |---|---|
@@ -68,6 +78,8 @@ Curated tools, books and communities.
 
 ## Podcasts
 
+*Podcasts in Resources — what it is and when to use it.*
+
 | Podcast | Focus |
 |---|---|
 | [Talk Python To Me](https://talkpython.fm) | interviews, ecosystem |
@@ -77,6 +89,8 @@ Curated tools, books and communities.
 ---
 
 ## GitHub repos worth studying
+
+*GitHub repos worth studying in Resources — what it is and when to use it.*
 
 | Repo | Why |
 |---|---|
@@ -89,6 +103,8 @@ Curated tools, books and communities.
 ---
 
 ## Staying current
+
+*Staying current in Resources — what it is and when to use it.*
 
 - **PEPs** — [peps.python.org](https://peps.python.org) for language evolution
 - **What's New** — the official `docs.python.org/3/whatsnew/` per release

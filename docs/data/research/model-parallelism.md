@@ -38,6 +38,8 @@ Modern models (large LLMs) can be too big to fit in a single GPU's memory. **Mod
 
 ## Data vs model parallelism
 
+*Data vs model parallelism in Model Parallelism — what it is and when to use it.*
+
 Two fundamentally different ways to parallelize training:
 
 ```
@@ -99,6 +101,8 @@ These handle the splitting, communication, and gradient synchronization so you c
 ---
 
 ## When you need it
+
+*A core question explored in Model Parallelism: When you need it.*
 
 - **You need it** when a model + its activations + optimizer state exceed one GPU's memory (large LLMs, huge vision models).
 - **You don't** for models that fit on one GPU — use simpler data parallelism to go faster.

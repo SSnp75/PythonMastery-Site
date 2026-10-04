@@ -30,6 +30,8 @@ below runs as-is.
 
 ## Generators
 
+*Generators in Generators, Decorators & Filtering — Deep Dive — what it is and when to use it.*
+
 ### Infinite generators
 
 A generator with `while True` produces values forever — safe because they're lazy. Pull with `next()`.
@@ -207,6 +209,8 @@ def stream_socket(sock):
 
 ## Decorators
 
+*Decorators in Generators, Decorators & Filtering — Deep Dive — what it is and when to use it.*
+
 A decorator is a function that **takes a function, adds behavior, and returns a new function** —
 without modifying the original. Common uses: logging, timing, authentication, caching,
 validation, retry logic, resource management.
@@ -346,6 +350,8 @@ greet()
 ---
 
 ## Filtering with `filter`, `map`, `reduce`
+
+*Filtering with filter, map, reduce in Generators, Decorators & Filtering — Deep Dive — what it is and when to use it.*
 
 ### The three building blocks
 

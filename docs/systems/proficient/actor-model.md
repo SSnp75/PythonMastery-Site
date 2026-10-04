@@ -34,6 +34,8 @@ The **actor model** is a concurrency approach where independent **actors** never
 
 ## The core idea
 
+*The core idea — a key concept in Actor Model.*
+
 ```
    actor A  ──message──▶  [mailbox]  actor B
                            processes one message at a time,
@@ -50,6 +52,8 @@ This sidesteps the hardest part of concurrency — shared mutable state (see [Th
 ---
 
 ## An actor with a mailbox (tested)
+
+*An actor with a mailbox — a key concept in Actor Model.*
 
 Using a thread + a queue as the mailbox. Runnable:
 
@@ -99,11 +103,15 @@ Four `add` messages sent concurrently from the main thread all landed in the mai
 
 ## Fault isolation
 
+*Fault isolation in Actor Model — what it is and when to use it.*
+
 A key benefit: actors are isolated, so one crashing doesn't corrupt others. In mature actor systems (like Erlang/Akka), this becomes a **supervision** strategy — a supervisor actor watches its children and restarts them on failure ("let it crash"). Because state isn't shared, a failed actor can be replaced cleanly without leaving the system in a half-broken state. This is the philosophy behind highly reliable systems like telecom switches.
 
 ---
 
 ## The Python ecosystem
+
+*The Python ecosystem — a key concept in Actor Model.*
 
 Python has no built-in actor system, but several options exist:
 

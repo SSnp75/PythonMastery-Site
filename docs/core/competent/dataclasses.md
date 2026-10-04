@@ -17,6 +17,8 @@ description: "@dataclass for clean data containers with less boilerplate"
 
 ## Basic usage
 
+*Basic usage in Dataclasses — what it is and when to use it.*
+
 ```python
 from dataclasses import dataclass
 
@@ -34,6 +36,8 @@ print(p == Point(3.0, 4.0))   # True — auto __eq__
 
 ## Default values & fields
 
+*Default values & fields in Dataclasses — what it is and when to use it.*
+
 ```python
 from dataclasses import dataclass, field
 
@@ -47,6 +51,8 @@ class Config:
 ---
 
 ## Frozen (immutable)
+
+*Frozen (immutable) in Dataclasses — what it is and when to use it.*
 
 ```python
 @dataclass(frozen=True)
@@ -62,6 +68,8 @@ c.lat = 0   # FrozenInstanceError!
 
 ## Post-init processing
 
+*Post-init processing in Dataclasses — what it is and when to use it.*
+
 ```python
 @dataclass
 class Circle:
@@ -75,6 +83,8 @@ class Circle:
 ---
 
 ## Ordering & comparison
+
+*Ordering & comparison in Dataclasses — what it is and when to use it.*
 
 `order=True` generates `__lt__`, `__le__`, etc., comparing fields as a tuple:
 
@@ -95,6 +105,8 @@ print(sorted([Version(2, 0), Version(1, 9)]))
 
 ## `slots=True` — smaller, faster instances
 
+*slots=True — smaller, faster instances, part of Dataclasses.*
+
 Python 3.10+ can generate `__slots__`, which drops the per-instance `__dict__`:
 
 ```python
@@ -113,6 +125,8 @@ print(hasattr(p, "__dict__"))   # False — attributes live in slots
 
 ## Excluding a field from compare / repr
 
+*Excluding a field from compare / repr in Dataclasses — what it is and when to use it.*
+
 ```python
 from dataclasses import dataclass, field
 
@@ -130,6 +144,8 @@ print(u == User("alice", "different"))   # True — password ignored in ==
 
 ## Convert to dict / tuple
 
+*Convert to dict / tuple in Dataclasses — what it is and when to use it.*
+
 ```python
 from dataclasses import dataclass, asdict, astuple
 
@@ -146,6 +162,8 @@ print(astuple(p))   # (3, 4)
 ---
 
 ## Post-init validation (runnable)
+
+*Post-init validation (runnable) in Dataclasses — what it is and when to use it.*
 
 ```python
 from dataclasses import dataclass, field

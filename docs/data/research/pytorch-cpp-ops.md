@@ -38,6 +38,8 @@ Sometimes PyTorch's built-in operations aren't enough — you need a **custom op
 
 ## Why custom operators
 
+*A core question explored in PyTorch C++ Ops: Why custom operators.*
+
 Reasons to drop from Python into C++/CUDA for a PyTorch op:
 
 - **Speed** — a fused custom kernel avoids the overhead of composing many small PyTorch ops (each of which launches a GPU kernel and moves memory).
@@ -106,6 +108,8 @@ You define `forward` (the computation) and `backward` (its gradient) — exactly
 ---
 
 ## When it's worth it
+
+*A core question explored in PyTorch C++ Ops: When it's worth it.*
 
 !!! tip "Last resort, big payoff"
     Writing C++/CUDA ops is a real investment (build systems, CUDA knowledge, gradient math, cross-platform wheels). Reach for it only when:

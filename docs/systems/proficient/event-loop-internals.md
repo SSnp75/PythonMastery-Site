@@ -35,6 +35,8 @@ description: How the asyncio event loop schedules and runs coroutines under the 
 
 ## What an event loop is
 
+*A core question explored in Event Loop Internals: What an event loop is.*
+
 An event loop runs one thing at a time, but switches between many tasks whenever one would *wait* (for I/O, a timer, etc.). Instead of blocking, a task yields control back to the loop, which runs something else until the first task is ready to continue.
 
 ```
@@ -50,6 +52,8 @@ This is how one thread handles thousands of concurrent connections — it's neve
 ---
 
 ## A tiny event loop (tested)
+
+*A tiny event loop — a key concept in Event Loop Internals.*
 
 The essence is a queue of ready callbacks. Runnable:
 
@@ -98,6 +102,8 @@ Output:
 
 ## How coroutines suspend and resume
 
+*A core question explored in Event Loop Internals: How coroutines suspend and resume.*
+
 Real async tasks are **coroutines** (`async def`). When a coroutine hits `await` on something not ready, it **suspends** — returning control to the loop — and the loop resumes it later when the awaited thing is ready. Under the hood this uses the same mechanism as generators (see [Generators](../../core/intermediate/iterators-generators.md)): `await` is a suspension point, like `yield`.
 
 ```
@@ -110,6 +116,8 @@ So a coroutine is a resumable function, and the event loop is the scheduler deci
 ---
 
 ## Selectors: knowing when I/O is ready
+
+*Selectors: knowing when I/O is ready in Event Loop Internals — what it is and when to use it.*
 
 The piece our mini-loop omits: how does the loop know a socket has data? It uses the OS's **I/O multiplexing** — `select`, `epoll` (Linux), `kqueue` (macOS), exposed via Python's `selectors` module. The loop asks the OS "which of these sockets are ready?" and only resumes tasks waiting on ready sockets.
 
@@ -126,6 +134,8 @@ This is why async handles thousands of connections efficiently: instead of a thr
 ---
 
 ## The task lifecycle
+
+*The task lifecycle — a key concept in Event Loop Internals.*
 
 An `asyncio` task moves through states:
 

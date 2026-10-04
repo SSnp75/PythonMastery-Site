@@ -23,6 +23,8 @@ description: Aggregates, bounded contexts, value objects, repositories and ubiqu
 
 ## Core concepts
 
+*Core concepts in Domain-Driven Design — what it is and when to use it.*
+
 DDD is a software design approach that focuses on the **business domain** — aligning code structure with how domain experts think.
 
 | Concept | Definition | Python equivalent |

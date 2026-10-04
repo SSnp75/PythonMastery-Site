@@ -23,6 +23,8 @@ description: Triton server, BentoML, Ray Serve, ONNX, containerization and produ
 
 ## Deployment landscape
 
+*Deployment landscape in ML Deployment — what it is and when to use it.*
+
 | Tool | Best for | Latency | Throughput |
 |---|---|---|---|
 | **FastAPI + uvicorn** | Simple models, prototypes | Low | Moderate |

@@ -38,6 +38,8 @@ Visualization turns numbers into insight. Where [Matplotlib](matplotlib.md) and 
 
 ## Why it matters
 
+*A core question explored in Data Visualization: Why it matters.*
+
 Anscombe's quartet is the classic proof: four datasets with *identical* means, variances, and correlations look utterly different when plotted — one linear, one curved, one with an outlier. Summary statistics hid what a single glance revealed. **Always plot your data** before trusting summaries.
 
 Visualization serves three jobs:

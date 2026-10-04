@@ -22,6 +22,8 @@ description: Designing scalable systems — architecture patterns, trade-offs an
 
 ## The system design framework
 
+*The system design framework — a key concept in System Design.*
+
 ```
 1. REQUIREMENTS   — What exactly are we building? (functional + non-functional)
 2. ESTIMATION     — How much data? How many users? QPS?
@@ -33,6 +35,8 @@ description: Designing scalable systems — architecture patterns, trade-offs an
 ---
 
 ## Example: Design a URL shortener
+
+*Example: Design a URL shortener in System Design — what it is and when to use it.*
 
 ### Requirements
 - Shorten a URL → return short code (7 chars)
@@ -103,6 +107,8 @@ def shorten(original_url: str) -> str:
 
 ## Key trade-offs to discuss
 
+*Key trade-offs to discuss in System Design — what it is and when to use it.*
+
 | Decision | Option A | Option B |
 |---|---|---|
 | SQL vs NoSQL | Consistent, ACID | Scalable, flexible schema |
@@ -114,6 +120,8 @@ def shorten(original_url: str) -> str:
 ---
 
 ## Common system design problems
+
+*Common system design problems in System Design — what it is and when to use it.*
 
 | Problem | Key challenges |
 |---|---|

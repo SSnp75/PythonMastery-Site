@@ -22,6 +22,8 @@ description: Systematic debugging, scientific method, rubber duck and common bug
 
 ## The scientific method for debugging
 
+*The scientific method for debugging — a key concept in Debugging Strategies.*
+
 ```
 1. OBSERVE   — What exactly is the symptom?
 2. HYPOTHESIZE — What could cause this?
@@ -33,6 +35,8 @@ description: Systematic debugging, scientific method, rubber duck and common bug
 ---
 
 ## Strategy ladder (try in order)
+
+*Strategy ladder (try in order) in Debugging Strategies — what it is and when to use it.*
 
 | Step | Method | When |
 |---|---|---|
@@ -48,6 +52,8 @@ description: Systematic debugging, scientific method, rubber duck and common bug
 ---
 
 ## Common Python bug patterns
+
+*Common Python bug patterns in Debugging Strategies — what it is and when to use it.*
 
 ```python
 # 1. Mutable default argument (classic trap)
@@ -93,6 +99,8 @@ async def get_data():
 ---
 
 ## Git bisect — find the breaking commit
+
+*Git bisect — find the breaking commit, part of Debugging Strategies.*
 
 ```bash
 git bisect start

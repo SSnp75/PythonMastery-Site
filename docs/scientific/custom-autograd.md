@@ -58,6 +58,8 @@ We'll build reverse mode, since it's what ML uses.
 
 ## A working autograd engine (tested)
 
+*A working autograd engine — a key concept in Custom Autograd Engines.*
+
 Each `Value` remembers how it was computed and knows how to push gradients to its inputs. Runnable:
 
 ```python

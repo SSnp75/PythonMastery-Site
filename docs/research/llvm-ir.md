@@ -36,6 +36,8 @@ description: Compile Python to LLVM IR for native-speed execution
 
 ## What is LLVM IR?
 
+*Introduces LLVM IR and where it fits in Python to LLVM IR.*
+
 **LLVM** is a compiler infrastructure that powers Clang (C/C++), Rust, Swift, and many others. Its heart is **LLVM IR** — an intermediate representation: a low-level, typed, assembly-like language that sits between your source code and the machine code for a specific CPU.
 
 ```

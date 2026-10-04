@@ -35,6 +35,8 @@ description: Foundational and current papers worth reading on Python internals, 
 
 ## Why read papers?
 
+*A core question explored in Research Papers: Why read papers.*
+
 Most engineering knowledge is second-hand — blog posts summarizing summaries. Papers are the **primary source**: the actual ideas, with their precise claims and honest limitations. For the deep topics on this site (consensus, JITs, CRDTs, ML systems), reading the original paper gives an understanding that tutorials can't. You don't need a PhD — you need patience and a method (below).
 
 ---

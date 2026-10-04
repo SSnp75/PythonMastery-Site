@@ -14,6 +14,8 @@ Quick-reference cards — print them (`Ctrl+P`), bookmark them, keep them open w
 
 ## [Core Python](../core/index.md){ .pm-cheat-link }
 
+*Quick-reference card for Core Python — the common commands at a glance.*
+
 ### Strings
 
 | Task | Snippet |
@@ -170,6 +172,8 @@ Quick-reference cards — print them (`Ctrl+P`), bookmark them, keep them open w
 
 ## [Standard Library & Tooling](../core/competent/index.md){ .pm-cheat-link }
 
+*Quick-reference card for Standard Library & Tooling — the common commands at a glance.*
+
 ### Regex (`re`)
 
 | Task | Snippet |
@@ -249,6 +253,8 @@ Quick-reference cards — print them (`Ctrl+P`), bookmark them, keep them open w
 
 ## [Concurrency & Performance](../systems/index.md){ .pm-cheat-link }
 
+*Quick-reference card for Concurrency & Performance — the common commands at a glance.*
+
 ### Threading & Multiprocessing
 
 | Task | Snippet |
@@ -288,6 +294,8 @@ Quick-reference cards — print them (`Ctrl+P`), bookmark them, keep them open w
 ---
 
 ## [Data & AI](../data/index.md){ .pm-cheat-link }
+
+*Quick-reference card for Data & AI — the common commands at a glance.*
 
 ### NumPy
 
@@ -339,6 +347,8 @@ Quick-reference cards — print them (`Ctrl+P`), bookmark them, keep them open w
 
 ## [Web & APIs](../web/index.md){ .pm-cheat-link }
 
+*Quick-reference card for Web & APIs — the common commands at a glance.*
+
 ### FastAPI
 
 | Task | Snippet |
@@ -385,6 +395,8 @@ Quick-reference cards — print them (`Ctrl+P`), bookmark them, keep them open w
 
 ## [Databases](../databases/index.md){ .pm-cheat-link }
 
+*Quick-reference card for Databases — the common commands at a glance.*
+
 ### SQL (core)
 
 | Task | Snippet |
@@ -427,6 +439,8 @@ Quick-reference cards — print them (`Ctrl+P`), bookmark them, keep them open w
 
 ## [Networking](../networking/index.md){ .pm-cheat-link }
 
+*Quick-reference card for Networking — the common commands at a glance.*
+
 | Task | Snippet |
 |---|---|
 | TCP server | `s = socket.socket()`, `.bind((host, port))`, `.listen()`, `.accept()` |
@@ -440,6 +454,8 @@ Quick-reference cards — print them (`Ctrl+P`), bookmark them, keep them open w
 ---
 
 ## [Testing](../testing/index.md){ .pm-cheat-link }
+
+*Quick-reference card for Testing — the common commands at a glance.*
 
 ### pytest
 
@@ -468,6 +484,8 @@ Quick-reference cards — print them (`Ctrl+P`), bookmark them, keep them open w
 
 ## [Design Patterns](../patterns/index.md){ .pm-cheat-link }
 
+*Quick-reference card for Design Patterns — the common commands at a glance.*
+
 | Pattern | Pythonic form |
 |---|---|
 | Singleton | module-level object, or `@lru_cache` factory |
@@ -485,6 +503,8 @@ Quick-reference cards — print them (`Ctrl+P`), bookmark them, keep them open w
 
 ## [Algorithms](../algorithms/index.md){ .pm-cheat-link }
 
+*Quick-reference card for Algorithms — the common commands at a glance.*
+
 | Topic | Key tools |
 |---|---|
 | Sorting | `sorted(key=...)`, Timsort O(n log n), `operator.itemgetter` |
@@ -499,6 +519,8 @@ Quick-reference cards — print them (`Ctrl+P`), bookmark them, keep them open w
 ---
 
 ## [Security](../security/index.md){ .pm-cheat-link }
+
+*Quick-reference card for Security — the common commands at a glance.*
 
 | Task | Snippet / rule |
 |---|---|
@@ -516,6 +538,8 @@ Quick-reference cards — print them (`Ctrl+P`), bookmark them, keep them open w
 ---
 
 ## [DevOps & Deployment](../deployment/index.md){ .pm-cheat-link }
+
+*Quick-reference card for DevOps & Deployment — the common commands at a glance.*
 
 ### Git
 
@@ -551,6 +575,8 @@ Quick-reference cards — print them (`Ctrl+P`), bookmark them, keep them open w
 
 ## [Distributed Systems](../distributed/index.md){ .pm-cheat-link }
 
+*Quick-reference card for Distributed Systems — the common commands at a glance.*
+
 | Concept | Essence |
 |---|---|
 | Consensus | Raft / Paxos — agree on a value across unreliable nodes |
@@ -566,6 +592,8 @@ Quick-reference cards — print them (`Ctrl+P`), bookmark them, keep them open w
 ---
 
 ## [Systems & Research (deep internals)](../research/index.md){ .pm-cheat-link }
+
+*Quick-reference card for Systems & Research (deep internals) — the common commands at a glance.*
 
 | Topic | Key tools |
 |---|---|

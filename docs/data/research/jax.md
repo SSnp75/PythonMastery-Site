@@ -23,6 +23,8 @@ description: XLA compilation, jit, grad, vmap, pytrees and functional transforma
 
 ## What is JAX?
 
+*Introduces JAX and where it fits in JAX Internals.*
+
 JAX = **NumPy + Autograd + XLA**. Write NumPy-like code that:
 
 - Compiles to XLA (runs on CPU/GPU/TPU)

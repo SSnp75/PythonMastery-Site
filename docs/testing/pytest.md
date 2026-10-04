@@ -23,6 +23,8 @@ description: Fixtures, parametrize, markers, plugins, conftest and test organiza
 
 ## Why pytest?
 
+*A core question explored in pytest: Why pytest.*
+
 - Minimal boilerplate — just use `assert`
 - Powerful fixtures for setup/teardown
 - Rich plugin ecosystem (1000+ plugins)
@@ -33,6 +35,8 @@ description: Fixtures, parametrize, markers, plugins, conftest and test organiza
 ---
 
 ## Your first test
+
+*Your first test in pytest — what it is and when to use it.*
 
 ```python
 # math_utils.py

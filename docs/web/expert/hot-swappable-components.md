@@ -33,6 +33,8 @@ description: Change behavior at runtime with feature flags, strategy swaps and d
 
 ## The idea
 
+*The idea — a key concept in Hot-swappable Components.*
+
 "Hot-swappable" means changing part of a running system **without stopping it**. Three levels, from safest to riskiest:
 
 1. **Swap an object's strategy** — replace a pluggable behavior via a reference. Trivial and safe.

@@ -33,6 +33,8 @@ description: Decouple components with events, handlers and message brokers
 
 ## The idea
 
+*The idea — a key concept in Event-driven Architecture.*
+
 In a traditional design, a component *calls* the components it depends on: place an order, then directly call email, inventory, and analytics. Everything is wired together and knows about everything else.
 
 Event-driven architecture inverts this. A component announces that **something happened** (an *event*) and moves on. Other components *react* if they care. The producer doesn't know or care who's listening.
@@ -194,6 +196,8 @@ channel.start_consuming()   # blocks, waiting for messages
 ---
 
 ## The honest tradeoffs
+
+*The honest tradeoffs — a key concept in Event-driven Architecture.*
 
 Event-driven design is powerful but not free.
 

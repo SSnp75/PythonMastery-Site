@@ -23,6 +23,8 @@ description: async/await, event loop, tasks, gather, streams, TaskGroup and asyn
 
 ## How asyncio works
 
+*A core question explored in Asyncio: How asyncio works.*
+
 Asyncio uses a **single thread** with cooperative multitasking. When one coroutine awaits I/O, the event loop runs another.
 
 ```

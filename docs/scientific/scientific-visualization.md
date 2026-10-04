@@ -38,6 +38,8 @@ A plot turns numbers into understanding. Scientific visualization is how researc
 
 ## Why it matters
 
+*A core question explored in Scientific Visualization: Why it matters.*
+
 Numbers alone hide patterns. A visualization reveals trends, outliers, and structure the eye catches instantly. In science specifically, plots:
 
 - **Explore** — spot the shape of data before formal analysis.

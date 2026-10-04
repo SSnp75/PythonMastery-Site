@@ -22,6 +22,8 @@ description: GitHub Actions, automated testing, deployment and release workflows
 
 ## GitHub Actions — complete pipeline
 
+*GitHub Actions — complete pipeline, part of CI/CD Pipelines.*
+
 ```yaml
 # .github/workflows/ci.yml
 name: CI/CD Pipeline

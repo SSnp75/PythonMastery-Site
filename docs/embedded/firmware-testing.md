@@ -123,6 +123,8 @@ The valid frame round-trips (`HELLO` in, `HELLO` out). Flip a single bit in the 
 
 ## Simulate the device — so tests run without hardware
 
+*Simulate the device — so tests run without hardware, part of Firmware Testing.*
+
 Hardware-in-the-loop testing is powerful but slow and unavailable in CI. The fix: a **simulator** that speaks the same protocol, so most tests run against fake hardware and only a few run against the real thing.
 
 ```python

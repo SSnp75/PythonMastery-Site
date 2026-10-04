@@ -36,6 +36,8 @@ description: Trace syscalls and kernel events with perf, ftrace and eBPF from Py
 
 ## Why trace the kernel
 
+*A core question explored in Kernel Tracing: Why trace the kernel.*
+
 Application profilers (see [Profiling](../systems/advanced/profiling.md)) show where *your Python code* spends time. But when a program is slow because of what it asks the *operating system* to do — reading files, waiting on the network, spawning processes, contending for locks — you need to see below your code, into the **kernel**. Kernel tracing reveals the system calls a program makes, how long they take, and what the kernel does in response.
 
 ```

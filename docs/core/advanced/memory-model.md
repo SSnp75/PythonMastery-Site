@@ -17,6 +17,8 @@ description: Object layout, id(), references, copying, __slots__ and memory inte
 
 ## Variables are references, not boxes
 
+*Variables are references, not boxes in Memory Model — what it is and when to use it.*
+
 In Python, variables don't "contain" values — they're **name tags** pointing to objects:
 
 ```python

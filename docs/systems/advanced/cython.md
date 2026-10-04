@@ -23,6 +23,8 @@ description: Static types, .pyx files, typed memoryviews, wrapping C libraries a
 
 ## What is Cython?
 
+*Introduces Cython and where it fits in Cython.*
+
 Cython is a **superset of Python** that compiles to C. Adding type annotations gives C-level speed while keeping Python-like syntax.
 
 ```
@@ -239,6 +241,8 @@ def hash_string(str s):
 
 ## The annotation report
 
+*The annotation report — a key concept in Cython.*
+
 ```bash
 cython -a my_module.pyx   # generates my_module.html
 ```
@@ -252,6 +256,8 @@ Goal: make hot loops white (no yellow lines).
 ---
 
 ## When to use Cython vs alternatives
+
+*A core question explored in Cython: When to use Cython vs alternatives.*
 
 | Tool | Best for | Effort | Speedup |
 |---|---|---|---|

@@ -27,6 +27,8 @@ A curated collection of small, reusable Python snippets for tasks you hit again 
 
 ## Files & paths
 
+*Files & paths in Code Snippets — what it is and when to use it.*
+
 ```python
 from pathlib import Path
 
@@ -45,6 +47,8 @@ kb = Path("file.txt").stat().st_size / 1024
 ```
 
 ## Dictionaries
+
+*Dictionaries in Code Snippets — what it is and when to use it.*
 
 ```python
 # Merge two dicts (right wins on conflict) — Python 3.9+
@@ -66,6 +70,8 @@ for word in ["apple", "avocado", "banana"]:
 ```
 
 ## Lists & iterables
+
+*Lists & iterables in Code Snippets — what it is and when to use it.*
 
 ```python
 # Flatten one level
@@ -91,6 +97,8 @@ list(zip([1, 2], ["a", "b"]))                  # [(1,'a'), (2,'b')]
 
 ## Strings
 
+*Strings in Code Snippets — what it is and when to use it.*
+
 ```python
 # Reverse a string
 "hello"[::-1]                                  # 'olleh'
@@ -112,6 +120,8 @@ re.sub(r"[^a-z0-9]+", "-", "Hello World!".lower()).strip("-")   # 'hello-world'
 
 ## Dates & time
 
+*Dates & time in Code Snippets — what it is and when to use it.*
+
 ```python
 from datetime import datetime, timedelta, timezone
 
@@ -123,6 +133,8 @@ parsed = datetime.strptime("2026-01-15", "%Y-%m-%d")
 
 ## JSON
 
+*JSON in Code Snippets — what it is and when to use it.*
+
 ```python
 import json
 from pathlib import Path
@@ -132,6 +144,8 @@ Path("out.json").write_text(json.dumps(data, indent=2), encoding="utf-8")
 ```
 
 ## Functional helpers
+
+*Functional helpers in Code Snippets — what it is and when to use it.*
 
 ```python
 from functools import reduce, lru_cache
@@ -147,6 +161,8 @@ fib(30)                                         # 832040 (fast, cached)
 ```
 
 ## Timing a block
+
+*Timing a block in Code Snippets — what it is and when to use it.*
 
 ```python
 import time
@@ -164,6 +180,8 @@ elapsed_ms = (time.perf_counter() - start) * 1000
 ---
 
 ## Related
+
+*Related in Code Snippets — what it is and when to use it.*
 
 - [Cheat Sheets](cheatsheets.md) — syntax and library quick reference
 - [Glossary](glossary.md) — terminology

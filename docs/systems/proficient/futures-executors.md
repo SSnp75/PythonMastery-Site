@@ -35,6 +35,8 @@ description: Offload work to thread and process pools with concurrent.futures
 
 ## A future is a promise of a result
 
+*A future is a promise of a result — a key concept in Futures & Executors.*
+
 A **future** is an object representing a computation that may not be done yet. You get it immediately when you submit work; later you call `.result()` to get the value (blocking until ready).
 
 ```
@@ -48,6 +50,8 @@ Two **executors** manage the pool:
 ---
 
 ## `map` — parallel over an iterable (tested)
+
+*map — parallel over an iterable, part of Futures & Executors.*
 
 The simplest pattern: apply a function to every item, in parallel:
 
@@ -74,6 +78,8 @@ Output:
 ---
 
 ## `submit` + `as_completed` — results as they finish (tested)
+
+*submit + as_completed — results as they finish, part of Futures & Executors.*
 
 When you want each result the moment it's ready (not in submission order):
 

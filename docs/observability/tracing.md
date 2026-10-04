@@ -22,6 +22,8 @@ description: OpenTelemetry, spans, trace context propagation and debugging distr
 
 ## What is distributed tracing?
 
+*Introduces distributed tracing and where it fits in Distributed Tracing.*
+
 When a request passes through multiple services, tracing shows the full journey:
 
 ```

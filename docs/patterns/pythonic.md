@@ -22,6 +22,8 @@ description: Python-specific patterns that differ from traditional GoF — proto
 
 ## Why Python patterns differ from GoF
 
+*A core question explored in Pythonic Patterns: Why Python patterns differ from GoF.*
+
 The Gang of Four patterns were designed for C++ and Java — languages with:
 - No first-class functions
 - No duck typing

@@ -23,6 +23,8 @@ description: Threads, locks, race conditions, synchronization primitives and the
 
 ## When to use threads
 
+*A core question explored in Threading: When to use threads.*
+
 | Workload | Use threads? | Why |
 |---|---|---|
 | Network I/O (HTTP, DB) | **Yes** | GIL released during I/O |

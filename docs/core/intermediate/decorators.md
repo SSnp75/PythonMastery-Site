@@ -23,6 +23,8 @@ description: Closures, functools.wraps, class decorators and decorator patterns
 
 ## What is a decorator?
 
+*Introduces a decorator and where it fits in Decorators.*
+
 A function that takes a function and returns a modified function.
 
 ```python

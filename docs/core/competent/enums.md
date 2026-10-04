@@ -22,6 +22,8 @@ self-documenting, type-safe members.
 
 ## Basic Enum
 
+*Basic Enum in Enums — what it is and when to use it.*
+
 ```python
 from enum import Enum
 
@@ -53,6 +55,8 @@ print(Color.RED == Color.RED)   # True
 
 ## `auto()` for automatic values
 
+*auto() for automatic values in Enums — what it is and when to use it.*
+
 ```python
 from enum import Enum, auto
 
@@ -68,6 +72,8 @@ print([d.value for d in Direction])   # [1, 2, 3, 4]
 ---
 
 ## Iteration and membership
+
+*Iteration and membership in Enums — what it is and when to use it.*
 
 ```python
 from enum import Enum
@@ -85,6 +91,8 @@ print(len(Status))                       # 2
 
 ## IntEnum — compares as an int
 
+*IntEnum — compares as an int, part of Enums.*
+
 ```python
 from enum import IntEnum
 
@@ -100,6 +108,8 @@ print(Priority.MEDIUM + 1)            # 3  (behaves like an int)
 ---
 
 ## StrEnum (Python 3.11+) — compares as a str
+
+*StrEnum (Python 3.11+) — compares as a str, part of Enums.*
 
 ```python
 import sys
@@ -120,6 +130,8 @@ if sys.version_info >= (3, 11):
 
 ## Flag — combinable bit flags
 
+*Flag — combinable bit flags, part of Enums.*
+
 ```python
 from enum import Flag, auto
 
@@ -137,6 +149,8 @@ print(access.value)             # 3  (READ=1 | WRITE=2)
 ---
 
 ## Methods on enums
+
+*Methods on enums in Enums — what it is and when to use it.*
 
 Enums are classes — they can have methods:
 

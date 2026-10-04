@@ -33,6 +33,8 @@ description: Serve many customers from one system with data isolation and tenant
 
 ## What "multi-tenant" means
 
+*A core question explored in Multi-tenant Systems: What "multi-tenant" means.*
+
 A **tenant** is a customer (usually an organization) whose data and users are logically separated from every other customer's — even though they all share the same running application. Slack, Shopify, and Salesforce are multi-tenant: one system, thousands of isolated companies.
 
 The central challenge is **isolation**: tenant A must never, under any circumstances, see tenant B's data. A single missing filter is a data breach.

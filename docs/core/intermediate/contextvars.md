@@ -24,6 +24,8 @@ argument, and unlike globals they don't leak between concurrent tasks.
 
 ## Basic get / set
 
+*Basic get / set in Context Variables — what it is and when to use it.*
+
 ```python
 from contextvars import ContextVar
 
@@ -37,6 +39,8 @@ print(request_id.get())        # abc123
 ---
 
 ## Tokens and reset
+
+*Tokens and reset in Context Variables — what it is and when to use it.*
 
 `set()` returns a `Token` that restores the previous value — the basis for scoped overrides:
 
@@ -54,6 +58,8 @@ print(level.get())    # INFO  (restored)
 ---
 
 ## Why not just a global?
+
+*A core question explored in Context Variables: Why not just a global.*
 
 A plain global is shared by every task. A `ContextVar` gives each asyncio task its own
 value, so concurrent requests don't clobber each other.
@@ -81,6 +87,8 @@ With a global, the interleaving `await` would let one task overwrite the other.
 
 ## Running inside a copied context
 
+*Running inside a copied context in Context Variables — what it is and when to use it.*
+
 `copy_context()` snapshots the current values and runs a callable in that isolated copy —
 changes inside don't escape:
 
@@ -101,6 +109,8 @@ print(v.get())                  # 0   (outer context unchanged)
 ---
 
 ## A practical logging-context pattern
+
+*A practical logging-context pattern — a key concept in Context Variables.*
 
 ```python
 from contextvars import ContextVar

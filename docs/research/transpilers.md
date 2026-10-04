@@ -17,6 +17,8 @@ description: Source-to-source compilation — AST parsing, code generation, and 
 
 ## What is a transpiler?
 
+*Introduces a transpiler and where it fits in Transpilers.*
+
 A source-to-source compiler translates code between languages at the **same** abstraction
 level (unlike a compiler, which lowers to machine code).
 
@@ -67,6 +69,8 @@ print(ast.unparse(tree))   # a = 1 + 2
 ---
 
 ## A working Python-to-C expression transpiler
+
+*A working Python-to-C expression transpiler — a key concept in Transpilers.*
 
 This walks an arithmetic expression's AST and emits equivalent C. It handles numbers,
 names, and the four basic operators:

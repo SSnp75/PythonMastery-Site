@@ -35,6 +35,8 @@ Optimization — finding the input that minimizes (or maximizes) a function — 
 
 ## Root-finding: bisection (tested)
 
+*Root-finding: bisection in Numerical Optimization — what it is and when to use it.*
+
 Finding where `f(x) = 0` is the simplest optimization-adjacent problem. **Bisection** repeatedly halves an interval known to contain a root — slow but rock-solid. Runnable:
 
 ```python
@@ -64,6 +66,8 @@ Bisection found √2 by narrowing the interval [0, 2] until it pinned the root. 
 
 ## Newton's method (tested, faster)
 
+*Newton's method in Numerical Optimization — what it is and when to use it.*
+
 **Newton's method** uses the derivative to leap toward the root — far faster convergence when it works:
 
 ```python
@@ -88,6 +92,8 @@ Same answer, but Newton converges *quadratically* — the number of correct digi
 ---
 
 ## Gradient descent (tested)
+
+*Gradient descent in Numerical Optimization — what it is and when to use it.*
 
 To *minimize* a function, **gradient descent** steps downhill — repeatedly moving against the gradient (slope). It's the engine behind training most ML models. Runnable:
 

@@ -35,6 +35,8 @@ Physics is full of equations we can't solve by hand, so we solve them *numerical
 
 ## Numerical integration (tested)
 
+*Numerical integration in Computational Physics — what it is and when to use it.*
+
 Computing an integral (area under a curve) numerically — the **trapezoidal rule** sums thin trapezoids:
 
 ```python
@@ -62,6 +64,8 @@ Both match the exact answers (1/3 and 2). More slices (`n`) means more accuracy 
 ---
 
 ## Solving ODEs: simulating motion (tested)
+
+*Solving ODEs: simulating motion in Computational Physics — what it is and when to use it.*
 
 Most physics is **differential equations** — rates of change. **Euler's method** steps a system forward in tiny time increments. Here, radioactive decay `dy/dt = -y`:
 
@@ -94,6 +98,8 @@ Euler's method got 0.3677 against the exact 0.3679 — close, with the small gap
 ---
 
 ## Monte Carlo methods (tested)
+
+*Monte Carlo methods in Computational Physics — what it is and when to use it.*
 
 When a problem is too complex to solve directly, **Monte Carlo** uses random sampling. The classic demo: estimate π by throwing random darts at a square and counting how many land in the inscribed circle:
 

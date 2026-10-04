@@ -40,6 +40,8 @@ Browser automation drives a genuine browser (Chrome, Firefox, WebKit) programmat
 
 ## Selenium vs Playwright — which to use
 
+*Selenium vs Playwright — which to use, part of Browser Automation.*
+
 | | **Selenium** | **Playwright** |
 |---|---|---|
 | Maturity | Very mature, huge ecosystem | Newer, rapidly growing |
@@ -54,6 +56,8 @@ Browser automation drives a genuine browser (Chrome, Firefox, WebKit) programmat
 ---
 
 ## Selenium
+
+*Selenium in Browser Automation — what it is and when to use it.*
 
 ```bash
 pip install selenium
@@ -156,6 +160,8 @@ def login_and_get_welcome(url: str, user: str, pw: str) -> str:
 
 ## Playwright
 
+*Playwright in Browser Automation — what it is and when to use it.*
+
 ```bash
 pip install playwright
 playwright install          # downloads Chromium, Firefox, WebKit
@@ -240,6 +246,8 @@ def scrape_titles(url: str) -> list[str]:
 
 ## Headless mode
 
+*Headless mode in Browser Automation — what it is and when to use it.*
+
 "Headless" means the browser runs without a visible window — faster, and required on servers with no display.
 
 ```python
@@ -259,6 +267,8 @@ Develop with `headless=False` so you can *watch* what happens, then flip to `Tru
 
 ## Requests vs browser automation
 
+*Requests vs browser automation in Browser Automation — what it is and when to use it.*
+
 Don't reach for a browser when a simple HTTP call will do — browsers are heavy.
 
 | Use `requests` when… | Use a browser when… |
@@ -273,6 +283,8 @@ A good workflow: try `requests` first (see [APIs & HTTP](../web/proficient/apis-
 ---
 
 ## Ethics & legality
+
+*Ethics & legality in Browser Automation — what it is and when to use it.*
 
 !!! danger "Scrape responsibly"
     Browser automation makes scraping easy — that doesn't make everything legal or acceptable.

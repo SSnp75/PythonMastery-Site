@@ -464,6 +464,8 @@ log.error("Failed to connect to server")
 
 ## Putting it together
 
+*Putting it together in Automation & Scripting — what it is and when to use it.*
+
 A realistic maintenance script combining several pieces — clean old files, back up, and log:
 
 ```python
@@ -514,6 +516,8 @@ if __name__ == "__main__":
 ---
 
 ## Quick reference
+
+*Quick reference in Automation & Scripting — what it is and when to use it.*
 
 | Task | Tool | Example |
 |---|---|---|

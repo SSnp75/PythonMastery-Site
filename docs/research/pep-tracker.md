@@ -67,6 +67,8 @@ description: Active Python Enhancement Proposals, upcoming features and CPython 
 
 ## Currently active/draft PEPs (2026)
 
+*Currently active/draft PEPs (2026) in PEP Tracker — what it is and when to use it.*
+
 | PEP | Title | Status |
 |---|---|---|
 | 703 | Free-threading (no-GIL) | Accepted, maturing |

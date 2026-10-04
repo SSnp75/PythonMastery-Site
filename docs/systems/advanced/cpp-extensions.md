@@ -38,6 +38,8 @@ When pure Python (even vectorized) isn't fast enough, you can write the hot part
 
 ## Why C++ extensions
 
+*A core question explored in C++ Extensions: Why C++ extensions.*
+
 Reasons to drop to C++:
 
 - **Speed** — a tight numeric/algorithmic loop in C++ can be 10-100× faster than pure Python.

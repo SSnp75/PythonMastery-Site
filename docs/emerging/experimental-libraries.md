@@ -35,6 +35,8 @@ description: New and prototype tools worth watching — and how to evaluate them
 
 ## The landscape is shifting
 
+*The landscape is shifting — a key concept in Experimental Libraries.*
+
 A wave of newer tools — many written in Rust for speed — has been modernizing the Python experience. Knowing them helps you work faster and spot where the ecosystem is heading. But "new and shiny" isn't automatically "use it" — the second half of this page is about *evaluating* before you adopt.
 
 ---

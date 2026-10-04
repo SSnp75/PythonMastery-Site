@@ -33,6 +33,8 @@ description: Refactoring strategies, deprecation policies and architectural chan
 
 ## The reality
 
+*The reality — a key concept in Long-term Codebase Evolution.*
+
 Code that lives for years faces a force nothing else does: **continuous change under continuous use**. Requirements shift, the team turns over, dependencies age out, and the "temporary" hack from 2021 is now load-bearing. Evolving such a codebase isn't about grand rewrites — those usually fail. It's about a set of disciplined, incremental practices that let a system change shape while staying alive.
 
 ---

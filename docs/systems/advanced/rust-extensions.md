@@ -23,6 +23,8 @@ description: PyO3, maturin, memory safety, GIL management and high-performance P
 
 ## Why Rust for Python extensions?
 
+*A core question explored in Rust Extensions: Why Rust for Python extensions.*
+
 | Advantage | Explanation |
 |---|---|
 | Memory safety | No segfaults, no buffer overflows (compile-time guarantees) |
@@ -281,6 +283,8 @@ except ValueError as e:
 
 ## Async Rust functions
 
+*Async Rust functions in Rust Extensions — what it is and when to use it.*
+
 ```rust
 use pyo3::prelude::*;
 use pyo3_asyncio_0_21::tokio::future_into_py;
@@ -303,6 +307,8 @@ fn async_fetch(py: Python<'_>, url: String) -> PyResult<Bound<'_, PyAny>> {
 
 ## Performance comparison
 
+*Performance comparison in Rust Extensions — what it is and when to use it.*
+
 ```python
 import timeit
 import my_rust_module
@@ -317,6 +323,8 @@ print("Rust:  ", timeit.timeit("my_rust_module.fibonacci(30)", globals=globals()
 ---
 
 ## Publishing to PyPI
+
+*Publishing to PyPI in Rust Extensions — what it is and when to use it.*
 
 ```bash
 # Build wheels for all platforms

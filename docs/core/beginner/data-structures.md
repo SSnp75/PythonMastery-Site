@@ -23,6 +23,8 @@ description: Lists, tuples, sets, dictionaries and when to use each
 
 ## Lists
 
+*Lists in Data Structures — what it is and when to use it.*
+
 Ordered, mutable, allows duplicates.
 
 ```python
@@ -59,6 +61,8 @@ matrix  = [[0]*3 for _ in range(3)]   # 3x3 grid
 
 ## Tuples
 
+*Tuples in Data Structures — what it is and when to use it.*
+
 Ordered, **immutable**, allows duplicates.
 
 ```python
@@ -76,6 +80,8 @@ def min_max(nums):
 ---
 
 ## Sets
+
+*Sets in Data Structures — what it is and when to use it.*
 
 Unordered, mutable, **no duplicates**.
 
@@ -101,6 +107,8 @@ if "green" in colors:
 ---
 
 ## Dictionaries
+
+*Dictionaries in Data Structures — what it is and when to use it.*
 
 Key-value pairs, ordered (3.7+), mutable, keys are unique.
 
@@ -132,6 +140,8 @@ squares = {x: x**2 for x in range(6)}
 ---
 
 ## When to use what
+
+*A core question explored in Data Structures: When to use what.*
 
 | Structure | Ordered | Mutable | Duplicates | Best for |
 |---|---|---|---|---|
@@ -168,6 +178,8 @@ schedule = {
 ---
 
 ## The `collections` module
+
+*The collections module — a key concept in Data Structures.*
 
 The standard library's `collections` adds specialized containers beyond the built-ins.
 
@@ -210,6 +222,8 @@ print(u._asdict())         # {'id': 1, 'name': 'alice'}
 
 ## `deque` — fast queue / stack
 
+*deque — fast queue / stack, part of Data Structures.*
+
 A `deque` (double-ended queue) adds and removes from **both ends** in O(1), unlike a list
 which is O(n) at the front.
 
@@ -247,6 +261,8 @@ For a thread-safe FIFO queue, use `queue.Queue`; for priorities, `queue.Priority
 ---
 
 ## Tuple vs list: memory
+
+*Tuple vs list: memory in Data Structures — what it is and when to use it.*
 
 Tuples are immutable, so Python stores them more compactly than lists:
 

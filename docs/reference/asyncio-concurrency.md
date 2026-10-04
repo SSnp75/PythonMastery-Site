@@ -30,6 +30,8 @@ other coroutines can progress. Every example below runs as-is.
 
 ## Vocabulary
 
+*Vocabulary in Asyncio & Concurrency — Deep Dive — what it is and when to use it.*
+
 | Term | Meaning |
 |---|---|
 | **Coroutine** | an `async def` function; calling it returns a coroutine object, it doesn't run yet |
@@ -48,6 +50,8 @@ other coroutines can progress. Every example below runs as-is.
 
 ## Define and run
 
+*Define and run in Asyncio & Concurrency — Deep Dive — what it is and when to use it.*
+
 ```python
 import asyncio
 
@@ -61,6 +65,8 @@ print(asyncio.run(greet("alice")))   # hi alice
 ---
 
 ## `gather` — run coroutines concurrently and collect results
+
+*gather — run coroutines concurrently and collect results, part of Asyncio & Concurrency — Deep Dive.*
 
 ```python
 import asyncio
@@ -80,6 +86,8 @@ print(asyncio.run(main()))   # [2, 4, 6]  (order preserved)
 ---
 
 ## `gather` vs `create_task`
+
+*gather vs create_task in Asyncio & Concurrency — Deep Dive — what it is and when to use it.*
 
 Both run work concurrently. `gather` is the batch shortcut; `create_task` gives you a handle
 you can await individually, cancel, or inspect.
@@ -116,6 +124,8 @@ print(asyncio.run(with_tasks()))    # ('coffee', 'bagel')
 
 ## `TaskGroup` — structured concurrency (3.11+)
 
+*TaskGroup — structured concurrency, part of Asyncio & Concurrency — Deep Dive.*
+
 `TaskGroup` is the modern, safer way to run a group of tasks: it waits for all of them, and
 if any raises, it cancels the rest and propagates the error. No orphaned tasks.
 
@@ -139,6 +149,8 @@ print(asyncio.run(main()))   # [0, 1, 2]
 
 ## Timeouts
 
+*Timeouts in Asyncio & Concurrency — Deep Dive — what it is and when to use it.*
+
 ```python
 import asyncio
 
@@ -160,6 +172,8 @@ For a single awaitable, `asyncio.wait_for(coro, timeout)` does the same.
 ---
 
 ## Synchronization primitives
+
+*Synchronization primitives in Asyncio & Concurrency — Deep Dive — what it is and when to use it.*
 
 Even single-threaded, you need coordination when tasks share state or a limited resource.
 
@@ -261,6 +275,8 @@ print(asyncio.run(main()))   # [0, 10, 20]
 
 ## Running blocking code without freezing the loop
 
+*Running blocking code without freezing the loop in Asyncio & Concurrency — Deep Dive — what it is and when to use it.*
+
 A blocking call (CPU work, a non-async library) stalls the whole event loop. Offload it to a
 thread with `asyncio.to_thread`:
 
@@ -279,6 +295,8 @@ print(asyncio.run(main()))   # 499500
 ---
 
 ## Async context managers
+
+*Async context managers in Asyncio & Concurrency — Deep Dive — what it is and when to use it.*
 
 Resources with async setup/teardown use `async with`. Define one with
 `__aenter__`/`__aexit__` or the `@asynccontextmanager` decorator:
@@ -322,6 +340,8 @@ print(asyncio.run(main()))   # ['open', 'use', 'close']
 ---
 
 ## Async iteration
+
+*Async iteration in Asyncio & Concurrency — Deep Dive — what it is and when to use it.*
 
 Consume an async generator with `async for`:
 

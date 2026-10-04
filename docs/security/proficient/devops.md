@@ -23,6 +23,8 @@ description: Docker SDK, Fabric, infrastructure automation, CI/CD and subprocess
 
 ## subprocess — running system commands
 
+*subprocess — running system commands, part of Python for DevOps.*
+
 ```python
 import subprocess
 
@@ -116,6 +118,8 @@ client.volumes.prune()
 ---
 
 ## Fabric — remote SSH execution
+
+*Fabric — remote SSH execution, part of Python for DevOps.*
 
 ```python
 from fabric import Connection, task

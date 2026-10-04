@@ -33,6 +33,8 @@ description: Automate network devices with SSH, device APIs and idempotent confi
 
 ## Why automate the network
 
+*A core question explored in Networking Automation: Why automate the network.*
+
 Configuring routers, switches, and firewalls by hand — logging into each one and typing commands — doesn't scale and invites human error. **Network automation (NetOps)** applies software practices to network devices: push config from scripts, verify state programmatically, and treat the network config as version-controlled code. Python dominates this space thanks to libraries like Netmiko, NAPALM, and Nornir.
 
 ```

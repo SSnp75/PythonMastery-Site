@@ -16,6 +16,8 @@ description: Qiskit, quantum circuits, simulation and quantum algorithms
 
 ## Core ideas
 
+*Core ideas in Quantum Computing — what it is and when to use it.*
+
 - A **qubit** is a unit vector in a 2D complex space: `α|0⟩ + β|1⟩` with `|α|² + |β|² = 1`.
 - **Measurement** collapses it to `0` or `1` with probabilities `|α|²` and `|β|²`.
 - **Gates** are unitary matrices (Hadamard, Pauli-X, CNOT) that rotate the state.
@@ -24,6 +26,8 @@ description: Qiskit, quantum circuits, simulation and quantum algorithms
 ---
 
 ## A pure-Python single-qubit simulator
+
+*A pure-Python single-qubit simulator — a key concept in Quantum Computing.*
 
 No libraries needed — a qubit is just two complex amplitudes, and a gate is a 2×2 matrix:
 
@@ -53,6 +57,8 @@ qubits.
 ---
 
 ## Qiskit basics
+
+*Qiskit basics in Quantum Computing — what it is and when to use it.*
 
 With a real framework you build circuits declaratively and run them on a simulator or
 hardware:

@@ -30,6 +30,8 @@ inline.
 
 ## Lambda patterns
 
+*Lambda patterns in Lambda, reduce & Function Calls — Deep Dive — what it is and when to use it.*
+
 A `lambda` is a single-expression anonymous function. Reach for it when the logic is small
 and passed directly to another function. Use a named `def` when logic is complex, needs
 multiple statements, or benefits from a name/docstring.
@@ -140,6 +142,8 @@ print(safe_div(10, 0))   # None
 ---
 
 ## The `reduce` toolbox
+
+*The reduce toolbox — a key concept in Lambda, reduce & Function Calls — Deep Dive.*
 
 `reduce(func, iterable[, initializer])` folds an iterable into a single value by applying a
 two-argument function cumulatively.
@@ -312,6 +316,8 @@ print(reduce(lambda a, b: a * b // gcd(a, b), [4, 6, 8]))      # 24 (lcm)
 
 ## A composable `Pipeline` class
 
+*A composable Pipeline class — a key concept in Lambda, reduce & Function Calls — Deep Dive.*
+
 A small reusable class that chains callables left to right, supports `|` chaining, and can
 compose right to left.
 
@@ -355,6 +361,8 @@ print(p.compose()(10))    # ((10 - 5) * 3) + 2 = 17
 ---
 
 ## Every way to call a function
+
+*Every way to call a function in Lambda, reduce & Function Calls — Deep Dive — what it is and when to use it.*
 
 | Call type | Example |
 |---|---|
@@ -420,6 +428,8 @@ print(globals()["greet"]())                      # hi  (globals holds module-lev
 ---
 
 ## Complete string-methods reference
+
+*Complete string-methods reference in Lambda, reduce & Function Calls — Deep Dive — what it is and when to use it.*
 
 Grouped list of every `str` method. (`ord`/`chr` are built-in functions, not methods, but
 belong in the same mental bucket.)

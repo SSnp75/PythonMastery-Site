@@ -23,6 +23,8 @@ description: JIT compilation for numerical Python with @njit, vectorize, CUDA an
 
 ## What is Numba?
 
+*Introduces Numba and where it fits in Numba.*
+
 Numba is a **JIT compiler** that translates Python/NumPy code to fast machine code using LLVM. Zero setup — just add a decorator.
 
 ```python

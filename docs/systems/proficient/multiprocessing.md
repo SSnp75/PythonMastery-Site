@@ -23,6 +23,8 @@ description: Processes, Pool, Queue, shared memory, ProcessPoolExecutor and true
 
 ## Why multiprocessing?
 
+*A core question explored in Multiprocessing: Why multiprocessing.*
+
 Each process has its own Python interpreter and GIL — true parallelism for CPU-bound work.
 
 ```python

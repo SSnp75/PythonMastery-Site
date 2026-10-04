@@ -35,6 +35,8 @@ description: Concurrency without locks — atomics, compare-and-swap and the Pyt
 
 ## What "lock-free" means
 
+*A core question explored in Lock-free Structures: What "lock-free" means.*
+
 A normal thread-safe counter uses a lock: acquire, increment, release. If a thread holds the lock and stalls, others wait. **Lock-free** algorithms guarantee that *some* thread always makes progress, using atomic operations that either fully succeed or fully fail — no in-between state to protect.
 
 The foundational primitive is **compare-and-swap (CAS)**: atomically, "if this memory still holds the value I expect, replace it; otherwise tell me it changed." Hardware provides this as a single uninterruptible instruction.
@@ -42,6 +44,8 @@ The foundational primitive is **compare-and-swap (CAS)**: atomically, "if this m
 ---
 
 ## Compare-and-swap (tested model)
+
+*Compare-and-swap in Lock-free Structures — what it is and when to use it.*
 
 Here's the *logic* of CAS (single-threaded, to show the semantics — real CAS is one atomic CPU instruction):
 

@@ -35,6 +35,8 @@ A **fiber** is a lightweight, cooperatively-scheduled unit of execution with its
 
 ## Stackful vs stackless
 
+*Stackful vs stackless in Fibers — what it is and when to use it.*
+
 This is the crux of the topic:
 
 - **Stackful coroutine (fiber)** — has its own full call stack. It can suspend from *anywhere*, even deep inside nested function calls, and resume exactly there. You can `yield`/switch from a helper function three levels down.
@@ -53,6 +55,8 @@ The practical difference: fibers let *any* code suspend without every caller kno
 ---
 
 ## Cooperative switching with generators (tested)
+
+*Cooperative switching with generators in Fibers — what it is and when to use it.*
 
 Python generators are a *stackless* coroutine primitive — they suspend only at their own `yield`, not inside called functions. We can still model cooperative multitasking with them. Runnable:
 
@@ -93,6 +97,8 @@ The fibers interleave cooperatively. But notice the limit: a generator can only 
 
 ## The Python landscape
 
+*The Python landscape — a key concept in Fibers.*
+
 Python's built-in tools are mostly stackless:
 
 | Tool | Stackful? | Notes |
@@ -107,6 +113,8 @@ Python's built-in tools are mostly stackless:
 ---
 
 ## Why it matters
+
+*A core question explored in Fibers: Why it matters.*
 
 The stackful/stackless distinction explains a lot of real Python design:
 

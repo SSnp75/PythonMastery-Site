@@ -22,6 +22,8 @@ description: High-performance RPC with protobuf, streaming and service definitio
 
 ## What is gRPC?
 
+*Introduces gRPC and where it fits in gRPC & Protocol Buffers.*
+
 gRPC is a high-performance RPC framework using Protocol Buffers for serialization — 10x faster than JSON REST for inter-service communication.
 
 ---

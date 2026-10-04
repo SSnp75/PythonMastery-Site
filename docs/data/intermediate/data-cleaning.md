@@ -35,6 +35,8 @@ description: Handle missing values, wrong types and outliers before analysis
 
 ## Missing values (tested)
 
+*Missing values in Data Cleaning — what it is and when to use it.*
+
 Real datasets have gaps. You either drop rows with missing data or **impute** (fill) them — commonly with the mean or median of the column. Runnable:
 
 ```python
@@ -67,6 +69,8 @@ The missing age was filled with 40.0 (the mean of 30, 50, 40). **Choosing a stra
 
 ## Wrong types (tested)
 
+*Wrong types in Data Cleaning — what it is and when to use it.*
+
 Data from CSVs, forms, and APIs arrives as strings, with junk mixed in. Coerce safely, with a fallback:
 
 ```python
@@ -90,6 +94,8 @@ Valid strings convert; `"bad"` and `None` fall back to the default instead of cr
 ---
 
 ## Outliers (tested)
+
+*Outliers in Data Cleaning — what it is and when to use it.*
 
 Extreme values can distort analysis. A standard detector is the **IQR method**: flag points far outside the middle 50% of the data. Runnable:
 

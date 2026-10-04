@@ -22,6 +22,8 @@ from the system's IANA database.
 
 ## Building dates and times
 
+*Building dates and times in Dates & Times — what it is and when to use it.*
+
 ```python
 from datetime import date, datetime, time
 
@@ -36,6 +38,8 @@ print(dt.hour, dt.minute)       # 9 30
 ---
 
 ## Formatting (`strftime`) and parsing (`strptime`)
+
+*Formatting (strftime) and parsing (strptime) in Dates & Times — what it is and when to use it.*
 
 ```python
 from datetime import datetime
@@ -55,6 +59,8 @@ Common codes: `%Y` year, `%m` month, `%d` day, `%H` hour, `%M` minute, `%S` seco
 
 ## ISO format (preferred for storage/exchange)
 
+*ISO format (preferred for storage/exchange) in Dates & Times — what it is and when to use it.*
+
 ```python
 from datetime import datetime
 
@@ -66,6 +72,8 @@ print(datetime.fromisoformat("2026-01-15T09:05:00").hour)   # 9
 ---
 
 ## Arithmetic with `timedelta`
+
+*Arithmetic with timedelta in Dates & Times — what it is and when to use it.*
 
 ```python
 from datetime import datetime, timedelta
@@ -82,6 +90,8 @@ print(delta.total_seconds())                # 432000.0
 ---
 
 ## Timezone-aware datetimes with `zoneinfo`
+
+*Timezone-aware datetimes with zoneinfo in Dates & Times — what it is and when to use it.*
 
 Naive datetimes have no timezone; aware ones carry a `tzinfo`. Prefer aware for anything
 real-world.
@@ -100,6 +110,8 @@ print(ny.utcoffset().total_seconds() / 3600)   # -5.0
 ---
 
 ## Unix timestamps
+
+*Unix timestamps in Dates & Times — what it is and when to use it.*
 
 ```python
 from datetime import datetime, timezone

@@ -35,6 +35,8 @@ Bioinformatics applies computation to biology — analyzing DNA, proteins, and g
 
 ## Sequences are just strings (tested)
 
+*Sequences are just strings in Python for Bioinformatics — what it is and when to use it.*
+
 DNA is a string over the alphabet `A, C, G, T`. Many core operations are pure string manipulation — runnable:
 
 ```python

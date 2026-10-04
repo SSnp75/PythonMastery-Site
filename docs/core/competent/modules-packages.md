@@ -104,6 +104,8 @@ This ensures code runs only when the file is executed directly, not when importe
 
 ## Import forms, compared
 
+*Import forms, compared in Modules & Packages — what it is and when to use it.*
+
 ```python
 import math                      # math.sqrt(4)
 from math import sqrt            # sqrt(4)
@@ -123,6 +125,8 @@ print(round(pi, 2))    # 3.14
 
 ## Relative vs absolute imports
 
+*Relative vs absolute imports in Modules & Packages — what it is and when to use it.*
+
 Inside a package, relative imports use leading dots:
 
 ```python
@@ -140,6 +144,8 @@ Relative imports only work inside a package (a module run as a script can't use 
 
 ## What `import` actually does
 
+*A core question explored in Modules & Packages: What import actually does.*
+
 The first import executes the module top to bottom and caches it in `sys.modules`;
 later imports reuse the cached module (the body does **not** re-run):
 
@@ -154,6 +160,8 @@ print("json" in sys.modules)   # True
 
 ## Inspecting a module
 
+*Inspecting a module in Modules & Packages — what it is and when to use it.*
+
 ```python
 import math
 
@@ -165,6 +173,8 @@ print(type(math).__name__)                             # module
 ---
 
 ## Namespace packages (no `__init__.py`)
+
+*Namespace packages (no __init__.py) in Modules & Packages — what it is and when to use it.*
 
 Since PEP 420, a directory without `__init__.py` can still be an importable namespace
 package, letting one logical package span multiple directories. Prefer a regular package

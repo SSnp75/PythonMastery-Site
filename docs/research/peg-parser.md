@@ -17,6 +17,8 @@ description: CPython's PEG parser, the grammar file, packrat parsing theory, and
 
 ## CPython's parser evolution
 
+*CPython's parser evolution in PEG Parser Internals — what it is and when to use it.*
+
 - **Python < 3.9** used an LL(1) parser — limited lookahead, which forced grammar hacks.
 - **Python ≥ 3.9** uses a **PEG** (Parsing Expression Grammar) parser (PEP 617) — more
   expressive, with cleaner grammar rules and unlimited lookahead via backtracking.
@@ -27,6 +29,8 @@ The grammar lives in `Grammar/python.gram` in the CPython source and is compiled
 ---
 
 ## PEG vs. CFG — the key difference
+
+*PEG vs. CFG — the key difference, part of PEG Parser Internals.*
 
 A context-free grammar's `|` is **unordered** (ambiguity possible). A PEG's `/` is an
 **ordered choice**: it tries alternatives left to right and commits to the first match. This

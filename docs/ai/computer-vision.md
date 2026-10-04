@@ -175,6 +175,8 @@ for score, idx in zip(top5.values, top5.indices):
 
 ## Practical applications
 
+*Practical applications in Computer Vision — what it is and when to use it.*
+
 ```python
 # ─── Face detection ───────────────────────────────
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")

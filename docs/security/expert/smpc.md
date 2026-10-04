@@ -35,6 +35,8 @@ description: Secure multiparty computation — compute on data without revealing
 
 ## The idea
 
+*The idea — a key concept in SMPC.*
+
 ```
    Alice's secret ─┐
    Bob's secret   ─┼──▶ joint computation ──▶ result
@@ -47,6 +49,8 @@ Each party keeps its input private, yet together they get the correct answer. Th
 ---
 
 ## Additive secret sharing (tested)
+
+*Additive secret sharing in SMPC — what it is and when to use it.*
 
 Split a secret into `n` **shares** that individually look random, but sum back to the secret (modulo a prime). No single share reveals anything. Runnable:
 
@@ -81,6 +85,8 @@ The secret 42 is split into 3 shares. Each share is a random-looking number — 
 
 ## Computing on shares (the magic, tested)
 
+*Computing on shares (the magic, tested) in SMPC — what it is and when to use it.*
+
 Here's what makes SMPC powerful: you can **add two shared secrets without reconstructing either** — just add the shares position-wise, and the result is a valid sharing of the sum:
 
 ```python
@@ -105,6 +111,8 @@ sum reconstructed: 100
 
 ## Real protocols and libraries
 
+*Real protocols and libraries in SMPC — what it is and when to use it.*
+
 Our example shows additive sharing (great for sums/averages). Full SMPC uses richer schemes:
 
 - **Shamir's Secret Sharing** — polynomial-based, allows *threshold* reconstruction (any k of n shares).
@@ -119,6 +127,8 @@ Python libraries (documented, not installed here): **PySyft**, **MP-SPDZ**, **Cr
 ---
 
 ## Where SMPC is used
+
+*A core question explored in SMPC: Where SMPC is used.*
 
 - **Privacy-preserving analytics** — compute aggregate statistics across organizations without sharing raw data (e.g. hospitals studying outcomes without exposing patient records).
 - **Private machine learning** — train/infer on combined datasets while keeping each party's data private (CrypTen, federated learning overlaps).

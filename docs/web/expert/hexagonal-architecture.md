@@ -33,6 +33,8 @@ description: Ports and adapters — isolate your domain from frameworks, databas
 
 ## The idea
 
+*The idea — a key concept in Hexagonal Architecture.*
+
 Hexagonal Architecture — also called **Ports and Adapters** (Alistair Cockburn, 2005) — puts your business logic in the center and pushes everything external (web frameworks, databases, message queues, email) to the edges. The center talks to the outside world only through **ports** (interfaces), and the outside world plugs in through **adapters** (implementations).
 
 ```
@@ -183,6 +185,8 @@ Output:
 ---
 
 ## Testability — the payoff
+
+*Testability — the payoff, part of Hexagonal Architecture.*
 
 Because the core depends only on ports, tests inject fakes and run with **no database, no network, no framework** — instantly.
 

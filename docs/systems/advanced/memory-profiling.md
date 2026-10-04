@@ -35,6 +35,8 @@ CPU profiling ([Profiling](profiling.md)) tells you where *time* goes; **memory 
 
 ## Why memory matters
 
+*A core question explored in Memory Profiling: Why memory matters.*
+
 Even with garbage collection, Python programs can:
 - **Leak** — hold references to objects that are never released, so memory grows unboundedly (a long-running server slowly consuming all RAM).
 - **Bloat** — use far more memory than necessary (loading a whole file when you could stream it).
@@ -45,6 +47,8 @@ Memory profiling finds *what* is holding memory and *where* it was allocated.
 ---
 
 ## `tracemalloc`: the built-in tool (tested)
+
+*tracemalloc: the built-in tool in Memory Profiling — what it is and when to use it.*
 
 `tracemalloc` (standard library) tracks allocations and can compare snapshots to show what grew. Runnable:
 

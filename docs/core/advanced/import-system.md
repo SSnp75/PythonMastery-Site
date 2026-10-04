@@ -17,6 +17,8 @@ description: importlib, finders, loaders, import hooks, sys.path and lazy import
 
 ## How `import` works — the full process
 
+*A core question explored in Import System Internals: How import works — the full process.*
+
 When Python executes `import mymodule`, this happens:
 
 ```python

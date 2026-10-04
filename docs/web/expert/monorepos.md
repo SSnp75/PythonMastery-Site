@@ -36,6 +36,8 @@ description: Structure, tooling, dependency management and CI for a single repos
 
 ## What is a monorepo?
 
+*Introduces a monorepo and where it fits in Monorepos.*
+
 A **monorepo** (monolithic repository) is a single version-control repository that holds **many projects** — multiple services, shared libraries, tooling — instead of splitting each into its own repo (the **polyrepo** approach).
 
 ```
@@ -167,6 +169,8 @@ Notice the `api` filter includes `libs/core/**`: if the shared lib changes, the 
 ---
 
 ## Monorepo vs polyrepo — the honest tradeoff
+
+*Monorepo vs polyrepo — the honest tradeoff, part of Monorepos.*
 
 | | **Monorepo** | **Polyrepo** |
 |---|---|---|

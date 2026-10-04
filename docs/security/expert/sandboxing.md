@@ -22,6 +22,8 @@ description: RestrictedPython, seccomp, containers, resource limits and safe cod
 
 ## Why sandbox?
 
+*A core question explored in Sandboxing: Why sandbox.*
+
 When executing **untrusted code** (user submissions, plugins, REPL), you need to prevent:
 
 - File system access (read/write/delete)
@@ -33,6 +35,8 @@ When executing **untrusted code** (user submissions, plugins, REPL), you need to
 ---
 
 ## RestrictedPython — AST-level restriction
+
+*RestrictedPython — AST-level restriction, part of Sandboxing.*
 
 ```python
 from RestrictedPython import compile_restricted, safe_globals

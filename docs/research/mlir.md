@@ -36,6 +36,8 @@ description: Lower Python to MLIR — multi-level IR, dialects and modern compil
 
 ## What is MLIR?
 
+*Introduces MLIR and where it fits in Python to MLIR.*
+
 **MLIR** (Multi-Level Intermediate Representation) is a newer compiler framework from the LLVM project, built to solve a problem LLVM IR alone doesn't: representing programs at **many levels of abstraction at once**. Where LLVM IR is a single low-level representation, MLIR lets a program be expressed — and gradually *lowered* — through multiple custom IRs called **dialects**.
 
 ```

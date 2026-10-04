@@ -35,6 +35,8 @@ description: Compute on encrypted data without ever decrypting it
 
 ## The idea
 
+*The idea — a key concept in Homomorphic Encryption.*
+
 ```
    plaintext ──encrypt──▶ ciphertext ──compute on ciphertext──▶ encrypted result
                                                                       │ decrypt
@@ -47,6 +49,8 @@ Normally, to compute on data you must decrypt it — exposing it to whoever's do
 ---
 
 ## The homomorphic property (illustrated, tested)
+
+*The homomorphic property (illustrated, tested) — a key concept in Homomorphic Encryption.*
 
 The core idea is that an operation on ciphertexts corresponds to an operation on plaintexts. A *toy* illustration using multiplication as the "encryption" (NOT secure — just to show the property):
 
@@ -87,6 +91,8 @@ Operating on the "ciphertexts" and decrypting gave `15` = `3 × 5` — **we comp
 
 ## Partial vs fully homomorphic
 
+*Partial vs fully homomorphic in Homomorphic Encryption — what it is and when to use it.*
+
 HE schemes differ by *which* operations they support:
 
 - **Partially Homomorphic (PHE)** — supports *one* operation unlimited times. E.g. RSA is multiplicatively homomorphic; Paillier is additively homomorphic (great for summing encrypted votes/values).
@@ -99,12 +105,16 @@ The breakthrough that made FHE possible was **bootstrapping** — periodically "
 
 ## The performance reality
 
+*The performance reality — a key concept in Homomorphic Encryption.*
+
 !!! warning "HE is slow — that's the catch"
     Homomorphic encryption is orders of magnitude slower and larger than plaintext computation — a single operation can be thousands of times slower, and ciphertexts are much bigger than plaintexts. FHE especially remains impractical for general heavy computation today. It's used where **privacy justifies the cost**, not as a default. Performance is improving steadily but it's not "encrypt everything and compute freely" yet.
 
 ---
 
 ## Libraries and use cases
+
+*Libraries and use cases in Homomorphic Encryption — what it is and when to use it.*
 
 Python libraries (documented, not installed here): **Pyfhel**, **TenSEAL** (HE for tensors/ML), **Microsoft SEAL** bindings, **OpenFHE**. They implement the real lattice-based schemes.
 

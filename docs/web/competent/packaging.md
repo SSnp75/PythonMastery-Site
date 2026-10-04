@@ -91,6 +91,8 @@ mypackage/
 
 ## uv — the fast modern workflow
 
+*uv — the fast modern workflow, part of Python Packaging.*
+
 [`uv`](https://docs.astral.sh/uv/) is a fast, all-in-one package and project manager that
 replaces most `pip` + `venv` + `pip-tools` workflows:
 

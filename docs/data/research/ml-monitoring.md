@@ -35,6 +35,8 @@ Unlike ordinary software, an ML model can **silently get worse** without any cod
 
 ## Why models degrade
 
+*A core question explored in ML Monitoring: Why models degrade.*
+
 A deployed model was trained on *past* data. As reality drifts away from that data, predictions get worse — without any error or crash. This is unique to ML: the code is fine, but the *world* changed.
 
 - **Data drift** — the input distribution shifts (e.g. new user demographics, seasonal change).
@@ -46,6 +48,8 @@ Monitoring makes these *visible* so you can retrain or fix before damage accumul
 ---
 
 ## Detecting data drift (tested)
+
+*Detecting data drift in ML Monitoring — what it is and when to use it.*
 
 Compare the distribution of live data against the training baseline. A standard approach buckets both and measures how much the proportions differ (a PSI-style metric). Runnable:
 

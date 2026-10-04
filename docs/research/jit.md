@@ -23,6 +23,8 @@ description: Tracing JIT design, type specialization, guard insertion and LLVM b
 
 ## What is a JIT compiler?
 
+*Introduces a JIT compiler and where it fits in Custom JIT Compilers.*
+
 A JIT (Just-In-Time) compiler translates bytecode to native machine code **at runtime**, specializing for the actual types and values observed.
 
 ```
@@ -33,6 +35,8 @@ JIT (fast, specialized):       bytecode → observe types → compile native cod
 ---
 
 ## Tracing JIT — the core concept
+
+*Tracing JIT — the core concept, part of Custom JIT Compilers.*
 
 A tracing JIT records the **hot path** (frequently executed code), compiles it, and inserts **guards** for assumptions:
 

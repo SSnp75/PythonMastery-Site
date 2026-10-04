@@ -35,6 +35,8 @@ description: Replace Python loops with array operations for massive speedups
 
 ## Why loops are slow, arrays are fast
 
+*A core question explored in Vectorization: Why loops are slow, arrays are fast.*
+
 A Python `for` loop over numbers pays the interpreter's overhead *every iteration*: bytecode dispatch, boxing each `int` as an object, type checks. A vectorized operation hands the whole array to C code that does the loop in tight machine code with SIMD instructions — no per-element Python overhead.
 
 ```
@@ -43,6 +45,8 @@ A Python `for` loop over numbers pays the interpreter's overhead *every iteratio
 ```
 
 ## The pure-Python analog (tested)
+
+*The pure-Python analog — a key concept in Vectorization.*
 
 Even without NumPy, the *principle* — push the loop into C — shows up with builtins:
 

@@ -43,6 +43,8 @@ Desktop automation drives the graphical interface the way a human would — movi
 
 ## 1. The fail-safe (read this first)
 
+*1. The fail-safe (read this first) in Desktop Automation — what it is and when to use it.*
+
 Before writing any automation, know how to stop it. A runaway script that's clicking and typing on its own can be hard to interrupt.
 
 ```python
@@ -61,6 +63,8 @@ pyautogui.PAUSE = 0.5        # seconds between actions
 ---
 
 ## 2. Mouse control
+
+*2. Mouse control in Desktop Automation — what it is and when to use it.*
 
 ```python
 import pyautogui
@@ -94,6 +98,8 @@ pyautogui.scroll(-300)
 
 ## 3. Keyboard control
 
+*3. Keyboard control in Desktop Automation — what it is and when to use it.*
+
 ```python
 import pyautogui
 
@@ -123,6 +129,8 @@ with pyautogui.hold("shift"):
 ---
 
 ## 4. Screenshots & finding things on screen
+
+*4. Screenshots & finding things on screen in Desktop Automation — what it is and when to use it.*
 
 ```python
 import pyautogui
@@ -175,6 +183,8 @@ text = pytesseract.image_to_string(image)
 
 ## 5. A complete example: automate a repetitive form
 
+*5. A complete example: automate a repetitive form in Desktop Automation — what it is and when to use it.*
+
 ```python
 import pyautogui
 import time
@@ -207,6 +217,8 @@ This works, but notice how much it *assumes*: which field has focus, that Tab mo
 
 ## 6. Cross-platform caveats
 
+*6. Cross-platform caveats in Desktop Automation — what it is and when to use it.*
+
 | Concern | Windows | macOS | Linux |
 |---|---|---|---|
 | Extra setup | none | grant **Accessibility** permission | needs X11 + `scrot` |
@@ -224,6 +236,8 @@ This works, but notice how much it *assumes*: which field has focus, that Tab mo
 
 ## When NOT to use desktop automation
 
+*A core question explored in Desktop Automation: When NOT to use desktop automation.*
+
 Reach for a better tool if one exists:
 
 - The app has an **API or SDK** → call it directly.
@@ -236,6 +250,8 @@ Desktop automation is the fallback when a legacy or closed application offers no
 ---
 
 ## Alternatives worth knowing
+
+*Alternatives worth knowing in Desktop Automation — what it is and when to use it.*
 
 - **`pynput`** — lower-level mouse/keyboard control, and it can *listen* for input events (useful for building macro recorders).
 - **`pywinauto`** (Windows) — automates via the Windows UI Automation API, targeting controls by name/type instead of pixel coordinates. Much sturdier than PyAutoGUI for Windows desktop apps.

@@ -35,6 +35,8 @@ Much real-world data is **mostly zeros** — a document's word counts (most word
 
 ## The idea: store only nonzeros (tested)
 
+*The idea: store only nonzeros — a key concept in Sparse Tensors.*
+
 A dense vector of a million entries where only 3 are nonzero still uses a million slots. A sparse vector stores just the 3. Runnable:
 
 ```python

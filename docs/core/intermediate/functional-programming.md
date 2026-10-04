@@ -17,6 +17,8 @@ description: map, filter, reduce, functools, partial and functional patterns
 
 ## map, filter, reduce
 
+*map, filter, reduce in Functional Programming — what it is and when to use it.*
+
 ```python
 from functools import reduce
 
@@ -35,6 +37,8 @@ total = reduce(lambda acc, x: acc + x, numbers, 0)
 ---
 
 ## functools.partial
+
+*functools.partial in Functional Programming — what it is and when to use it.*
 
 `partial` pre-fills some of a function's arguments and returns a new callable that only needs
 the rest. It's a clean way to specialize a general function without writing a wrapper.
@@ -66,6 +70,8 @@ print(cube(3))     # 27
 
 ## Higher-order function patterns
 
+*Higher-order function patterns in Functional Programming — what it is and when to use it.*
+
 A **higher-order function** takes other functions as arguments or returns one. They let you
 treat behavior as data — passing, combining, and building functions on the fly.
 
@@ -91,6 +97,8 @@ print(pipeline(3))   # 8
 ---
 
 ## Immutability patterns
+
+*Immutability patterns in Functional Programming — what it is and when to use it.*
 
 ```python
 # Prefer tuple over list for fixed data

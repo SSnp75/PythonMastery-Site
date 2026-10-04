@@ -23,6 +23,8 @@ description: Service boundaries, communication patterns, orchestration and obser
 
 ## When to use microservices
 
+*A core question explored in Microservices Architecture: When to use microservices.*
+
 !!! warning "Start monolith, extract later"
     Don't start with microservices. Start with a well-structured monolith and extract services when you have:
     

@@ -23,6 +23,8 @@ description: Arrays, broadcasting, vectorization, linear algebra and numerical c
 
 ## Why NumPy?
 
+*A core question explored in NumPy: Why NumPy.*
+
 NumPy is 10-100x faster than Python lists for numerical operations because:
 
 - Data is stored in **contiguous memory** (cache-friendly)

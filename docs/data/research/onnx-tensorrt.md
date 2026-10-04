@@ -38,6 +38,8 @@ You train a model in PyTorch or TensorFlow — but for *inference* (serving pred
 
 ## The training-to-inference gap
 
+*The training-to-inference gap — a key concept in ONNX & TensorRT.*
+
 Training and inference have different needs:
 
 - **Training** — flexibility, autograd, experimentation. Framework-specific (PyTorch, TF).
@@ -110,6 +112,8 @@ Each step trades flexibility for speed. You lock in the model (no more training)
 ---
 
 ## When to use them
+
+*A core question explored in ONNX & TensorRT: When to use them.*
 
 - **ONNX** — almost always worth it for production inference: portability + free graph optimizations, and it decouples serving from your training framework. Especially valuable for cross-platform (mobile, browser via ONNX Runtime Web, edge).
 - **TensorRT** — when you serve on NVIDIA GPUs and need maximum throughput/lowest latency, and can invest in the (NVIDIA-specific) optimization step.

@@ -165,6 +165,8 @@ python greeting.py
 
 ## Key rules to remember
 
+*Key rules to remember in Python Basics — what it is and when to use it.*
+
 !!! tip "Python Style"
     - Use `snake_case` for variable names: `first_name`, not `firstName`
     - Use 4 spaces for indentation (never tabs)

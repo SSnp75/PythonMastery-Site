@@ -33,6 +33,8 @@ description: Model and simulate hardware behavior with discrete-event simulation
 
 ## Why simulate hardware
 
+*A core question explored in Hardware Simulation: Why simulate hardware.*
+
 Real hardware is scarce, slow, and sometimes doesn't exist yet. Simulation lets you develop and test the software *before* the board arrives, run thousands of scenarios in seconds, and reproduce rare timing bugs on demand. It's how you test firmware logic, protocol handling, and control loops without a physical rig.
 
 The dominant technique is **discrete-event simulation (DES)**: instead of advancing time in tiny fixed steps, you jump directly from one *event* to the next. A simulated clock holds the "current time," and events are processed in time order. This is enormously more efficient than stepping through idle time.

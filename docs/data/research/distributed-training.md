@@ -23,6 +23,8 @@ description: DDP, FSDP, model sharding, pipeline parallelism and multi-GPU strat
 
 ## Why distribute training?
 
+*A core question explored in Distributed Training: Why distribute training.*
+
 | Scenario | Solution |
 |---|---|
 | Data doesn't fit in GPU memory | Gradient accumulation, data parallelism |

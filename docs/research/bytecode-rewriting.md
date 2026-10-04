@@ -17,6 +17,8 @@ description: Inspecting and manipulating CPython bytecode — dis, code objects,
 
 ## Why rewrite bytecode?
 
+*A core question explored in Bytecode Rewriting: Why rewrite bytecode.*
+
 - **Coverage tools** inject counting instructions at each line.
 - **Profilers** trace function entry/exit.
 - **Security sandboxes** block dangerous operations.
@@ -28,6 +30,8 @@ CPython exposes enough of the compiled code object to inspect — and, carefully
 ---
 
 ## Inspecting bytecode with `dis`
+
+*Inspecting bytecode with dis in Bytecode Rewriting — what it is and when to use it.*
 
 ```python
 import dis
@@ -59,6 +63,8 @@ print("BINARY_OP" in ops)   # True
 
 ## The code object
 
+*The code object — a key concept in Bytecode Rewriting.*
+
 Every function carries a read-only `code` object describing its compiled form.
 
 ```python
@@ -75,6 +81,8 @@ print(type(code.co_code))  # <class 'bytes'>  (raw bytecode)
 ---
 
 ## Rewriting via `code.replace()`
+
+*Rewriting via code.replace() in Bytecode Rewriting — what it is and when to use it.*
 
 Code objects are immutable, but `.replace()` returns a modified copy. Swapping a constant
 changes what the function returns:

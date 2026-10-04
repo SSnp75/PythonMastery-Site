@@ -17,6 +17,8 @@ description: ast module, NodeVisitor, NodeTransformer, code transformation and s
 
 ## What is the AST?
 
+*Introduces the AST and where it fits in AST Manipulation.*
+
 The Abstract Syntax Tree is the structured representation of Python source code after parsing but before compilation to bytecode.
 
 ```python
@@ -201,6 +203,8 @@ exec(code)
 
 ## Use Case: Automatic Timing of All Functions
 
+*Use Case: Automatic Timing of All Functions in AST Manipulation — what it is and when to use it.*
+
 ```python
 import ast, textwrap
 
@@ -256,6 +260,8 @@ exec(compile(tree, "<timed>", "exec"))
 
 ## Use Case: Security — detecting dangerous calls
 
+*Use Case: Security — detecting dangerous calls, part of AST Manipulation.*
+
 ```python
 import ast
 
@@ -305,6 +311,8 @@ for w in scanner.warnings:
 ---
 
 ## Use Case: Complexity analysis
+
+*Use Case: Complexity analysis in AST Manipulation — what it is and when to use it.*
 
 ```python
 import ast

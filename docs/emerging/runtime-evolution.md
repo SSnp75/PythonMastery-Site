@@ -35,6 +35,8 @@ The runtime — CPython itself — is undergoing the most significant changes in
 
 ## The GIL and why it's changing
 
+*The GIL and why it's changing — a key concept in Python Runtime Evolution.*
+
 The **Global Interpreter Lock (GIL)** is a mutex that lets only *one* thread execute Python bytecode at a time, even on a multi-core CPU. It has simplified CPython's memory management for decades, but it means threads can't run Python code truly in parallel — the reason CPU-bound work uses `multiprocessing` instead of `threading` (see [Threading](../systems/proficient/threading.md)).
 
 ```

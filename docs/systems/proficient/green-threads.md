@@ -35,6 +35,8 @@ description: Cooperative lightweight threads with gevent and greenlets
 
 ## The idea
 
+*The idea — a key concept in Green Threads.*
+
 An OS thread is heavyweight (its own stack, kernel scheduling). A **green thread** is cheap — the library schedules it in user space, switching at I/O points. You can run tens of thousands, versus maybe thousands of OS threads.
 
 The catch: green threads are **cooperative**. They only switch when a task voluntarily yields (typically at an I/O call). One task that never yields blocks all the others — unlike OS threads, which the kernel can preempt at any time.
@@ -42,6 +44,8 @@ The catch: green threads are **cooperative**. They only switch when a task volun
 ---
 
 ## Cooperative scheduling (tested demo)
+
+*Cooperative scheduling in Green Threads — what it is and when to use it.*
 
 Generators let us model cooperative switching in pure Python — each task runs until it `yield`s, then the scheduler moves on:
 
@@ -82,6 +86,8 @@ The two tasks **interleave** (A:0, B:0, A:1, B:1, then B alone) because each yie
 
 ## gevent and greenlets
 
+*gevent and greenlets in Green Threads — what it is and when to use it.*
+
 The classic Python green-thread library is **gevent**, built on **greenlet**:
 
 ```python
@@ -107,6 +113,8 @@ gevent.joinall(jobs)                # 1000 "threads" in one OS thread
 
 ## Green threads vs the alternatives
 
+*Green threads vs the alternatives in Green Threads — what it is and when to use it.*
+
 | | Green threads (gevent) | asyncio | OS threads |
 |---|---|---|---|
 | Scheduling | Cooperative (implicit yield) | Cooperative (explicit `await`) | Preemptive (OS) |
@@ -119,6 +127,8 @@ The key contrast with **asyncio**: gevent hides the switch points (code *looks* 
 ---
 
 ## When to use them
+
+*A core question explored in Green Threads: When to use them.*
 
 - **gevent/green threads** — you have a big synchronous (I/O-bound) codebase and want concurrency without rewriting it to async. Or you're on a framework built around it.
 - **asyncio** ([Asyncio](asyncio.md)) — new I/O-bound code where explicit, readable concurrency is preferred. The modern default.

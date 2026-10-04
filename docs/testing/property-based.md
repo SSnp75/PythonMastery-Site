@@ -23,6 +23,8 @@ description: Hypothesis library, strategies, stateful testing and finding edge c
 
 ## What is property-based testing?
 
+*Introduces property-based testing and where it fits in Property-Based Testing.*
+
 Instead of writing specific test cases, you describe **properties** that should always hold, and the framework generates hundreds of random inputs to find violations.
 
 ```python

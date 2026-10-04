@@ -23,6 +23,8 @@ description: unittest.mock, MagicMock, patch, side_effect and testing in isolati
 
 ## Why mock?
 
+*A core question explored in Mocking & Patching: Why mock.*
+
 Mocks replace real objects with controlled fakes so you can:
 
 - Test code without hitting databases, APIs or filesystems
@@ -303,6 +305,8 @@ async def test_fetch_data():
 ---
 
 ## When to mock vs when NOT to mock
+
+*A core question explored in Mocking & Patching: When to mock vs when NOT to mock.*
 
 | Mock | Don't mock |
 |---|---|

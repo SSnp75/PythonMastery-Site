@@ -22,6 +22,8 @@ description: Distributed data processing with Spark DataFrames, SQL and transfor
 
 ## PySpark basics
 
+*PySpark basics in PySpark — what it is and when to use it.*
+
 ```python
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
@@ -74,6 +76,8 @@ result.write.parquet("output/user_stats/", mode="overwrite", partitionBy="signup
 ---
 
 ## When Spark vs Pandas
+
+*A core question explored in PySpark: When Spark vs Pandas.*
 
 | Feature | Pandas | PySpark |
 |---|---|---|

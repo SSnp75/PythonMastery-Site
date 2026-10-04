@@ -33,6 +33,8 @@ description: Real-time constraints, scheduling and why Python needs care in timi
 
 ## What "real-time" actually means
 
+*A core question explored in Real-time Systems: What "real-time" actually means.*
+
 Real-time does **not** mean "fast." It means **predictable** — the system must respond within a guaranteed time bound, every time. A slow-but-punctual system can be real-time; a fast-but-erratic one is not.
 
 ```

@@ -22,6 +22,8 @@ description: Strategies for understanding unfamiliar codebases efficiently
 
 ## The systematic approach
 
+*The systematic approach — a key concept in Reading Other People's Code.*
+
 ### 1. Start from the entry point
 
 ```
@@ -70,6 +72,8 @@ pyan3 src/**/*.py --dot | dot -Tpng -o callgraph.png
 ---
 
 ## Strategies for different situations
+
+*Strategies for different situations in Reading Other People's Code — what it is and when to use it.*
 
 | Situation | Strategy |
 |---|---|

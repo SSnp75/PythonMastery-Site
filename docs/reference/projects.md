@@ -11,6 +11,8 @@ Build things. That's how you learn.
 
 ## Beginner Projects
 
+*Beginner Projects in Projects — what it is and when to use it.*
+
 | Project | Topics practiced |
 |---|---|
 | Calculator | Functions, control flow, input/output |
@@ -22,6 +24,8 @@ Build things. That's how you learn.
 ---
 
 ## Intermediate Projects
+
+*Intermediate Projects in Projects — what it is and when to use it.*
 
 | Project | Topics practiced |
 |---|---|
@@ -35,6 +39,8 @@ Build things. That's how you learn.
 
 ## Advanced Projects
 
+*Advanced Projects in Projects — what it is and when to use it.*
+
 | Project | Topics practiced |
 |---|---|
 | Custom ORM | Descriptors, metaclasses, SQL |
@@ -47,6 +53,8 @@ Build things. That's how you learn.
 
 ## Systems Projects
 
+*Systems Projects in Projects — what it is and when to use it.*
+
 | Project | Topics practiced |
 |---|---|
 | Thread pool | Threading, queues, synchronization |
@@ -58,6 +66,8 @@ Build things. That's how you learn.
 ---
 
 ## Research Projects
+
+*Research Projects in Projects — what it is and when to use it.*
 
 | Project | Topics practiced |
 |---|---|

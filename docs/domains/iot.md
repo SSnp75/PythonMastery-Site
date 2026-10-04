@@ -35,6 +35,8 @@ IoT (Internet of Things) connects physical sensors and devices to software. Pyth
 
 ## The shape of an IoT system
 
+*The shape of an IoT system — a key concept in Python for IoT.*
+
 ```
    sensors  →  edge device  →  messaging  →  cloud/backend  →  dashboard
    (temp,      (Raspberry Pi,   (MQTT)        (store, analyze)  (visualize,
@@ -46,6 +48,8 @@ Data flows from cheap sensors, through a local device that may pre-process it, o
 ---
 
 ## Smoothing noisy sensor data (tested)
+
+*Smoothing noisy sensor data in Python for IoT — what it is and when to use it.*
 
 Real sensors are noisy — readings jitter. A **moving average** smooths them, which is one of the most common IoT data tasks. Runnable:
 

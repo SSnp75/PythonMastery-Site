@@ -91,6 +91,8 @@ class BankAccount:
 
 ## Exception chaining (`raise ... from`)
 
+*Exception chaining (raise ... from) in Error Handling — what it is and when to use it.*
+
 Preserve the original cause when re-raising as a higher-level error:
 
 ```python
@@ -114,6 +116,8 @@ except ConfigError as e:
 
 ## A custom exception hierarchy
 
+*A custom exception hierarchy — a key concept in Error Handling.*
+
 Give an app one base exception so callers can catch broadly or narrowly:
 
 ```python
@@ -130,6 +134,8 @@ print(handle(NotFoundError()))   # True — one base catches all app errors
 ---
 
 ## Exception groups (Python 3.11+)
+
+*Exception groups in Error Handling — what it is and when to use it.*
 
 Handle multiple simultaneous errors (e.g. from concurrent tasks) with `except*`:
 
@@ -149,6 +155,8 @@ if sys.version_info >= (3, 11):
 
 ## `contextlib.suppress` — ignore an expected error
 
+*contextlib.suppress — ignore an expected error, part of Error Handling.*
+
 ```python
 from contextlib import suppress
 
@@ -160,6 +168,8 @@ print("continued without crashing")   # continued without crashing
 ---
 
 ## EAFP vs LBYL
+
+*EAFP vs LBYL in Error Handling — what it is and when to use it.*
 
 Python prefers **EAFP** (Easier to Ask Forgiveness than Permission) — try the operation and
 handle failure — over **LBYL** (Look Before You Leap):
@@ -182,6 +192,8 @@ print(v)   # 0
 ---
 
 ## Best practices
+
+*Best practices in Error Handling — what it is and when to use it.*
 
 !!! tip "Error handling rules"
     - Catch specific exceptions, never bare `except:`

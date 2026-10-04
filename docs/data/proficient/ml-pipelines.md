@@ -23,6 +23,8 @@ description: End-to-end machine learning workflows from data to deployment with 
 
 ## The ML lifecycle
 
+*The ML lifecycle — a key concept in ML Pipelines.*
+
 ```
 ┌────────┐    ┌────────┐    ┌────────┐    ┌────────┐    ┌────────┐
 │  Data  │ →  │Feature │ →  │ Train  │ →  │Evaluate│ →  │ Deploy │

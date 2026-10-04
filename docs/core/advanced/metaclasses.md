@@ -23,6 +23,8 @@ description: "type, __new__, __init_subclass__, __prepare__ and controlling clas
 
 ## The fundamental truth: classes are objects
 
+*The fundamental truth: classes are objects — a key concept in Metaclasses.*
+
 In Python, everything is an object — including classes. A class is an instance of its metaclass.
 
 ```python
@@ -216,6 +218,8 @@ print(Record._fields)   # ['name', 'age', 'city']  — preserves definition orde
 
 ## Use Case: Auto-registering plugins
 
+*Use Case: Auto-registering plugins in Metaclasses — what it is and when to use it.*
+
 ```python
 class PluginMeta(type):
     registry = {}
@@ -263,6 +267,8 @@ print(exporter.export("hello"))   # PDF: hello
 
 ## Use Case: Interface enforcement
 
+*Use Case: Interface enforcement in Metaclasses — what it is and when to use it.*
+
 ```python
 class InterfaceMeta(type):
     """Metaclass that enforces subclasses implement required methods."""
@@ -309,6 +315,8 @@ except TypeError as ex:
 ---
 
 ## Use Case: Automatic `__repr__` and `__eq__`
+
+*Use Case: Automatic __repr__ and __eq__ in Metaclasses — what it is and when to use it.*
 
 ```python
 class AutoMeta(type):
@@ -435,6 +443,8 @@ class C(A, B, metaclass=MetaC): pass   # works!
 ---
 
 ## When NOT to use metaclasses
+
+*A core question explored in Metaclasses: When NOT to use metaclasses.*
 
 !!! warning "Metaclasses are powerful but complex"
     Before reaching for a metaclass, try these simpler alternatives:

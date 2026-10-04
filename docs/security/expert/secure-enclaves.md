@@ -38,6 +38,8 @@ A **secure enclave** (or **Trusted Execution Environment**, TEE) is a hardware-p
 
 ## The "data in use" gap
 
+*The "data in use" gap — a key concept in Secure Enclaves.*
+
 Encryption traditionally protects data in two states, leaving a gap:
 
 ```
@@ -52,6 +54,8 @@ To *compute* on data, you normally decrypt it into RAM — where the OS, a compr
 
 ## The technologies
 
+*The technologies — a key concept in Secure Enclaves.*
+
 - **Intel SGX** (Software Guard Extensions) — creates encrypted memory "enclaves"; even the OS kernel can't read enclave memory.
 - **AMD SEV** (Secure Encrypted Virtualization) — encrypts a whole VM's memory, protecting it from the hypervisor/host.
 - **ARM TrustZone** — a "secure world" on ARM chips (common in mobile/embedded).
@@ -63,11 +67,15 @@ Collectively this is **confidential computing** — a growing field for running 
 
 ## Attestation: proving what's running
 
+*Attestation: proving what's running in Secure Enclaves — what it is and when to use it.*
+
 A key concept is **remote attestation** — the enclave can cryptographically *prove* to a remote party exactly what code is running inside it and that it's genuinely protected by real hardware. Before sending secret data to an enclave, you verify its attestation. This is what lets you trust computation on someone else's machine: not "trust the operator," but "trust the hardware's proof of what's executing."
 
 ---
 
 ## How Python fits
+
+*A core question explored in Secure Enclaves: How Python fits.*
 
 Python isn't the natural language for enclave code (which is often C/C++ for the small trusted core), but it appears at the edges:
 
@@ -80,6 +88,8 @@ So the common pattern for Python + enclaves today is a **confidential VM**: run 
 ---
 
 ## Threat model and limits
+
+*Threat model and limits in Secure Enclaves — what it is and when to use it.*
 
 !!! warning "Enclaves are not magic"
     Secure enclaves defend against a specific threat: a compromised OS/hypervisor/host reading your data *in use*. They do **not** fix bugs in *your* code, protect against side-channel attacks (several have been demonstrated against SGX), or remove the need for other security practices. They also add complexity and performance overhead. Use them when your threat model genuinely includes an untrusted host — and combine with, not instead of, the rest of your security.

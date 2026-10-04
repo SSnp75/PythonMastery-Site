@@ -81,6 +81,8 @@ with open("model.pkl", "rb") as f:
 
 ## JSON round-trip (runnable)
 
+*JSON round-trip (runnable) in Data Serialization — what it is and when to use it.*
+
 ```python
 import json
 
@@ -96,6 +98,8 @@ Note the type mapping: Python `True` → JSON `true`, `None` → `null`, tuples 
 ---
 
 ## Custom JSON encoding
+
+*Custom JSON encoding in Data Serialization — what it is and when to use it.*
 
 `json` can't serialize arbitrary objects — supply a `default` function:
 
@@ -116,6 +120,8 @@ print(json.dumps({"when": date(2026, 1, 15)}, default=encode))
 
 ## CSV
 
+*CSV in Data Serialization — what it is and when to use it.*
+
 ```python
 import csv, io
 
@@ -135,6 +141,8 @@ CSV values are always strings on read — convert types yourself.
 
 ## TOML (read-only, stdlib 3.11+)
 
+*TOML in Data Serialization — what it is and when to use it.*
+
 ```python
 import tomllib   # Python 3.11+
 
@@ -147,6 +155,8 @@ Great for config (`pyproject.toml` uses it). For writing TOML, use the `tomli-w`
 ---
 
 ## pickle round-trip (runnable)
+
+*pickle round-trip (runnable) in Data Serialization — what it is and when to use it.*
 
 ```python
 import pickle
@@ -164,6 +174,8 @@ print(restored == obj)            # True
 ---
 
 ## When to use what
+
+*A core question explored in Data Serialization: When to use what.*
 
 | Format | Human-readable | Language-agnostic | Speed | Use case |
 |---|---|---|---|---|

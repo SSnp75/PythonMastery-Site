@@ -17,6 +17,8 @@ description: Frames, namespaces, LEGB scope, code objects and the eval loop
 
 ## How Python executes your code
 
+*A core question explored in Python Execution Model: How Python executes your code.*
+
 ```
 Source Code (.py)
     │

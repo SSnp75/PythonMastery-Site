@@ -35,6 +35,8 @@ Python dominates quantitative finance — from research notebooks to trading sys
 
 ## Financial math (stdlib, tested)
 
+*Financial math (stdlib, tested) in Python for Finance — what it is and when to use it.*
+
 The foundations need no libraries. Compound interest and simple returns:
 
 ```python
