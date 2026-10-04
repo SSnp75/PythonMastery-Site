@@ -48,14 +48,48 @@ Curated tools, books and communities.
 
 ## Communities
 
-- r/learnpython
+- r/learnpython and r/Python
 - Python Discord
 - PyCon (conferences worldwide)
 - Local Python meetups
 
 ---
 
-<div class="pm-coming-soon">
-<h3>📝 More resources coming</h3>
-<p>Video courses, podcasts, GitHub repos worth studying</p>
-</div>
+## Video courses & channels
+
+| Resource | What it is |
+|---|---|
+| [Corey Schafer (YouTube)](https://www.youtube.com/@coreyms) | Clear topic-by-topic tutorials |
+| [mCoding (YouTube)](https://www.youtube.com/@mCoding) | Deep, idiomatic Python internals |
+| [ArjanCodes (YouTube)](https://www.youtube.com/@ArjanCodes) | Design and architecture |
+| [Talk Python Training](https://training.talkpython.fm) | Structured paid courses |
+
+---
+
+## Podcasts
+
+| Podcast | Focus |
+|---|---|
+| [Talk Python To Me](https://talkpython.fm) | interviews, ecosystem |
+| [Python Bytes](https://pythonbytes.fm) | weekly news in brief |
+| [The Real Python Podcast](https://realpython.com/podcasts/rpp/) | tutorials and guests |
+
+---
+
+## GitHub repos worth studying
+
+| Repo | Why |
+|---|---|
+| `python/cpython` | the reference implementation itself |
+| `pallets/flask` | clean, readable web framework |
+| `psf/requests` | famously approachable API design |
+| `tiangolo/fastapi` | modern async + typing patterns |
+| `TheAlgorithms/Python` | algorithms with clear implementations |
+
+---
+
+## Staying current
+
+- **PEPs** — [peps.python.org](https://peps.python.org) for language evolution
+- **What's New** — the official `docs.python.org/3/whatsnew/` per release
+- **Discuss** — [discuss.python.org](https://discuss.python.org) for core development
