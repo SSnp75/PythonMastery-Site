@@ -15,6 +15,12 @@ description: Tools for discrete-event, agent-based and continuous simulation in 
 
 ---
 
+!!! info "When you'd use this"
+    Tools for discrete-event, agent-based and continuous simulation in Python.
+
+    Build and run simulations — physical systems, agents, Monte Carlo — with Python frameworks and numeric backends.
+
+
 ## What you'll learn
 
 - [x] The three simulation paradigms

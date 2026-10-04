@@ -15,6 +15,12 @@ description: Conflict-free replicated data types that merge without coordination
 
 ---
 
+!!! info "When you'd use this"
+    Conflict-free replicated data types that merge without coordination.
+
+    Let replicas accept writes independently and merge without conflicts — for offline-first apps and collaborative editing.
+
+
 ## What you'll learn
 
 - [x] The problem CRDTs solve (merging without coordination)

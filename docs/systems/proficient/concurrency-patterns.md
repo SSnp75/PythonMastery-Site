@@ -15,6 +15,12 @@ description: Producer-consumer, fan-out/fan-in, pipeline, backpressure and actor
 
 ---
 
+!!! info "When you'd use this"
+    Producer-consumer, fan-out/fan-in, pipeline, backpressure and actor model.
+
+    Apply proven patterns (worker pools, pipelines, fan-out/fan-in) to structure concurrent systems correctly and avoid races.
+
+
 ## Pattern 1: Producer-Consumer
 
 Multiple producers generate work, multiple consumers process it.

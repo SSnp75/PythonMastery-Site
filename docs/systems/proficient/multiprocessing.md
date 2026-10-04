@@ -15,6 +15,12 @@ description: Processes, Pool, Queue, shared memory, ProcessPoolExecutor and true
 
 ---
 
+!!! info "When you'd use this"
+    Processes, Pool, Queue, shared memory, ProcessPoolExecutor and true parallelism.
+
+    Use multiple processes to parallelize CPU-bound work across cores, sidestepping the GIL — for number crunching and heavy computation.
+
+
 ## Why multiprocessing?
 
 Each process has its own Python interpreter and GIL — true parallelism for CPU-bound work.

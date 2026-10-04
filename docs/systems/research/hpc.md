@@ -15,6 +15,12 @@ description: MPI4py, SLURM, Dask, Ray and distributed high-performance computing
 
 ---
 
+!!! info "When you'd use this"
+    MPI4py, SLURM, Dask, Ray and distributed high-performance computing.
+
+    Scale computation across clusters with MPI/schedulers — for scientific and large-scale simulation workloads.
+
+
 ## MPI4py — Message Passing Interface
 
 MPI is the standard for distributed computing on clusters. Each process (rank) communicates explicitly.

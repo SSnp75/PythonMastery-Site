@@ -15,6 +15,12 @@ description: Build robot software with ROS 2 — nodes, topics, services and Pyt
 
 ---
 
+!!! info "When you'd use this"
+    Build robot software with ROS 2 — nodes, topics, services and Python.
+
+    Connect robot components with middleware like ROS for messaging, control, and sensor integration.
+
+
 ## What you'll learn
 
 - [x] What robotics middleware solves

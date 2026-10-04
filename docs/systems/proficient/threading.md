@@ -15,6 +15,12 @@ description: Threads, locks, race conditions, synchronization primitives and the
 
 ---
 
+!!! info "When you'd use this"
+    Threads, locks, race conditions, synchronization primitives and the GIL.
+
+    Run I/O-bound work concurrently (downloads, requests) with threads — but mind the GIL, which limits CPU-bound parallelism.
+
+
 ## When to use threads
 
 | Workload | Use threads? | Why |

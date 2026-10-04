@@ -15,6 +15,12 @@ description: Store and compute on mostly-zero data efficiently
 
 ---
 
+!!! info "When you'd use this"
+    Store and compute on mostly-zero data efficiently.
+
+    Store and compute on mostly-zero data efficiently — for graphs, NLP, and large scientific matrices.
+
+
 ## What you'll learn
 
 - [x] What "sparse" means and why it matters

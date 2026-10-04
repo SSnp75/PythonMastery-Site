@@ -15,6 +15,12 @@ description: Find memory leaks and reduce usage with tracemalloc and friends
 
 ---
 
+!!! info "When you'd use this"
+    Find memory leaks and reduce usage with tracemalloc and friends.
+
+    Track down memory leaks and bloat with tracemalloc and memory profilers when processes grow unexpectedly.
+
+
 ## What you'll learn
 
 - [x] Why memory matters (leaks, limits)

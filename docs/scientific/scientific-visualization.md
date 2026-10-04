@@ -15,6 +15,12 @@ description: Plot data and render results with Matplotlib and beyond
 
 ---
 
+!!! info "When you'd use this"
+    Plot data and render results with Matplotlib and beyond.
+
+    Visualize scientific and 3D data — fields, volumes, meshes — for analysis and publication.
+
+
 ## What you'll learn
 
 - [x] Why visualization matters in science

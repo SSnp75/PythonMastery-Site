@@ -15,6 +15,12 @@ description: Run background jobs at scale with Celery and RQ — retries, backof
 
 ---
 
+!!! info "When you'd use this"
+    Run background jobs at scale with Celery and RQ — retries, backoff and failure handling.
+
+    Coordinate and place work across a cluster — assigning tasks to nodes with fairness and fault tolerance.
+
+
 ## What you'll learn
 
 - [x] Why offload work to background jobs

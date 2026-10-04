@@ -15,6 +15,12 @@ description: Run Python on Raspberry Pi and embedded Linux — GPIO, daemons and
 
 ---
 
+!!! info "When you'd use this"
+    Run Python on Raspberry Pi and embedded Linux — GPIO, daemons and cross-compiling.
+
+    Build and script Python on embedded Linux boards — GPIO, buses, and device interfaces for IoT and robotics.
+
+
 ## What you'll learn
 
 - [x] Where embedded Linux sits between a PC and a microcontroller

@@ -15,6 +15,12 @@ description: Real-time constraints, scheduling and why Python needs care in timi
 
 ---
 
+!!! info "When you'd use this"
+    Real-time constraints, scheduling and why Python needs care in timing-critical code.
+
+    Meet timing deadlines in control and signal systems where late is as bad as wrong.
+
+
 ## What you'll learn
 
 - [x] The difference between soft and hard real-time

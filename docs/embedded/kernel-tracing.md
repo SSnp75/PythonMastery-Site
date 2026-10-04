@@ -15,6 +15,12 @@ description: Trace syscalls and kernel events with perf, ftrace and eBPF from Py
 
 ---
 
+!!! info "When you'd use this"
+    Trace syscalls and kernel events with perf, ftrace and eBPF from Python.
+
+    Trace OS/kernel behavior to diagnose latency, scheduling, and I/O issues on embedded and server systems.
+
+
 ## What you'll learn
 
 - [x] Why trace the kernel at all

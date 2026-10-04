@@ -15,6 +15,12 @@ description: Collect metrics, export them and alert when a system misbehaves
 
 ---
 
+!!! info "When you'd use this"
+    Collect metrics, export them and alert when a system misbehaves.
+
+    Collect system metrics (CPU, memory, I/O, temperature) for monitoring and alerting on devices and servers.
+
+
 ## What you'll learn
 
 - [x] Collect CPU, memory and disk metrics

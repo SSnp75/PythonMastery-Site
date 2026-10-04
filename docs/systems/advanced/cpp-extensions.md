@@ -15,6 +15,12 @@ description: Extend Python with C++ using pybind11 for native speed
 
 ---
 
+!!! info "When you'd use this"
+    Extend Python with C++ using pybind11 for native speed.
+
+    Extend Python with C++ for speed or to bind existing native libraries.
+
+
 ## What you'll learn
 
 - [x] Why write extensions in C++

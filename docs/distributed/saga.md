@@ -15,6 +15,12 @@ description: Coordinate changes across services with sagas and compensating tran
 
 ---
 
+!!! info "When you'd use this"
+    Coordinate changes across services with sagas and compensating transactions.
+
+    Coordinate a multi-service transaction with compensating actions when there's no distributed two-phase commit.
+
+
 ## What you'll learn
 
 - [x] Why cross-service transactions are hard

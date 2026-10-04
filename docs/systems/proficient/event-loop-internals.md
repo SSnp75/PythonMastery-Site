@@ -15,6 +15,12 @@ description: How the asyncio event loop schedules and runs coroutines under the 
 
 ---
 
+!!! info "When you'd use this"
+    How the asyncio event loop schedules and runs coroutines under the hood.
+
+    Understand how the asyncio loop schedules coroutines when you're debugging stalls or writing custom awaitables.
+
+
 ## What you'll learn
 
 - [x] What an event loop actually is

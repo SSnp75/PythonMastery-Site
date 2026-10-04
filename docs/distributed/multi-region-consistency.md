@@ -15,6 +15,12 @@ description: Consistency across geo-distributed regions — replication, conflic
 
 ---
 
+!!! info "When you'd use this"
+    Consistency across geo-distributed regions — replication, conflicts and causality.
+
+    Serve users worldwide while managing the consistency/latency tradeoffs of replicating data across regions.
+
+
 ## What you'll learn
 
 - [x] Why geography forces consistency tradeoffs

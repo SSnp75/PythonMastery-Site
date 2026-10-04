@@ -15,6 +15,12 @@ description: Model and simulate hardware behavior with discrete-event simulation
 
 ---
 
+!!! info "When you'd use this"
+    Model and simulate hardware behavior with discrete-event simulation.
+
+    Simulate hardware to develop and test without the physical device in the loop.
+
+
 ## What you'll learn
 
 - [x] Why simulate hardware at all

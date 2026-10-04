@@ -15,6 +15,12 @@ description: Sequence analysis, structural biology and genomics with Python
 
 ---
 
+!!! info "When you'd use this"
+    Sequence analysis, structural biology and genomics with Python.
+
+    Analyze biological data — sequences, structures, genomics — with Python's scientific stack.
+
+
 ## What you'll learn
 
 - [x] How computational biology relates to bioinformatics

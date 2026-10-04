@@ -15,6 +15,12 @@ description: Follow a request across services with traces, spans and OpenTelemet
 
 ---
 
+!!! info "When you'd use this"
+    Follow a request across services with traces, spans and OpenTelemetry.
+
+    Follow a request as it hops across services to find where latency and errors come from in a distributed system.
+
+
 ## What you'll learn
 
 - [x] Why tracing exists (debugging across services)

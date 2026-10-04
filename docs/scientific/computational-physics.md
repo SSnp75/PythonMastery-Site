@@ -15,6 +15,12 @@ description: Numerical integration, ODEs and Monte Carlo methods for physics
 
 ---
 
+!!! info "When you'd use this"
+    Numerical integration, ODEs and Monte Carlo methods for physics.
+
+    Solve physics problems numerically — ODEs/PDEs, N-body, field simulations — with NumPy/SciPy.
+
+
 ## What you'll learn
 
 - [x] Numerical integration (tested)

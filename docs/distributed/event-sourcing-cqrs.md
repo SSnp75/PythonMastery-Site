@@ -15,6 +15,12 @@ description: Model state as an immutable log of events and separate reads from w
 
 ---
 
+!!! info "When you'd use this"
+    Model state as an immutable log of events and separate reads from writes.
+
+    Store state as an append-only log of events and separate reads from writes — for auditability and complex read models.
+
+
 ## What you'll learn
 
 - [x] Store state as a log of events, not a current snapshot

@@ -15,6 +15,12 @@ description: Build automatic differentiation from scratch — the engine behind 
 
 ---
 
+!!! info "When you'd use this"
+    Build automatic differentiation from scratch — the engine behind deep learning.
+
+    Build an automatic-differentiation engine to understand how backprop and ML frameworks compute gradients.
+
+
 ## What you'll learn
 
 - [x] What automatic differentiation is

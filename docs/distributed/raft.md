@@ -15,6 +15,12 @@ description: The Raft consensus algorithm — leader election, log replication a
 
 ---
 
+!!! info "When you'd use this"
+    The Raft consensus algorithm — leader election, log replication and safety.
+
+    Keep replicated state consistent across nodes with a leader-based consensus algorithm — the basis of etcd, Consul, and many databases.
+
+
 ## What you'll learn
 
 - [x] What consensus is and why it's hard

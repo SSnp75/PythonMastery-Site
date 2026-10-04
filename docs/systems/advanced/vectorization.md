@@ -15,6 +15,12 @@ description: Replace Python loops with array operations for massive speedups
 
 ---
 
+!!! info "When you'd use this"
+    Replace Python loops with array operations for massive speedups.
+
+    Replace Python loops with array-wide NumPy operations for order-of-magnitude speedups on numeric data.
+
+
 ## What you'll learn
 
 - [x] What vectorization is and why it's fast

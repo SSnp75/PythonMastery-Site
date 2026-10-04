@@ -15,6 +15,12 @@ description: Scale reads with Redis/Memcached, consistent hashing and cache inva
 
 ---
 
+!!! info "When you'd use this"
+    Scale reads with Redis/Memcached, consistent hashing and cache invalidation.
+
+    Speed up systems and cut load with distributed caches — but handle TTLs and invalidation to avoid stale data.
+
+
 ## What you'll learn
 
 - [x] Why and where to cache

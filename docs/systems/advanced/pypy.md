@@ -15,6 +15,12 @@ description: An alternative Python with a JIT compiler for big speedups
 
 ---
 
+!!! info "When you'd use this"
+    An alternative Python with a JIT compiler for big speedups.
+
+    Run pure-Python, loop-heavy programs several times faster with a JIT — when the bottleneck is Python itself, not C libraries or I/O.
+
+
 ## What you'll learn
 
 - [x] What PyPy is and how it differs from CPython

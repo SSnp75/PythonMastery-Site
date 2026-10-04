@@ -15,6 +15,12 @@ description: Static types, .pyx files, typed memoryviews, wrapping C libraries a
 
 ---
 
+!!! info "When you'd use this"
+    Static types, .pyx files, typed memoryviews, wrapping C libraries and compilation.
+
+    Compile Python to C for big speedups on hot numeric loops, or to wrap C libraries.
+
+
 ## What is Cython?
 
 Cython is a **superset of Python** that compiles to C. Adding type annotations gives C-level speed while keeping Python-like syntax.

@@ -15,6 +15,12 @@ description: Common slow patterns in Python and the faster alternatives
 
 ---
 
+!!! info "When you'd use this"
+    Common slow patterns in Python and the faster alternatives.
+
+    Recognize and avoid the slow patterns (string `+=` in loops, needless copies, N+1 queries) that quietly kill performance.
+
+
 ## What you'll learn
 
 - [x] The most common Python slow-downs

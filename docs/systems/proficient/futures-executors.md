@@ -15,6 +15,12 @@ description: Offload work to thread and process pools with concurrent.futures
 
 ---
 
+!!! info "When you'd use this"
+    Offload work to thread and process pools with concurrent.futures.
+
+    Submit work to thread/process pools and collect results via futures — a simple API for parallelism without managing threads directly.
+
+
 ## What you'll learn
 
 - [x] What a future represents

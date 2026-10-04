@@ -15,6 +15,12 @@ description: Write GPU kernels in Python with Triton for deep-learning speed
 
 ---
 
+!!! info "When you'd use this"
+    Write GPU kernels in Python with Triton for deep-learning speed.
+
+    Write custom GPU kernels in Python with Triton for ML and numerical workloads that need maximum throughput.
+
+
 ## What you'll learn
 
 - [x] Why GPUs are fast (and different)

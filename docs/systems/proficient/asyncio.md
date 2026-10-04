@@ -15,6 +15,12 @@ description: async/await, event loop, tasks, gather, streams, TaskGroup and asyn
 
 ---
 
+!!! info "When you'd use this"
+    async/await, event loop, tasks, gather, streams, TaskGroup and async patterns.
+
+    Handle thousands of concurrent I/O operations on one thread — network servers, API clients, scrapers — with async/await.
+
+
 ## How asyncio works
 
 Asyncio uses a **single thread** with cooperative multitasking. When one coroutine awaits I/O, the event loop runs another.

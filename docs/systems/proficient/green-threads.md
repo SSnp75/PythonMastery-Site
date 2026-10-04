@@ -15,6 +15,12 @@ description: Cooperative lightweight threads with gevent and greenlets
 
 ---
 
+!!! info "When you'd use this"
+    Cooperative lightweight threads with gevent and greenlets.
+
+    Use lightweight cooperative threads for massive concurrency without OS-thread overhead — the idea behind gevent and async runtimes.
+
+
 ## What you'll learn
 
 - [x] What green threads are

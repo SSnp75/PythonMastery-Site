@@ -15,6 +15,12 @@ description: Concurrency via isolated actors that communicate only by messages
 
 ---
 
+!!! info "When you'd use this"
+    Concurrency via isolated actors that communicate only by messages.
+
+    Model concurrency as isolated actors exchanging messages — avoiding shared mutable state and the bugs it brings.
+
+
 ## What you'll learn
 
 - [x] What the actor model is and why it avoids shared-state bugs

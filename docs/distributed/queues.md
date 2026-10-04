@@ -15,6 +15,12 @@ description: Message queues and streams with RabbitMQ and Kafka — delivery gua
 
 ---
 
+!!! info "When you'd use this"
+    Message queues and streams with RabbitMQ and Kafka — delivery guarantees and ordering.
+
+    Decouple producers from consumers with message queues — for async processing, buffering spikes, and reliable work distribution.
+
+
 ## What you'll learn
 
 - [x] Why services communicate through queues

@@ -15,6 +15,12 @@ description: PyO3, maturin, memory safety, GIL management and high-performance P
 
 ---
 
+!!! info "When you'd use this"
+    PyO3, maturin, memory safety, GIL management and high-performance Python extensions.
+
+    Write performance-critical or safety-critical pieces in Rust and call them from Python via PyO3.
+
+
 ## Why Rust for Python extensions?
 
 | Advantage | Explanation |

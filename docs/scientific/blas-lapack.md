@@ -15,6 +15,12 @@ description: The linear algebra engines that make NumPy fast
 
 ---
 
+!!! info "When you'd use this"
+    The linear algebra engines that make NumPy fast.
+
+    Understand the optimized linear-algebra libraries under NumPy/SciPy so you can get maximum numeric performance.
+
+
 ## What you'll learn
 
 - [x] What BLAS and LAPACK are

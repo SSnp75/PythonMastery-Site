@@ -15,6 +15,12 @@ description: Find minima, roots and best fits with gradient and gradient-free me
 
 ---
 
+!!! info "When you'd use this"
+    Find minima, roots and best fits with gradient and gradient-free methods.
+
+    Find minima/maxima and fit models with optimization algorithms — for calibration, ML, and engineering problems.
+
+
 ## What you'll learn
 
 - [x] What optimization means numerically

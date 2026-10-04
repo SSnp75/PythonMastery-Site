@@ -15,6 +15,12 @@ description: cProfile, line_profiler, py-spy, memory profiling and optimization 
 
 ---
 
+!!! info "When you'd use this"
+    cProfile, line_profiler, py-spy, memory profiling and optimization workflow.
+
+    Find the real bottleneck before optimizing — measure with cProfile/py-spy instead of guessing where time goes.
+
+
 ## The optimization workflow
 
 ```

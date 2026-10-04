@@ -15,6 +15,12 @@ description: Test embedded firmware from Python over serial and other protocols
 
 ---
 
+!!! info "When you'd use this"
+    Test embedded firmware from Python over serial and other protocols.
+
+    Test firmware from Python — hardware-in-the-loop rigs, serial protocols, and automated validation.
+
+
 ## What you'll learn
 
 - [x] Talk to a device over a serial port

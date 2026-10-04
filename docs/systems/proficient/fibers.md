@@ -15,6 +15,12 @@ description: Stackful coroutines and how they differ from asyncio's stackless mo
 
 ---
 
+!!! info "When you'd use this"
+    Stackful coroutines and how they differ from asyncio's stackless model.
+
+    Work with cooperatively-scheduled coroutines/fibers when you need fine-grained control over suspension and resumption.
+
+
 ## What you'll learn
 
 - [x] What a fiber is

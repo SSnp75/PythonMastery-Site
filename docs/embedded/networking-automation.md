@@ -15,6 +15,12 @@ description: Automate network devices with SSH, device APIs and idempotent confi
 
 ---
 
+!!! info "When you'd use this"
+    Automate network devices with SSH, device APIs and idempotent configuration.
+
+    Automate network devices — config, provisioning, and testing — with Python libraries like Netmiko/NAPALM.
+
+
 ## What you'll learn
 
 - [x] Automate device config over SSH

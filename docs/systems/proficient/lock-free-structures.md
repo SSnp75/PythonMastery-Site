@@ -15,6 +15,12 @@ description: Concurrency without locks — atomics, compare-and-swap and the Pyt
 
 ---
 
+!!! info "When you'd use this"
+    Concurrency without locks — atomics, compare-and-swap and the Python reality.
+
+    Build concurrent data structures without locks — for low-latency, high-contention systems where locking is a bottleneck.
+
+
 ## What you'll learn
 
 - [x] What "lock-free" means

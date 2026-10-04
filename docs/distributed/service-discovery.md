@@ -15,6 +15,12 @@ description: How services find each other — registries, health checks and clie
 
 ---
 
+!!! info "When you'd use this"
+    How services find each other — registries, health checks and client-side load balancing.
+
+    Let services find each other dynamically via a registry and health checks — essential once instances scale up and down.
+
+
 ## What you'll learn
 
 - [x] Why hard-coded addresses break in the cloud

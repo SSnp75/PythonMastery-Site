@@ -15,6 +15,12 @@ description: Kernel tracing, observability, bcc tools and system-level Python in
 
 ---
 
+!!! info "When you'd use this"
+    Kernel tracing, observability, bcc tools and system-level Python instrumentation.
+
+    Instrument and trace the Linux kernel from user space for deep observability and performance analysis.
+
+
 ## What is eBPF?
 
 eBPF (extended Berkeley Packet Filter) runs **sandboxed programs inside the Linux kernel** without modifying kernel source or loading modules. It's used for:

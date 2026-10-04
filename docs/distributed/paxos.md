@@ -15,6 +15,12 @@ description: The Paxos consensus family — proposers, acceptors and quorum agre
 
 ---
 
+!!! info "When you'd use this"
+    The Paxos consensus family — proposers, acceptors and quorum agreement.
+
+    Reach agreement among unreliable nodes — the foundational (if intricate) consensus algorithm behind many distributed systems.
+
+
 ## What you'll learn
 
 - [x] What Paxos achieves and why it's famous

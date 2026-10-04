@@ -15,6 +15,12 @@ description: Run Python on microcontrollers with MicroPython and CircuitPython
 
 ---
 
+!!! info "When you'd use this"
+    Run Python on microcontrollers with MicroPython and CircuitPython.
+
+    Run Python on constrained devices (MicroPython/CircuitPython) for microcontroller projects and IoT.
+
+
 ## What you'll learn
 
 - [x] What MicroPython and CircuitPython are
