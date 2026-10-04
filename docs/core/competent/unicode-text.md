@@ -182,6 +182,24 @@ s.strip(" !")      # "Hello, World"  — strip these chars
 "hello world".replace("l", "L", 1)          # "heLlo world" (max 1 replacement)
 ```
 
+!!! info "`str.title()` — what it's for"
+    `title()` upper-cases the first letter of **every word** and lower-cases the rest —
+    handy for display formatting: cleaning up user-entered names (`"alice smith".title()`
+    → `"Alice Smith"`), normalizing city/place names, or formatting headings and labels for
+    a UI.
+
+    **Gotcha:** it treats any non-letter as a word boundary, so apostrophes and hyphens
+    break words oddly: `"o'brien".title()` → `"O'Brien"` and `"it's".title()` → `"It'S"`.
+    For human names with apostrophes, prefer `.capitalize()` per word or the `string.capwords`
+    helper.
+
+    ```python
+    import string
+    print("hello world".title())        # Hello World
+    print("it's a test".title())        # It'S A Test   (apostrophe gotcha)
+    print(string.capwords("it's a test"))  # It's A Test  (capwords is safer here)
+    ```
+
 ### Splitting and joining
 
 ```python
