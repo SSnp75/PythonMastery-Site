@@ -66,6 +66,13 @@ print(cube(3))     # 27
 
 ## Higher-order function patterns
 
+A **higher-order function** takes other functions as arguments or returns one. They let you
+treat behavior as data — passing, combining, and building functions on the fly.
+
+**When you'd use this:** composing a data-transformation pipeline from small steps, writing
+`sorted`/`map`/`filter` keys, building decorators and middleware, implementing strategy/
+callback patterns, and factoring out boilerplate into reusable wrappers.
+
 ```python
 # Function composition
 def compose(*fns):
@@ -78,7 +85,7 @@ def compose(*fns):
 add_one  = lambda x: x + 1
 double   = lambda x: x * 2
 pipeline = compose(double, add_one)   # first add_one, then double
-pipeline(3)   # 8
+print(pipeline(3))   # 8
 ```
 
 ---
