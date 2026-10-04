@@ -15,6 +15,12 @@ description: BeautifulSoup, Scrapy, Playwright, handling pagination, proxies and
 
 ---
 
+!!! info "When you'd use this"
+    BeautifulSoup, Scrapy, Playwright, handling pagination, proxies and ethical scraping.
+
+    Extract data from websites: parse HTML with BeautifulSoup, drive JS-heavy pages with Playwright, and respect robots.txt and rate limits.
+
+
 ## BeautifulSoup — parsing static HTML
 
 ```python

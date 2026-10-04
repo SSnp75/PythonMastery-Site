@@ -15,6 +15,12 @@ description: sqlite3, PostgreSQL, connection pooling, transactions, migrations a
 
 ---
 
+!!! info "When you'd use this"
+    sqlite3, PostgreSQL, connection pooling, transactions, migrations and patterns.
+
+    Talk to databases from Python — connections, parameterized queries, transactions — for any app that persists data.
+
+
 ## sqlite3 (built-in) — complete guide
 
 ### CRUD operations

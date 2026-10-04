@@ -15,6 +15,12 @@ description: Arrays, broadcasting, vectorization, linear algebra and numerical c
 
 ---
 
+!!! info "When you'd use this"
+    Arrays, broadcasting, vectorization, linear algebra and numerical computing.
+
+    Do fast numerical work on arrays — math, linear algebra, simulations — far quicker than Python lists. The foundation under pandas and ML libraries.
+
+
 ## Why NumPy?
 
 NumPy is 10-100x faster than Python lists for numerical operations because:

@@ -15,6 +15,12 @@ description: Turn raw data into features that make models work
 
 ---
 
+!!! info "When you'd use this"
+    Turn raw data into features that make models work.
+
+    Turn raw data into model-ready features — encoding, scaling, binning, extraction — often the biggest lever on ML model quality.
+
+
 ## What you'll learn
 
 - [x] Why feature engineering matters most

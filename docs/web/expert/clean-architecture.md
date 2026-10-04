@@ -15,6 +15,12 @@ description: Layered design, dependency inversion, ports & adapters and testable
 
 ---
 
+!!! info "When you'd use this"
+    Layered design, dependency inversion, ports & adapters and testable systems.
+
+    Keep business logic independent of frameworks and databases, so you can swap infrastructure and test the core in isolation.
+
+
 ## The dependency rule
 
 The core principle: **dependencies point inward**. Inner layers know nothing about outer layers.

@@ -14,6 +14,12 @@ description: Extract-Transform-Load patterns, data validation and pipeline orche
 
 ---
 
+!!! info "When you'd use this"
+    Extract-Transform-Load patterns, data validation and pipeline orchestration.
+
+    Move and transform data between systems on a schedule — extract, transform, load — the core of analytics and data-warehouse work.
+
+
 ## ETL pattern
 
 ```python

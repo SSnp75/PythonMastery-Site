@@ -15,6 +15,12 @@ description: SQLAlchemy 2.0, relationships, async, migrations and query optimiza
 
 ---
 
+!!! info "When you'd use this"
+    SQLAlchemy 2.0, relationships, async, migrations and query optimization.
+
+    Map database rows to objects with SQLAlchemy or Django ORM, so you work with Python classes instead of raw SQL for most queries.
+
+
 ## SQLAlchemy 2.0 — Declarative Models
 
 ```python

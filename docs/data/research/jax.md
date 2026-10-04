@@ -15,6 +15,12 @@ description: XLA compilation, jit, grad, vmap, pytrees and functional transforma
 
 ---
 
+!!! info "When you'd use this"
+    XLA compilation, jit, grad, vmap, pytrees and functional transformations.
+
+    Write high-performance, differentiable array code that compiles to CPU/GPU/TPU — for ML research and large-scale numerical work.
+
+
 ## What is JAX?
 
 JAX = **NumPy + Autograd + XLA**. Write NumPy-like code that:

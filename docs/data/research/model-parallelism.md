@@ -15,6 +15,12 @@ description: Split a model too big for one device across multiple GPUs
 
 ---
 
+!!! info "When you'd use this"
+    Split a model too big for one device across multiple GPUs.
+
+    Split a model too big for one device across several — for very large networks.
+
+
 ## What you'll learn
 
 - [x] Data parallelism vs model parallelism

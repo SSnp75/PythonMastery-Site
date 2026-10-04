@@ -15,6 +15,12 @@ description: Orchestrate multi-step inference pipelines as DAGs for latency and 
 
 ---
 
+!!! info "When you'd use this"
+    Orchestrate multi-step inference pipelines as DAGs for latency and throughput.
+
+    Optimize the computation graph for inference — fusing ops and pruning — to cut latency and cost.
+
+
 ## What you'll learn
 
 - [x] Why real inference is multi-step

@@ -15,6 +15,12 @@ description: Build extensible systems where features plug in without touching th
 
 ---
 
+!!! info "When you'd use this"
+    Build extensible systems where features plug in without touching the core.
+
+    Let third parties (or your team) extend an app via plugins without modifying its core — for extensible tools, IDEs, and platforms.
+
+
 ## What you'll learn
 
 - [x] Build a plugin registry with decorators

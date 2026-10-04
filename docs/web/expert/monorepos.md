@@ -15,6 +15,12 @@ description: Structure, tooling, dependency management and CI for a single repos
 
 ---
 
+!!! info "When you'd use this"
+    Structure, tooling, dependency management and CI for a single repository holding many projects.
+
+    Manage many related packages/services in one repository with shared tooling — when coordinated changes across projects are common.
+
+
 ## What you'll learn
 
 - [x] What a monorepo is and the problem it solves

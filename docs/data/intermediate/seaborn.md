@@ -15,6 +15,12 @@ description: Statistical data visualization built on Matplotlib
 
 ---
 
+!!! info "When you'd use this"
+    Statistical data visualization built on Matplotlib.
+
+    Make statistical plots quickly — heatmaps, distributions, pair plots — on top of matplotlib with sensible defaults.
+
+
 ## What you'll learn
 
 - [x] What Seaborn adds over Matplotlib

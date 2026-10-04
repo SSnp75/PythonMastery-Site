@@ -15,6 +15,12 @@ description: End-to-end machine learning workflows from data to deployment with 
 
 ---
 
+!!! info "When you'd use this"
+    End-to-end machine learning workflows from data to deployment with MLflow.
+
+    Chain preprocessing and models into reproducible pipelines, and tune them with cross-validation and grid search.
+
+
 ## The ML lifecycle
 
 ```

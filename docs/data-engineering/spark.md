@@ -14,6 +14,12 @@ description: Distributed data processing with Spark DataFrames, SQL and transfor
 
 ---
 
+!!! info "When you'd use this"
+    Distributed data processing with Spark DataFrames, SQL and transformations.
+
+    Process datasets too big for one machine with distributed DataFrames — for large-scale batch analytics.
+
+
 ## PySpark basics
 
 ```python

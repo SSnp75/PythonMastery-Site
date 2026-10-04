@@ -15,6 +15,12 @@ description: Split a model across GPUs like an assembly line, with micro-batchin
 
 ---
 
+!!! info "When you'd use this"
+    Split a model across GPUs like an assembly line, with micro-batching.
+
+    Stage a model across devices so micro-batches flow through like an assembly line — for training huge models efficiently.
+
+
 ## What you'll learn
 
 - [x] What pipeline parallelism is

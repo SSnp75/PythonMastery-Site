@@ -15,6 +15,12 @@ description: Service boundaries, communication patterns, orchestration and obser
 
 ---
 
+!!! info "When you'd use this"
+    Service boundaries, communication patterns, orchestration and observability.
+
+    Split a system into independently deployable services communicating over APIs or messaging — for scaling teams and workloads independently.
+
+
 ## When to use microservices
 
 !!! warning "Start monolith, extract later"

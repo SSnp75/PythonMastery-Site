@@ -15,6 +15,12 @@ description: DataFrames, Series, groupby, merge, pivot, window functions and dat
 
 ---
 
+!!! info "When you'd use this"
+    DataFrames, Series, groupby, merge, pivot, window functions and data manipulation.
+
+    Load, clean, filter, group, and reshape tabular data — the everyday tool for data analysis, ETL, and preparing datasets for ML.
+
+
 ## DataFrame basics
 
 ```python

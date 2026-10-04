@@ -14,6 +14,12 @@ description: Real-time data pipelines with Kafka, producers, consumers and strea
 
 ---
 
+!!! info "When you'd use this"
+    Real-time data pipelines with Kafka, producers, consumers and stream processing.
+
+    Handle continuous event streams (Kafka) in real time — for live analytics, pipelines, and event-driven systems.
+
+
 ## Kafka producer
 
 ```python

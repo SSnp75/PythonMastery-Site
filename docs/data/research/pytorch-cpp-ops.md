@@ -15,6 +15,12 @@ description: Write custom high-performance PyTorch operators in C++/CUDA
 
 ---
 
+!!! info "When you'd use this"
+    Write custom high-performance PyTorch operators in C++/CUDA.
+
+    Write custom high-performance operators in C++/CUDA when a hot path isn't fast enough in pure PyTorch.
+
+
 ## What you'll learn
 
 - [x] Why write custom PyTorch operators

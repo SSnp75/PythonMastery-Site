@@ -15,6 +15,12 @@ description: REST principles, httpx, authentication, pagination, error handling 
 
 ---
 
+!!! info "When you'd use this"
+    REST principles, httpx, authentication, pagination, error handling and API design.
+
+    Design and consume HTTP APIs — REST endpoints, status codes, auth headers, and clients with requests/httpx — the backbone of most backend work.
+
+
 ## Making HTTP requests with httpx
 
 ```python

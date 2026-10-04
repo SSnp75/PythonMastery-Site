@@ -15,6 +15,12 @@ description: Handle missing values, wrong types and outliers before analysis
 
 ---
 
+!!! info "When you'd use this"
+    Handle missing values, wrong types and outliers before analysis.
+
+    Fix messy real-world data — missing values, duplicates, bad types, outliers — before any analysis or modeling.
+
+
 ## What you'll learn
 
 - [x] Why cleaning is most of the work

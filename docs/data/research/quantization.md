@@ -15,6 +15,12 @@ description: Shrink and speed up models with lower-precision numbers
 
 ---
 
+!!! info "When you'd use this"
+    Shrink and speed up models with lower-precision numbers.
+
+    Shrink models (int8/fp16) to run faster and cheaper with minimal accuracy loss — key for edge and high-throughput serving.
+
+
 ## What you'll learn
 
 - [x] What quantization is and why it helps

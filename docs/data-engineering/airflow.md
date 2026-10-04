@@ -14,6 +14,12 @@ description: DAGs, operators, scheduling, dependencies and workflow orchestratio
 
 ---
 
+!!! info "When you'd use this"
+    DAGs, operators, scheduling, dependencies and workflow orchestration.
+
+    Orchestrate data pipelines as DAGs with scheduling, retries, and dependencies — for reliable recurring batch workflows.
+
+
 ## DAG (Directed Acyclic Graph)
 
 ```python

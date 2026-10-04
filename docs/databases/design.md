@@ -14,6 +14,12 @@ description: Normalization, schema design, relationships, indexes and data model
 
 ---
 
+!!! info "When you'd use this"
+    Normalization, schema design, relationships, indexes and data modeling.
+
+    Design schemas that stay fast and correct — normalization, keys, indexes, and modeling relationships — before you write queries.
+
+
 ## Normalization forms
 
 | Form | Rule | Example fix |

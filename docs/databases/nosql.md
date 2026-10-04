@@ -14,6 +14,12 @@ description: Key-value stores, document databases, caching patterns and when to 
 
 ---
 
+!!! info "When you'd use this"
+    Key-value stores, document databases, caching patterns and when to use NoSQL.
+
+    Use non-relational stores — Redis for caching/queues, MongoDB for documents — when a relational schema isn't the best fit.
+
+
 ## Redis — in-memory key-value store
 
 ```python

@@ -15,6 +15,12 @@ description: File system automation, task scheduling, batch processing and OS in
 
 ---
 
+!!! info "When you'd use this"
+    File system automation, task scheduling, batch processing and OS interaction with Python.
+
+    Automate repetitive chores — renaming files, moving data, calling tools — with small scripts that save hours of manual work.
+
+
 ## What you'll learn
 
 - [x] Manipulate files and folders with `pathlib`

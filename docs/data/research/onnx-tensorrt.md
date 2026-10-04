@@ -15,6 +15,12 @@ description: Export and optimize trained models for fast, portable inference
 
 ---
 
+!!! info "When you'd use this"
+    Export and optimize trained models for fast, portable inference.
+
+    Export and optimize models to a portable/accelerated runtime for fast inference across frameworks and hardware.
+
+
 ## What you'll learn
 
 - [x] The training-to-inference gap

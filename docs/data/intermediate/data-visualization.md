@@ -15,6 +15,12 @@ description: Choosing the right chart and telling stories with data
 
 ---
 
+!!! info "When you'd use this"
+    Choosing the right chart and telling stories with data.
+
+    Communicate findings visually — choosing the right chart and making it readable — for reports, dashboards, and exploratory analysis.
+
+
 ## What you'll learn
 
 - [x] Why visualization matters

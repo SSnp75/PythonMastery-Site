@@ -15,6 +15,12 @@ description: Build command-line interfaces with argparse, click and typer
 
 ---
 
+!!! info "When you'd use this"
+    Build command-line interfaces with argparse, click and typer.
+
+    Build command-line tools — scripts with flags, subcommands, and help text — using argparse, click, or typer instead of parsing `sys.argv` by hand.
+
+
 ## argparse (built-in)
 
 ```python

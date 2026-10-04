@@ -15,6 +15,12 @@ description: Drive real browsers with Selenium and Playwright for testing and sc
 
 ---
 
+!!! info "When you'd use this"
+    Drive real browsers with Selenium and Playwright for testing and scraping.
+
+    Automate the browser for testing, scraping, or repetitive web tasks using Playwright or Selenium.
+
+
 ## What you'll learn
 
 - [x] Launch and control a real browser from Python

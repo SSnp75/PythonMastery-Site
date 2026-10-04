@@ -15,6 +15,12 @@ description: Refactoring strategies, deprecation policies and architectural chan
 
 ---
 
+!!! info "When you'd use this"
+    Refactoring strategies, deprecation policies and architectural change over years.
+
+    Keep a large codebase healthy over years — refactoring strategies, deprecations, and migrations that don't break consumers.
+
+
 ## What you'll learn
 
 - [x] Refactor safely behind a test net

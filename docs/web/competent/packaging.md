@@ -14,6 +14,12 @@ description: pip, venv, pyproject.toml and distributing your code
 
 ---
 
+!!! info "When you'd use this"
+    pip, venv, pyproject.toml and distributing your code.
+
+    Package and distribute code: set up `pyproject.toml`, manage dependencies with venv/uv, and publish a library or CLI to PyPI.
+
+
 ## Virtual environments
 
 ```bash

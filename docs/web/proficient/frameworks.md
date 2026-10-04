@@ -15,6 +15,12 @@ description: Flask, FastAPI and Django — building production web applications 
 
 ---
 
+!!! info "When you'd use this"
+    Flask, FastAPI and Django — building production web applications in Python.
+
+    Choose and use a web framework (FastAPI, Flask, Django) to build APIs and web apps with routing, request handling, and templating.
+
+
 ## FastAPI (recommended for modern APIs)
 
 ### Basic application

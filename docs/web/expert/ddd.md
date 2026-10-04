@@ -15,6 +15,12 @@ description: Aggregates, bounded contexts, value objects, repositories and ubiqu
 
 ---
 
+!!! info "When you'd use this"
+    Aggregates, bounded contexts, value objects, repositories and ubiquitous language.
+
+    Model complex business domains with entities, value objects, aggregates, and a ubiquitous language — for large systems with rich domain rules.
+
+
 ## Core concepts
 
 DDD is a software design approach that focuses on the **business domain** — aligning code structure with how domain experts think.

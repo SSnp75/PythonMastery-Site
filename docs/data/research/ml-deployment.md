@@ -15,6 +15,12 @@ description: Triton server, BentoML, Ray Serve, ONNX, containerization and produ
 
 ---
 
+!!! info "When you'd use this"
+    Triton server, BentoML, Ray Serve, ONNX, containerization and production inference.
+
+    Serve trained models in production — packaging, inference servers, batching — so models deliver predictions reliably.
+
+
 ## Deployment landscape
 
 | Tool | Best for | Latency | Throughput |

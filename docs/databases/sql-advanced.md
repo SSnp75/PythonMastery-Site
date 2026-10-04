@@ -14,6 +14,12 @@ description: CTEs, window functions, subqueries, indexing and query optimization
 
 ---
 
+!!! info "When you'd use this"
+    CTEs, window functions, subqueries, indexing and query optimization.
+
+    Write powerful queries — CTEs, window functions, smart indexing — and optimize slow ones using EXPLAIN.
+
+
 ## Common Table Expressions (CTEs)
 
 ```sql

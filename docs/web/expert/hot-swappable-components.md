@@ -15,6 +15,12 @@ description: Change behavior at runtime with feature flags, strategy swaps and d
 
 ---
 
+!!! info "When you'd use this"
+    Change behavior at runtime with feature flags, strategy swaps and dynamic reloading.
+
+    Reload or replace parts of a running system without downtime — for long-running services and live-reconfigurable platforms.
+
+
 ## What you'll learn
 
 - [x] Swap a component's behavior at runtime with no restart

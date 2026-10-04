@@ -15,6 +15,12 @@ description: Serve many customers from one system with data isolation and tenant
 
 ---
 
+!!! info "When you'd use this"
+    Serve many customers from one system with data isolation and tenant routing.
+
+    Serve many customers from one deployment while isolating their data — the standard model for SaaS products.
+
+
 ## What you'll learn
 
 - [x] The three data-isolation strategies and their tradeoffs

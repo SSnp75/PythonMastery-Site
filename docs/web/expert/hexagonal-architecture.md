@@ -15,6 +15,12 @@ description: Ports and adapters — isolate your domain from frameworks, databas
 
 ---
 
+!!! info "When you'd use this"
+    Ports and adapters — isolate your domain from frameworks, databases and I/O.
+
+    Isolate the application core behind ports/adapters so external systems (DB, UI, APIs) plug in without the core depending on them.
+
+
 ## What you'll learn
 
 - [x] The ports & adapters model and why it exists

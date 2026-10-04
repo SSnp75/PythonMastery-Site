@@ -15,6 +15,12 @@ description: Plotting, figures, subplots, styling, annotations and publication-q
 
 ---
 
+!!! info "When you'd use this"
+    Plotting, figures, subplots, styling, annotations and publication-quality charts.
+
+    Create charts and figures from data — line/bar/scatter plots for reports, EDA, and publication-quality visuals.
+
+
 ## Two APIs: pyplot vs OO
 
 ```python

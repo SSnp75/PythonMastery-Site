@@ -15,6 +15,12 @@ description: Detect drift, track performance and keep production models healthy
 
 ---
 
+!!! info "When you'd use this"
+    Detect drift, track performance and keep production models healthy.
+
+    Watch deployed models for drift, latency, and quality degradation so you catch problems before users do.
+
+
 ## What you'll learn
 
 - [x] Why models degrade in production

@@ -15,6 +15,12 @@ description: Machine learning models, pipelines, cross-validation, hyperparamete
 
 ---
 
+!!! info "When you'd use this"
+    Machine learning models, pipelines, cross-validation, hyperparameter tuning and evaluation.
+
+    Train and evaluate classical ML models — classification, regression, clustering — with a consistent fit/predict API and pipelines.
+
+
 ## The sklearn workflow
 
 ```

@@ -15,6 +15,12 @@ description: scipy.stats, distributions, hypothesis testing, correlation and reg
 
 ---
 
+!!! info "When you'd use this"
+    scipy.stats, distributions, hypothesis testing, correlation and regression.
+
+    Summarize and reason about data: distributions, hypothesis tests, correlation — for analysis and validating experiments.
+
+
 ## Descriptive statistics
 
 ```python

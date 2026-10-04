@@ -15,6 +15,12 @@ description: DDP, FSDP, model sharding, pipeline parallelism and multi-GPU strat
 
 ---
 
+!!! info "When you'd use this"
+    DDP, FSDP, model sharding, pipeline parallelism and multi-GPU strategies.
+
+    Train large models across multiple GPUs/nodes — data and model parallelism — when one device isn't enough.
+
+
 ## Why distribute training?
 
 | Scenario | Solution |

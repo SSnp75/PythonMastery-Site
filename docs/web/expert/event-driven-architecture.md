@@ -15,6 +15,12 @@ description: Decouple components with events, handlers and message brokers
 
 ---
 
+!!! info "When you'd use this"
+    Decouple components with events, handlers and message brokers.
+
+    Decouple components with events/messages — for async workflows, audit trails, and systems that must react to things happening elsewhere.
+
+
 ## What you'll learn
 
 - [x] Model your system as events and reactions

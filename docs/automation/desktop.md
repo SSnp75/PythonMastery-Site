@@ -15,6 +15,12 @@ description: Control the mouse, keyboard and screen with PyAutoGUI
 
 ---
 
+!!! info "When you'd use this"
+    Control the mouse, keyboard and screen with PyAutoGUI.
+
+    Drive desktop apps programmatically: control the mouse/keyboard, read the screen, and automate GUI workflows that have no API.
+
+
 ## What you'll learn
 
 - [x] Control the mouse (move, click, drag)
