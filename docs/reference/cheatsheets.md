@@ -622,6 +622,100 @@ See the full [Pattern Matching lesson](../core/intermediate/pattern-matching.md)
 
 ---
 
+## [AI & LLMs](../ai/index.md){ .pm-cheat-link }
+
+*Quick-reference card for AI & LLMs — the common commands at a glance.*
+
+| Task | Snippet |
+|---|---|
+| OpenAI call | `client.chat.completions.create(model=..., messages=[...])` |
+| Streaming | `for chunk in client.chat.completions.create(..., stream=True):` |
+| JSON mode | `response_format={"type": "json_object"}` |
+| Anthropic | `client.messages.create(model=..., messages=[...])` |
+| Tool calling | pass `tools=[...]`; model returns a tool call to execute |
+| Local models | Ollama: `ollama.chat(model="llama3", messages=[...])` |
+| Embeddings | `client.embeddings.create(model=..., input=text)` → vector |
+| Vector search | ChromaDB / pgvector / Pinecone similarity query |
+| RAG | chunk → embed → retrieve top-k → stuff into prompt |
+
+---
+
+## [Observability](../observability/index.md){ .pm-cheat-link }
+
+*Quick-reference card for Observability — the common commands at a glance.*
+
+| Task | Snippet |
+|---|---|
+| Logging | `logging.getLogger(__name__)`, `log.info("%s", x)`, levels DEBUG→CRITICAL |
+| Structured logs | `structlog` / JSON formatter for machine-parseable logs |
+| Metrics | Prometheus `Counter`, `Gauge`, `Histogram`; expose `/metrics` |
+| Tracing | OpenTelemetry spans; propagate context across services |
+| Correlation | attach a request/trace id via `contextvars` |
+| The 3 pillars | logs (what), metrics (how much), traces (where) |
+
+---
+
+## [Data Engineering](../data-engineering/index.md){ .pm-cheat-link }
+
+*Quick-reference card for Data Engineering — the common commands at a glance.*
+
+| Task | Snippet |
+|---|---|
+| ETL shape | extract → transform → load (batch or incremental) |
+| Validation | `pandera` schema, or `pydantic` models on records |
+| Airflow | define a DAG of tasks with deps, schedule, and retries |
+| Spark | `spark.read...`, DataFrame ops, lazy until an action |
+| Kafka produce | `producer.send(topic, value)` |
+| Kafka consume | `for msg in consumer:` with offset commits |
+| Incremental | load only new/changed rows via a watermark |
+
+---
+
+## [Automation & Scripting](../automation/index.md){ .pm-cheat-link }
+
+*Quick-reference card for Automation & Scripting — the common commands at a glance.*
+
+| Task | Snippet |
+|---|---|
+| Files | `pathlib.Path`, `.glob("**/*.py")`, `shutil.copy/move/rmtree` |
+| Archives | `shutil.make_archive`, `zipfile`, `tarfile` |
+| Run programs | `subprocess.run([...], capture_output=True, text=True, check=True)` |
+| Env & config | `os.environ.get(...)`, `.env` via `python-dotenv` |
+| Schedule | cron / Task Scheduler, or `schedule` / APScheduler |
+| Desktop | `pyautogui` mouse/keyboard/screenshot (set `FAILSAFE`) |
+| Browser | Playwright / Selenium for web tasks |
+
+---
+
+## [Auth](../auth/index.md){ .pm-cheat-link }
+
+*Quick-reference card for Auth — the common commands at a glance.*
+
+| Task | Snippet |
+|---|---|
+| Hash password | `bcrypt`/`argon2` — never store plaintext or fast hashes |
+| JWT encode | `jwt.encode(payload, key, algorithm="HS256")` |
+| JWT decode | `jwt.decode(token, key, algorithms=["HS256"])` (verifies sig + exp) |
+| Bearer header | `Authorization: Bearer <token>` |
+| OAuth2 | authorization-code flow for "log in with Google/GitHub" |
+| RBAC | gate endpoints on roles/scopes in the token |
+
+---
+
+## [GUI](../gui/index.md){ .pm-cheat-link }
+
+*Quick-reference card for GUI — the common commands at a glance.*
+
+| Task | Snippet |
+|---|---|
+| Tkinter window | `root = tk.Tk()`, `root.mainloop()` |
+| Widgets | `Label`, `Button(command=fn)`, `Entry`, `Frame` |
+| Layout | `.pack()`, `.grid(row, column)`, `.place()` |
+| Textual (TUI) | `App` subclass + `compose()`; runs in the terminal |
+| When to use | Tkinter for simple desktop apps; Textual for terminal UIs |
+
+---
+
 <div class="pm-next">
 <strong>✅ Keep going</strong>
 <a href="generators-decorators-filter.md">Generators, Decorators & Filtering (deep dive)</a>
