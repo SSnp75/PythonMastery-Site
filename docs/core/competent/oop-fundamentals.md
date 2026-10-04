@@ -23,6 +23,8 @@ description: Classes, inheritance, polymorphism, encapsulation and abstract base
 
 ## Classes & Objects
 
+*A class is a blueprint; an object is an instance with its own data. Use classes to bundle related state and behavior — domain entities, services, components.*
+
 ```python
 class Dog:
     species = "Canis familiaris"   # class variable
@@ -42,6 +44,8 @@ print(Dog.species)       # Canis familiaris
 ---
 
 ## Inheritance
+
+*Derive a subclass that reuses and specializes a base class. Use it for genuine "is-a" relationships; prefer composition when you only want to reuse code.*
 
 ```python
 class Animal:
@@ -64,6 +68,8 @@ class Dog(Animal):
 
 ## super()
 
+*Call the parent class's implementation — most often to run its `__init__` before adding subclass-specific setup.*
+
 ```python
 class Vehicle:
     def __init__(self, brand, model):
@@ -79,6 +85,8 @@ class Car(Vehicle):
 ---
 
 ## Encapsulation
+
+*Hide internal state behind methods/properties so callers can't put the object in an invalid state. Use a leading `_` by convention and `@property` for validated access.*
 
 ```python
 class BankAccount:
@@ -102,6 +110,8 @@ class BankAccount:
 
 ## Polymorphism
 
+*Different types responding to the same call. Use it to write code against an interface and let each type supply its own behavior — no `if type == ...` chains.*
+
 ```python
 animals = [Cat("Whiskers"), Dog("Rex")]
 for animal in animals:
@@ -113,6 +123,8 @@ for animal in animals:
 ---
 
 ## Abstract Base Classes
+
+*Define an interface subclasses must implement — instantiating an incomplete subclass fails fast. Use for plugin contracts and enforcing a common API.*
 
 ```python
 from abc import ABC, abstractmethod
@@ -140,6 +152,8 @@ class Circle(Shape):
 ---
 
 ## Dunder Methods
+
+*"Double underscore" hooks let your objects work with built-in syntax — `+`, `==`, `len()`, iteration, `repr()`. Implement them so your types feel native.*
 
 ```python
 class Vector:

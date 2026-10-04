@@ -23,6 +23,8 @@ description: Organising Python code into modules, packages and namespaces
 
 ## Modules
 
+*A single `.py` file of reusable code you `import` elsewhere. Use modules to split a growing script into focused, testable units.*
+
 A module is just a `.py` file. Import it by name.
 
 ```python
@@ -48,6 +50,8 @@ from math_utils import add as addition   # alias
 
 ## Packages
 
+*A directory of modules (with `__init__.py`) that groups related code under one namespace. Use packages to organize a library or app into subsystems.*
+
 A package is a folder with an `__init__.py` file.
 
 ```
@@ -70,6 +74,8 @@ from myproject.utils.helpers import format_name
 
 ## `__init__.py`
 
+*Runs when the package is imported — use it to expose a clean public API and set `__all__` so `from pkg import *` only pulls intended names.*
+
 ```python
 # myproject/__init__.py
 from .core.engine import start
@@ -81,6 +87,8 @@ __all__ = ["start", "format_name"]   # controls "from myproject import *"
 ---
 
 ## The `if __name__ == "__main__"` guard
+
+*Make a file work both as an importable module and a runnable script — the guarded code runs only on direct execution, not on import.*
 
 ```python
 def main():

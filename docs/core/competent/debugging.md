@@ -17,6 +17,8 @@ description: pdb, breakpoints, print debugging and logging
 
 ## The built-in debugger (pdb)
 
+*Pause execution and inspect/step through live state with `breakpoint()`. Reach for it when print-debugging isn't enough — complex control flow or state you need to poke at.*
+
 ```python
 # Add breakpoint in your code
 def buggy_function(data):
@@ -40,6 +42,8 @@ def buggy_function(data):
 ---
 
 ## Logging (better than print)
+
+*Record diagnostics with levels you can filter — the right tool for anything beyond a throwaway script, and essential in production where you can't watch stdout.*
 
 ```python
 import logging

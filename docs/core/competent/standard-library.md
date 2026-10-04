@@ -23,6 +23,8 @@ description: Essential built-in modules — collections, datetime, pathlib, re, 
 
 ## collections
 
+*Specialized containers beyond the built-ins — counting, grouping, fast ends, named records. Reach here before writing your own container logic.*
+
 ### Counter — count anything
 
 ```python
@@ -155,6 +157,8 @@ print(config["weight"])   # light (found in defaults)
 
 ## datetime
 
+*Work with dates, times, and durations. Use it for timestamps, scheduling, and time math; see the [Dates & Times](datetime.md) page for timezone-aware handling.*
+
 ```python
 from datetime import datetime, date, time, timedelta, timezone
 
@@ -218,6 +222,8 @@ ist_time = utc_time.astimezone(ist)
 
 ## pathlib — object-oriented filesystem
 
+*Build and manipulate filesystem paths as objects. The modern replacement for `os.path` string handling; see the [Pathlib](pathlib.md) deep dive.*
+
 ```python
 from pathlib import Path
 
@@ -262,6 +268,8 @@ print(absolute)   # /full/path/to/other/file.txt
 ---
 
 ## re — regular expressions
+
+*Match, search, and replace text by pattern. Use for validation, extraction, and parsing — but prefer plain string methods when they suffice.*
 
 ```python
 import re
@@ -321,6 +329,8 @@ print(case_insensitive)   # ['Python', 'PYTHON', 'python']
 
 ## functools
 
+*Tools for working with functions — memoization (`lru_cache`), argument pre-filling (`partial`), reduction (`reduce`), and metadata-preserving wrappers (`wraps`).*
+
 ```python
 from functools import lru_cache, partial, reduce, wraps, total_ordering
 
@@ -361,6 +371,8 @@ class Student:
 ---
 
 ## itertools
+
+*Memory-efficient iterator building blocks — chaining, grouping, combinations, infinite sequences. Use them to process streams lazily without building big lists.*
 
 ```python
 from itertools import (
@@ -411,6 +423,8 @@ list(dropwhile(lambda x: x < 5, [1, 3, 5, 2, 1]))   # [5, 2, 1]
 
 ## subprocess — run external commands
 
+*Shell out to other programs and capture their output. Use `run(..., check=True)` and pass args as a list (never shell-concatenate untrusted input).*
+
 ```python
 import subprocess
 
@@ -445,6 +459,8 @@ output = p2.communicate()[0]
 
 ## shutil — high-level file operations
 
+*Copy, move, and delete files and whole directory trees in one call — for backups, scaffolding, and cleanup tasks.*
+
 ```python
 import shutil
 
@@ -471,6 +487,8 @@ print(f"Free: {free // (1024**3)} GB")
 ---
 
 ## os & sys essentials
+
+*Talk to the operating system and interpreter — environment variables, command-line args, exit codes, and process info.*
 
 ```python
 import os, sys

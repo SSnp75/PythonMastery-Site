@@ -23,6 +23,8 @@ description: Exceptions, try/except, raising errors and custom exceptions
 
 ## try / except / else / finally
 
+*The core structure: `try` the risky code, `except` specific failures, `else` for the success path, `finally` for cleanup that always runs. Use it anywhere an operation can fail.*
+
 ```python
 try:
     result = int(input("Enter a number: "))
@@ -41,6 +43,8 @@ finally:
 
 ## Catching multiple exceptions
 
+*Group related failures in one `except (A, B)` when they share handling, or use separate clauses when each needs a different response.*
+
 ```python
 try:
     data = process(raw_input)
@@ -52,6 +56,8 @@ except (ValueError, TypeError, KeyError) as e:
 
 ## Raising exceptions
 
+*Signal a problem yourself with `raise` — validate inputs and fail loudly with a clear message instead of returning a bad value.*
+
 ```python
 def divide(a, b):
     if b == 0:
@@ -62,6 +68,8 @@ def divide(a, b):
 ---
 
 ## Custom exceptions
+
+*Define your own exception types to carry domain context and let callers catch exactly what they care about. Inherit from `Exception`, not `BaseException`.*
 
 ```python
 class InsufficientFundsError(Exception):
