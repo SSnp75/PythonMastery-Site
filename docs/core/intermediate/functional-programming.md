@@ -36,6 +36,9 @@ total = reduce(lambda acc, x: acc + x, numbers, 0)
 
 ## functools.partial
 
+`partial` pre-fills some of a function's arguments and returns a new callable that only needs
+the rest. It's a clean way to specialize a general function without writing a wrapper.
+
 ```python
 from functools import partial
 
@@ -45,9 +48,19 @@ def power(base, exp):
 square = partial(power, exp=2)
 cube   = partial(power, exp=3)
 
-square(5)   # 25
-cube(3)     # 27
+print(square(5))   # 25
+print(cube(3))     # 27
 ```
+
+**When to use it:**
+
+- **Callbacks** — bind arguments to a handler passed to a GUI/event system or `Timer`:
+  `button.on_click(partial(save, document))`.
+- **Predicates for `map`/`filter`/`sorted`** — e.g. `filter(partial(gt, threshold=10), nums)`.
+- **Configuring library functions** — fix an encoding or base once:
+  `read_utf8 = partial(open, encoding="utf-8")`.
+- **Avoiding repetitive lambdas** — `partial(power, exp=2)` is clearer than `lambda b: power(b, 2)`.
+- **Dependency injection** — pre-bind a logger, connection, or config so callers pass only the data.
 
 ---
 
