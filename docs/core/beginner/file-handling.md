@@ -23,6 +23,8 @@ description: Reading, writing and managing files in Python
 
 ## Reading files
 
+*Pull text from disk — whole file, all lines, or one line at a time. Prefer line-by-line iteration for large files so you never load the whole thing into memory.*
+
 ```python
 # Always use 'with' — it closes the file automatically
 with open("data.txt", "r") as f:
@@ -40,6 +42,8 @@ with open("data.txt", "r") as f:
 ---
 
 ## Writing files
+
+*Save data to disk. Use `"w"` to overwrite, `"a"` to append (logs, journals), and `writelines` for a batch of lines.*
 
 ```python
 # Write (overwrites existing)
@@ -60,6 +64,8 @@ with open("output.txt", "w") as f:
 ---
 
 ## pathlib (modern approach)
+
+*The object-oriented way to handle paths — join with `/`, read/write in one call, check existence, and glob. Prefer it over `os.path` string juggling in new code.*
 
 ```python
 from pathlib import Path
@@ -89,6 +95,8 @@ for py_file in Path(".").glob("**/*.py"):
 
 ## Working with CSV
 
+*Read and write spreadsheet-style tabular data. Use `DictReader`/`DictWriter` so rows are dicts keyed by column name — far clearer than positional indexes.*
+
 ```python
 import csv
 
@@ -108,6 +116,8 @@ with open("output.csv", "w", newline="") as f:
 ---
 
 ## Working with JSON
+
+*Serialize Python objects to text and back — the default format for config files and web APIs. Use `load`/`dump` for files, `loads`/`dumps` for strings.*
 
 ```python
 import json

@@ -23,6 +23,8 @@ description: Write clean, idiomatic Python from day one
 
 ## Unpacking
 
+*Assign multiple names from a sequence at once, swap without a temp, or capture "the rest" with `*`. Cleaner than index-by-index access.*
+
 ```python
 # Tuple unpacking
 a, b, c = 1, 2, 3
@@ -41,6 +43,8 @@ first, *rest = [1, 2, 3, 4, 5]
 ---
 
 ## EAFP over LBYL
+
+*Pythonic style: try the operation and handle the exception, rather than pre-checking. Avoids race conditions and is often clearer — but `dict.get` is cleaner still for defaults.*
 
 ```python
 # Bad — Look Before You Leap (LBYL)
@@ -61,6 +65,8 @@ value = dictionary.get("key", "default")
 
 ## Use `enumerate`, not range(len())
 
+*When you need both index and value, `enumerate` is clearer and less error-prone than indexing. Pass `start=1` for human-friendly numbering.*
+
 ```python
 # Bad
 for i in range(len(items)):
@@ -79,6 +85,8 @@ for i, item in enumerate(items, start=1):
 
 ## Use `zip` to iterate in parallel
 
+*Walk two or more sequences together without index bookkeeping — pairing names with scores, keys with values, etc.*
+
 ```python
 # Bad
 for i in range(len(names)):
@@ -92,6 +100,8 @@ for name, score in zip(names, scores):
 ---
 
 ## Truthiness checks
+
+*Empty containers and `0`/`""`/`None` are falsy — test them directly. Use `is None` for None and `is True` for identity, not `==`.*
 
 ```python
 # Bad
@@ -111,6 +121,8 @@ if value is True:
 
 ## One-liner patterns
 
+*A toolkit of concise expressions — ternaries, `dict.get` defaults, `join`, `any`/`all` — that replace multi-line boilerplate when the logic is simple.*
+
 ```python
 # Conditional expression
 label = "even" if x % 2 == 0 else "odd"
@@ -129,6 +141,8 @@ all_positive = all(x > 0 for x in numbers)
 ---
 
 ## The Zen of Python
+
+*Python's guiding design aphorisms (PEP 20). Run `import this` anytime you need a reminder of what "Pythonic" means.*
 
 ```python
 import this

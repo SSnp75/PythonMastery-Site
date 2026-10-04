@@ -40,6 +40,8 @@ description: Variables, data types, operators and your first Python programs
 
 ## Variables & Data Types
 
+*Store values in named variables; every value has a type (`str`, `int`, `float`, `bool`, `None`). Use `type()` and conversions when data crosses boundaries like user input.*
+
 Python is dynamically typed — you don't declare types, you just assign values.
 
 ```python
@@ -70,6 +72,8 @@ print(bool("hi"))   # True    (any non-empty string is truthy)
 
 ## Operators
 
+*Arithmetic, comparison, and logical operators are the building blocks of every expression. Note `/` always gives a float and `//` floors; comparisons/logic return booleans for conditions.*
+
 ```python
 # Arithmetic
 10 + 3   # 13
@@ -95,6 +99,8 @@ not True        # False
 ---
 
 ## Strings
+
+*Text values with rich methods and slicing. Reach for f-strings to build output and `.upper()`/`.split()`/`.replace()` etc. for everyday text work.*
 
 ```python
 # Creation
@@ -123,6 +129,8 @@ print(s[-6:])           # World!
 
 ## Input & Output
 
+*`print` sends text out; `input` reads a line in (always as a string — convert it immediately). The basics of any interactive script.*
+
 ```python
 # Output
 print("Hello")
@@ -136,6 +144,8 @@ age  = int(input("How old are you? "))   # convert immediately
 ---
 
 ## Your first program
+
+*Putting it together: read input, compute, print output — the shape of countless small scripts.*
 
 ```python
 # greeting.py

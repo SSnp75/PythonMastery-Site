@@ -23,6 +23,8 @@ description: if/elif/else, for loops, while loops and match-case
 
 ## Conditionals
 
+*Branch on a condition with `if`/`elif`/`else`. Use it to validate input, pick a code path, or map a value to a category.*
+
 ```python
 score = 85
 
@@ -60,6 +62,8 @@ if "hello":     print("yes!")
 
 ## for Loops
 
+*Iterate over any sequence or range. Pair with `enumerate` when you need the index and `zip` to walk two sequences together.*
+
 ```python
 # Iterate over a sequence
 fruits = ["apple", "banana", "cherry"]
@@ -94,6 +98,8 @@ for name, score in zip(names, scores):
 
 ## while Loops
 
+*Repeat until a condition changes — when you don't know the iteration count up front (input loops, polling, retries). Use `break` to exit early and `continue` to skip an iteration.*
+
 ```python
 count = 0
 while count < 5:
@@ -118,6 +124,8 @@ for i in range(10):
 
 ## match-case (Python 3.10+)
 
+*Structural pattern matching — cleaner than a long `if`/`elif` chain when dispatching on a value or the shape of data. See the [Pattern Matching](../intermediate/pattern-matching.md) deep dive for destructuring.*
+
 ```python
 command = "quit"
 
@@ -135,6 +143,8 @@ match command:
 ---
 
 ## Loop else clause
+
+*Runs only if the loop finished without hitting `break` — handy for "searched everything and found nothing" logic.*
 
 ```python
 # else runs only if the loop completed without break

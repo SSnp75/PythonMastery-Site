@@ -144,6 +144,8 @@ squares = {x: x**2 for x in range(6)}
 
 ## Nested structures
 
+*Combine containers — lists of dicts, dicts of lists — to model real-world data like JSON records, tables, and schedules.*
+
 ```python
 # List of dicts — very common pattern
 students = [
