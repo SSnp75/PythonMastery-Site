@@ -159,6 +159,103 @@ schedule = {
 
 ---
 
+## The `collections` module
+
+The standard library's `collections` adds specialized containers beyond the built-ins.
+
+### `Counter` — count things
+
+```python
+from collections import Counter
+
+c = Counter("banana")
+print(c["a"])              # 3
+print(c.most_common(1))    # [('a', 3)]
+print(dict(c))             # {'b': 1, 'a': 3, 'n': 2}
+print(sorted(c.elements()))  # ['a', 'a', 'a', 'b', 'n', 'n']
+```
+
+### `defaultdict` — automatic default values
+
+```python
+from collections import defaultdict
+
+groups = defaultdict(list)
+groups["x"].append(1)      # no KeyError — list is created automatically
+groups["x"].append(2)
+print(dict(groups))        # {'x': [1, 2]}
+```
+
+### `namedtuple` — readable records
+
+```python
+from collections import namedtuple
+
+User = namedtuple("User", ["id", "name"])
+u = User(1, "alice")
+print(u.name)              # alice
+print(u[0])                # 1  (still indexable like a tuple)
+print(u._asdict())         # {'id': 1, 'name': 'alice'}
+```
+
+---
+
+## `deque` — fast queue / stack
+
+A `deque` (double-ended queue) adds and removes from **both ends** in O(1), unlike a list
+which is O(n) at the front.
+
+```python
+from collections import deque
+
+d = deque([1, 2, 3])
+d.append(4)        # add right
+d.appendleft(0)    # add left
+print(list(d))     # [0, 1, 2, 3, 4]
+
+print(d.pop())      # 4   (remove right)
+print(d.popleft())  # 0   (remove left)
+print(list(d))      # [1, 2, 3]
+
+# Rotate
+d.rotate(1)         # move items right
+print(list(d))      # [3, 1, 2]
+d.rotate(-1)        # move items left
+print(list(d))      # [1, 2, 3]
+
+# extendleft inserts in reverse order
+d.extendleft([0, -1])
+print(list(d))      # [-1, 0, 1, 2, 3]
+
+# Bounded deque — great for a sliding window / "last N" buffer
+recent = deque(maxlen=3)
+for x in [1, 2, 3, 4, 5]:
+    recent.append(x)
+print(list(recent))  # [3, 4, 5]  (oldest dropped automatically)
+```
+
+For a thread-safe FIFO queue, use `queue.Queue`; for priorities, `queue.PriorityQueue`.
+
+---
+
+## Tuple vs list: memory
+
+Tuples are immutable, so Python stores them more compactly than lists:
+
+```python
+import sys
+
+lst = [0, 1, 2, "hello", True]
+tup = (0, 1, 2, "hello", True)
+print(sys.getsizeof(lst))   # 104  (varies by platform)
+print(sys.getsizeof(tup))   # 80   (smaller — no over-allocation for growth)
+```
+
+A list over-allocates to make `append` fast; a tuple can't grow, so it allocates exactly
+what it needs.
+
+---
+
 ## Practice exercises
 
 1. Remove all duplicates from a list while preserving order.
@@ -166,3 +263,5 @@ schedule = {
 3. Find the intersection of two lists without using `set()`.
 4. Implement a simple phonebook using a dictionary with add, delete, search.
 5. Given a list of `(name, score)` tuples, find the top 3 scores.
+6. Use a bounded `deque(maxlen=5)` to keep only the last 5 readings from a stream.
+7. Use `Counter` to find the 3 most common words in a paragraph.
