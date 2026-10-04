@@ -104,6 +104,41 @@ for x in parent():
 
 ---
 
+### The six use cases of `yield from` (PEP 380)
+
+Everything `yield from` does traces back to six cases introduced by
+[PEP 380](https://peps.python.org/pep-0380/):
+
+| # | Use case | Why it matters |
+|---|---|---|
+| 1 | Delegate iteration to a sub-generator | cleaner generator composition |
+| 2 | Flatten nested iterables / recurse | simplifies tree / JSON / AST flattening |
+| 3 | Forward `.send()`, `.throw()`, `.close()` | enables generator-based coroutines |
+| 4 | Capture a sub-generator's return value | structured results / state machines |
+| 5 | Build coroutine pipelines (pre-async) | foundation of early asyncio |
+| 6 | Precursor to `await` | understanding async internals |
+
+**(2) Recursive flattening** is the canonical example — used for JSON flattening, AST
+traversal, and walking directory trees:
+
+```python
+def flatten(tree):
+    for item in tree:
+        if isinstance(item, list):
+            yield from flatten(item)   # recurse into sub-lists
+        else:
+            yield item
+
+print(list(flatten([1, [2, [3, 4], 5], [6]])))   # [1, 2, 3, 4, 5, 6]
+```
+
+**(5, 6) Historical note:** before `async`/`await` (Python 3.5), generator-based
+coroutines used `yield from` to delegate execution and propagate results. The old
+`result = yield from other_task()` is the direct conceptual ancestor of today's
+`result = await other_task()`.
+
+---
+
 ### Generators in data pipelines
 
 Chain generators like Unix pipes. Nothing is computed until you iterate — memory stays flat even for huge inputs.
@@ -162,6 +197,11 @@ def stream_socket(sock):
             break
         yield chunk
 ```
+
+!!! tip "Where streaming generators show up"
+    Yielding fixed-size chunks instead of reading everything at once is the pattern behind
+    file uploads/downloads, network proxies, real-time data feeds, log streaming, and
+    chunked HTTP responses — it avoids loading the whole message into memory.
 
 ---
 
