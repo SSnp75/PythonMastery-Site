@@ -33,6 +33,8 @@ description: Run background jobs at scale with Celery and RQ — retries, backof
 
 ## Why background jobs
 
+*Move slow or deferred work off the request path so users aren't kept waiting.*
+
 Some work shouldn't happen inside a web request: sending email, generating a report, processing an upload, calling a slow third-party API. Doing it inline makes the user wait and ties up a web worker. Instead, you **enqueue a job** and return immediately; a separate pool of **worker** processes picks it up and runs it.
 
 ```

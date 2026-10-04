@@ -33,6 +33,8 @@ description: The Raft consensus algorithm — leader election, log replication a
 
 ## The consensus problem
 
+*Getting a cluster to agree on an ordered log despite crashes and network issues.*
+
 Multiple servers must agree on a single value (or an ordered sequence of commands) even though messages get delayed, servers crash, and networks partition. This is **distributed consensus**, and it's genuinely hard — the naive "just have everyone vote" breaks under failures and partitions.
 
 **Raft** is a consensus algorithm designed to be *understandable* (its predecessor Paxos is notoriously hard to grasp — see [Paxos](paxos.md)). It powers the coordination layer of many real systems: etcd (Kubernetes' brain), Consul, CockroachDB, and TiKV.
@@ -49,6 +51,8 @@ Raft keeps a **replicated log** consistent across servers by electing one **lead
 
 ## Three roles
 
+*Follower, candidate, leader — nodes move between these as elections happen.*
+
 Every node is in one of three states at any time:
 
 - **Follower** — passive; responds to the leader and to vote requests.
@@ -58,6 +62,8 @@ Every node is in one of three states at any time:
 ---
 
 ## Terms and majorities
+
+*Monotonic terms plus majority votes prevent two leaders and split-brain.*
 
 Two ideas make Raft safe:
 
@@ -89,6 +95,8 @@ Because any two majorities of the same cluster must overlap in at least one node
 ---
 
 ## Voting logic
+
+*The rules a node follows when granting votes to keep the log consistent.*
 
 A node grants its vote based on the candidate's **term** and whether it has already voted this term. Runnable:
 
@@ -139,6 +147,8 @@ The node votes for A in term 1, refuses B in the *same* term (one vote per term 
 
 ## Log replication (the leader's job)
 
+*The leader appends entries and replicates them to followers before committing.*
+
 Once elected, the leader is the single entry point for changes:
 
 1. Client sends a command to the leader.
@@ -151,6 +161,8 @@ Because entries commit only after a majority replicate them, a committed entry s
 ---
 
 ## Where Raft is used
+
+*etcd, Consul, and many databases rely on Raft for replicated state.*
 
 - **etcd** — the consistent key-value store behind Kubernetes.
 - **Consul** — service discovery and configuration.

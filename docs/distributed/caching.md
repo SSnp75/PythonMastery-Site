@@ -33,6 +33,8 @@ description: Scale reads with Redis/Memcached, consistent hashing and cache inva
 
 ## Why cache
 
+*Store expensive results so repeat requests are served instantly — the first lever for latency and load.*
+
 A cache stores expensive-to-compute or slow-to-fetch data in fast memory so repeated requests skip the work. In a distributed system, a shared cache (Redis, Memcached) sits between your app servers and the database, absorbing read load that would otherwise hammer the DB.
 
 ```

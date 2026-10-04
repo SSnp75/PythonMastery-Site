@@ -33,6 +33,8 @@ description: The Paxos consensus family — proposers, acceptors and quorum agre
 
 ## The most famous consensus algorithm
 
+*The classic (and famously subtle) protocol for agreeing on a value across unreliable nodes.*
+
 **Paxos** (Leslie Lamport, 1998) solves the same problem as [Raft](raft.md) — getting unreliable machines to agree on a single value despite crashes and message loss — and it's the algorithm that proved consensus is *possible* under those conditions. It underpins Google's Chubby, Spanner, and many other foundational systems.
 
 Paxos is also famous for being **hard to understand** — Raft was created specifically as a more approachable alternative. We'll build the intuition and prove the key safety property with runnable code, without drowning in the full protocol.
@@ -40,6 +42,8 @@ Paxos is also famous for being **hard to understand** — Raft was created speci
 ---
 
 ## The roles
+
+*Proposers, acceptors, and learners — the parts that cooperate to reach agreement.*
 
 - **Proposer** — proposes a value and drives the agreement.
 - **Acceptor** — votes on proposals; a *majority* of acceptors deciding makes a value chosen.
@@ -50,6 +54,8 @@ Agreement is reached when a **majority (quorum)** of acceptors accept the same p
 ---
 
 ## The two-phase protocol
+
+*Prepare then accept — how a value gets chosen with majority agreement.*
 
 Paxos reaches agreement in two round-trips, using monotonically increasing **proposal numbers**:
 
@@ -71,6 +77,8 @@ The subtle, brilliant part: in Phase 1, if any acceptor reports a value it alrea
 ---
 
 ## Why quorum overlap makes it safe
+
+*Any two majorities share a node, which prevents two conflicting values being chosen.*
 
 Safety rests on one fact: **any two majorities of the same set must share at least one member.** That overlapping acceptor "remembers" the earlier decision and forces later proposals to respect it. The quorum logic is identical to Raft's:
 
@@ -102,6 +110,8 @@ Because every majority of a 5-node cluster contains at least one of any other ma
 
 ## Multi-Paxos and variants
 
+*Running Paxos repeatedly for a log, plus the optimizations real systems use.*
+
 Basic ("single-decree") Paxos agrees on *one* value. Real systems need agreement on an ordered *sequence* (a replicated log), so they use **Multi-Paxos**: elect a stable leader to skip Phase 1 on every entry, then run only Phase 2 repeatedly. At that point it looks a lot like Raft — which is not a coincidence.
 
 Notable variants: **Fast Paxos** (fewer round-trips), **EPaxos** (leaderless, for lower latency), **Cheap Paxos** (fewer acceptors).
@@ -109,6 +119,8 @@ Notable variants: **Fast Paxos** (fewer round-trips), **EPaxos** (leaderless, fo
 ---
 
 ## Paxos vs Raft
+
+*Same goal, different presentation — Raft trades some generality for understandability.*
 
 | | **Paxos** | **Raft** |
 |---|---|---|

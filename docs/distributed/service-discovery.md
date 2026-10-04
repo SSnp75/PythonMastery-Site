@@ -33,6 +33,8 @@ description: How services find each other — registries, health checks and clie
 
 ## The problem: addresses aren't stable
 
+*Instances come and go with autoscaling, so hardcoded hosts break — services must be found dynamically.*
+
 In a static world you'd configure "the payment service is at `10.0.0.5:8000`" and be done. In a cloud/microservices world that breaks constantly: instances **scale up and down**, get **replaced** on deploy, **move** between hosts, and **crash and restart** with new addresses. Hard-coding addresses — or even a fixed list — means constant reconfiguration and broken calls.
 
 **Service discovery** solves this: services **register** themselves in a central **registry** when they start, and callers **look up** the current healthy instances by *name* ("payment-service") rather than address.

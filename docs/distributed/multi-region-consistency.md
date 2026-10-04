@@ -33,6 +33,8 @@ description: Consistency across geo-distributed regions — replication, conflic
 
 ## Why regions change everything
 
+*Cross-region latency and partitions force explicit consistency choices you can ignore in one datacenter.*
+
 When your data lives in one datacenter, coordination is cheap. Spread it across continents — US, Europe, Asia — and physics intervenes: a round trip between regions is 100–300 ms. If every write had to synchronously reach every region, writes would crawl. So you replicate **asynchronously**, which means regions can temporarily disagree, and two regions can accept **conflicting writes** to the same key at the same time.
 
 ```
@@ -47,6 +49,8 @@ This is the [CAP theorem](index.md) made concrete: during a network partition yo
 
 ## The consistency spectrum
 
+*From strong to eventual — stronger guarantees cost latency and availability.*
+
 | Model | Guarantee | Cost |
 |---|---|---|
 | **Strong** | Every read sees the latest write, everywhere | Slow cross-region coordination (consensus) |
@@ -58,6 +62,8 @@ There's no free lunch: stronger consistency costs latency and availability. The 
 ---
 
 ## Resolving conflicts: LWW with a deterministic tie-break
+
+*Pick a winner for concurrent writes using timestamps plus a stable tiebreaker.*
 
 The simplest conflict resolution is **last-write-wins** by timestamp. But two regions can produce the *same* timestamp — so you need a deterministic tie-breaker (like region name) so **every** replica independently picks the same winner. Runnable:
 
@@ -99,6 +105,8 @@ With identical timestamps, the tie-break by region name picks `us-west` (since `
 
 ## Tracking causality with vector clocks
 
+*Record per-node versions so you can tell concurrent writes from causally ordered ones.*
+
 Wall-clock timestamps can't tell whether two writes were *causally related* (one saw the other) or truly *concurrent*. **Vector clocks** — a counter per node — capture this. Runnable:
 
 ```python
@@ -134,6 +142,8 @@ b concurrent with c: True
 ---
 
 ## Strategies in practice
+
+*How real systems pick replication and conflict strategies for their needs.*
 
 - **Single-writer region (leader per key).** Route all writes for a key to one "home" region; other regions read a replica. Avoids write conflicts entirely, at the cost of cross-region write latency for non-home regions.
 - **Multi-writer + conflict resolution.** Accept writes anywhere, reconcile with LWW, vector clocks, or CRDTs. Best availability, needs careful conflict handling.

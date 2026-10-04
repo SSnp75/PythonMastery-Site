@@ -33,6 +33,8 @@ description: Message queues and streams with RabbitMQ and Kafka — delivery gua
 
 ## Why queues
 
+*Decouple producers from consumers so work is buffered, retried, and processed independently.*
+
 When services talk directly (service A calls service B over HTTP), A is blocked while B works, and if B is down, A fails. A **message queue** sits between them: A publishes a message and moves on; B consumes it when ready. This **decouples** producers from consumers in time — B can be slow, restart, or scale out, and A never notices.
 
 ```

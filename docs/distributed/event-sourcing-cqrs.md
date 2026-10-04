@@ -33,6 +33,8 @@ description: Model state as an immutable log of events and separate reads from w
 
 ## Event sourcing: the log is the truth
 
+*Persist every change as an immutable event; current state is a projection of the log.*
+
 Traditional apps store the **current state** — a `balance` column that you overwrite. Event sourcing stores the **sequence of changes** instead: every deposit and withdrawal as an immutable event. The current state is *derived* by replaying the log.
 
 ```
@@ -47,6 +49,8 @@ You never update or delete; you only **append** new events. The log becomes a co
 ---
 
 ## Rebuilding state from events
+
+*Replay events from the start to reconstruct state — the basis of auditability and time travel.*
 
 The core mechanic: start from empty, apply each event in order. Fully runnable:
 
@@ -96,6 +100,8 @@ The balance (100) is *computed* from the events, never stored directly. Replay i
 
 ## Why this is powerful
 
+*Full history, debugging by replay, and multiple read models from one source of truth.*
+
 - **Complete audit trail.** Every change is recorded with its cause — invaluable for finance, compliance, debugging. You can answer "how did we get to this state?"
 - **Time travel.** Replay up to any point to see historical state.
 - **Rebuild/repair.** Fix a bug in how state is derived, then rebuild by replaying — the events are untouched.
@@ -104,6 +110,8 @@ The balance (100) is *computed* from the events, never stored directly. Replay i
 ---
 
 ## Snapshots: don't replay millions of events
+
+*Periodically save state so replay starts from a checkpoint instead of event zero.*
 
 Replaying from the beginning gets slow once a log has millions of events. The fix is **snapshots**: periodically save the derived state plus the log position, then replay only the events *after* the snapshot.
 
@@ -134,6 +142,8 @@ Snapshots trade a little storage for much faster reconstruction — replay 100 r
 
 ## CQRS: separate reads from writes
 
+*Model commands and queries independently so each can be optimized separately.*
+
 **CQRS** (Command Query Responsibility Segregation) splits the model in two: **commands** (writes) go through one path, **queries** (reads) through another. They can use different models, and even different databases, each optimized for its job.
 
 ```
@@ -153,6 +163,8 @@ They're often (not always) used together. You can do CQRS without event sourcing
 ---
 
 ## The honest tradeoffs
+
+*Power at the cost of complexity — eventual consistency, more moving parts, and a learning curve.*
 
 **Gains:** full audit history, time travel, rebuildable state, flexible read models, natural fit with [event-driven](../web/expert/event-driven-architecture.md) and distributed systems.
 

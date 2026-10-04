@@ -33,6 +33,8 @@ description: Conflict-free replicated data types that merge without coordination
 
 ## The problem
 
+*Multiple replicas accept writes offline and must converge without a central coordinator or conflicts.*
+
 When data is replicated across nodes that can update independently — offline apps, multi-region databases, collaborative editors — two replicas can change the *same* value at the *same* time. When they sync, whose value wins? Locking everything to coordinate is slow and defeats the point of replication.
 
 **CRDTs (Conflict-free Replicated Data Types)** are data structures designed so that concurrent updates **always merge to the same result, automatically, without coordination**. No locks, no consensus, no "last writer clobbers everything." Any two replicas that have seen the same set of updates converge to identical state — a property called *strong eventual consistency*.
@@ -46,6 +48,8 @@ When data is replicated across nodes that can update independently — offline a
 ---
 
 ## G-Counter: a grow-only counter
+
+*A counter each node increments locally; merging takes the max per node, so it always converges.*
 
 The simplest CRDT. The trick: instead of one shared number, **each node keeps its own count**, and the value is the sum. Merging takes the max per node — so no increment is ever lost. Fully runnable:
 
@@ -95,6 +99,8 @@ Both replicas converge to 8 — neither increment was lost. Because each node ow
 
 ## LWW-Register: last-write-wins
 
+*A single value where the newest timestamp wins — simple conflict resolution for a register.*
+
 For a single value (like a user's chosen theme color), a common CRDT attaches a **timestamp** and keeps whichever write is latest:
 
 ```python
@@ -140,6 +146,8 @@ The later write (`blue` at t=12) wins on both replicas. Simple and convergent �
 
 ## What makes a merge safe
 
+*Merges must be commutative, associative, and idempotent so any order/duplication converges to the same state.*
+
 A CRDT merge works because it has three mathematical properties. Any operation with all three converges regardless of order or duplication:
 
 | Property | Meaning | Why it matters |
@@ -154,6 +162,8 @@ A CRDT merge works because it has three mathematical properties. Any operation w
 
 ## The CRDT family
 
+*Counters, registers, sets, and maps — the common building blocks and what each is for.*
+
 - **Counters** — G-Counter (increment-only), PN-Counter (increment + decrement, using two G-Counters).
 - **Registers** — LWW-Register, Multi-Value Register (keeps all concurrent values for the app to resolve).
 - **Sets** — G-Set (add-only), OR-Set (add/remove with unique tags).
@@ -162,6 +172,8 @@ A CRDT merge works because it has three mathematical properties. Any operation w
 ---
 
 ## Real-world use
+
+*Collaborative editors, offline-first apps, and distributed caches that sync without locking.*
 
 - **Collaborative editors** (Figma, Google Docs-style tools) — merge simultaneous edits without a central lock.
 - **Offline-first / local-first apps** — edit offline, sync and merge cleanly when back online.

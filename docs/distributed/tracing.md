@@ -33,6 +33,8 @@ description: Follow a request across services with traces, spans and OpenTelemet
 
 ## The problem: where did the time go?
 
+*In a request spanning many services, you need to see each hop to find the slow one.*
+
 In a monolith, a slow request shows up in one stack trace. In [microservices](../web/expert/microservices.md), a single user request might touch a dozen services — API gateway → auth → orders → inventory → payment → database. When it's slow, *which* service is to blame? Logs on each service can't easily be stitched together. **Distributed tracing** solves this by following one request across every service it touches and timing each step.
 
 ```
@@ -48,6 +50,8 @@ In a monolith, a slow request shows up in one stack trace. In [microservices](..
 
 ## Traces, spans, and context
 
+*A trace is a tree of spans linked by a propagated context ID.*
+
 - **Trace** — the whole journey of one request, identified by a **trace ID** shared by every step.
 - **Span** — one unit of work within the trace (a function, an HTTP call, a DB query), with a start, a duration, and a **span ID**.
 - **Parent/child** — spans nest: a span records its parent's ID, forming a tree that mirrors the call structure.
@@ -58,6 +62,8 @@ Context propagation is the crux: without passing the trace ID along, each servic
 ---
 
 ## Modeling a span tree
+
+*Represent nested operations as parent/child spans with timings.*
 
 The core data model is simple — spans sharing a trace ID, linked by parent IDs. Fully runnable:
 
@@ -113,6 +119,8 @@ All four spans share `trace_id="T1"`, and the parent links let us rebuild the ex
 
 ## OpenTelemetry: the standard
 
+*Vendor-neutral APIs/SDKs for emitting traces, metrics, and logs.*
+
 You don't hand-roll tracing in production — you use **OpenTelemetry (OTel)**, the vendor-neutral standard for instrumentation. It generates spans, propagates context across services, and exports to any backend (Jaeger, Zipkin, Datadog, Grafana Tempo).
 
 ```python
@@ -137,6 +145,8 @@ def query_db():
 
 ## Reading a trace to debug
 
+*Follow the span waterfall to pinpoint latency and errors.*
+
 The workflow once tracing is in place:
 
 1. A request is slow → find its trace by ID (often logged with the request).
@@ -149,6 +159,8 @@ This turns "the checkout is slow sometimes" into "the payment service's fraud-ch
 ---
 
 ## The three pillars of observability
+
+*Logs, metrics, and traces together explain what a system is doing.*
 
 Tracing is one of three complementary signals:
 

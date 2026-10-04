@@ -33,6 +33,8 @@ description: Coordinate changes across services with sagas and compensating tran
 
 ## The problem: no shared transaction
 
+*You can't ACID-commit across services, so a multi-step operation can fail halfway.*
+
 In a single database, a transaction gives you all-or-nothing (**atomicity**): wrap several changes in `BEGIN … COMMIT`, and if anything fails, `ROLLBACK` undoes it all. But in [microservices](../web/expert/microservices.md), each service owns its *own* database. An order that must reserve stock, charge a card, and schedule shipping spans three services and three databases — there's no single transaction that covers them.
 
 ```
@@ -51,6 +53,8 @@ If the third step fails, you can't `ROLLBACK` the first two — they were commit
 
 ## Why not two-phase commit (2PC)?
 
+*2PC blocks and doesn't scale across independent services — it's fragile under failure.*
+
 The classic answer is **two-phase commit**: a coordinator asks all participants to "prepare," and if all agree, tells them to "commit." It does provide atomicity across services — but it's largely avoided in modern microservices because:
 
 - **It's blocking.** Participants hold locks while waiting for the coordinator's decision. A slow or crashed coordinator can freeze everyone.
@@ -62,6 +66,8 @@ For long-running, loosely-coupled service interactions, 2PC's locking and blocki
 ---
 
 ## The saga pattern
+
+*Break a transaction into local steps, each with a compensating action to undo it.*
 
 A **saga** breaks a distributed transaction into a sequence of **local** transactions, one per service. Each step commits independently. If a later step fails, the saga runs **compensating transactions** — explicit "undo" operations — for the steps already completed, in reverse order.
 
@@ -77,6 +83,8 @@ The crucial mindset shift: there's no automatic rollback. **You** write the comp
 ---
 
 ## An orchestrated saga
+
+*A coordinator drives the steps and triggers compensations on failure.*
 
 In **orchestration**, a central coordinator runs the steps and triggers compensations on failure. Fully runnable:
 
@@ -176,6 +184,8 @@ Output:
 ---
 
 ## Orchestration vs choreography
+
+*Central coordinator vs event-driven peers — the two ways to run a saga.*
 
 Two ways to coordinate a saga:
 
