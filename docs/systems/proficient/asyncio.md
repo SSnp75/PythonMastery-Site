@@ -43,6 +43,8 @@ Event Loop (single thread):
 
 ## Coroutines and await
 
+*`async def` defines a coroutine; `await` suspends it so the loop can run others — the two keywords async is built on.*
+
 ```python
 import asyncio
 
@@ -67,6 +69,8 @@ asyncio.run(main())
 
 ## Concurrent execution with gather
 
+*Run many coroutines at once and collect results in order — the simplest way to parallelize I/O.*
+
 ```python
 async def main():
     # Concurrent — all run together (fast!)
@@ -85,6 +89,8 @@ asyncio.run(main())
 ---
 
 ## create_task — start now, await later
+
+*Schedule a coroutine immediately and get a handle you can await, cancel, or inspect.*
 
 ```python
 async def main():
@@ -107,6 +113,8 @@ asyncio.run(main())
 ---
 
 ## TaskGroup (Python 3.11+) — structured concurrency
+
+*Run a group of tasks that are all awaited and auto-cancelled if one fails — the safe modern default.*
 
 ```python
 async def main():
@@ -167,6 +175,8 @@ asyncio.run(main())
 
 ## Timeouts
 
+*Bound how long an await can take and cancel it if it overruns.*
+
 ```python
 async def slow_operation():
     await asyncio.sleep(10)
@@ -192,6 +202,8 @@ asyncio.run(main())
 ---
 
 ## asyncio.Queue — async producer/consumer
+
+*Hand work between coroutines safely without shared-state races.*
 
 ```python
 import asyncio
@@ -234,6 +246,8 @@ asyncio.run(main())
 
 ## Semaphore — limit concurrency
 
+*Cap how many coroutines run a section at once — e.g. max N concurrent downloads.*
+
 ```python
 import asyncio
 import httpx
@@ -260,6 +274,8 @@ asyncio.run(main())
 
 ## Async generators
 
+*Produce values lazily from async sources with `async for`.*
+
 ```python
 async def async_range(start, stop, delay=0.1):
     """Async generator — yields values with delays."""
@@ -281,6 +297,8 @@ asyncio.run(main())
 ---
 
 ## Async context managers
+
+*`async with` for resources that need async setup/teardown (connections, sessions).*
 
 ```python
 import asyncio
@@ -337,6 +355,8 @@ asyncio.run(main())
 ---
 
 ## Running blocking code in async context
+
+*Offload a blocking call to a thread with `to_thread` so it doesn't stall the loop.*
 
 ```python
 import asyncio

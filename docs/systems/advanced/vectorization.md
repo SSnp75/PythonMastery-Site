@@ -72,6 +72,8 @@ Same result, but `sum(...)` does the iteration in C rather than interpreted Pyth
 
 ## NumPy vectorized operations
 
+*Replace element-by-element loops with whole-array operations for huge speedups.*
+
 The real thing operates on whole arrays at once:
 
 ```python
@@ -92,6 +94,8 @@ normalized = (a - a.mean()) / a.std()   # whole-array math
 ---
 
 ## Broadcasting
+
+*Combine differently-shaped arrays without explicit tiling.*
 
 **Broadcasting** lets NumPy combine arrays of different shapes without writing loops — it "stretches" smaller arrays to match:
 

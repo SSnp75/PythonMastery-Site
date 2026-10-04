@@ -49,6 +49,8 @@ print(f"Parallel:   {time.perf_counter() - start:.2f}s")  # ~1.2s (near-linear s
 
 ## ProcessPoolExecutor (high-level API)
 
+*Run CPU-bound work across cores with the same simple submit/map API as threads.*
+
 ```python
 from concurrent.futures import ProcessPoolExecutor, as_completed
 
@@ -68,6 +70,8 @@ with ProcessPoolExecutor(max_workers=mp.cpu_count()) as executor:
 ---
 
 ## Pool methods
+
+*`map`, `imap`, and `apply` variants for distributing work over a process pool.*
 
 ```python
 import multiprocessing as mp
@@ -107,6 +111,8 @@ with mp.Pool(processes=4, initializer=init_worker) as pool:
 ---
 
 ## Inter-process communication
+
+*Pass data between processes with queues and pipes (everything is pickled).*
 
 ### Queue
 
@@ -162,6 +168,8 @@ p1.join(); p2.join()
 ---
 
 ## Shared memory
+
+*Share large arrays across processes without copying using shared-memory objects.*
 
 ```python
 import multiprocessing as mp
@@ -219,6 +227,8 @@ print(f"Counter: {counter.value}")   # 400,000
 
 ## Pickling limitations
 
+*Only picklable objects cross the process boundary — a common source of errors.*
+
 !!! warning "Objects must be picklable"
     Multiprocessing serializes objects with `pickle` to send between processes. These **cannot** be pickled:
     
@@ -244,6 +254,8 @@ pool.map(square, range(10))   # works
 ---
 
 ## Process lifecycle and error handling
+
+*Start, join, and handle failures in child processes robustly.*
 
 ```python
 import multiprocessing as mp

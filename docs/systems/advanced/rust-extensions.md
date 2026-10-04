@@ -36,6 +36,8 @@ description: PyO3, maturin, memory safety, GIL management and high-performance P
 
 ## Quick start with maturin
 
+*Build and install a Rust-backed Python module with one tool.*
+
 ```bash
 # Install tools
 pip install maturin
@@ -73,6 +75,8 @@ numpy = "0.22"   # for NumPy integration
 ---
 
 ## Basic functions
+
+*Expose Rust functions to Python with PyO3 attributes.*
 
 ```rust
 // src/lib.rs
@@ -133,6 +137,8 @@ print(my_rust_module.count_vowels("Hello World")) # 3
 
 ## Python classes in Rust
 
+*Implement Python classes in Rust for performance-critical objects.*
+
 ```rust
 use pyo3::prelude::*;
 
@@ -182,6 +188,8 @@ print(p1.x, p1.y)        # 3.0 4.0
 
 ## NumPy integration
 
+*Operate on NumPy arrays from Rust without copying.*
+
 ```rust
 use numpy::{IntoPyArray, PyArrayDyn, PyReadonlyArrayDyn};
 use pyo3::prelude::*;
@@ -221,6 +229,8 @@ print(element_wise_sqrt(arr))    # [1., 2., 3., 4.]
 
 ## Releasing the GIL
 
+*Drop the GIL during heavy Rust work so Python threads can run.*
+
 ```rust
 use pyo3::prelude::*;
 
@@ -239,6 +249,8 @@ This means Python threads can run concurrently while Rust does heavy computation
 ---
 
 ## Error handling
+
+*Map Rust `Result` errors to Python exceptions cleanly.*
 
 ```rust
 use pyo3::prelude::*;

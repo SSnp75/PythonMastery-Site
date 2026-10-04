@@ -35,6 +35,8 @@ Typical speedup: **10x–100x** for numerical loops.
 
 ## Setup
 
+*Compile `.pyx` modules into C extensions as part of your build.*
+
 ```bash
 pip install cython setuptools
 ```
@@ -57,6 +59,8 @@ python setup.py build_ext --inplace
 ---
 
 ## Basic Cython — adding types
+
+*Annotate variables with C types to remove Python overhead from hot loops.*
 
 ```cython
 # fib.pyx
@@ -90,6 +94,8 @@ print(timeit.timeit("fib_cython(1000)", globals=globals(), number=10000))   # ~0
 
 ## Type declarations
 
+*Declare `cdef` types so arithmetic runs at C speed.*
+
 ```cython
 # Variable types
 cdef int x = 10
@@ -117,6 +123,8 @@ def add_python(int a, int b):  # Python function with typed args
 ---
 
 ## Typed memoryviews (fast array access)
+
+*Access NumPy/array buffers directly without Python indexing overhead.*
 
 ```cython
 # primes.pyx
@@ -163,6 +171,8 @@ def fast(double[:] arr):
 
 ## Parallel loops with prange
 
+*Release the GIL and run loops across cores from Cython.*
+
 ```cython
 # parallel.pyx
 from cython.parallel import prange
@@ -199,6 +209,8 @@ setup(ext_modules=cythonize([ext]))
 ---
 
 ## Wrapping C libraries
+
+*Call existing C code from Python by declaring its interface in Cython.*
 
 ```cython
 # wrapper.pyx

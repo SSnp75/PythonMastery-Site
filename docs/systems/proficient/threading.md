@@ -34,6 +34,8 @@ description: Threads, locks, race conditions, synchronization primitives and the
 
 ## Basic threading
 
+*Start a thread to run a function concurrently — good for overlapping I/O waits.*
+
 ```python
 import threading
 import time
@@ -67,6 +69,8 @@ print(f"Threaded: {time.perf_counter() - start:.2f}s")   # ~1s
 
 ## ThreadPoolExecutor (recommended API)
 
+*Submit tasks to a managed pool and collect results — simpler than managing threads by hand.*
+
 ```python
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
@@ -98,6 +102,8 @@ with ThreadPoolExecutor(max_workers=5) as executor:
 
 ## Race conditions
 
+*What goes wrong when threads touch shared state without coordination — the bug locks exist to prevent.*
+
 ```python
 import threading
 
@@ -121,6 +127,8 @@ print(f"Actual:   {counter:,}")   # likely < 4,000,000!
 ---
 
 ## Locks
+
+*Serialize access to shared state so only one thread is in the critical section at a time.*
 
 ```python
 import threading
@@ -156,6 +164,8 @@ def recursive_function(n):
 ---
 
 ## Other synchronization primitives
+
+*Events, conditions, semaphores, and barriers for coordinating threads beyond a plain lock.*
 
 ### Semaphore — limit concurrent access
 
@@ -259,6 +269,8 @@ for t in threads: t.join()
 
 ## Thread-safe data structures
 
+*Use `queue.Queue` and friends to pass data between threads without manual locking.*
+
 ```python
 import queue
 import threading
@@ -289,6 +301,8 @@ t1.join(); t2.join()
 
 ## Daemon threads
 
+*Background threads that don't block program exit — for fire-and-forget helpers.*
+
 ```python
 import threading
 import time
@@ -310,6 +324,8 @@ print("Main thread done — daemon will be killed")
 ---
 
 ## Thread-local storage
+
+*Give each thread its own copy of a value to avoid sharing entirely.*
 
 ```python
 import threading

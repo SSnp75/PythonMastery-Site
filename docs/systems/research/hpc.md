@@ -23,6 +23,8 @@ description: MPI4py, SLURM, Dask, Ray and distributed high-performance computing
 
 ## MPI4py — Message Passing Interface
 
+*Coordinate processes across cluster nodes with explicit message passing.*
+
 MPI is the standard for distributed computing on clusters. Each process (rank) communicates explicitly.
 
 ```python
@@ -89,6 +91,8 @@ srun -n 64 python my_mpi_script.py
 
 ## SLURM job scripts
 
+*Submit and schedule parallel jobs on an HPC cluster.*
+
 ```bash
 #!/bin/bash
 #SBATCH --job-name=my_python_job
@@ -123,6 +127,8 @@ salloc --nodes=1 --time=01:00:00
 ---
 
 ## Dask — parallel computing in Python
+
+*Scale NumPy/pandas-style work across cores and machines with familiar APIs.*
 
 ```python
 import dask.array as da
@@ -170,6 +176,8 @@ client = Client(cluster)
 
 ## Ray — distributed computing framework
 
+*Distribute Python functions and actors across a cluster.*
+
 ```python
 import ray
 import numpy as np
@@ -209,6 +217,8 @@ print(ray.get(counter.get.remote()))   # 4950
 ---
 
 ## Parallel I/O with HDF5
+
+*Read/write huge datasets in parallel without a bottleneck.*
 
 ```python
 import h5py

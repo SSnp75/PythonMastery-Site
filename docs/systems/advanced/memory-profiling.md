@@ -79,6 +79,8 @@ peak tracked memory > 0: True
 
 ## The leak-hunting workflow
 
+*Snapshot, diff, and locate what keeps growing — a repeatable process for finding leaks.*
+
 For a long-running process that slowly grows:
 
 ```python
@@ -100,6 +102,8 @@ If the same line's allocation keeps growing across iterations that *should* be s
 
 ## Other tools
 
+*Beyond tracemalloc — memory_profiler, objgraph, and OS-level views.*
+
 | Tool | Use |
 |---|---|
 | **tracemalloc** | Built-in; snapshot diffs, allocation tracebacks |
@@ -119,6 +123,8 @@ print(sys.getsizeof([]))        # bytes for an empty list (shallow only)
 ---
 
 ## Reduction strategies
+
+*Cut memory with `__slots__`, generators, streaming, and smaller dtypes.*
 
 Once you know where memory goes, common fixes:
 

@@ -38,6 +38,8 @@ description: cProfile, line_profiler, py-spy, memory profiling and optimization 
 
 ## timeit — micro-benchmarks
 
+*Time tiny snippets accurately by running them many times — for comparing small alternatives.*
+
 ```python
 import timeit
 
@@ -61,6 +63,8 @@ print(timeit.timeit(approach_b, number=10000))   # generator (slightly slower fo
 ---
 
 ## cProfile — function-level profiling
+
+*See where total time goes by function — the first tool to find a bottleneck.*
 
 ```python
 import cProfile
@@ -114,6 +118,8 @@ snakeviz profile.prof   # opens interactive visualization in browser
 
 ## line_profiler — line-by-line timing
 
+*Drill into a hot function to see which lines cost the most.*
+
 ```python
 # pip install line_profiler
 
@@ -148,6 +154,8 @@ Now you know: `sorted()` is the bottleneck (72.4% of time).
 
 ## py-spy — sampling profiler (no code changes!)
 
+*Profile a running process (even in production) without modifying or restarting it.*
+
 ```bash
 # Install
 pip install py-spy
@@ -167,6 +175,8 @@ Flame graphs show call stacks — wider bars mean more time spent.
 ---
 
 ## Memory profiling
+
+*Find what's consuming memory when a process grows unexpectedly.*
 
 ### tracemalloc (built-in)
 
@@ -240,6 +250,8 @@ Scalene gives:
 ---
 
 ## Common optimization patterns
+
+*Proven fixes once you've found the bottleneck — caching, vectorizing, better data structures.*
 
 ```python
 # 1. Avoid repeated attribute lookups

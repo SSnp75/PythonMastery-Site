@@ -49,6 +49,8 @@ result = sum_squares(data)   # ~100x faster than pure Python loop
 
 ## @njit vs @jit
 
+*`@njit` (no-Python mode) is the fast path; plain `@jit` falls back to slow object mode.*
+
 ```python
 from numba import jit, njit
 
@@ -69,6 +71,8 @@ def strict(x):
 
 ## Supported operations
 
+*Numba accelerates numeric Python and NumPy — know what's in scope before decorating.*
+
 Numba supports:
 - All numeric types (int, float, complex)
 - NumPy arrays and most NumPy functions
@@ -85,6 +89,8 @@ Numba does NOT support:
 ---
 
 ## Parallel execution with `parallel=True`
+
+*Auto-parallelize loops across cores for extra speed on big arrays.*
 
 ```python
 from numba import njit, prange
@@ -119,6 +125,8 @@ C = parallel_matrix_multiply(A, B)   # uses all CPU cores
 ---
 
 ## @vectorize — create NumPy ufuncs
+
+*Turn a scalar function into a fast element-wise array operation.*
 
 ```python
 from numba import vectorize, float64, int64
@@ -164,6 +172,8 @@ print(row_sum(matrix))   # [6., 22., 38.]
 
 ## CUDA kernels (GPU programming)
 
+*Write GPU kernels in Python for massively parallel numeric work.*
+
 ```python
 from numba import cuda
 import numpy as np
@@ -200,6 +210,8 @@ print(np.allclose(result, a + b))   # True
 ---
 
 ## Caching — avoid recompilation
+
+*Cache compiled functions so you don't pay JIT warm-up on every run.*
 
 ```python
 @njit(cache=True)   # save compiled code to disk
