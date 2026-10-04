@@ -33,6 +33,8 @@ description: Collect metrics, export them and alert when a system misbehaves
 
 ## The monitoring pipeline
 
+*Collect → process → alert → visualize — the shape of any monitoring system.*
+
 Every monitoring system, from a 20-line script to Datadog, follows the same four stages:
 
 ```
@@ -46,6 +48,8 @@ We'll build the pieces in Python, keeping the logic runnable with pure stdlib an
 ---
 
 ## Collecting metrics
+
+*Sample CPU, memory, disk, and temperature with psutil and sensors.*
 
 The de-facto library is **`psutil`** — cross-platform access to CPU, memory, disk, network, and processes.
 
@@ -66,6 +70,8 @@ print(f"CPU {cpu}%  MEM {mem}%  DISK {disk}%")
 ---
 
 ## Processing: turning readings into alerts
+
+*Apply thresholds and rules to decide when to notify.*
 
 The valuable part isn't reading a number — it's deciding when a number is a *problem*. A threshold check is the simplest useful processing step. Fully runnable:
 
@@ -102,6 +108,8 @@ CPU and disk breached their limits; memory (55% vs 90%) stayed quiet. Real syste
 
 ## A simple monitoring loop
 
+*A minimal collect-and-check loop you can extend.*
+
 Combine collection, processing, and action into a loop:
 
 ```python
@@ -120,6 +128,8 @@ For anything long-lived, run this as a proper background service (systemd on Lin
 ---
 
 ## Exporting for Prometheus + Grafana
+
+*Expose metrics for scraping and dashboards.*
 
 The industry-standard stack is **Prometheus** (scrapes and stores metrics) + **Grafana** (dashboards). Your app exposes metrics on an HTTP endpoint; Prometheus *pulls* them on a schedule.
 
@@ -144,6 +154,8 @@ while True:
 ---
 
 ## Push vs pull, agents vs libraries
+
+*Design choices for how metrics get from device to backend.*
 
 Two architectural choices you'll encounter:
 

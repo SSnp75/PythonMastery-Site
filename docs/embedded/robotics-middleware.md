@@ -54,6 +54,8 @@ A robot is many components that must cooperate: cameras, LIDAR, motors, a planne
 
 ## Nodes, topics, and pub/sub
 
+*Robot components as nodes exchanging messages over named topics.*
+
 - **Node** — an independent process doing one job (read the camera, plan a path, drive the motors).
 - **Topic** — a named channel (`/scan`, `/cmd_vel`) carrying a stream of typed messages.
 - **Publisher / Subscriber** — a node *publishes* to a topic; any node *subscribes* to receive. Publishers and subscribers don't know about each other — exactly the decoupling of an event bus, distributed across processes.
@@ -63,6 +65,8 @@ This is publish/subscribe, the same pattern as [Event-driven Architecture](../we
 ---
 
 ## A publisher node
+
+*Send sensor/command data onto a topic.*
 
 `rclpy` is ROS 2's Python client library. A node that publishes a counter every second:
 
@@ -93,6 +97,8 @@ def main():
 
 ## A subscriber node
 
+*React to messages arriving on a topic.*
+
 ```python
 import rclpy
 from rclpy.node import Node
@@ -118,6 +124,8 @@ Run both (in separate terminals) and the listener prints each message the talker
 
 ## Topics vs services vs actions
 
+*Streaming vs request/response vs long-running goals in ROS.*
+
 ROS 2 offers three communication styles for different needs:
 
 | Mechanism | Style | Use for |
@@ -131,6 +139,8 @@ Rule of thumb: **topics** for streams, **services** for quick request/reply, **a
 ---
 
 ## How it fits a real robot
+
+*How these pieces compose into perception-control-actuation.*
 
 A typical robot software stack layers these pieces:
 

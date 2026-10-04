@@ -36,6 +36,8 @@ description: Run Python on microcontrollers with MicroPython and CircuitPython
 
 ## Python on a microcontroller
 
+*MicroPython/CircuitPython bring Python to tiny boards with kilobytes of RAM.*
+
 Microcontrollers — the tiny chips inside sensors, appliances, and IoT devices — traditionally run C. **MicroPython** and **CircuitPython** put a real Python interpreter on these chips, so you write firmware in Python instead. You lose some speed and RAM, but gain enormous development speed: edit a file, save, and it runs — no compile-and-flash cycle.
 
 ```
@@ -52,6 +54,8 @@ These are real Python (indentation, functions, classes, exceptions) — just a s
 ---
 
 ## Blinking an LED (the "hello world" of hardware)
+
+*The canonical first program — toggle a pin to prove the toolchain works.*
 
 Controlling a GPIO pin — MicroPython style:
 
@@ -91,6 +95,8 @@ while True:
 
 ## Reading a sensor
 
+*Sample a sensor over a bus (I2C/SPI/analog) and act on the value.*
+
 Reading an analog value (e.g. a temperature sensor or potentiometer) via the ADC (analog-to-digital converter):
 
 ```python
@@ -123,6 +129,8 @@ Common protocols (**I2C**, **SPI**, **UART**) connect richer peripherals — dis
 
 ## Living within constraints
 
+*Manage scarce RAM/flash and no OS on microcontrollers.*
+
 The defining challenge of embedded Python is **scarcity** — often 256 KB of RAM or less. This changes how you code:
 
 - **Memory is precious.** A careless list comprehension can exhaust RAM. Prefer generators, reuse buffers, and avoid holding large structures.
@@ -134,6 +142,8 @@ The defining challenge of embedded Python is **scarcity** — often 256 KB of RA
 ---
 
 ## MicroPython vs CircuitPython
+
+*Two beginner-friendly embedded Pythons with different ecosystems.*
 
 They share a common ancestor (CircuitPython is a fork of MicroPython) but differ in philosophy:
 
@@ -150,6 +160,8 @@ They share a common ancestor (CircuitPython is a fork of MicroPython) but differ
 ---
 
 ## When embedded Python fits (and when it doesn't)
+
+*Great for prototyping and I/O glue; not for hard real-time or tight timing.*
 
 **Great for:** prototyping, education, IoT sensors, hobby projects, and products where development speed beats squeezing every cycle.
 

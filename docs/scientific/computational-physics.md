@@ -124,6 +124,8 @@ Output:
 
 ## The scientific stack
 
+*NumPy, SciPy, and Matplotlib as the backbone of numerical physics work.*
+
 In real computational physics you'd use optimized libraries:
 
 ```python

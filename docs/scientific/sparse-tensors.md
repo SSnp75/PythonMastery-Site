@@ -68,6 +68,8 @@ The dot product is `2×4 + 3×1 = 11` (only indices 5 and 999 overlap). Cruciall
 
 ## Sparse storage formats
 
+*CSR, CSC, COO — each trades off fast construction vs fast math.*
+
 Different access patterns want different layouts. The common matrix formats:
 
 | Format | Full name | Best for |
@@ -83,6 +85,8 @@ You typically **build** in COO or DOK, then **convert** to CSR/CSC for computati
 
 ## The tradeoff
 
+*Sparse saves memory on mostly-zero data but adds overhead on dense data.*
+
 Sparse isn't always better:
 
 - **Sparse wins** when the fraction of nonzeros (density) is low — say under ~10%. Huge memory savings and faster operations that skip zeros.
@@ -93,6 +97,8 @@ The crossover depends on the operation and hardware, but the rule of thumb: **us
 ---
 
 ## In practice: SciPy sparse
+
+*Use `scipy.sparse` matrices for large, mostly-empty data.*
 
 For real work, **`scipy.sparse`** provides all the formats with optimized operations:
 
@@ -114,6 +120,8 @@ result = sparse @ sparse.T # sparse matrix multiply
 ---
 
 ## Where sparse data appears
+
+*Graphs, text/TF-IDF, recommender matrices, and finite-element meshes.*
 
 - **NLP** — term-document matrices (vocabulary is huge, each document uses few words).
 - **Recommendation systems** — user×item rating matrices (mostly unrated).

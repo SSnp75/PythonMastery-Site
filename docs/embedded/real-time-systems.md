@@ -52,6 +52,8 @@ The defining metric is the **worst case**, not the average. "Usually 1 ms" is me
 
 ## Jitter: the enemy of predictability
 
+*Variation in timing is what breaks real-time guarantees, not average speed.*
+
 **Jitter** is the variation in timing — how much actual intervals deviate from the target. A task meant to run every 10 ms that sometimes runs at 9.7 ms and sometimes at 10.6 ms has jitter. Measuring it tells you how predictable your timing really is. Runnable:
 
 ```python
@@ -92,6 +94,8 @@ Asking for a 10 ms sleep, we got errors of a few hundred microseconds up to over
 
 ## Why Python struggles with hard real-time
 
+*GC pauses and the GIL make deterministic timing hard in CPython.*
+
 Several parts of Python's design work against guaranteed timing:
 
 - **Garbage collection pauses.** Python's cyclic garbage collector can run at unpredictable moments, introducing pauses right when you need determinism. (You can disable it with `gc.disable()`, at the cost of managing memory carefully.)
@@ -104,6 +108,8 @@ The result: Python can do **soft** real-time comfortably (audio, dashboards, rob
 ---
 
 ## Mitigation strategies
+
+*Pin priorities, preallocate, and offload timing-critical parts to C/hardware.*
 
 When you must use Python in timing-sensitive code, you can push soft real-time further:
 
@@ -120,6 +126,8 @@ When you must use Python in timing-sensitive code, you can push soft real-time f
 ---
 
 ## A soft real-time control loop
+
+*A loop that usually meets its deadline — acceptable for many control tasks.*
 
 A moderate-rate control loop (e.g. 50 Hz robotics) is well within Python's comfort zone if you compensate for drift:
 

@@ -33,6 +33,8 @@ description: Test embedded firmware from Python over serial and other protocols
 
 ## Why Python for firmware testing
 
+*Python drives test rigs, speaks device protocols, and automates validation.*
+
 Firmware runs on the device (often in C/C++), but the *tests* that poke it, feed it inputs, and check its responses are frequently written in Python. Python is ideal here: quick to write, great libraries for serial/USB/network, and it plays well with `pytest`. The pattern is **host-side test code driving device-side firmware**.
 
 ```
@@ -45,6 +47,8 @@ Firmware runs on the device (often in C/C++), but the *tests* that poke it, feed
 ---
 
 ## Talking over serial
+
+*Communicate with a device over a serial port from Python.*
 
 The workhorse is **`pyserial`**. Opening a port and exchanging bytes:
 
@@ -63,6 +67,8 @@ with serial.Serial("COM3", baudrate=115200, timeout=1) as port:
 ---
 
 ## Framing a binary protocol
+
+*Pack/unpack binary messages to talk to firmware correctly.*
 
 Real devices rarely speak plain text. They use **framed binary protocols**: a start byte, a length, a payload, a checksum, an end byte. Framing lets the receiver find message boundaries and detect corruption. Here's a complete, tested implementation:
 
@@ -146,6 +152,8 @@ Both tests pass with no serial port in sight. The same test *logic* later runs a
 ---
 
 ## Structuring hardware-in-the-loop (HIL) tests
+
+*Organize tests that exercise real hardware reliably and repeatably.*
 
 A pragmatic firmware test suite has layers:
 

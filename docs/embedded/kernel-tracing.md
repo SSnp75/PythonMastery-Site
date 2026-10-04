@@ -52,6 +52,8 @@ Application profilers (see [Profiling](../systems/advanced/profiling.md)) show w
 
 ## The Linux tracing toolbox
 
+*strace, perf, ftrace, and eBPF — the layers of Linux observability.*
+
 | Tool | What it does | Overhead |
 |---|---|---|
 | **strace** | Log every syscall a process makes | High (good for debugging, not production) |
@@ -64,6 +66,8 @@ The trend is toward **eBPF** — it's programmable, low-overhead, and safe enoug
 ---
 
 ## strace: see the syscalls
+
+*Watch every system call a process makes to diagnose I/O and permission issues.*
 
 The quickest way to see what a program asks the kernel to do:
 
@@ -87,6 +91,8 @@ This instantly answers "is my program spending its time in `read`, `futex`, `pol
 
 ## perf: profile the whole system
 
+*Sample CPU across the whole machine to find hotspots.*
+
 `perf` samples what's running across the system, including kernel time:
 
 ```bash
@@ -99,6 +105,8 @@ It attributes CPU time down into kernel functions, so you can see, say, that tim
 ---
 
 ## eBPF from Python (BCC)
+
+*Attach safe programs to kernel events and read them from Python.*
 
 **eBPF** lets you load small, verified programs into the kernel that fire on events (a syscall, a function entry, a network packet). The **BCC** toolkit exposes this from Python: you write the in-kernel probe in a C snippet and the orchestration in Python.
 
@@ -128,6 +136,8 @@ This attaches a **kprobe** (kernel probe) to the `openat` syscall; every time *a
 ---
 
 ## Reading the output to debug
+
+*Interpret traces to find the actual cause of latency or failures.*
 
 The workflow for a "mysteriously slow" program:
 

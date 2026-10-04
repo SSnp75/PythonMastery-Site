@@ -35,6 +35,8 @@ description: Build automatic differentiation from scratch — the engine behind 
 
 ## Three ways to differentiate
 
+*Numeric, symbolic, and automatic — and why autodiff wins for ML.*
+
 - **Numerical** — approximate via `(f(x+h) - f(x)) / h`. Simple but imprecise and slow (one evaluation per input).
 - **Symbolic** — manipulate formulas algebraically (like SymPy). Exact but explodes in size for complex functions.
 - **Automatic** — apply the chain rule to the actual operations as they execute. Exact *and* efficient. This is what frameworks use.
@@ -44,6 +46,8 @@ Autodiff wins by tracking each elementary operation and composing their known de
 ---
 
 ## Forward vs reverse mode
+
+*Two autodiff directions; reverse mode (backprop) is efficient when outputs are few.*
 
 - **Forward mode** — propagate derivatives *from inputs toward outputs*. Efficient when there are few inputs, many outputs.
 - **Reverse mode** — compute the output, then propagate gradients *backward from output to inputs*. Efficient when there are **many inputs, one output** — exactly the case in machine learning (millions of weights, one loss). This backward pass is **backpropagation**.
@@ -124,6 +128,8 @@ Verify by hand: `f = xy + x`, so `∂f/∂x = y + 1 = 5` and `∂f/∂y = x = 3`
 ---
 
 ## How real frameworks scale this up
+
+*How PyTorch/JAX turn this idea into fast, GPU-ready engines.*
 
 **PyTorch** and **JAX** are industrial versions of this idea:
 

@@ -36,6 +36,8 @@ description: Run Python on Raspberry Pi and embedded Linux — GPIO, daemons and
 
 ## Embedded Linux vs microcontrollers
 
+*Full OS on a board (Raspberry Pi) vs bare-metal MCUs — different capabilities and constraints.*
+
 Unlike a microcontroller running [MicroPython](embedded-python.md), an embedded Linux board (Raspberry Pi, BeagleBone, industrial gateways) runs a **full Linux OS and full CPython**. You get the entire standard library, pip, and PyPI — but on modest hardware and often headless (no screen).
 
 ```
@@ -51,6 +53,8 @@ So "Python for embedded Linux" is mostly normal Python — with three twists: ha
 ---
 
 ## Controlling GPIO
+
+*Read sensors and drive outputs via the board's GPIO pins from Python.*
 
 On a Raspberry Pi, the modern library is **`gpiozero`** (friendly, high-level, built on lower-level drivers):
 
@@ -85,6 +89,8 @@ Because it's full CPython, you can freely combine hardware control with the whol
 ---
 
 ## Running as a service (daemon)
+
+*Keep your program running in the background and start on boot via systemd.*
 
 Embedded devices run **headless and unattended** — your program must start on boot, restart if it crashes, and log somewhere persistent. On Linux, **systemd** manages this. You write a unit file:
 
@@ -121,6 +127,8 @@ journalctl -u sensor.service -f        # follow its logs
 
 ## Cross-compiling and deployment
 
+*Build on a dev machine and deploy to the target board.*
+
 Embedded boards are slow to build on. **Cross-compiling** means building on your fast PC for the target's architecture (often ARM), then deploying the artifact.
 
 For pure-Python code there's nothing to compile — you just copy files. The complication is **C-extension dependencies** (numpy, cryptography, pillow): their compiled wheels must match the target's architecture.
@@ -134,6 +142,8 @@ For deployment, common approaches are `rsync`/`scp` of the code, a git pull on t
 ---
 
 ## Resource constraints
+
+*Work within limited CPU, memory, and storage on embedded hardware.*
 
 Embedded Linux is roomier than a microcontroller but far tighter than a server:
 

@@ -35,6 +35,8 @@ Behind NumPy's speed sit two venerable Fortran/C libraries: **BLAS** and **LAPAC
 
 ## What they are
 
+*The low-level linear-algebra libraries (matrix multiply, solvers) that NumPy/SciPy call under the hood.*
+
 - **BLAS** (Basic Linear Algebra Subprograms) — low-level routines for vector and matrix operations: dot products, matrix-vector, matrix-matrix multiply. Decades of hand-tuned optimization.
 - **LAPACK** (Linear Algebra PACKage) — higher-level routines built *on* BLAS: solving linear systems, eigenvalues, decompositions (LU, QR, SVD).
 
@@ -56,6 +58,8 @@ When you call `numpy.linalg.solve` or `A @ B`, you're really invoking optimized 
 ---
 
 ## Why it's fast: naive vs optimized
+
+*Tuned BLAS beats a naive triple loop by orders of magnitude through cache blocking and SIMD.*
 
 Here's a naive matrix multiply in pure Python — correct but slow. Runnable:
 

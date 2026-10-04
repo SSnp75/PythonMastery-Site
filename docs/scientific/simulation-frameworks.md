@@ -34,6 +34,8 @@ This page maps the simulation *frameworks* landscape. The runnable examples of e
 
 ## Three paradigms
 
+*Discrete-event, agent-based, and continuous — pick by how your system changes over time.*
+
 Simulation splits into three approaches, each suited to different systems:
 
 ```
@@ -54,6 +56,8 @@ Simulation splits into three approaches, each suited to different systems:
 
 ## Discrete-event simulation → SimPy
 
+*Model systems that change at discrete events (queues, servers) with SimPy processes.*
+
 Time advances by jumping to the next scheduled event, skipping idle periods — hugely efficient for systems that are mostly waiting. You saw a **complete, tested** discrete-event engine in [Hardware Simulation](../embedded/hardware-simulation.md).
 
 For real models, **SimPy** adds resources (limited servers/tellers), queues, and process interaction on top of Python generators. Use it for operations research: queuing systems, supply chains, service capacity planning.
@@ -61,6 +65,8 @@ For real models, **SimPy** adds resources (limited servers/tellers), queues, and
 ---
 
 ## Agent-based simulation → Mesa
+
+*Model many interacting agents and watch emergent behavior with Mesa.*
 
 Model individual agents with simple local rules; watch complex global behavior *emerge*. You saw a **tested** agent-based model (Conway's Game of Life) in [Python for Simulation](../domains/simulation.md).
 
@@ -70,6 +76,8 @@ Model individual agents with simple local rules; watch complex global behavior *
 
 ## Continuous simulation → NumPy/SciPy
 
+*Integrate differential equations over time for physical systems.*
+
 Systems governed by differential equations evolve continuously; you approximate them with small time steps. You saw **tested** numerical ODE integration (Euler's method) in [Computational Physics](computational-physics.md).
 
 For real work, **SciPy's `solve_ivp`** provides accurate adaptive solvers (Runge-Kutta and more), and **NumPy** vectorizes the math. Use for physics, engineering, chemical kinetics — anything described by rates of change.
@@ -77,6 +85,8 @@ For real work, **SciPy's `solve_ivp`** provides accurate adaptive solvers (Runge
 ---
 
 ## Choosing a paradigm
+
+*Match the modeling style to whether change is event-driven, agent-driven, or continuous.*
 
 Ask what drives change in your system:
 
@@ -92,6 +102,8 @@ Some systems mix paradigms (a hybrid model), but most fit one primarily.
 ---
 
 ## The ecosystem
+
+*SimPy, Mesa, and SciPy as the go-to simulation tools.*
 
 | Paradigm | Framework | Also |
 |---|---|---|

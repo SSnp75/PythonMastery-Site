@@ -35,6 +35,8 @@ Computational biology applies computation and modeling to biological questions �
 
 ## Biology as an algorithms problem
 
+*Sequences, structures, and populations become string, graph, and statistics problems.*
+
 Much of computational biology reduces to well-known CS problems:
 
 - **Sequence alignment** → dynamic programming (edit distance).
@@ -86,6 +88,8 @@ Output:
 
 ## Structural biology
 
+*Work with 3D molecular structures (proteins, DNA) computationally.*
+
 Beyond sequences, computational biology studies 3D structure:
 
 - **Protein structure** — proteins fold into shapes that determine function. Predicting the fold from the sequence was a grand challenge, recently revolutionized by **AlphaFold** (deep learning).
@@ -96,6 +100,8 @@ Beyond sequences, computational biology studies 3D structure:
 
 ## Genomic-scale data
 
+*Handle datasets too big for memory with streaming and specialized formats.*
+
 Modern genomics processes enormous datasets — a single sequencing run produces billions of bases:
 
 - **Formats** — FASTQ (reads + quality), BAM/SAM (alignments), VCF (variants).
@@ -105,6 +111,8 @@ Modern genomics processes enormous datasets — a single sequencing run produces
 ---
 
 ## The ecosystem
+
+*Biopython, scikit-bio, and friends — the standard toolkit.*
 
 | Need | Tool |
 |---|---|

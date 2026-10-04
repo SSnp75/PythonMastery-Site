@@ -47,6 +47,8 @@ The dominant technique is **discrete-event simulation (DES)**: instead of advanc
 
 ## A discrete-event engine from scratch
 
+*Build a tiny event-queue simulator to see how simulation works.*
+
 The core is a **priority queue of events keyed by time**. We pop the earliest, advance the clock to it, process it, and repeat. Fully runnable:
 
 ```python
@@ -98,6 +100,8 @@ The sensor fires at 1.0, 2.0, 3.0 (rescheduling itself each time), and the butto
 
 ## Using `simpy` for real simulations
 
+*Model processes and resources with SimPy instead of rolling your own.*
+
 Hand-rolling a scheduler is great for understanding DES, but for anything substantial use **`simpy`**, which builds simulations on Python generators — you `yield` timeouts and the framework advances the clock.
 
 ```python
@@ -122,6 +126,8 @@ env.run(until=3)
 ---
 
 ## Building a testbed
+
+*Create a simulated environment to develop and test device logic.*
 
 Simulation shines as a **testbed**: wrap a simulated device so your real software can talk to it exactly as it would to hardware.
 
@@ -152,6 +158,8 @@ Now the control software can be tested against this model — thousands of scena
 ---
 
 ## When simulation is (and isn't) enough
+
+*Where a model suffices and where you still need real hardware.*
 
 **Great for:** logic, protocols, control loops, timing *models*, rare-scenario reproduction, pre-hardware development.
 

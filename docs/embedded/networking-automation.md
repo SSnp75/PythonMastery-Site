@@ -47,6 +47,8 @@ Configuring routers, switches, and firewalls by hand — logging into each one a
 
 ## SSH to a device with Netmiko
 
+*Push and pull config on network gear over SSH from Python.*
+
 Most network gear is driven over SSH. **Netmiko** wraps the messy details (vendor prompts, paging, timing) into a clean API:
 
 ```python
@@ -75,6 +77,8 @@ with ConnectHandler(**device) as conn:
 ---
 
 ## Idempotency: the core discipline
+
+*Make config changes safe to re-apply so reruns don't break anything.*
 
 The single most important idea in configuration automation is **idempotency** — applying the same desired state repeatedly produces the same result, making no changes after the first. You don't blindly re-push config; you compute the *difference* between what's running and what you want, and apply only that. Fully runnable:
 
@@ -113,6 +117,8 @@ Only the NTP server changed, so the diff proposes exactly one addition and one r
 
 ## Configuration management at scale
 
+*Manage many devices consistently with templates and inventory.*
+
 For many devices, you graduate from scripts to frameworks:
 
 - **Ansible** — agentless, YAML playbooks, huge library of network modules. The common starting point.
@@ -124,6 +130,8 @@ A typical workflow: keep the desired config in **git** (version-controlled sourc
 ---
 
 ## Automating safely
+
+*Dry-runs, backups, and validation so automation doesn't take down the network.*
 
 Network changes can take down connectivity — including your own path to the device. Guardrails:
 
