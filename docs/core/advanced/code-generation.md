@@ -108,6 +108,8 @@ print(p1 == p3)    # False
 
 ## Template-based code generation
 
+*Fill a source template with values, then compile it — simple and readable.*
+
 ```python
 from string import Template
 import textwrap
@@ -165,6 +167,8 @@ except TypeError as ex:
 
 ## Generating functions with closures (no exec needed)
 
+*Build functions at runtime with closures to avoid `exec` entirely.*
+
 ```python
 def make_getter(attr_name):
     """Generate an optimized getter function."""
@@ -203,6 +207,8 @@ print(get_name(p))    # Bob
 ---
 
 ## Real-world code generation patterns
+
+*Where codegen earns its keep — ORMs, serializers, RPC stubs.*
 
 ### Pattern 1: Protocol Buffers / Thrift
 
@@ -261,6 +267,8 @@ def {endpoint.replace("/", "_").strip("_")}(self, {param_str}):
 
 ## Safety considerations
 
+*Never `exec`/`eval` untrusted input; validate and sandbox generated code.*
+
 !!! warning "exec() and eval() are dangerous with untrusted input"
 
     ```python
@@ -290,6 +298,8 @@ except (ValueError, SyntaxError) as ex:
 ---
 
 ## Performance: generated code is fast
+
+*Generated code runs at full speed — the cost is one-time compilation.*
 
 Code generated with `exec(compile(...))` runs at **full CPython speed** — it's real bytecode, same as hand-written code:
 

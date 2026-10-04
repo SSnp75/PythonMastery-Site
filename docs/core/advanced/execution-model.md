@@ -63,6 +63,8 @@ exec(code)   # prints: 15
 
 ## Code Objects
 
+*The compiled, immutable representation of a function's body (bytecode + metadata).*
+
 Every function, module, class and comprehension has a code object:
 
 ```python
@@ -150,6 +152,8 @@ outer()
 
 ## The Call Stack
 
+*The stack of frames tracking active calls — what you see in a traceback.*
+
 ```python
 import traceback
 
@@ -183,6 +187,8 @@ def walk_stack():
 ---
 
 ## LEGB Scope Resolution in Detail
+
+*Exactly how Python resolves a name through Local, Enclosing, Global, Built-in.*
 
 ```python
 builtin_x = "B"   # would be in builtins, but for illustration
@@ -276,6 +282,8 @@ print(c())   # 3
 
 ## Cell Objects and Closures
 
+*The storage that lets inner functions capture enclosing variables.*
+
 When a function captures variables from an enclosing scope, Python uses **cells**:
 
 ```python
@@ -298,6 +306,8 @@ print(fn.__code__.co_freevars)     # ('x',)
 ---
 
 ## The Eval Loop (simplified)
+
+*The core loop that fetches and executes bytecode instructions.*
 
 CPython's main loop in `Python/ceval.c` is essentially:
 
@@ -337,6 +347,8 @@ def eval_frame(frame):
 ---
 
 ## Execution of Modules
+
+*What happens top to bottom the first time a module is imported.*
 
 When Python imports or runs a module:
 

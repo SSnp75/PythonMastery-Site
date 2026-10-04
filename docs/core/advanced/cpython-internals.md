@@ -23,6 +23,8 @@ description: Object model, reference counting, GIL, type slots and the C impleme
 
 ## Everything is a PyObject
 
+*Every value is a heap object with a type and refcount — the uniform model behind Python.*
+
 In the C source, every Python object starts with a common header:
 
 ```c
@@ -129,6 +131,8 @@ python3.13t script.py   # free-threaded build
 
 ## Small Integer Cache
 
+*CPython pre-creates small ints (-5..256) so they're shared singletons.*
+
 CPython caches integers from **-5 to 256**:
 
 ```python
@@ -154,6 +158,8 @@ This exists purely as an optimization — small integers are used so frequently 
 ---
 
 ## String Interning
+
+*Identical identifier-like strings share one object to speed comparisons.*
 
 CPython interns certain strings (stores only one copy):
 
@@ -181,6 +187,8 @@ Interning rules:
 ---
 
 ## Object Allocation: pymalloc
+
+*CPython's specialized allocator for small objects.*
 
 CPython has its own memory allocator for small objects (< 512 bytes):
 
@@ -211,6 +219,8 @@ print(sys.getsizeof({}))       # 64 bytes
 ---
 
 ## Type Slots — How methods are dispatched
+
+*C-level function pointers that make built-in operations fast.*
 
 When you write `a + b`, CPython doesn't look up `__add__` in a dictionary. Instead, it checks a **type slot**:
 
@@ -247,6 +257,8 @@ print(timeit.timeit("a + b", globals={"a": a, "b": b}, number=10_000_000))  # ~3
 
 ## `__slots__` vs `__dict__`
 
+*Slots store attributes compactly and skip the per-instance dict — less memory, no dynamic attrs.*
+
 ```python
 import sys
 
@@ -274,6 +286,8 @@ print(sys.getsizeof(s))                                 # ~56 bytes
 ---
 
 ## Examining CPython source patterns
+
+*How to read the C source to understand behavior precisely.*
 
 The CPython source is at `github.com/python/cpython`. Key directories:
 

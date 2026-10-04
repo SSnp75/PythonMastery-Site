@@ -43,6 +43,8 @@ print(a)         # [1, 2, 3]  — a is unchanged
 
 ## `id()` — object identity
 
+*The identity of an object — what `is` compares, distinct from `==`.*
+
 `id(obj)` returns the memory address of the object (in CPython):
 
 ```python
@@ -93,6 +95,8 @@ print(d)        # [1, 2, 3, 4]
 
 ## Shallow vs Deep Copy
 
+*Shallow copies share nested objects; deep copies duplicate them fully.*
+
 ```python
 import copy
 
@@ -126,6 +130,8 @@ print(original[0])          # [1, 2, 3, 99]  ← unaffected
 ---
 
 ## Object sizes and `sys.getsizeof`
+
+*Measure an object's memory footprint.*
 
 ```python
 import sys
@@ -183,6 +189,8 @@ print(f"Deep: {deep_getsizeof(data)} bytes")
 
 ## tracemalloc — tracking memory allocations
 
+*Trace where memory is allocated to find growth and leaks.*
+
 ```python
 import tracemalloc
 
@@ -208,6 +216,8 @@ Top 5 memory consumers:
 ---
 
 ## Memory-efficient patterns
+
+*Generators, `__slots__`, and smaller types to cut memory use.*
 
 ### Use `__slots__` for data-heavy classes:
 
@@ -259,6 +269,8 @@ print(f"Array: {sys.getsizeof(c_array):>10,} bytes")   # ~4.0 MB
 ---
 
 ## Weak References
+
+*Reference an object without keeping it alive — for caches and back-references.*
 
 Normal references keep objects alive. Weak references allow the object to be garbage collected:
 

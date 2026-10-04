@@ -54,6 +54,8 @@ def import_module(name):
 
 ## sys.meta_path — the finder chain
 
+*The ordered list of finders Python consults to locate a module.*
+
 ```python
 import sys
 
@@ -69,6 +71,8 @@ for finder in sys.meta_path:
 ---
 
 ## sys.path — where PathFinder searches
+
+*The directories searched for modules — and how to control them.*
 
 ```python
 import sys
@@ -143,6 +147,8 @@ print(upper_python.value)    # PYTHON
 
 ## Writing a custom Loader
 
+*Define how a located module's code is produced and executed.*
+
 ```python
 import importlib.abc
 import importlib.util
@@ -179,6 +185,8 @@ class DatabaseFinder(importlib.abc.MetaPathFinder):
 
 ## Import hooks — modifying imports globally
 
+*Intercept all imports to transform, log, or redirect them.*
+
 ```python
 import sys
 import importlib
@@ -199,6 +207,8 @@ import hashlib    # prints: 📦 Importing: hashlib
 ---
 
 ## Lazy imports (deferred loading)
+
+*Delay importing heavy modules until first use to speed startup.*
 
 ```python
 import importlib
@@ -239,6 +249,8 @@ np = lazy_import("numpy")
 ---
 
 ## Circular imports — how Python handles them
+
+*Why circular imports sometimes work and how to avoid breakage.*
 
 ```python
 # a.py
@@ -283,6 +295,8 @@ import b   # now x exists when b tries to access it
 
 ## importlib.reload — hot-reloading modules
 
+*Reload a changed module at runtime without restarting.*
+
 ```python
 import importlib
 import mymodule
@@ -296,6 +310,8 @@ importlib.reload(mymodule)   # re-executes the module
 ---
 
 ## `__import__` and `importlib.import_module`
+
+*Import modules by name dynamically from code.*
 
 ```python
 # Low-level: __import__ (don't use directly)

@@ -17,6 +17,8 @@ description: Reference counting, generational GC, cyclic references, weakref and
 
 ## Two GC mechanisms in CPython
 
+*Reference counting for most objects, plus a cyclic collector for reference cycles.*
+
 ### 1. Reference Counting (primary)
 
 Objects are freed **immediately** when their reference count drops to zero:
@@ -104,6 +106,8 @@ print(gc.get_stats())
 
 ## The `gc` module in detail
 
+*Inspect, trigger, enable/disable, and tune the cyclic collector.*
+
 ```python
 import gc
 
@@ -137,6 +141,8 @@ print(gc.is_tracked(42))  # False (int — no cycles possible)
 
 ## Which objects does the cyclic GC track?
 
+*Only container types that can form cycles — not simple scalars.*
+
 The GC only tracks **container objects** that could potentially be part of cycles:
 
 ```python
@@ -166,6 +172,8 @@ print(gc.is_tracked(t2))           # True (contains mutable)
 ---
 
 ## `__del__` and its pitfalls
+
+*Finalizers run at unpredictable times and can keep cycles alive — use with care.*
 
 ```python
 import gc
@@ -211,6 +219,8 @@ with GoodFile("data.txt") as f:
 ---
 
 ## Breaking reference cycles
+
+*Use weak references or explicit cleanup to let objects be freed promptly.*
 
 ```python
 import weakref
@@ -263,6 +273,8 @@ gc.collect()
 
 ## Performance: tuning the GC
 
+*Adjust thresholds or disable the collector in allocation-heavy hot paths.*
+
 ```python
 import gc
 
@@ -283,6 +295,8 @@ Instagram [disabled the GC entirely](https://instagram-engineering.com/dismissin
 ---
 
 ## `gc.freeze()` — optimize for fork-based servers (Python 3.7+)
+
+*Freeze existing objects before forking so copy-on-write memory is shared.*
 
 ```python
 import gc

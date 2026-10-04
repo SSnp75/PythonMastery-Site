@@ -41,6 +41,8 @@ print(type(Dog()))     # <class '__main__.Dog'>
 
 ## Creating classes dynamically with `type()`
 
+*`type(name, bases, namespace)` builds a class at runtime — classes are objects.*
+
 `type` has a dual role — as a function it returns the type of an object; with three arguments it **creates a new class**:
 
 ```python
@@ -67,6 +69,8 @@ This is **exactly** what the `class` statement does under the hood.
 ---
 
 ## How class creation works (step by step)
+
+*What Python does between `class X:` and the finished class object.*
 
 When Python encounters:
 
@@ -139,6 +143,8 @@ class Dog(Animal):
 
 ## `__new__` vs `__init__` in metaclasses
 
+*`__new__` builds the class; `__init__` configures it afterward.*
+
 | Method | Called on | Purpose |
 |---|---|---|
 | `Meta.__new__(mcs, name, bases, ns)` | The metaclass | **Creates** the class object |
@@ -176,6 +182,8 @@ print(db2.url)          # postgres://localhost/mydb  (first call's value)
 ---
 
 ## `__prepare__` — controlling the namespace
+
+*Customize the mapping used to collect the class body (e.g. ordered or validating).*
 
 `__prepare__` returns the dict-like object used for the class body. You can use this to customize how the body is evaluated.
 
@@ -351,6 +359,8 @@ print(p1 == p3)    # False
 
 ## `__init_subclass__` — the simpler alternative (Python 3.6+)
 
+*React to subclassing without a full metaclass — covers most real needs.*
+
 For most metaclass use cases, `__init_subclass__` is simpler and sufficient:
 
 ```python
@@ -386,6 +396,8 @@ print(Plugin._registry)
 
 ## Metaclass conflicts and resolution
 
+*Why mixing metaclasses can clash and how Python resolves it.*
+
 ```python
 class MetaA(type): pass
 class MetaB(type): pass
@@ -409,6 +421,8 @@ class C(A, B, metaclass=MetaC): pass   # works!
 ---
 
 ## Real-world metaclass usage
+
+*ORMs, serializers, and plugin registries that rely on metaclasses.*
 
 | Library | What it does with metaclasses |
 |---|---|

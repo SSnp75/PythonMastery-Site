@@ -92,6 +92,8 @@ Output:
 
 ## Key opcode categories
 
+*Load/store, call, jump, and operator opcodes — the vocabulary of the VM.*
+
 ### Loading values onto the stack
 
 | Opcode | Source | Speed |
@@ -134,6 +136,8 @@ Output:
 
 ## Comparing bytecode for performance insights
 
+*Disassemble two approaches to see which does less work.*
+
 ```python
 # Which is faster: `x in set` or `x in list`?
 
@@ -155,6 +159,8 @@ The CPython peephole optimizer converts `{1,2,3,4,5}` to a `frozenset` constant 
 ---
 
 ## .pyc files
+
+*The cached compiled bytecode Python writes to skip recompiling unchanged modules.*
 
 Python caches compiled bytecode in `.pyc` files (in `__pycache__/`):
 
@@ -182,6 +188,8 @@ print(code.co_consts)       # constants used in the module
 ---
 
 ## The instruction object API
+
+*Inspect instructions programmatically via `dis.get_instructions`.*
 
 ```python
 import dis
@@ -226,6 +234,8 @@ instr.is_jump_target  # True if another instruction jumps here
 
 ## Bytecode optimization examples
 
+*How the compiler folds constants and simplifies code.*
+
 ### Python's peephole optimizer
 
 ```python
@@ -254,6 +264,8 @@ dis.dis(g)
 
 ## Modifying bytecode at runtime
 
+*Swap constants/instructions on a code object — powerful but fragile.*
+
 ```python
 import types
 
@@ -274,6 +286,8 @@ print(original())   # 100
 ---
 
 ## The `opcode` module
+
+*The mapping of opcode names to numbers used when reading raw bytecode.*
 
 ```python
 import opcode

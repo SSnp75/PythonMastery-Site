@@ -128,6 +128,8 @@ print(obj.nondata)   # "instance value"          ← instance wins
 
 ## The Descriptor Resolution Order
 
+*The exact lookup order that decides when a descriptor's `__get__` runs vs the instance dict.*
+
 When you access `obj.attr`, Python follows this lookup chain:
 
 ```
@@ -354,6 +356,8 @@ df = DataFile("config.txt")
 
 ## How @property Works Under the Hood
 
+*`property` is just a data descriptor — this shows the mechanism.*
+
 `property` is a data descriptor class built into Python:
 
 ```python
@@ -402,6 +406,8 @@ Now you understand why `@property` is more than magic — it's just a descriptor
 
 ## How @classmethod and @staticmethod Work
 
+*Both are descriptors that change how the function is bound.*
+
 ```python
 class classmethod:
     def __init__(self, func):
@@ -442,6 +448,8 @@ print(f.bar)    # <bound method Foo.bar of <Foo object>>
 
 ## Descriptors and `__slots__`
 
+*How descriptors interact with slot-based storage.*
+
 When a class uses `__slots__`, Python creates **member descriptors** for each slot:
 
 ```python
@@ -466,6 +474,8 @@ Member descriptors are data descriptors implemented in C — extremely fast.
 ---
 
 ## Composing Descriptors (Stacking Validators)
+
+*Chain validators by layering descriptors.*
 
 ```python
 class Validator:
@@ -527,6 +537,8 @@ except ValueError as ex:
 
 ## Descriptor Best Practices
 
+*Keep them focused, use `__set_name__`, and prefer `property` for simple cases.*
+
 !!! tip "Rules of thumb"
 
     1. **Use `__set_name__`** — don't require the user to pass the field name manually
@@ -538,6 +550,8 @@ except ValueError as ex:
 ---
 
 ## Real-World Descriptor Usage
+
+*ORMs, form fields, and settings use descriptors for validated attributes.*
 
 | Library/Framework | What uses descriptors |
 |---|---|

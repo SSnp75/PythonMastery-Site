@@ -62,6 +62,8 @@ Module(
 
 ## Node Types — the building blocks
 
+*The classes (`Module`, `FunctionDef`, `Call`, `BinOp`…) that make up a parsed tree.*
+
 ### Expressions
 
 | Node | Python source | Example |
@@ -333,6 +335,8 @@ class ComplexityCounter(ast.NodeVisitor):
 
 ## Compiling and executing transformed ASTs
 
+*Turn a modified tree back into a runnable code object with `compile` + `exec`.*
+
 ```python
 import ast
 
@@ -361,6 +365,8 @@ print(result)   # 1024
 
 ## `ast.fix_missing_locations`
 
+*Repair line/column info on new nodes so `compile` accepts them.*
+
 When you create AST nodes programmatically, they lack line/column info. `fix_missing_locations` copies from parent nodes:
 
 ```python
@@ -373,6 +379,8 @@ code = compile(tree, "<source>", "exec")
 ---
 
 ## `ast.unparse` — convert AST back to source (Python 3.9+)
+
+*Render a (possibly modified) tree back to Python source text.*
 
 ```python
 import ast
@@ -392,6 +400,8 @@ print(ast.unparse(tree))
 ---
 
 ## Building AST nodes from scratch
+
+*Construct nodes programmatically to generate code rather than only rewrite it.*
 
 ```python
 import ast
