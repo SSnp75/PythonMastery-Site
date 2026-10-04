@@ -22,6 +22,8 @@ description: Comparison sorts, binary search, merge sort, quick sort and complex
 
 ## Binary search — O(log n)
 
+*Find an item in a sorted sequence by repeatedly halving the search range.*
+
 ```python
 def binary_search(arr: list[int], target: int) -> int:
     """Find target in sorted array. Returns index or -1."""
@@ -48,6 +50,8 @@ print(binary_search(arr, 8))    # -1 (not found)
 ---
 
 ## Merge sort — O(n log n), stable
+
+*Divide-and-conquer sort that's stable and predictable — good when stability matters.*
 
 ```python
 def merge_sort(arr: list) -> list:
@@ -77,6 +81,8 @@ print(merge_sort([38, 27, 43, 3, 9, 82, 10]))
 
 ## Quick sort — O(n log n) average, in-place
 
+*Fast in-place sort via partitioning — the common default, with O(n²) worst case.*
+
 ```python
 def quick_sort(arr: list, low: int = 0, high: int = None) -> list:
     if high is None:
@@ -101,6 +107,8 @@ def partition(arr, low, high):
 ---
 
 ## Complexity comparison
+
+*How the common sorts and searches trade off time, space, and stability.*
 
 | Algorithm | Best | Average | Worst | Space | Stable |
 |---|---|---|---|---|---|

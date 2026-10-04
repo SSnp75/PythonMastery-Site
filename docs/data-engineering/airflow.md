@@ -22,6 +22,8 @@ description: DAGs, operators, scheduling, dependencies and workflow orchestratio
 
 ## DAG (Directed Acyclic Graph)
 
+*Define a pipeline as tasks with dependencies that Airflow schedules and retries.*
+
 ```python
 from airflow import DAG
 from airflow.operators.python import PythonOperator
@@ -78,6 +80,8 @@ with DAG(
 ---
 
 ## TaskFlow API (Python-native, modern)
+
+*Write tasks as decorated Python functions with automatic data passing.*
 
 ```python
 from airflow.decorators import dag, task

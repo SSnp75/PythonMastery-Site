@@ -22,6 +22,8 @@ description: Key-value stores, document databases, caching patterns and when to 
 
 ## Redis — in-memory key-value store
 
+*Blazing-fast cache, counters, queues, and pub/sub with simple commands.*
+
 ```python
 import redis
 
@@ -85,6 +87,8 @@ def get_user(user_id: int) -> dict:
 
 ## MongoDB — document database
 
+*Store flexible JSON-like documents when a rigid schema doesn't fit.*
+
 ```python
 from pymongo import MongoClient
 
@@ -128,6 +132,8 @@ for doc in users.aggregate(pipeline):
 ---
 
 ## When to use what
+
+*Match the store (relational, key-value, document) to the access pattern.*
 
 | Use case | Best choice |
 |---|---|

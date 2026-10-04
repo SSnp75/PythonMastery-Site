@@ -22,6 +22,8 @@ description: Extract-Transform-Load patterns, data validation and pipeline orche
 
 ## ETL pattern
 
+*Extract from sources, transform/clean, load to a warehouse — the core data pipeline.*
+
 ```python
 import pandas as pd
 from pathlib import Path
@@ -83,6 +85,8 @@ run_pipeline()
 
 ## Data validation with Pandera
 
+*Assert schema and value constraints on DataFrames to catch bad data early.*
+
 ```python
 import pandera as pa
 from pandera import Column, Check, DataFrameSchema
@@ -107,6 +111,8 @@ def transform_users(df: pd.DataFrame) -> pd.DataFrame:
 ---
 
 ## Incremental loading patterns
+
+*Load only new/changed rows instead of reprocessing everything.*
 
 ```python
 def incremental_extract(conn_string: str, table: str, last_run: datetime) -> pd.DataFrame:

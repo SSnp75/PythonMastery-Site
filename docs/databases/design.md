@@ -22,6 +22,8 @@ description: Normalization, schema design, relationships, indexes and data model
 
 ## Normalization forms
 
+*Reduce redundancy and update anomalies by structuring tables to 1NF–3NF.*
+
 | Form | Rule | Example fix |
 |---|---|---|
 | **1NF** | No repeating groups, atomic values | Split "tags: python,java" → tag table |
@@ -31,6 +33,8 @@ description: Normalization, schema design, relationships, indexes and data model
 ---
 
 ## Relationship patterns
+
+*Model one-to-many and many-to-many relationships with keys and join tables.*
 
 ```sql
 -- One-to-Many (most common)
@@ -63,6 +67,8 @@ CREATE TABLE profiles (
 ---
 
 ## Common schema patterns
+
+*Reusable designs for timestamps, soft deletes, hierarchies, and audit trails.*
 
 ### Soft delete
 ```sql

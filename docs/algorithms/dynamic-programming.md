@@ -22,6 +22,8 @@ description: Memoization, tabulation, common DP patterns and problem-solving app
 
 ## The DP approach
 
+*Break a problem into overlapping subproblems and cache their answers to avoid recomputation.*
+
 1. Define the **subproblem** (what are we computing?)
 2. Write the **recurrence** (how does current depend on smaller subproblems?)
 3. Identify **base cases**
@@ -30,6 +32,8 @@ description: Memoization, tabulation, common DP patterns and problem-solving app
 ---
 
 ## Fibonacci — classic DP example
+
+*The canonical demo of memoization vs tabulation.*
 
 ```python
 from functools import lru_cache
@@ -59,6 +63,8 @@ print(fib_tab(50))   # 12586269025 (instant!)
 ---
 
 ## Classic DP problems
+
+*Knapsack, longest-subsequence, edit-distance — the patterns interviews love.*
 
 ### 1. Climbing stairs (n ways to climb n steps, 1 or 2 at a time)
 

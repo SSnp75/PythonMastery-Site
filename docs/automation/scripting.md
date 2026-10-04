@@ -38,6 +38,8 @@ Automation is where Python earns its "batteries included" reputation. Most of wh
 
 ## 1. File System Automation
 
+*Find, filter, and operate on files and directories programmatically.*
+
 ### Paths with `pathlib`
 
 `pathlib` is the modern, object-oriented way to work with paths. Prefer it over the older string-based `os.path`.
@@ -128,6 +130,8 @@ def organize(folder: str) -> dict[str, int]:
 
 ## 2. Copy, Move, Archive with `shutil`
 
+*High-level file operations and zip/tar archiving in a few calls.*
+
 `pathlib` handles single files well; `shutil` handles whole trees and archives.
 
 ```python
@@ -174,6 +178,8 @@ def backup(source: str, backup_root: str) -> str:
 ---
 
 ## 3. Batch Processing Data
+
+*Loop over many files/records applying the same transformation.*
 
 ### CSV files
 
@@ -259,6 +265,8 @@ The `{i:03d}` format pads the number to 3 digits with leading zeros, so files so
 
 ## 4. Running External Programs with `subprocess`
 
+*Call other tools and capture their output from your script.*
+
 `subprocess.run` executes another program and waits for it to finish.
 
 ```python
@@ -312,6 +320,8 @@ def run_safely(cmd: list[str], timeout: int = 30) -> str:
 
 ## 5. Environment Variables & Configuration
 
+*Read config from the environment so scripts adapt without code changes.*
+
 Never hard-code secrets or environment-specific values. Read them from the environment.
 
 ```python
@@ -337,6 +347,8 @@ py myscript.py
 ---
 
 ## 6. Task Scheduling
+
+*Run scripts on a schedule with cron/Task Scheduler or Python schedulers.*
 
 Two approaches: schedule from **inside** a long-running Python process, or let the **operating system** run your script on a timer.
 
@@ -375,6 +387,8 @@ For anything that should survive reboots, let the OS run it:
 ---
 
 ## 7. Turn a Script into a CLI Tool
+
+*Add arguments and help so your script is reusable by others.*
 
 `argparse` (standard library) turns a script into a proper command-line tool with `--flags`, help text, and validation.
 
@@ -415,6 +429,8 @@ python organize.py --help          # auto-generated help
 ---
 
 ## 8. Logging Your Automation
+
+*Record what ran and what failed so unattended jobs are debuggable.*
 
 Unattended scripts (scheduled jobs) need logs — you won't be watching the terminal when they run. Use `logging`, not `print`.
 

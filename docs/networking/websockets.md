@@ -22,6 +22,8 @@ description: Real-time bidirectional communication with websockets library and F
 
 ## Server with the `websockets` library
 
+*Accept persistent two-way connections for real-time push.*
+
 ```python
 import asyncio
 import websockets
@@ -56,6 +58,8 @@ asyncio.run(main())
 
 ## Client
 
+*Connect to a WebSocket server and exchange messages.*
+
 ```python
 import asyncio
 import websockets
@@ -82,6 +86,8 @@ asyncio.run(chat_client("Alice"))
 ---
 
 ## FastAPI WebSockets
+
+*Add real-time endpoints to a FastAPI app alongside normal routes.*
 
 ```python
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect

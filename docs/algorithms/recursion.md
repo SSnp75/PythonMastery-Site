@@ -22,6 +22,8 @@ description: Recursive thinking, backtracking patterns, memoization and tree rec
 
 ## Recursion fundamentals
 
+*A function calling itself with a base case — natural for trees and divide-and-conquer.*
+
 ```python
 # Every recursive function needs:
 # 1. Base case (when to stop)
@@ -43,6 +45,8 @@ def power(base, exp):
 ---
 
 ## Backtracking — explore and undo
+
+*Try choices, recurse, and undo on failure — for permutations, puzzles, and constraint problems.*
 
 ```python
 def permutations(nums: list) -> list[list]:

@@ -23,6 +23,8 @@ description: Pods, deployments, services, config maps and Python apps on K8s
 
 ## Core concepts
 
+*Pods, deployments, services, and configmaps — the vocabulary of running containers on k8s.*
+
 | Resource | What it does |
 |---|---|
 | **Pod** | Smallest unit — one or more containers |
@@ -35,6 +37,8 @@ description: Pods, deployments, services, config maps and Python apps on K8s
 ---
 
 ## Deploying a Python app
+
+*Package, declare, and roll out a Python service with health checks and scaling.*
 
 ```yaml
 # deployment.yaml

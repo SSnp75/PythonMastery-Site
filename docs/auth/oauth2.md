@@ -22,6 +22,8 @@ description: OAuth2 authorization code flow, Google/GitHub login and Single Sign
 
 ## OAuth2 Authorization Code Flow
 
+*The standard flow for 'log in with Google/GitHub' without handling passwords.*
+
 ```
 User → Your App → Redirect to Provider (Google/GitHub)
      → User logs in at Provider
@@ -34,6 +36,8 @@ User → Your App → Redirect to Provider (Google/GitHub)
 ---
 
 ## Implementation with authlib
+
+*Wire up a provider and callback to authenticate users via OAuth2.*
 
 ```python
 from fastapi import FastAPI, Request

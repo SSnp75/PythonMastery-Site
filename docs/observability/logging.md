@@ -22,6 +22,8 @@ description: stdlib logging, structlog, loguru, structured logging and log aggre
 
 ## stdlib logging — the foundation
 
+*Leveled, configurable logging built into Python — the baseline for any app.*
+
 ```python
 import logging
 
@@ -59,6 +61,8 @@ logger.critical("System is unusable")
 ---
 
 ## Production logging configuration
+
+*Set up handlers, formatters, and levels suitable for a running service.*
 
 ```python
 import logging
@@ -100,6 +104,8 @@ setup_logging()
 ---
 
 ## Structured logging with structlog
+
+*Emit machine-parseable key-value logs that are easy to search and aggregate.*
 
 Plain text logs are hard to parse. Structured logs output JSON — perfect for log aggregation.
 
@@ -147,6 +153,8 @@ def handle_request(request):
 
 ## loguru — simpler alternative
 
+*A batteries-included logging library with minimal setup.*
+
 ```python
 from loguru import logger
 
@@ -173,6 +181,8 @@ def risky_function():
 ---
 
 ## Logging best practices
+
+*What and how to log — levels, context, no secrets, actionable messages.*
 
 !!! tip "Rules"
     

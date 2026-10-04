@@ -22,6 +22,8 @@ description: Prometheus, StatsD, Grafana dashboards and application metrics
 
 ## Prometheus metrics with Python
 
+*Expose counters, gauges, and histograms a Prometheus server can scrape.*
+
 ```python
 from prometheus_client import Counter, Histogram, Gauge, start_http_server, generate_latest
 import time, random
@@ -85,6 +87,8 @@ while True:
 
 ## FastAPI integration
 
+*Auto-collect request metrics (latency, counts) from your API.*
+
 ```python
 from fastapi import FastAPI, Request
 from prometheus_client import Counter, Histogram, generate_latest
@@ -120,6 +124,8 @@ async def metrics():
 
 ## Custom business metrics
 
+*Track domain KPIs (orders, signups) alongside system metrics.*
+
 ```python
 # Track what matters to your business
 ORDERS_PLACED = Counter("orders_placed_total", "Orders placed", ["region", "payment_method"])
@@ -134,6 +140,8 @@ def place_order(order):
 ---
 
 ## Grafana dashboard queries (PromQL)
+
+*Query and visualize your metrics to see system health over time.*
 
 ```promql
 # Request rate (requests per second)
@@ -152,6 +160,8 @@ active_connections
 ---
 
 ## Alerting rules
+
+*Fire alerts when a metric crosses a threshold so you know before users do.*
 
 ```yaml
 # prometheus/alerts.yml

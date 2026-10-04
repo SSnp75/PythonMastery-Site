@@ -22,6 +22,8 @@ description: Real-time data pipelines with Kafka, producers, consumers and strea
 
 ## Kafka producer
 
+*Publish events to a topic for other systems to consume.*
+
 ```python
 from kafka import KafkaProducer
 import json
@@ -45,6 +47,8 @@ producer.close()
 
 ## Kafka consumer
 
+*Read events from a topic, tracking offsets for reliable processing.*
+
 ```python
 from kafka import KafkaConsumer
 import json
@@ -67,6 +71,8 @@ for message in consumer:
 ---
 
 ## Stream processing pattern
+
+*Transform and aggregate continuous event streams in real time.*
 
 ```python
 import asyncio

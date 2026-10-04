@@ -35,6 +35,8 @@ Total: 752ms — tracing shows WHERE time was spent
 
 ## OpenTelemetry — the standard
 
+*Vendor-neutral tracing instrumentation that works across languages and backends.*
+
 ```python
 from opentelemetry import trace
 from opentelemetry.sdk.trace import TracerProvider
@@ -72,6 +74,8 @@ def process_order(order_id: int):
 
 ## Auto-instrumentation (zero code changes)
 
+*Add tracing to common libraries without editing your code.*
+
 ```bash
 pip install opentelemetry-distro opentelemetry-exporter-otlp
 opentelemetry-bootstrap -a install   # installs all relevant instrumentors
@@ -89,6 +93,8 @@ This automatically traces: HTTP requests (httpx, requests), database queries (SQ
 
 ## FastAPI integration
 
+*Trace requests through a FastAPI app automatically.*
+
 ```python
 from opentelemetry.instrumentation.fastapi import FastAPIInstrumentor
 
@@ -104,6 +110,8 @@ FastAPIInstrumentor.instrument_app(app)
 ---
 
 ## Context propagation between services
+
+*Carry the trace context across service boundaries so one trace spans the whole request.*
 
 ```python
 import httpx

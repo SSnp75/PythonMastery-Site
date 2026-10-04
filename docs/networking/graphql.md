@@ -22,6 +22,8 @@ description: Schema definition, resolvers, queries, mutations and Strawberry fra
 
 ## GraphQL with Strawberry (Python-native)
 
+*Define a schema with Python types and let clients query exactly the fields they need.*
+
 ```python
 import strawberry
 from strawberry.fastapi import GraphQLRouter
@@ -62,6 +64,8 @@ app.include_router(GraphQLRouter(schema), prefix="/graphql")
 
 ## Querying
 
+*Shape responses from the client side — one request, precisely the data you want.*
+
 ```graphql
 # Get specific fields (no over-fetching!)
 query {
@@ -92,6 +96,8 @@ mutation {
 ---
 
 ## REST vs GraphQL
+
+*When flexible client-driven queries beat fixed REST endpoints (and when they don't).*
 
 | Feature | REST | GraphQL |
 |---|---|---|

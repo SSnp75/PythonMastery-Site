@@ -22,6 +22,8 @@ description: CTEs, window functions, subqueries, indexing and query optimization
 
 ## Common Table Expressions (CTEs)
 
+*Name a subquery with `WITH` to make complex queries readable and reusable.*
+
 ```sql
 -- Named subquery — readable, reusable
 WITH monthly_revenue AS (
@@ -45,6 +47,8 @@ SELECT * FROM monthly_growth WHERE growth_pct > 10;
 ---
 
 ## Window functions
+
+*Compute rankings, running totals, and moving averages without collapsing rows.*
 
 ```sql
 -- Ranking
@@ -85,6 +89,8 @@ FROM employees;
 
 ## Subqueries vs JOINs
 
+*When a nested query is clearer vs when a join is faster.*
+
 ```sql
 -- Correlated subquery (runs per row — can be slow)
 SELECT name, salary
@@ -107,6 +113,8 @@ WHERE EXISTS (SELECT 1 FROM orders o WHERE o.customer_id = c.id AND o.amount > 1
 
 ## Indexing strategy
 
+*Add the right indexes (and column order) so queries use them.*
+
 ```sql
 -- B-tree index (default, most common)
 CREATE INDEX idx_users_email ON users(email);
@@ -126,6 +134,8 @@ EXPLAIN ANALYZE SELECT * FROM users WHERE email = 'alice@example.com';
 ---
 
 ## Query optimization tips
+
+*Read `EXPLAIN`, fix table scans, and avoid common slow patterns.*
 
 | Problem | Solution |
 |---|---|

@@ -22,6 +22,8 @@ description: BFS, DFS, Dijkstra, topological sort and shortest path algorithms
 
 ## Graph representation
 
+*Model nodes and edges (adjacency list/matrix) — the first choice shapes everything after.*
+
 ```python
 from collections import defaultdict, deque
 
@@ -44,6 +46,8 @@ weighted["B"].append(("D", 3))
 ---
 
 ## BFS (Breadth-First Search) — shortest path in unweighted graphs
+
+*Explore level by level with a queue — finds shortest hop count.*
 
 ```python
 def bfs(graph, start, target):
@@ -70,6 +74,8 @@ print(path)   # ['A', 'C', 'F']
 ---
 
 ## DFS (Depth-First Search) — explore all paths
+
+*Go deep with recursion/stack — for traversal, cycle detection, and topological order.*
 
 ```python
 def dfs(graph, start, target, visited=None):
@@ -109,6 +115,8 @@ def dfs_iterative(graph, start):
 
 ## Dijkstra — shortest path in weighted graphs
 
+*Shortest path with non-negative weights using a priority queue.*
+
 ```python
 import heapq
 
@@ -137,6 +145,8 @@ print(distances)   # {'A': 0, 'C': 2, 'B': 4, 'D': 7}
 ---
 
 ## Topological sort (DAG ordering)
+
+*Order nodes so dependencies come first — for build systems and task scheduling.*
 
 ```python
 def topological_sort(graph):
@@ -172,6 +182,8 @@ print(topological_sort(tasks))   # ['lint', 'build', 'test', 'deploy']
 ---
 
 ## Cycle detection
+
+*Determine whether a graph contains a cycle — e.g. to catch circular dependencies.*
 
 ```python
 def has_cycle(graph):

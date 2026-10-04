@@ -28,6 +28,8 @@ gRPC is a high-performance RPC framework using Protocol Buffers for serializatio
 
 ## Define service with .proto
 
+*Declare messages and RPC methods in a language-neutral schema that generates typed stubs.*
+
 ```protobuf
 // user_service.proto
 syntax = "proto3";
@@ -65,6 +67,8 @@ python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. user_service.
 ---
 
 ## Server implementation
+
+*Implement the generated service interface to handle RPC calls.*
 
 ```python
 import grpc
@@ -110,6 +114,8 @@ serve()
 ---
 
 ## Client
+
+*Call remote methods as if they were local functions using the generated stub.*
 
 ```python
 import grpc

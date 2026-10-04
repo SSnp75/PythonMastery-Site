@@ -22,6 +22,8 @@ description: Built-in GUI toolkit — windows, widgets, layouts and event handli
 
 ## Basic window
 
+*Create a window and start the event loop — the skeleton of any Tkinter app.*
+
 ```python
 import tkinter as tk
 from tkinter import ttk, messagebox
@@ -65,6 +67,8 @@ if __name__ == "__main__":
 ---
 
 ## Common widgets
+
+*Labels, buttons, entries, and layout managers to build a simple UI.*
 
 ```python
 # Combobox (dropdown)

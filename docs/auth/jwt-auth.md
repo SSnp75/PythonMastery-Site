@@ -22,6 +22,8 @@ description: JSON Web Tokens, access/refresh tokens, middleware and secure imple
 
 ## How JWT works
 
+*A signed, self-contained token the server can verify without a session store.*
+
 ```
 Client                     Server
   │                          │
@@ -41,6 +43,8 @@ Client                     Server
 ---
 
 ## Implementation with FastAPI
+
+*Issue tokens on login and protect routes by verifying them.*
 
 ```python
 from datetime import datetime, timedelta
@@ -129,6 +133,8 @@ async def profile(user = Depends(get_current_user)):
 ---
 
 ## Role-Based Access Control (RBAC)
+
+*Gate endpoints by the roles encoded in the token.*
 
 ```python
 from enum import Enum

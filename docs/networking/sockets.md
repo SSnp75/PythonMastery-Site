@@ -22,6 +22,8 @@ description: TCP/UDP from scratch, client/server patterns and low-level networki
 
 ## TCP server and client
 
+*The raw building blocks of networking — bind/listen/accept on the server, connect/send/recv on the client.*
+
 ```python
 import socket
 
@@ -58,6 +60,8 @@ def tcp_client(host="127.0.0.1", port=9999):
 
 ## Multi-threaded server
 
+*Handle multiple clients at once by giving each connection its own thread.*
+
 ```python
 import socket
 import threading
@@ -88,6 +92,8 @@ def threaded_server(host="0.0.0.0", port=9999):
 ---
 
 ## Async TCP server (production-grade)
+
+*Serve many connections on one thread with asyncio stream APIs — scales better than thread-per-client.*
 
 ```python
 import asyncio
@@ -120,6 +126,8 @@ asyncio.run(main())
 
 ## UDP (connectionless)
 
+*Send datagrams without a connection — for low-latency, loss-tolerant data like telemetry and games.*
+
 ```python
 import socket
 
@@ -144,6 +152,8 @@ def udp_client():
 ---
 
 ## Building a simple HTTP server from scratch
+
+*See what frameworks hide by parsing a request and writing a response over a socket.*
 
 ```python
 import socket

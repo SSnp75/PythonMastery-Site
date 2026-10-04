@@ -22,6 +22,8 @@ description: Dockerfiles, multi-stage builds, docker-compose and container best 
 
 ## Dockerfile for Python apps
 
+*A multi-stage build that produces a small, reproducible image for a Python service.*
+
 ```dockerfile
 # ─── Multi-stage build (smaller final image) ─────
 FROM python:3.13-slim AS builder
@@ -48,6 +50,8 @@ CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000"]
 ---
 
 ## docker-compose (local dev environment)
+
+*Spin up your app plus its dependencies (DB, cache) with one command for local dev.*
 
 ```yaml
 # docker-compose.yml
@@ -95,6 +99,8 @@ docker compose exec app bash  # shell into container
 ---
 
 ## Best practices
+
+*Slim images, non-root users, pinned deps, and `.dockerignore` for safe, lean containers.*
 
 !!! tip "Docker for Python"
     - Use `python:3.13-slim` (not full image — 5x smaller)
