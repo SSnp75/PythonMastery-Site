@@ -118,6 +118,8 @@ The drawdown of -0.25 means the portfolio fell 25% from its peak before recoveri
 
 ## Backtesting
 
+*Simulate a strategy on historical data before risking real money.*
+
 **Backtesting** simulates a trading strategy on historical data to estimate how it *would* have performed. The skeleton: for each day, decide a signal from past data only, apply it, and track the resulting returns.
 
 !!! warning "Backtests lie easily"

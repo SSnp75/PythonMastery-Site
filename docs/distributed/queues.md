@@ -47,6 +47,8 @@ Queues give you buffering (absorb traffic spikes), resilience (messages survive 
 
 ## RabbitMQ vs Kafka: two models
 
+*Broker-with-queues vs distributed-log — pick based on routing needs vs replay/throughput.*
+
 The two dominant systems embody different models:
 
 | | **RabbitMQ** (queue) | **Kafka** (log) |
@@ -79,6 +81,8 @@ ch.basic_publish(exchange="", routing_key="tasks",
 
 ## Delivery guarantees
 
+*At-most-once, at-least-once, exactly-once — what each costs and when you need it.*
+
 No broker can give you everything; you choose a point on this spectrum:
 
 - **At-most-once** — fire and forget. Fast, but messages can be lost (consumer crashes before processing). OK for disposable data (metrics samples).
@@ -90,6 +94,8 @@ The practical reality: **most systems use at-least-once and make consumers idemp
 ---
 
 ## The idempotent consumer
+
+*Make processing safe to retry so at-least-once delivery doesn't double-apply effects.*
 
 Since at-least-once means the same message can arrive twice (redelivery after a timeout, a retry, a broker hiccup), your consumer must produce the **same effect whether it processes a message once or many times**. The standard technique: track processed message IDs and skip duplicates. Fully runnable:
 
@@ -132,6 +138,8 @@ The redelivered `m1` is skipped, so `charge $10` happens exactly once even thoug
 ---
 
 ## Ordering and consumer groups
+
+*How partitions/queues preserve order and scale consumers.*
 
 - **Ordering** is only guaranteed within a single queue (RabbitMQ) or partition (Kafka) — *not* globally across partitions. If you need related messages ordered, route them to the same partition (e.g. partition by `user_id` so one user's events stay ordered).
 - **Consumer groups** (Kafka) let many consumers share the load: each partition is read by exactly one consumer in the group, so you scale out by adding partitions and consumers. This is how you process a high-volume stream in parallel while preserving per-partition order.

@@ -115,6 +115,8 @@ Starting at 0, it walked downhill to the minimum at x=3. The **learning rate** (
 
 ## Gradient-free methods
 
+*Optimize when you can't compute derivatives — Nelder-Mead, genetic, Bayesian.*
+
 When you can't compute a gradient (noisy, discontinuous, or black-box functions), use gradient-free approaches:
 
 - **Grid / random search** — sample many points, keep the best. Simple, parallel, but scales poorly with dimensions.
@@ -125,6 +127,8 @@ When you can't compute a gradient (noisy, discontinuous, or black-box functions)
 ---
 
 ## In practice: SciPy
+
+*Use `scipy.optimize` for robust, battle-tested optimizers instead of hand-rolling.*
 
 You'd normally use **SciPy's** battle-tested optimizers rather than hand-rolling:
 

@@ -94,6 +94,8 @@ You will never beat BLAS with Python loops. The lesson: **express math as array 
 
 ## The three BLAS levels
 
+*Vector, matrix-vector, and matrix-matrix operations — level 3 is where tuned libraries shine.*
+
 BLAS routines are grouped by how much work they do per unit of data — which determines how well they use the hardware:
 
 | Level | Operation | Example | Performance |
@@ -107,6 +109,8 @@ BLAS routines are grouped by how much work they do per unit of data — which de
 ---
 
 ## LAPACK: the higher-level solvers
+
+*Decompositions and linear-system solvers built on BLAS — what NumPy calls under the hood.*
 
 LAPACK provides what you actually call for real problems:
 

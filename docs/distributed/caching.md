@@ -46,6 +46,8 @@ The two hard problems (as the saying goes) are **cache invalidation** and **nami
 
 ## The cache-aside pattern
 
+*Check the cache, fall back to the source on a miss, then populate — the most common caching strategy.*
+
 The most common strategy: the application checks the cache first, and on a miss, loads from the database and populates the cache.
 
 ```python
@@ -74,6 +76,8 @@ def update_user(user_id: int, data: dict, cache, db) -> None:
 ---
 
 ## Distributing keys with consistent hashing
+
+*Spread keys across cache nodes so adding/removing a node moves minimal data.*
 
 With many cache servers, which server holds `user:42`? The naive answer — `hash(key) % num_servers` — has a fatal flaw: **add or remove one server and *almost every* key remaps**, causing a cache-wide miss storm that stampedes the database.
 
@@ -131,6 +135,8 @@ Only ~27% of keys moved when adding a server — close to the theoretical ideal 
 
 ## Cache stampedes
 
+*Prevent a flood of recomputation when a hot key expires and many clients miss at once.*
+
 When a popular key expires, many requests miss simultaneously and all hit the database at once — a **stampede** (or "thundering herd") that can overwhelm it. Common defenses:
 
 - **Locking / single-flight** — the first request to miss acquires a lock and recomputes; others wait for its result instead of all recomputing.
@@ -154,6 +160,8 @@ def get_with_lock(key, cache, db, lock):
 ---
 
 ## Redis and Memcached from Python
+
+*Connect to a shared cache so many app instances share results.*
 
 ```python
 import redis   # pip install redis

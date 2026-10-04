@@ -190,6 +190,8 @@ pem_public = public_key.public_bytes(
 
 ## Digital signatures
 
+*Prove a message's origin and integrity with a private-key signature.*
+
 ```python
 from cryptography.hazmat.primitives.asymmetric import padding as asym_padding
 from cryptography.hazmat.primitives import hashes

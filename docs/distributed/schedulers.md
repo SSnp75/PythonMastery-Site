@@ -47,6 +47,8 @@ This is the [distributed queue](queues.md) pattern applied to task execution. Th
 
 ## Celery vs RQ
 
+*Two Python task-queue libraries — RQ is simple, Celery is feature-rich.*
+
 The two most common Python task queues:
 
 | | **Celery** | **RQ (Redis Queue)** |
@@ -79,6 +81,8 @@ send_email.delay("user@example.com", "Welcome!")
 
 ## Retry with exponential backoff
 
+*Retry failed jobs with growing delays to avoid hammering a struggling dependency.*
+
 Jobs fail — a network blip, a rate limit, a briefly-down dependency. The right response to a *transient* failure is to retry, but not instantly and not forever. **Exponential backoff** waits progressively longer between attempts (and real systems add random *jitter* to avoid a thundering herd of synchronized retries). Fully runnable:
 
 ```python
@@ -102,6 +106,8 @@ Each retry waits twice as long as the last (0.5s → 1s → 2s → 4s → 8s), t
 ---
 
 ## Handling permanent failures: dead-letter
+
+*Route repeatedly-failing jobs to a dead-letter queue for inspection.*
 
 Not every failure is transient. A malformed job or a permanently-broken dependency will fail every retry. After a bounded number of attempts, you must **give up gracefully** and set the job aside (a *dead-letter*) rather than retry forever. Runnable:
 
@@ -145,6 +151,8 @@ The `flaky` job recovers on its third attempt and reports `done`. The `always_fa
 ---
 
 ## Scheduling periodic and delayed work
+
+*Run jobs on a schedule or after a delay.*
 
 Beyond "run this now in the background," schedulers also handle:
 

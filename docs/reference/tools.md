@@ -62,6 +62,8 @@ pip install requests
 
 ## Linters & formatters
 
+*ruff and black to keep code consistent and catch issues.*
+
 | Tool | Role | Notes |
 |---|---|---|
 | **ruff** | Linter **and** formatter | Extremely fast (Rust); replaces flake8 + isort + more. The modern default. |
@@ -80,6 +82,8 @@ ruff format .       # format
 
 ## Type checkers
 
+*mypy and pyright to verify annotations.*
+
 | Tool | Notes |
 |---|---|
 | **mypy** | The original, widely used static type checker. |
@@ -95,6 +99,8 @@ Type checking catches a whole class of bugs before runtime. See [Typing & Type H
 ---
 
 ## Testing
+
+*pytest and coverage for verifying behavior.*
 
 | Tool | Role |
 |---|---|

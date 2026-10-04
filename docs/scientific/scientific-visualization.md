@@ -50,6 +50,8 @@ Anscombe's quartet is the classic lesson: four datasets with *identical* summary
 
 ## The Matplotlib workflow
 
+*Build figures with the object-oriented API for reproducible scientific plots.*
+
 Matplotlib is the foundation. The standard pattern — figure, axes, plot, label:
 
 ```python
@@ -74,6 +76,8 @@ The `fig, ax = plt.subplots()` pattern (explicit figure and axes objects) is the
 
 ## Choosing the right plot
 
+*Match the chart to the data — fields, distributions, time series, 3D.*
+
 Match the plot to the data and question:
 
 | Data / goal | Plot type |
@@ -91,6 +95,8 @@ The wrong plot obscures; the right one reveals. A common scientific mistake is a
 ---
 
 ## 3D and volume rendering
+
+*Visualize volumetric and surface data with mplot3d/Mayavi/PyVista.*
 
 For 3D data — surfaces, fields, molecular structures:
 
@@ -114,6 +120,8 @@ ax.plot_surface(X, Y, Z, cmap="viridis")
 ---
 
 ## Interactive & domain-specific tools
+
+*Plotly, Bokeh, and field-specific viewers for exploration.*
 
 - **Plotly / Bokeh** — interactive, web-based plots (zoom, hover, pan) — great for exploration and dashboards.
 - **HoloViews** — high-level interactive viz that reduces boilerplate.

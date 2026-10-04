@@ -47,6 +47,8 @@ In a static world you'd configure "the payment service is at `10.0.0.5:8000`" an
 
 ## A service registry
 
+*A central directory where services register and look each other up.*
+
 At its core a registry maps service names to healthy instances. Instances register on startup and send periodic **heartbeats**; if the heartbeats stop, the registry expires the instance. Fully runnable:
 
 ```python
@@ -145,6 +147,8 @@ Instance 2 hadn't heartbeated since t=100, so with a 30s TTL it's marked unhealt
 
 ## Client-side vs server-side discovery
 
+*Who resolves the address — the client via the registry, or a load balancer.*
+
 Two architectures for *where* the discovery/load-balancing happens:
 
 | | **Client-side** | **Server-side** |
@@ -160,6 +164,8 @@ Two architectures for *where* the discovery/load-balancing happens:
 ---
 
 ## Real-world tools
+
+*Consul, etcd, and Kubernetes DNS as production discovery mechanisms.*
 
 You rarely build a registry yourself — you use one:
 
