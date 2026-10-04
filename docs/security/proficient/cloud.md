@@ -23,6 +23,8 @@ description: boto3 (AWS), Azure SDK, GCP, serverless and cloud-native Python
 
 ## AWS with boto3
 
+*The official AWS SDK — provision and control S3, EC2, Lambda, and more from Python.*
+
 ```python
 import boto3
 
@@ -91,6 +93,8 @@ for msg in response.get("Messages", []):
 
 ## AWS Lambda handler pattern
 
+*The function signature AWS invokes for serverless compute.*
+
 ```python
 import json
 import boto3
@@ -126,6 +130,8 @@ def lambda_handler(event, context):
 ---
 
 ## Infrastructure with Pulumi (Python IaC)
+
+*Define cloud infrastructure in real Python instead of YAML/HCL.*
 
 ```python
 import pulumi

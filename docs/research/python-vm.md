@@ -42,6 +42,8 @@ description: Implement a bytecode virtual machine from scratch that executes Pyt
 
 ## Step 1: The operand stack
 
+*The stack the VM pushes/pops values on while executing bytecode.*
+
 ```python
 class Frame:
     """A single execution frame (one per function call)."""
@@ -74,6 +76,8 @@ class Frame:
 ---
 
 ## Step 2: The eval loop
+
+*The dispatch loop that reads opcodes and runs them.*
 
 ```python
 import dis
@@ -226,6 +230,8 @@ class MiniPythonVM:
 
 ## Step 3: Running real Python code
 
+*Feeding compiled bytecode through your VM.*
+
 ```python
 # Compile Python source to bytecode, then run in our VM
 source = """
@@ -255,6 +261,8 @@ vm.run_code(code)
 ---
 
 ## What's missing (for a complete VM)
+
+*The features a toy VM skips versus real CPython.*
 
 | Feature | Complexity |
 |---|---|

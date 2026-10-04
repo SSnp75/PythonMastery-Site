@@ -48,6 +48,8 @@ People fork CPython to **experiment** with language features, performance ideas,
 
 ## Seeing the layer you'd modify
 
+*Where interpreter behavior lives, so you know what forking touches.*
+
 You can inspect the bytecode the eval loop executes with `dis` — this is the interface between "your code" and "the interpreter's C". Runnable:
 
 ```python
@@ -75,6 +77,8 @@ Each line is an **opcode** the CPython eval loop handles in a giant C switch (hi
 
 ## The CPython source you'd touch
 
+*The files that implement the behavior you'd change.*
+
 A fork typically involves these parts of the CPython tree:
 
 | Area | File(s) | Role |
@@ -90,6 +94,8 @@ Adding a feature usually ripples through several of these: new syntax needs gram
 ---
 
 ## Famous forks and experiments
+
+*PyPy, Stackless, and research interpreters.*
 
 Interpreter forking has a rich history — and some experiments became hugely important:
 

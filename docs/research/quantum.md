@@ -79,6 +79,8 @@ entanglement.
 
 ## Where to go next
 
+*Gates, algorithms, error correction, and other SDKs to explore.*
+
 - **Gates:** Pauli-X/Y/Z, phase, Toffoli
 - **Algorithms:** Grover's search, Deutsch–Jozsa, Shor's factoring
 - **Variational:** VQE, QAOA for optimization

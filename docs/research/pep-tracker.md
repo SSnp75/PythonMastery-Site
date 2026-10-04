@@ -22,6 +22,8 @@ description: Active Python Enhancement Proposals, upcoming features and CPython 
 
 ## Notable PEPs by Python version
 
+*The headline features each release introduced.*
+
 ### Python 3.13 (2024)
 
 | PEP | Title | Impact |
@@ -78,6 +80,8 @@ description: Active Python Enhancement Proposals, upcoming features and CPython 
 
 ## How PEPs work
 
+*The proposal process that governs language changes.*
+
 ```
 Idea → python-ideas discussion → PEP draft → SC review → Accepted/Rejected
                                      ↓
@@ -100,6 +104,8 @@ Idea → python-ideas discussion → PEP draft → SC review → Accepted/Reject
 
 ## How to read a PEP
 
+*What the sections mean and where to find the decision.*
+
 Key sections in every PEP:
 
 1. **Abstract** — one paragraph summary
@@ -114,6 +120,8 @@ Key sections in every PEP:
 ---
 
 ## Following CPython development
+
+*Where the work and discussion happen.*
 
 | Resource | URL |
 |---|---|

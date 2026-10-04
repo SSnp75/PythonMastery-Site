@@ -33,6 +33,8 @@ description: Analyze code without running it — AST walking, control flow and d
 
 ## Analysis without execution
 
+*Reason about code by inspecting its structure, not by running it.*
+
 **Static analysis** examines source code *without running it* — the opposite of testing, which runs code to observe behavior. It's how linters catch bugs, type checkers verify correctness, and security scanners find vulnerabilities, all before a single line executes. Python makes this unusually accessible because the standard library ships a full parser: the `ast` module turns source into a tree you can inspect.
 
 ```
@@ -45,6 +47,8 @@ Every Python linter and type checker is, at its core, a program that parses your
 ---
 
 ## Walking the AST
+
+*Traverse the syntax tree to collect facts about code.*
 
 `ast.walk` yields every node in the tree. Here's a real analysis — finding **unused imports** by comparing imported names against used names. Fully runnable:
 
@@ -99,6 +103,8 @@ print("functions:", funcs)   # -> ['greet']
 
 ## Control flow and data flow
 
+*Track execution paths and how values move to find deeper issues.*
+
 Real analysis engines go deeper than node-counting, building two graphs:
 
 - **Control-Flow Graph (CFG)** — models the possible execution paths (branches, loops, returns). It answers "can this line ever be reached?" (dead-code detection) and "does every path return a value?"
@@ -119,6 +125,8 @@ Data-flow analysis on this CFG would flag that `y` might be used before assignme
 ---
 
 ## From AST to a real rule
+
+*Turn a traversal into an actual lint/security rule.*
 
 A minimal linter rule is a function that walks the tree and yields findings:
 
@@ -151,6 +159,8 @@ This is the entire shape of a linter plugin: match a node pattern, report a loca
 ---
 
 ## The tools built on this
+
+*ruff, mypy, bandit, and semgrep as production examples.*
 
 You rarely write an analysis engine from scratch — you use ones built on exactly these ideas:
 

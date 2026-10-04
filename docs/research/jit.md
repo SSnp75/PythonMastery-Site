@@ -104,6 +104,8 @@ class TracingJIT:
 
 ## Type specialization
 
+*Compile a fast path for the concrete types seen at runtime.*
+
 The key optimization: generate different code for different types.
 
 ```python
@@ -147,6 +149,8 @@ fast_add = SpecializedAdd()
 
 ## Guard failure and deoptimization
 
+*Fall back to the interpreter when a specialized assumption breaks.*
+
 ```python
 class GuardedCode:
     """Compiled code with type guards — deoptimizes if guards fail."""
@@ -176,6 +180,8 @@ class GuardedCode:
 
 ## Inline caching
 
+*Cache attribute/method lookups at the call site to skip repeated resolution.*
+
 ```python
 class InlineCache:
     """Cache the result of type lookups for attribute access."""
@@ -202,6 +208,8 @@ class InlineCache:
 ---
 
 ## CPython's JIT (PEP 744, Python 3.13+)
+
+*CPython's new experimental JIT and what it changes.*
 
 Python 3.13 introduced an experimental copy-and-patch JIT:
 

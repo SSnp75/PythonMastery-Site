@@ -28,6 +28,8 @@ Python source → tokenize → parse (AST) → transform → generate target sou
 
 ## Existing Python transpilers
 
+*Cython, mypyc, Transcrypt, and Codon as real-world examples.*
+
 | Tool | Target | Notes |
 |---|---|---|
 | **Cython** | C | superset of Python, compiled extension |
@@ -39,6 +41,8 @@ Python source → tokenize → parse (AST) → transform → generate target sou
 ---
 
 ## Reading the AST
+
+*Parse source into a tree — the front half of any transpiler.*
 
 The standard library parses Python into an AST you can walk — the front half of any
 transpiler:
@@ -92,6 +96,8 @@ statements, control flow, and type inference — but the shape is always *parse 
 ---
 
 ## The hard parts
+
+*Dynamic typing, runtime semantics, and the standard library.*
 
 - **Dynamic typing** — the target may need inferred or declared types.
 - **Runtime semantics** — duck typing, exceptions, and the GC rarely map 1:1.

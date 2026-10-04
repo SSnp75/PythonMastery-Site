@@ -62,6 +62,8 @@ Note it's **typed** (`i64` = 64-bit integer) and explicit — very different fro
 
 ## Generating IR from Python with `llvmlite`
 
+*Emit LLVM IR from Python to compile functions to native code.*
+
 `llvmlite` lets you build IR programmatically. The documented pattern for emitting that `add` function:
 
 ```python
@@ -91,6 +93,8 @@ This constructs the IR in memory; a backend then compiles it to machine code you
 
 ## The pipeline for compiling Python
 
+*Source → IR → optimize → machine code, step by step.*
+
 A Python-to-LLVM compiler (like Numba's core) works roughly like this:
 
 1. **Parse / get bytecode** — start from the function's AST or bytecode.
@@ -117,6 +121,8 @@ The first call triggers type inference and LLVM compilation; subsequent calls ru
 ---
 
 ## The hard part: Python is dynamic
+
+*Dynamic typing and objects are what make Python hard to compile statically.*
 
 The reason you can't just compile *all* Python to fast IR:
 

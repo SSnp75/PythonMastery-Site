@@ -57,6 +57,8 @@ Each step is a **dialect**, and compilation is **progressive lowering** from abs
 
 ## Dialects: the core concept
 
+*Custom IRs at different abstraction levels you progressively lower between.*
+
 A **dialect** is a self-contained set of operations and types for a particular domain or abstraction level. MLIR ships several and lets you define your own:
 
 - A **tensor/linear-algebra dialect** can represent `matmul` as a single operation — perfect for optimizing whole ML computations.
@@ -68,6 +70,8 @@ Optimizations that are natural at a high level (fusing two matrix ops) are impos
 ---
 
 ## Why ML compilers use it
+
+*Preserve high-level tensor structure for optimization before lowering.*
 
 MLIR was born from the machine-learning world and underpins modern ML compiler stacks:
 
@@ -82,6 +86,8 @@ The pattern: a Python front-end (JAX, PyTorch) captures your tensor computation 
 
 ## Where Python fits
 
+*Frameworks capture Python, emit MLIR, and lower it to hardware.*
+
 You almost never write MLIR by hand from Python. Instead:
 
 1. You write ordinary Python using a framework (JAX, PyTorch).
@@ -94,6 +100,8 @@ So "Python → MLIR" is really "Python framework → MLIR → hardware", with th
 ---
 
 ## MLIR vs plain LLVM IR
+
+*Many abstraction levels vs one — flexibility at the cost of complexity.*
 
 | | **LLVM IR** | **MLIR** |
 |---|---|---|

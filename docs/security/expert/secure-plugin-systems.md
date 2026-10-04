@@ -84,6 +84,8 @@ If even one byte of the plugin changes, its hash changes, and `verify` rejects i
 
 ## Isolation strategies (trust boundaries)
 
+*Separate-process or container isolation since in-process sandboxing is weak.*
+
 Since you can't fully trust plugin code, limit what it can reach. From weakest to strongest:
 
 | Strategy | Isolation | Notes |
@@ -100,12 +102,16 @@ The pattern: run untrusted plugins **out-of-process** (or in a container/VM/WASM
 
 ## Why in-process Python sandboxing fails
 
+*Python's introspection makes true in-process sandboxing effectively impossible.*
+
 !!! danger "You cannot safely sandbox untrusted Python inside your process"
     It's tempting to think you can restrict a plugin by removing builtins or blocking imports. **This does not work** — Python's introspection is too powerful. There are well-known escapes: reaching dangerous functions through `().__class__.__bases__`, `__subclasses__()`, exception objects, and countless other paths. The old `rexec`/`Bastion` modules were removed precisely because they couldn't be made safe. **Never** run untrusted code in your interpreter and expect restrictions to hold. If code is untrusted, isolate it at the **OS/process/container/VM** level, not within Python. See [Sandboxing](sandboxing.md).
 
 ---
 
 ## The safe architecture
+
+*Run plugins out-of-process with least privilege and a narrow IPC surface.*
 
 Putting it together for genuinely untrusted plugins:
 

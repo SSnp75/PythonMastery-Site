@@ -55,6 +55,8 @@ process.wait()
 
 ## Docker SDK
 
+*Build, run, and manage containers programmatically from Python.*
+
 ```python
 import docker
 
@@ -154,6 +156,8 @@ deploy(conn)
 
 ## CI/CD with Python
 
+*Script build/test/deploy steps and glue your pipeline together.*
+
 ### GitHub Actions (generate workflow from Python)
 
 ```python
@@ -196,6 +200,8 @@ with open(".github/workflows/ci.yml", "w") as f:
 
 ## Infrastructure as Code patterns
 
+*Version-controlled, repeatable infrastructure definitions.*
+
 ```python
 # Declarative infrastructure definition
 from dataclasses import dataclass
@@ -233,6 +239,8 @@ def provision(infra: Infrastructure):
 ---
 
 ## Monitoring and alerting
+
+*Collect signals and notify when something needs attention.*
 
 ```python
 import psutil

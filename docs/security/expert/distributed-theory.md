@@ -22,6 +22,8 @@ description: CAP theorem, consistency models, Raft consensus, vector clocks and 
 
 ## CAP Theorem
 
+*Under a partition you can keep Consistency or Availability, not both — the core distributed tradeoff.*
+
 In a distributed system with network partitions, you can guarantee at most **two of three**:
 
 - **C**onsistency — every read returns the most recent write
@@ -40,6 +42,8 @@ Since network partitions **always happen**, the real choice is: **CP** or **AP**
 ---
 
 ## Consistency models
+
+*From strong to eventual — what readers are guaranteed to see.*
 
 From strongest to weakest:
 
@@ -178,6 +182,8 @@ print(a.is_concurrent(b))   # True — A:3 and B:2 are concurrent
 ---
 
 ## Conflict resolution strategies
+
+*LWW, merges, and CRDTs for reconciling concurrent writes.*
 
 | Strategy | How | When to use |
 |---|---|---|

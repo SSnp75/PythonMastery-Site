@@ -33,6 +33,8 @@ description: Environment variables, HashiCorp Vault, AWS Secrets Manager and sec
 
 ## Environment variables (simplest approach)
 
+*Load secrets from the environment so they stay out of code and version control.*
+
 ```python
 import os
 
@@ -71,6 +73,8 @@ db_pass = os.environ["DB_PASSWORD"]
 
 ## Pydantic Settings (type-safe config)
 
+*Validate and type your config/secrets at startup.*
+
 ```python
 from pydantic_settings import BaseSettings
 
@@ -98,6 +102,8 @@ print(settings.db_password)   # from env
 
 ## AWS Secrets Manager
 
+*Centrally store, rotate, and access secrets in AWS.*
+
 ```python
 import boto3
 import json
@@ -124,6 +130,8 @@ def get_secret_cached(secret_name: str) -> dict:
 
 ## HashiCorp Vault
 
+*A dedicated secrets manager with dynamic credentials and fine-grained access.*
+
 ```python
 import hvac
 
@@ -149,6 +157,8 @@ print(f"Password: {creds['data']['password']}")
 ---
 
 ## Secret rotation pattern
+
+*Rotate credentials regularly so a leak has a limited blast radius.*
 
 ```python
 import secrets

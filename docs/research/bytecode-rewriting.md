@@ -99,6 +99,8 @@ print(answer())   # 42
 
 ## The `bytecode` library (safer surgery)
 
+*Edit instructions with offsets recomputed for you, instead of hand-patching raw bytes.*
+
 The third-party [`bytecode`](https://github.com/MatthieuDartiailh/bytecode) library gives an
 editable instruction list that recomputes offsets for you:
 

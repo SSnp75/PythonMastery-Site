@@ -33,6 +33,8 @@ description: Add new syntax to Python — grammar files, parser generation and t
 
 ## From grammar to parser
 
+*How a grammar definition becomes code that parses source.*
+
 Every language is defined by a **grammar** — formal rules describing valid syntax. Python's grammar lives in `Grammar/python.gram` in the CPython source, written in **PEG** (Parsing Expression Grammar) form since Python 3.9. At build time, a parser generator turns that grammar file into the C parser that reads your `.py` files.
 
 ```
@@ -43,6 +45,8 @@ Every language is defined by a **grammar** — formal rules describing valid syn
 "Modifying the grammar" means editing those rules and rebuilding CPython — a genuine fork of the language. Before we get there, let's build a tiny parser so the pipeline is concrete.
 
 ## A recursive-descent parser you can run
+
+*A small hand-written parser demonstrating the technique.*
 
 You can understand grammars by implementing one. Here's a parser+evaluator for a small expression grammar — fully runnable:
 
@@ -88,6 +92,8 @@ Each grammar rule (`expr`, `term`) became a function; the structure of the code 
 
 ## Modifying Python's actual grammar
 
+*Editing `python.gram` and regenerating the parser to add syntax.*
+
 To add real syntax to Python (say, a new operator or keyword), the steps are:
 
 1. **Edit `Grammar/python.gram`** — add or change a PEG rule.
@@ -102,6 +108,8 @@ To add real syntax to Python (say, a new operator or keyword), the steps are:
 ---
 
 ## Realistic alternatives (no fork needed)
+
+*Import hooks, AST transforms, and preprocessors instead of forking CPython.*
 
 Almost always, you want new *behavior*, not new *syntax* — and Python gives you powerful ways to get it without touching the grammar:
 

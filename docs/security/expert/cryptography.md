@@ -55,6 +55,8 @@ def verify_hmac(secret, message, expected_sig):
 
 ## Password hashing (NEVER use plain SHA for passwords)
 
+*Use bcrypt/argon2 with salting — slow by design to resist cracking.*
+
 ```python
 # bcrypt — industry standard for passwords
 import bcrypt
@@ -84,6 +86,8 @@ print(ph.verify(hash_str, "my_password"))   # True
 ---
 
 ## Symmetric encryption (same key for encrypt/decrypt)
+
+*Fast encryption with a shared secret (Fernet/AES-GCM) for data at rest.*
 
 ```python
 from cryptography.fernet import Fernet
@@ -142,6 +146,8 @@ print(plaintext)   # b"Secret data"
 ---
 
 ## Asymmetric encryption (public/private key pair)
+
+*Encrypt with a public key, decrypt with the private one — for key exchange and identity.*
 
 ```python
 from cryptography.hazmat.primitives.asymmetric import rsa, padding as asym_padding
@@ -225,6 +231,8 @@ except Exception:
 ---
 
 ## Secure random numbers
+
+*Use `secrets` for tokens and keys; `random` is predictable and unsafe for crypto.*
 
 ```python
 import secrets

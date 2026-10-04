@@ -43,6 +43,8 @@ factor<- NUMBER / '(' expr ')'
 
 ## Packrat parsing
 
+*Memoize rule results per position to keep backtracking linear-time.*
+
 PEG parsers can backtrack, which risks exponential time. **Packrat parsing** memoizes each
 rule's result at each input position, making parsing linear time at the cost of memory. This
 is the same `lru_cache`-style idea applied to parse positions.
@@ -50,6 +52,8 @@ is the same `lru_cache`-style idea applied to parse positions.
 ---
 
 ## A working toy PEG parser
+
+*A runnable recursive-descent parser with correct precedence.*
 
 This recursive-descent parser evaluates arithmetic with correct precedence — the exact
 structure CPython's generated parser uses, minus the memoization:
@@ -100,6 +104,8 @@ print(PEG("(2 + 3) * 4").expr())     # 20  (parentheses override)
 ---
 
 ## Modifying Python's own grammar
+
+*Edit the grammar and regenerate CPython's parser.*
 
 To add syntax to CPython you would: edit `Grammar/python.gram`, regenerate the parser with
 `make regen-pegen`, and rebuild. This is how experimental syntax features are prototyped.

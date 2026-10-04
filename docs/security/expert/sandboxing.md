@@ -67,6 +67,8 @@ except SyntaxError as e:
 
 ## Resource limits with `resource` module (Linux)
 
+*Cap CPU, memory, and file sizes so sandboxed code can't exhaust the host.*
+
 ```python
 import resource
 import signal
@@ -125,6 +127,8 @@ def run_sandboxed(code: str, timeout_seconds: int = 5) -> dict:
 ---
 
 ## Docker-based sandboxing (strongest isolation)
+
+*Run untrusted code in a container for real OS-level isolation.*
 
 ```python
 import docker

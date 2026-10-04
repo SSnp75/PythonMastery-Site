@@ -23,6 +23,8 @@ description: Saga, event sourcing, CQRS, outbox pattern and distributed transact
 
 ## Event Sourcing
 
+*Persist state as an event log for audit and rebuildable state.*
+
 Instead of storing current state, store all **events** that led to the current state.
 
 ```python
@@ -111,6 +113,8 @@ print(f"Balance: ${account.balance / 100:.2f}")   # $120.00
 
 ## CQRS (Command Query Responsibility Segregation)
 
+*Separate write and read models so each scales and optimizes independently.*
+
 Separate the **write model** (commands) from the **read model** (queries):
 
 ```python
@@ -162,6 +166,8 @@ class OrderReadModel:
 
 ## Outbox Pattern (reliable event publishing)
 
+*Write events to an outbox table in the same transaction, then publish — no lost events.*
+
 Ensure events are published **exactly once** even if the service crashes:
 
 ```python
@@ -195,6 +201,8 @@ async def outbox_publisher():
 ---
 
 ## Saga Pattern (distributed transactions)
+
+*Coordinate multi-service operations with compensating actions on failure.*
 
 When an operation spans multiple services, use compensating transactions:
 
