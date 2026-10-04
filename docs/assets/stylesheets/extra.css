@@ -681,3 +681,114 @@
   opacity: 0.8;
   transform: translateX(0);
 }
+
+/* ── Print styles ─────────────────────────────────────────── */
+/* Applies when the user prints or "Save as PDF". Strips site chrome,
+   forces an ink-friendly light theme, and keeps cards/tables from
+   splitting across page breaks. Tuned for the cheat-sheet and
+   reference pages, but safe site-wide. */
+@media print {
+
+  /* Hide everything that isn't the article content. */
+  .md-header,
+  .md-tabs,
+  .md-sidebar,
+  .md-nav,
+  .md-footer,
+  .md-search,
+  .md-top,
+  .md-content__button,
+  .pm-footer-support,
+  .pm-share-section,
+  .pm-comments-section,
+  .md-feedback,
+  .md-source {
+    display: none !important;
+  }
+
+  /* Give the content the full page width. */
+  .md-main__inner,
+  .md-content,
+  .md-content__inner,
+  .md-grid {
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Force a light, ink-friendly palette regardless of theme toggle. */
+  [data-md-color-scheme="slate"],
+  :root {
+    --md-default-bg-color: #ffffff;
+    --md-default-fg-color: #000000;
+    --md-typeset-color: #000000;
+  }
+
+  body,
+  .md-typeset {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 10.5pt;
+  }
+
+  /* Shrink headings and keep them with the content that follows. */
+  .md-typeset h1 { font-size: 18pt; }
+  .md-typeset h2 {
+    font-size: 13pt;
+    border-bottom: 1px solid #000;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  .md-typeset h3 {
+    font-size: 11pt;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* Section heading links print as plain black text, no arrow. */
+  .md-typeset h2 a.pm-cheat-link { color: #000 !important; }
+  .md-typeset h2 a.pm-cheat-link::after { content: "" !important; }
+
+  /* Don't split a table across pages when it can be avoided. */
+  .md-typeset table:not([class]) {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    font-size: 9.5pt;
+    width: 100%;
+    border: 1px solid #000;
+  }
+
+  .md-typeset table:not([class]) th,
+  .md-typeset table:not([class]) td {
+    border: 1px solid #999;
+  }
+
+  /* Light, bordered code so snippets stay legible on paper. */
+  .md-typeset code,
+  .md-typeset pre > code {
+    background: #f2f2f2 !important;
+    color: #000 !important;
+    border: 1px solid #ddd;
+  }
+
+  /* Keep admonitions and the "next" block from breaking mid-box. */
+  .md-typeset .admonition,
+  .pm-next,
+  .pm-topic-header {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border: 1px solid #ccc;
+    background: #fafafa !important;
+  }
+
+  /* Expand any collapsed <details> so nothing is hidden on paper. */
+  .md-typeset details[open],
+  .md-typeset details {
+    display: block;
+  }
+
+  /* Set reasonable page margins. */
+  @page {
+    margin: 1.5cm;
+  }
+}
