@@ -232,6 +232,8 @@ ax.set_title("Contour Plot")
 
 ## Animations
 
+*Build frame-by-frame animations for evolving data or simulations.*
+
 ```python
 from matplotlib.animation import FuncAnimation
 
@@ -258,6 +260,8 @@ plt.show()
 ---
 
 ## Integration with Pandas
+
+*Plot directly from DataFrames with `df.plot` on a Matplotlib backend.*
 
 ```python
 import pandas as pd

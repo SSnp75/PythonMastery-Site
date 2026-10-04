@@ -34,6 +34,8 @@ description: DDP, FSDP, model sharding, pipeline parallelism and multi-GPU strat
 
 ## Data Parallelism (DDP)
 
+*Replicate the model on each GPU, split the batch, and sync gradients — the default way to scale training.*
+
 The simplest form: same model on each GPU, different data batches, synchronized gradients.
 
 ```python
@@ -107,6 +109,8 @@ All GPUs end up with identical model parameters after each step.
 
 ## FSDP (Fully Sharded Data Parallel)
 
+*Shard model params/optimizer state across GPUs so models too big for one device fit.*
+
 For models too large for one GPU — shards model parameters, gradients AND optimizer states:
 
 ```python
@@ -152,6 +156,8 @@ With FSDP (8 GPUs): 112 / 8 = 14 GB per GPU ✓
 
 ## Gradient accumulation (simulating larger batches)
 
+*Accumulate gradients over several mini-batches to emulate a big batch on small memory.*
+
 ```python
 accumulation_steps = 4   # effective batch = 4 * batch_size
 
@@ -169,6 +175,8 @@ for i, (x, y) in enumerate(dataloader):
 ---
 
 ## Mixed precision training
+
+*Use fp16/bf16 for speed and memory while keeping fp32 where precision matters.*
 
 ```python
 from torch.cuda.amp import autocast, GradScaler
@@ -193,6 +201,8 @@ for x, y in dataloader:
 
 ## Pipeline parallelism
 
+*Split model layers across devices and stream micro-batches through them.*
+
 Split model layers across GPUs — micro-batches flow through the pipeline:
 
 ```python
@@ -210,6 +220,8 @@ Split model layers across GPUs — micro-batches flow through the pipeline:
 ---
 
 ## Checkpointing large models
+
+*Save/restore sharded state so long training runs survive interruptions.*
 
 ```python
 import torch.distributed.checkpoint as dcp
@@ -232,6 +244,8 @@ with FSDP.state_dict_type(model, StateDictType.SHARDED_STATE_DICT):
 ---
 
 ## Launch scripts
+
+*How to start multi-GPU/multi-node runs with torchrun and friends.*
 
 ```bash
 # torchrun (recommended)

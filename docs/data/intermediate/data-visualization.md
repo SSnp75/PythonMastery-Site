@@ -49,6 +49,8 @@ Visualization serves three jobs:
 
 ## Choosing the right chart
 
+*Match the chart to the question — comparison, trend, distribution, relationship.*
+
 The chart should match the *question* and the *data type*:
 
 | Your question | Chart |
@@ -67,6 +69,8 @@ Picking wrong obscures the message — a bar chart hiding a distribution, or a p
 
 ## Common mistakes
 
+*Misleading axes, chart junk, and wrong chart types to avoid.*
+
 !!! warning "Charts can mislead — often unintentionally"
     - **Truncated y-axis** — starting a bar chart's axis at a nonzero value exaggerates differences. Bar charts should start at zero.
     - **Pie charts with many slices** — humans can't compare angles well; a bar chart is almost always clearer.
@@ -78,6 +82,8 @@ Picking wrong obscures the message — a bar chart hiding a distribution, or a p
 ---
 
 ## Static vs interactive
+
+*When a static image suffices vs when interactivity helps exploration.*
 
 - **Static** (Matplotlib, Seaborn) — for reports, papers, print, and anywhere a fixed image is right. Precise control.
 - **Interactive** (Plotly, Bokeh, Altair) — zoom, hover, filter; great for exploration and web dashboards where users want to dig in.
@@ -95,6 +101,8 @@ fig.show()                     # interactive: hover, zoom, pan
 ---
 
 ## Telling a story with data
+
+*Guide the viewer to the insight, not just the numbers.*
 
 Beyond correctness, effective visualization *communicates*:
 

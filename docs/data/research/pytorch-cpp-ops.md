@@ -50,6 +50,8 @@ The pattern is the familiar one: Python for the model, C++/CUDA for the hot cust
 
 ## The extension mechanism
 
+*Compile C++/CUDA and bind it as a PyTorch operator.*
+
 PyTorch exposes its tensor library (ATen) to C++, so your operator works with PyTorch tensors directly:
 
 ```cpp
@@ -79,6 +81,8 @@ PyTorch can compile the C++ just-in-time (`load`) or ahead-of-time via setuptool
 ---
 
 ## Custom autograd (forward + backward)
+
+*Define both passes so your op works with autograd.*
 
 The key ML-specific piece: for your op to work in training, it must support **backpropagation** — you provide both the forward computation and the gradient (backward). This is [autograd](../../scientific/custom-autograd.md) applied at the operator level:
 

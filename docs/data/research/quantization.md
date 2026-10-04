@@ -81,6 +81,8 @@ The floats are mapped to integers 0-255 (fitting in a byte), and dequantizing re
 
 ## Post-training vs quantization-aware
 
+*Quantize after training (fast, some accuracy loss) vs during training (best accuracy).*
+
 Two ways to quantize a model:
 
 - **Post-Training Quantization (PTQ)** — quantize an already-trained model. Fast and easy (no retraining), but can lose more accuracy. Often you feed a small "calibration" dataset to pick good scales.
@@ -100,6 +102,8 @@ Precision options form a spectrum: `float32` (full) → `float16`/`bfloat16` (ha
 ---
 
 ## Tooling
+
+*PyTorch/ONNX quantization utilities that do the heavy lifting.*
 
 Real quantization uses framework tools (documented; not installed here):
 

@@ -92,6 +92,8 @@ The executor runs each node once its dependencies are ready: `pre` first, then `
 
 ## Latency vs throughput
 
+*The core serving tradeoff — fast single responses vs high aggregate volume.*
+
 Two competing goals shape inference-graph design:
 
 - **Latency** — time for *one* request. Minimize by running independent nodes in **parallel** (`modelA` and `modelB` at once) and keeping the critical path short.
@@ -108,6 +110,8 @@ Two competing goals shape inference-graph design:
 ---
 
 ## Serving frameworks
+
+*Triton, TorchServe, and others that optimize the inference graph.*
 
 You don't build production serving graphs from scratch — frameworks handle DAG orchestration, batching, and scaling (documented; not installed here):
 

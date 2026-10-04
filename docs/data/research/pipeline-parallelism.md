@@ -51,6 +51,8 @@ Each GPU handles its stage, passing activations to the next. This lets a model f
 
 ## The bubble problem
 
+*Idle time when stages wait for each other — the main inefficiency to minimize.*
+
 The naive version wastes most of the hardware:
 
 ```
@@ -66,6 +68,8 @@ With one batch flowing through, while GPU0 works, GPU1 and GPU2 sit idle waiting
 ---
 
 ## Micro-batching: the fix
+
+*Split the batch into micro-batches so stages stay busy.*
 
 The solution is to split each batch into smaller **micro-batches** and feed them through in a staggered stream, so multiple stages work simultaneously:
 
@@ -83,12 +87,16 @@ Once the pipeline is "full," all GPUs process different micro-batches at once �
 
 ## Balancing the stages
 
+*Size stages so none is a bottleneck.*
+
 !!! warning "Uneven stages waste the pipeline"
     A pipeline is only as fast as its slowest stage. If GPU1's layers take twice as long as the others, every GPU is throttled to its pace. **Balancing** — splitting layers so each stage takes roughly equal time — is essential. This is tricky because different layer types have very different costs, so frameworks provide auto-balancing or profiling to guide the split.
 
 ---
 
 ## Frameworks
+
+*GPipe, PipeDream, and DeepSpeed implementations.*
 
 Documented (not installed here):
 

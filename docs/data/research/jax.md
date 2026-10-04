@@ -44,6 +44,8 @@ print(y)   # [1.382, 0.494, 0.01]  (on GPU if available)
 
 ## `jax.jit` — Just-In-Time compilation
 
+*Compile a function to fused, hardware-optimized code for big speedups.*
+
 ```python
 import jax
 import jax.numpy as jnp
@@ -102,6 +104,8 @@ print(f(jnp.arange(10), 5))   # [0, 1, 2, 3, 4]
 
 ## `jax.grad` — automatic differentiation
 
+*Get the gradient of a function automatically — the core of ML training.*
+
 ```python
 import jax
 import jax.numpy as jnp
@@ -144,6 +148,8 @@ print(f"Grads: w={grads['w']:.4f}, b={grads['b']:.4f}")
 
 ## `jax.vmap` — automatic vectorization
 
+*Turn a function over one example into one over a batch with no manual loops.*
+
 ```python
 import jax
 import jax.numpy as jnp
@@ -171,6 +177,8 @@ per_example_grads = jax.vmap(jax.grad(lambda p, x: predict_single(p, x) ** 2), i
 ---
 
 ## Pytrees — JAX's data structures
+
+*Nested containers of arrays that JAX transforms treat uniformly.*
 
 JAX functions work with **pytrees** — nested containers of arrays:
 
@@ -205,6 +213,8 @@ grads = jax.grad(loss)(params, jnp.ones((5, 3)), jnp.ones((5, 2)))
 ---
 
 ## Training loop from scratch
+
+*Assemble jit+grad into a minimal training loop.*
 
 ```python
 import jax
@@ -259,6 +269,8 @@ for epoch in range(1000):
 ---
 
 ## `pmap` — parallelism across devices
+
+*Run the same computation across multiple accelerators.*
 
 ```python
 # Distribute computation across multiple GPUs/TPUs

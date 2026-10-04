@@ -56,6 +56,8 @@ Two fundamentally different ways to parallelize training:
 
 ## Ways to split a model
 
+*By layer (pipeline) or within a layer (tensor) across devices.*
+
 - **Tensor parallelism** — split *individual layers* across GPUs. A big matrix multiply is divided so each GPU computes part of it, then results are combined. Fine-grained; heavy communication.
 - **Layer (pipeline) parallelism** — put *different layers* on different GPUs. Layer 1-2 on GPU0, 3-4 on GPU1, etc. Data flows through like an assembly line (see [Pipeline Parallelism](pipeline-parallelism.md)).
 - **Expert parallelism** — for mixture-of-experts models, put different "expert" sub-networks on different GPUs.
@@ -66,12 +68,16 @@ Large-model training often combines all of these ("3D parallelism": data + tenso
 
 ## The communication cost
 
+*Splitting adds cross-device traffic that can dominate — balance carefully.*
+
 !!! warning "Communication is the bottleneck"
     Splitting a model means GPUs must constantly exchange intermediate results over their interconnect. This communication can dominate — a naive split can be *slower* than one GPU because the devices spend more time talking than computing. The engineering challenge is minimizing and overlapping communication with computation. This is why high-end training uses fast interconnects (NVLink, InfiniBand) — the network, not the math, is often the limit.
 
 ---
 
 ## Frameworks
+
+*DeepSpeed, Megatron, and FSDP that implement these splits.*
 
 You don't implement this by hand — specialized frameworks do (documented; not installed here):
 

@@ -49,6 +49,8 @@ Shipping your full training framework to production is heavy and slow. The fix: 
 
 ## ONNX: a portable model format
 
+*A standard graph format so models move between frameworks and runtimes.*
+
 **ONNX** (Open Neural Network Exchange) is a standard file format for models. Train in one framework, export to ONNX, run *anywhere* that supports ONNX — decoupling training from serving.
 
 ```python
@@ -73,6 +75,8 @@ outputs = session.run(None, {"input": data})
 
 ## TensorRT: maximum GPU speed
 
+*NVIDIA's optimizer/runtime that fuses and quantizes for fastest GPU inference.*
+
 **TensorRT** (NVIDIA) takes optimization further specifically for NVIDIA GPUs. It compiles a model into a highly-optimized inference "engine" using:
 
 - **Layer fusion** — combine operations into single GPU kernels (fewer memory round-trips — echoing [GPU Kernels](../../systems/advanced/gpu-kernels-triton.md)).
@@ -85,6 +89,8 @@ The result can be several times faster than the original model on the same GPU �
 ---
 
 ## The export-and-optimize pipeline
+
+*Train → export to ONNX → optimize to a target runtime.*
 
 A typical production path:
 

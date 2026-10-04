@@ -102,6 +102,8 @@ Standardized data has mean 0 and std 1. **When to use which:** min-max keeps val
 
 ## Creating features
 
+*Derive new signals (ratios, dates, interactions) that help models learn.*
+
 Often the biggest wins come from *creating* features from domain knowledge:
 
 - **Combinations** — `price_per_sqft = price / area`; ratios and interactions often capture what raw columns don't.
@@ -116,6 +118,8 @@ This is where domain understanding turns into predictive power — a model can o
 
 ## Feature selection
 
+*Keep the informative features and drop noise to improve and simplify models.*
+
 More features isn't always better — irrelevant ones add noise and overfitting risk. Selection keeps the useful ones:
 
 - **Filter** — rank features by correlation/statistical test with the target, keep the top.
@@ -125,6 +129,8 @@ More features isn't always better — irrelevant ones add noise and overfitting 
 ---
 
 ## In practice: scikit-learn
+
+*Use transformers and pipelines to apply feature steps consistently.*
 
 Real pipelines use scikit-learn's transformers, which fit on training data and apply consistently to new data:
 

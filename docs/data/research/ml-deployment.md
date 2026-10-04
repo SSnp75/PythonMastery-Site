@@ -36,6 +36,8 @@ description: Triton server, BentoML, Ray Serve, ONNX, containerization and produ
 
 ## Model export: ONNX
 
+*Export a trained model to a portable format for cross-framework serving.*
+
 Convert models to a portable format:
 
 ```python
@@ -75,6 +77,8 @@ print(outputs[0].shape)   # (1, 1000)
 ---
 
 ## BentoML — package and serve
+
+*Bundle a model with its dependencies into a servable artifact.*
 
 ```python
 # save_model.py
@@ -117,6 +121,8 @@ docker run -p 3000:3000 churn_service:latest
 ---
 
 ## Ray Serve — scalable serving
+
+*Scale model inference across a cluster with autoscaling.*
 
 ```python
 from ray import serve
@@ -163,6 +169,8 @@ serve.run(app, host="0.0.0.0", port=8000)
 
 ## Monitoring and drift detection
 
+*Watch live predictions for drift and quality drops.*
+
 ```python
 import numpy as np
 from scipy.stats import ks_2samp
@@ -195,6 +203,8 @@ if drifted:
 ---
 
 ## A/B testing models
+
+*Compare model versions on real traffic before full rollout.*
 
 ```python
 import random
@@ -229,6 +239,8 @@ router = ModelRouter(
 ---
 
 ## Docker deployment pattern
+
+*Containerize a model server for reproducible deploys.*
 
 ```dockerfile
 FROM python:3.13-slim

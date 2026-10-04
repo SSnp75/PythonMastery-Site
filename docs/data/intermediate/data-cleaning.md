@@ -117,6 +117,8 @@ The obvious outlier `100` is removed; the tightly-clustered values stay. **But b
 
 ## In practice: Pandas
 
+*Apply the cleaning techniques with pandas on a real DataFrame.*
+
 Real cleaning uses Pandas, which does all of this on whole columns at once:
 
 ```python
@@ -136,6 +138,8 @@ df = df[df["price"] > 0]                            # filter invalid
 ---
 
 ## Validate your data
+
+*Assert expectations (types, ranges, uniqueness) so bad data fails loudly.*
 
 Beyond fixing, *verify* assumptions hold: values in expected ranges, no impossible entries (negative ages), required fields present, categories from a known set. Libraries like **pandera** and **Great Expectations** let you declare data "contracts" and fail loudly when data violates them — catching quality problems before they corrupt analysis.
 

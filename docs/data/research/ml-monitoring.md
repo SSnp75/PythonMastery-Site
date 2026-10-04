@@ -94,6 +94,8 @@ Data similar to the baseline scores ~0 (no drift); data that shifted into differ
 
 ## Tracking performance
 
+*Log live accuracy/latency so you notice regressions.*
+
 Where you have ground-truth labels (eventually), track accuracy/precision/recall/etc. over time and alert on drops. The challenge: **labels are often delayed** (you learn if a loan defaulted months later). So monitoring combines:
 
 - **Leading indicators** — drift metrics (above), prediction distribution shifts — available *immediately*.
@@ -104,6 +106,8 @@ Drift monitoring is valuable precisely because it warns you *before* the accurac
 ---
 
 ## Data-quality monitoring
+
+*Catch schema and distribution issues in incoming data.*
 
 Often the problem isn't the model — it's broken input. Monitor for:
 
@@ -117,6 +121,8 @@ This overlaps with [Data Cleaning](../intermediate/data-cleaning.md) validation 
 ---
 
 ## Tools & the feedback loop
+
+*Close the loop: detect, retrain, redeploy.*
 
 Python ML-monitoring tools (documented; not installed here): **Evidently**, **whylogs/WhyLabs**, **NannyML**, **Arize**. They compute drift, performance, and data-quality metrics and dashboard/alert on them.
 

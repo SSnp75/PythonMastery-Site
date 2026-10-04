@@ -57,6 +57,8 @@ The same plot in raw Matplotlib would need manual regression fitting and styling
 
 ## The main plot categories
 
+*Relational, distribution, categorical, and matrix plots — the Seaborn families.*
+
 Seaborn organizes plots by what they show:
 
 | Category | Plots | Shows |
@@ -76,6 +78,8 @@ sns.heatmap(tips.corr(numeric_only=True), annot=True)  # correlation matrix
 ---
 
 ## The killer features
+
+*Built-in statistical estimation, faceting, and themes that Matplotlib lacks.*
 
 Two Seaborn capabilities are especially powerful:
 
@@ -97,6 +101,8 @@ These turn exploratory data analysis into a few expressive lines — a big reaso
 ---
 
 ## Seaborn vs Matplotlib
+
+*Seaborn for fast statistical plots; drop to Matplotlib for fine control.*
 
 They're complementary, not competitors (Seaborn *is* Matplotlib underneath):
 
