@@ -143,6 +143,8 @@ asyncio.run(main())
 
 ## Error handling
 
+*Exceptions in tasks surface on await; TaskGroup aggregates failures.*
+
 ```python
 async def might_fail(name, should_fail=False):
     await asyncio.sleep(0.5)
@@ -331,6 +333,8 @@ asyncio.run(main())
 ---
 
 ## Real-world pattern: async HTTP client
+
+*Fetch many URLs concurrently with an async client and a semaphore.*
 
 ```python
 import asyncio

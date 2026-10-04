@@ -102,6 +102,8 @@ Output:
 
 ## Choosing the pool
 
+*ThreadPool for I/O-bound, ProcessPool for CPU-bound.*
+
 | Workload | Executor | Why |
 |---|---|---|
 | **I/O-bound** (HTTP, files, DB) | `ThreadPoolExecutor` | Threads wait efficiently; GIL released during I/O |
@@ -115,6 +117,8 @@ Getting this wrong is the classic mistake: threads won't speed up CPU-bound work
 ---
 
 ## Error handling
+
+*Exceptions surface when you read a future's result — handle them there.*
 
 Exceptions in a task don't crash the pool — they're stored in the future and raised when you call `.result()`:
 

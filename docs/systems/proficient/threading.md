@@ -348,6 +348,8 @@ for t in threads: t.join()
 
 ## Common threading patterns
 
+*Worker pools, producer/consumer, and periodic tasks done safely.*
+
 ### Thread pool with result collection
 
 ```python
@@ -378,6 +380,8 @@ print(f"Processed {len(results)} items")
 ---
 
 ## The GIL's impact on threads
+
+*Why threads overlap I/O but can't speed up CPU-bound Python.*
 
 ```python
 import threading

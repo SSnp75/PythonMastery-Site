@@ -50,6 +50,8 @@ The pattern: **Python for the 95% (glue, I/O, orchestration), C++ for the 5% hot
 
 ## pybind11: the modern way
 
+*Bind C++ to Python with a clean header-only library.*
+
 Historically, extensions used the raw CPython C API (verbose, error-prone) or SWIG. **pybind11** is a header-only C++ library that makes binding concise and safe. A function:
 
 ```cpp
@@ -78,6 +80,8 @@ That `PYBIND11_MODULE` macro and `m.def` are all it takes to expose a C++ functi
 ---
 
 ## Exposing a C++ class
+
+*Make a C++ class usable as a Python class.*
 
 pybind11 maps C++ classes to Python classes naturally:
 
@@ -114,6 +118,8 @@ The C++ object behaves like a normal Python object. pybind11 also handles STL co
 
 ## Memory & lifetime across the boundary
 
+*Manage ownership so objects aren't freed too early or leaked.*
+
 The trickiest part is object lifetime — who owns what:
 
 - pybind11 manages Python's reference counting for you in common cases.
@@ -127,6 +133,8 @@ The trickiest part is object lifetime — who owns what:
 
 ## Build & packaging
 
+*Compile and ship the extension as an installable wheel.*
+
 You compile the C++ into a shared library Python can import:
 
 - **setuptools + pybind11** — declare the extension in `pyproject.toml`/`setup.py`; `pip install` compiles it.
@@ -138,6 +146,8 @@ The built module is a `.so` (Linux/macOS) or `.pyd` (Windows) that imports like 
 ---
 
 ## C++ vs Rust vs Cython vs Numba
+
+*Pick the right acceleration tool for the job.*
 
 | Approach | Best when |
 |---|---|

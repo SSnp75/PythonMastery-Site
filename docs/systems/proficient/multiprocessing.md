@@ -283,6 +283,8 @@ with mp.Pool(4) as pool:
 
 ## When to use what
 
+*Processes for CPU-bound, threads/async for I/O-bound — the decision rule.*
+
 | Need | Solution |
 |---|---|
 | I/O-bound parallelism | `threading` or `asyncio` |

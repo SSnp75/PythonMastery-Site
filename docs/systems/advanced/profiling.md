@@ -23,6 +23,8 @@ description: cProfile, line_profiler, py-spy, memory profiling and optimization 
 
 ## The optimization workflow
 
+*Measure, find the bottleneck, fix it, re-measure — never optimize blind.*
+
 ```
 1. Write correct code first
 2. Measure (profile) — find the bottleneck
@@ -234,6 +236,8 @@ Line #  Mem usage    Increment  Line Contents
 ---
 
 ## Scalene — CPU + memory + GPU profiler
+
+*A modern profiler that attributes CPU, memory, and GPU time by line.*
 
 ```bash
 pip install scalene

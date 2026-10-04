@@ -51,6 +51,8 @@ This is why GPUs dominate deep learning: training a neural network is billions o
 
 ## What a GPU kernel is
 
+*A function that runs in parallel across thousands of GPU threads.*
+
 A **kernel** is a small function that runs on the GPU, executed simultaneously by many threads, each handling a piece of the data. Traditionally you write kernels in **CUDA C++** — powerful but low-level and hard: you manage thread indices, memory tiers (global/shared/registers), and synchronization by hand.
 
 The challenge Triton addresses: CUDA is difficult and verbose, but the high-level frameworks (PyTorch) sometimes aren't fast enough for a custom operation. Triton is the middle ground.
@@ -58,6 +60,8 @@ The challenge Triton addresses: CUDA is difficult and verbose, but the high-leve
 ---
 
 ## Triton: kernels in Python
+
+*Write performant GPU kernels in Python-like syntax instead of CUDA C.*
 
 Triton lets you write GPU kernels in a Python-like syntax; it compiles them to efficient GPU code, handling much of the low-level complexity (memory coalescing, tiling) automatically. A vector-add kernel, in Triton's documented style:
 
@@ -81,6 +85,8 @@ Each program instance (block) handles a `BLOCK`-sized chunk of the arrays in par
 
 ## Where Triton fits
 
+*Custom ops for ML and numeric workloads needing peak GPU throughput.*
+
 Triton lives in the deep-learning performance world:
 
 - **Custom operations** — when PyTorch's built-in ops don't fuse or optimize the way you need, write a Triton kernel.
@@ -93,6 +99,8 @@ Most people benefit from Triton *indirectly* through `torch.compile`; writing ke
 ---
 
 ## The mental model shift
+
+*Think in parallel grids and memory tiles, not sequential loops.*
 
 Coming from CPU Python, GPU programming requires rethinking:
 

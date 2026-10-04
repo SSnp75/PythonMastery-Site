@@ -23,6 +23,8 @@ description: Producer-consumer, fan-out/fan-in, pipeline, backpressure and actor
 
 ## Pattern 1: Producer-Consumer
 
+*Decouple work generation from processing via a queue — the foundation of most concurrent designs.*
+
 Multiple producers generate work, multiple consumers process it.
 
 ```python
@@ -72,6 +74,8 @@ asyncio.run(main())
 ---
 
 ## Pattern 2: Fan-out / Fan-in
+
+*Split work across many workers, then gather results — for parallel map-style jobs.*
 
 Distribute work across workers, collect results.
 
@@ -127,6 +131,8 @@ asyncio.run(main())
 ---
 
 ## Pattern 3: Pipeline (staged processing)
+
+*Chain stages where each transforms and passes items on — for streaming data.*
 
 Each stage processes and passes to the next — like Unix pipes.
 
@@ -188,6 +194,8 @@ asyncio.run(main())
 
 ## Pattern 4: Backpressure
 
+*Slow producers when consumers fall behind so queues don't grow unbounded.*
+
 Prevent fast producers from overwhelming slow consumers:
 
 ```python
@@ -222,6 +230,8 @@ asyncio.run(main())
 
 ## Pattern 5: Throttle / Rate limiter
 
+*Cap the rate of operations to respect limits and protect downstreams.*
+
 ```python
 import asyncio
 import time
@@ -254,6 +264,8 @@ async def limited_request(url):
 ---
 
 ## Pattern 6: Circuit Breaker (async version)
+
+*Stop calling a failing dependency for a while so it can recover.*
 
 ```python
 import asyncio
@@ -302,6 +314,8 @@ class AsyncCircuitBreaker:
 ---
 
 ## Choosing the right pattern
+
+*Match the pattern to the workload's shape and failure modes.*
 
 | Scenario | Pattern |
 |---|---|

@@ -38,6 +38,8 @@ Most Python performance problems come from a handful of recurring mistakes. Reco
 
 ## Anti-pattern 1: string concatenation in a loop
 
+*`s += x` in a loop is O(n²); build a list and `join` instead.*
+
 Building a string with `+=` in a loop is **O(n²)** — each `+=` creates a whole new string (strings are immutable). Use `join` instead. Tested:
 
 ```python
@@ -68,6 +70,8 @@ Both produce the same 20,000-character string, but `join` is dramatically faster
 ---
 
 ## Anti-pattern 2: wrong data structure (list vs set for membership)
+
+*`x in list` is O(n); use a set for O(1) membership.*
 
 Checking `x in list` is **O(n)** — it scans every element. `x in set` is **O(1)**. If you test membership repeatedly, use a set. Tested:
 
@@ -103,6 +107,8 @@ The set is far faster for repeated membership tests. **Rule: if you check member
 
 ## Anti-pattern 3: recomputing inside a loop
 
+*Hoist invariant work out of the loop instead of redoing it each pass.*
+
 Computing the same value every iteration wastes work. Hoist invariants out:
 
 ```python
@@ -125,6 +131,8 @@ Attribute lookups (`some_object.threshold.value`) and function calls have real c
 
 ## Anti-pattern 4: needless allocation & copying
 
+*Avoid building throwaway intermediate lists; stream or reuse buffers.*
+
 Creating throwaway lists, or copying data you could iterate lazily, wastes memory and time:
 
 ```python
@@ -140,6 +148,8 @@ Dropping the brackets (`[...]` → `(...)`) turns a list comprehension into a **
 ---
 
 ## Anti-pattern 5: looping in Python over big numeric data
+
+*Vectorize with NumPy instead of per-element Python loops.*
 
 For heavy numeric work, a Python `for` loop is slow because each iteration runs interpreted bytecode. Push the loop into C — via builtins (`sum`, `map`) or, for real numeric arrays, **NumPy** (see [Vectorization](vectorization.md)):
 
@@ -158,6 +168,8 @@ Both give the same answer; the builtin version does the looping in optimized C. 
 ---
 
 ## The meta-lesson
+
+*Measure first, fix the real bottleneck, and prefer the right data structure.*
 
 | Anti-pattern | Fix |
 |---|---|

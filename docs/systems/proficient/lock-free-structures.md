@@ -78,6 +78,8 @@ The first CAS succeeds (cell was 0, becomes 5). The second **fails** because the
 
 ## The Python reality: the GIL
 
+*The GIL makes many Python operations effectively atomic, changing what lock-free means here.*
+
 Here's the crucial Python-specific truth: because of the **GIL** (see [Threading](threading.md)), only one thread executes Python bytecode at a time. This means:
 
 - Many single-bytecode operations are *effectively* atomic already (though relying on which ones is fragile and version-dependent).
@@ -89,6 +91,8 @@ The free-threaded (no-GIL) Python effort (see [Runtime Evolution](../../emerging
 ---
 
 ## The practical Python approach
+
+*Prefer `queue.Queue` and immutable messages over hand-rolled lock-free code.*
 
 For thread-safe data sharing in Python, **don't** hand-roll lock-free structures. Use the standard library's already-correct tools:
 
@@ -109,6 +113,8 @@ print(q.get())         # 1  — safe across threads, no manual locking
 ---
 
 ## When it actually matters
+
+*Rarely in pure Python; mostly in C extensions and other languages.*
 
 Lock-free techniques are genuinely important in:
 

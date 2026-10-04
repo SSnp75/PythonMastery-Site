@@ -152,6 +152,8 @@ print(custom_add(a, 2.0))  # [-1.0, 7.0, 1.0]
 
 ## @guvectorize — generalized ufuncs
 
+*Write array functions operating on sub-arrays, broadcast automatically.*
+
 ```python
 from numba import guvectorize, float64
 import numpy as np
@@ -226,6 +228,8 @@ def expensive_to_compile(x):
 
 ## Type signatures (ahead-of-time)
 
+*Specify types to compile up front and avoid first-call JIT lag.*
+
 ```python
 from numba import njit, int64, float64
 
@@ -253,6 +257,8 @@ def generic_sum(arr):
 
 ## Debugging Numba code
 
+*Techniques for diagnosing compile and type errors.*
+
 ```python
 from numba import njit
 
@@ -277,6 +283,8 @@ warnings.simplefilter("always", NumbaPendingDeprecationWarning)
 ---
 
 ## When to use Numba vs alternatives
+
+*Best for numeric hot loops; less so for general Python.*
 
 | Scenario | Best choice |
 |---|---|
