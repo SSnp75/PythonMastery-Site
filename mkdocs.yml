@@ -426,6 +426,7 @@ nav:
     - reference/cheatsheets.md
     - reference/generators-decorators-filter.md
     - reference/lambda-reduce-functions.md
+    - reference/asyncio-concurrency.md
     - reference/code-snippets.md
     - reference/templates.md
     - reference/tools.md
