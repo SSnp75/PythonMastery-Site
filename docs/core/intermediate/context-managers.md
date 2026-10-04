@@ -400,7 +400,11 @@ def single_use():
     print("teardown")
 
 cm = single_use()
-with cm: pass
+with cm:
+    print("inside")
+# setup
+# inside
+# teardown
 # with cm: pass   # ERROR — generator already exhausted
 ```
 
