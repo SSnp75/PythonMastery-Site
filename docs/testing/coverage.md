@@ -23,6 +23,8 @@ description: pytest-cov, branch coverage, mutation testing with mutmut and quali
 
 ## Code coverage with pytest-cov
 
+*Measure which lines/branches your tests actually execute, and surface the gaps.*
+
 ```bash
 pip install pytest-cov
 
@@ -71,6 +73,8 @@ def categorize(age):
 
 ## Coverage configuration
 
+*Tune what's measured and set a minimum threshold to fail CI when coverage drops.*
+
 ```toml
 # pyproject.toml
 [tool.coverage.run]
@@ -92,6 +96,8 @@ exclude_lines = [
 ---
 
 ## Mutation testing with mutmut
+
+*Mutate your code and check tests catch the change — a stronger signal than coverage that tests are meaningful.*
 
 Coverage tells you **what code runs**. Mutation testing tells you **if your tests would catch bugs**.
 

@@ -53,6 +53,8 @@ Hypothesis will test with hundreds of random lists including: empty, single elem
 
 ## Strategies — generating test data
 
+*Hypothesis `strategies` describe the space of inputs to generate — integers, text, lists, composites — so it can probe many cases.*
+
 ```python
 from hypothesis import strategies as st
 
@@ -87,6 +89,8 @@ def test_user_creation(user_data):
 ---
 
 ## Finding real bugs
+
+*Hypothesis shrinks a failing case to the smallest reproducer, pointing straight at the edge case your examples missed.*
 
 ```python
 from hypothesis import given

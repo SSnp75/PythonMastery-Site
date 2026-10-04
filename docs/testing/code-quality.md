@@ -22,6 +22,8 @@ description: ruff, mypy, black, isort, pre-commit hooks and enforcing standards
 
 ## The modern Python quality stack
 
+*The tools that keep a codebase consistent and correct — linter, formatter, type checker, pre-commit — working together.*
+
 | Tool | Purpose | Speed |
 |---|---|---|
 | **ruff** | Linter + formatter (replaces flake8, isort, black) | Extremely fast |
@@ -34,6 +36,8 @@ description: ruff, mypy, black, isort, pre-commit hooks and enforcing standards
 ---
 
 ## ruff — the all-in-one tool
+
+*An extremely fast linter and formatter that replaces flake8/isort/black for most projects.*
 
 ```bash
 pip install ruff
@@ -110,6 +114,8 @@ if isinstance(x, dict):
 
 ## mypy — static type checking
 
+*Catches type mismatches before runtime by checking your annotations; run it in CI.*
+
 ```bash
 pip install mypy
 mypy src/
@@ -153,6 +159,8 @@ def get_name(user) -> str:
 
 ## pre-commit — automate on every commit
 
+*Run linters/formatters/checks automatically on staged files so bad code never gets committed.*
+
 ```bash
 pip install pre-commit
 ```
@@ -192,6 +200,8 @@ pre-commit run --all-files # run on everything now
 ---
 
 ## CI integration
+
+*Enforce the whole quality stack on every push/PR so standards hold across the team.*
 
 ```yaml
 # .github/workflows/quality.yml

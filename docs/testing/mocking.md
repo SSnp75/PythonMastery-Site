@@ -34,6 +34,8 @@ Mocks replace real objects with controlled fakes so you can:
 
 ## The Mock object
 
+*A stand-in that records how it was called and returns whatever you configure — the basic unit of test isolation.*
+
 ```python
 from unittest.mock import Mock, MagicMock
 
@@ -57,6 +59,8 @@ print(result)   # "Alice"
 ---
 
 ## MagicMock — Mock with magic methods
+
+*A Mock that also supports dunder methods (`len`, iteration, context managers) — use when the real object is used with operators or `with`.*
 
 ```python
 from unittest.mock import MagicMock
@@ -88,6 +92,8 @@ print(data)   # "file contents"
 ---
 
 ## patch() — replace objects during tests
+
+*Temporarily swap a real object for a mock during a test, then restore it automatically — the workhorse for isolating dependencies.*
 
 ```python
 from unittest.mock import patch, MagicMock
@@ -158,6 +164,8 @@ def test_user_api(mock_api):
 
 ## side_effect — dynamic mock behavior
 
+*Make a mock raise, return different values per call, or run a function — for simulating errors and sequences.*
+
 ```python
 from unittest.mock import Mock, patch
 
@@ -190,6 +198,8 @@ with patch("services.requests.get", side_effect=fake_get):
 ---
 
 ## Assertions on mock calls
+
+*Verify the code under test called a dependency correctly — right method, right arguments, right number of times.*
 
 ```python
 from unittest.mock import Mock, call
@@ -224,6 +234,8 @@ assert call(99) not in mock.call_args_list
 
 ## patch.object — patch a method on a specific object
 
+*Patch a single attribute/method on a known object rather than by import path — handy when you already hold the object.*
+
 ```python
 from unittest.mock import patch
 
@@ -249,6 +261,8 @@ def test_get_user_name():
 
 ## patch.dict — temporarily modify dictionaries
 
+*Temporarily change a dict (like `os.environ`) for the duration of a test, then restore it.*
+
 ```python
 import os
 from unittest.mock import patch
@@ -264,6 +278,8 @@ def test_with_env_vars():
 ---
 
 ## Mocking async code
+
+*Use `AsyncMock` so awaiting a mocked coroutine works in async tests.*
 
 ```python
 from unittest.mock import AsyncMock, patch

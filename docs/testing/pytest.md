@@ -91,6 +91,8 @@ test_math_utils.py .....                                         [100%]
 
 ## Assertions — pytest magic
 
+*Just use `assert` — pytest rewrites it to show the actual values on failure, no special assert methods needed.*
+
 pytest rewrites `assert` statements to show detailed failure info:
 
 ```python
@@ -141,6 +143,8 @@ assert len(items) == 5
 ---
 
 ## Fixtures — setup and teardown
+
+*Reusable setup/teardown injected into tests by name — a DB connection, a temp dir, a logged-in client. Use scope to share expensive setup across tests.*
 
 ```python
 import pytest
@@ -211,6 +215,8 @@ def test_protected_route(auth_client):
 
 ## conftest.py — shared fixtures
 
+*Fixtures defined here are available to every test in the directory tree without importing — the place for cross-cutting setup like a test database or app client.*
+
 Place fixtures in `conftest.py` — automatically available to all tests in that directory:
 
 ```
@@ -240,6 +246,8 @@ def reset_database(db):
 ---
 
 ## Parametrize — multiple inputs, one test
+
+*Run the same test against many input/expected pairs — one function, many cases, each reported separately. The cleanest way to cover edge cases.*
 
 ```python
 import pytest
@@ -292,6 +300,8 @@ test_validation.py::test_email_validation[short_valid] PASSED
 
 ## Markers — categorize and filter tests
 
+*Tag tests (`@pytest.mark.slow`) to group, skip, xfail, or select subsets with `-m` — for fast local runs and slow CI suites.*
+
 ```python
 import pytest
 
@@ -343,6 +353,8 @@ markers = [
 
 ## Testing exceptions
 
+*Assert that code raises the right error with `pytest.raises`, optionally matching the message.*
+
 ```python
 import pytest
 
@@ -365,6 +377,8 @@ def test_raises_and_inspect():
 
 ## Testing output (capsys)
 
+*Capture and assert on what a function prints to stdout/stderr using the `capsys` fixture.*
+
 ```python
 def greet(name):
     print(f"Hello, {name}!")
@@ -380,6 +394,8 @@ def test_greet_output(capsys):
 
 ## Temporary files and directories (tmp_path)
 
+*Get a fresh temp directory per test via `tmp_path` — for tests that read/write files without polluting the repo.*
+
 ```python
 def test_write_and_read(tmp_path):
     # tmp_path is a pathlib.Path to a unique temporary directory
@@ -394,6 +410,8 @@ def test_write_and_read(tmp_path):
 ---
 
 ## Async tests
+
+*Test `async def` code with pytest-asyncio so coroutines actually run inside the test.*
 
 ```python
 import pytest
@@ -420,6 +438,8 @@ Requires: `pip install pytest-asyncio`
 ---
 
 ## Test organization best practices
+
+*Structure tests to mirror your package, keep them fast and independent, and name them for what they verify.*
 
 ```
 project/
@@ -458,6 +478,8 @@ markers = [
 ---
 
 ## Useful plugins
+
+*Extend pytest with plugins — coverage, mocking, async, parallelism — for richer workflows.*
 
 | Plugin | Purpose |
 |---|---|

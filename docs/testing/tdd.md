@@ -23,6 +23,8 @@ description: Red-green-refactor cycle, design benefits and TDD workflow
 
 ## The TDD cycle
 
+*Red → green → refactor: write a failing test, make it pass simply, then clean up with the test as a safety net.*
+
 ```
 ┌──────────────────────────────────────────────┐
 │  1. RED    — Write a failing test            │
@@ -36,6 +38,8 @@ Each cycle takes **1-5 minutes**. You always have working code.
 ---
 
 ## TDD walkthrough: building a Stack
+
+*A worked example of the cycle in action — growing a small class one test at a time.*
 
 ### Cycle 1: push and peek
 
@@ -166,6 +170,8 @@ Tests still pass after refactoring — confidence!
 
 ## TDD benefits
 
+*Why it pays off: clearer design, built-in regression tests, and confidence to refactor.*
+
 | Benefit | How |
 |---|---|
 | **Design feedback** | Hard-to-test code = bad design. TDD forces simple interfaces. |
@@ -177,6 +183,8 @@ Tests still pass after refactoring — confidence!
 ---
 
 ## TDD anti-patterns to avoid
+
+*Common traps — testing implementation details, giant tests, skipping the refactor step.*
 
 !!! warning "Don't do these"
 
