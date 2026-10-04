@@ -15,6 +15,12 @@ description: Add new syntax to Python — grammar files, parser generation and t
 
 ---
 
+!!! info "When you'd use this"
+    Add new syntax to Python — grammar files, parser generation and the tradeoffs.
+
+    Experiment with adding syntax to Python by editing its grammar and regenerating the parser.
+
+
 ## What you'll learn
 
 - [x] How Python's grammar becomes a parser

@@ -14,6 +14,12 @@ description: OAuth2 authorization code flow, Google/GitHub login and Single Sign
 
 ---
 
+!!! info "When you'd use this"
+    OAuth2 authorization code flow, Google/GitHub login and Single Sign-On.
+
+    Let users sign in with Google/GitHub and delegate access safely via OAuth2/SSO flows.
+
+
 ## OAuth2 Authorization Code Flow
 
 ```

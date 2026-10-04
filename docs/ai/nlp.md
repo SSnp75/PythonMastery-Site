@@ -15,6 +15,12 @@ description: Tokenization, text preprocessing, spaCy, transformers and text clas
 
 ---
 
+!!! info "When you'd use this"
+    Tokenization, text preprocessing, spaCy, transformers and text classification.
+
+    Process and analyze natural language — tokenization, classification, extraction — for text-heavy applications.
+
+
 ## Text preprocessing pipeline
 
 ```python

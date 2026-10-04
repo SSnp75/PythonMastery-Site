@@ -15,6 +15,12 @@ description: Geospatial analysis and mapping with Python, GeoPandas and Shapely
 
 ---
 
+!!! info "When you'd use this"
+    Geospatial analysis and mapping with Python, GeoPandas and Shapely.
+
+    Work with geospatial data — maps, coordinates, spatial queries — for location-aware applications.
+
+
 ## What you'll learn
 
 - [x] What GIS and geospatial data are

@@ -14,6 +14,12 @@ description: GitHub Actions, automated testing, deployment and release workflows
 
 ---
 
+!!! info "When you'd use this"
+    GitHub Actions, automated testing, deployment and release workflows.
+
+    Automate testing and deployment on every push — lint, test, build, ship — so releases are fast and safe.
+
+
 ## GitHub Actions — complete pipeline
 
 ```yaml

@@ -14,6 +14,12 @@ description: Real-time bidirectional communication with websockets library and F
 
 ---
 
+!!! info "When you'd use this"
+    Real-time bidirectional communication with websockets library and FastAPI.
+
+    Add real-time two-way communication — chat, live dashboards, notifications — over a persistent connection.
+
+
 ## Server with the `websockets` library
 
 ```python

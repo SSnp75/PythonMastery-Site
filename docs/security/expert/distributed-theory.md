@@ -14,6 +14,12 @@ description: CAP theorem, consistency models, Raft consensus, vector clocks and 
 
 ---
 
+!!! info "When you'd use this"
+    CAP theorem, consistency models, Raft consensus, vector clocks and partition handling.
+
+    Reason about the guarantees and limits of distributed systems — consensus, CAP, failure models — before designing one.
+
+
 ## CAP Theorem
 
 In a distributed system with network partitions, you can guarantee at most **two of three**:

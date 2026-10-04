@@ -15,6 +15,12 @@ description: Foundational and current papers worth reading on Python internals, 
 
 ---
 
+!!! info "When you'd use this"
+    Foundational and current papers worth reading on Python internals, JITs, distributed systems and ML.
+
+    Follow research that influences Python and its ecosystem — compilers, runtimes, ML systems.
+
+
 ## What you'll learn
 
 - [x] Why reading papers is worth it

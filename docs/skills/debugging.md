@@ -14,6 +14,12 @@ description: Systematic debugging, scientific method, rubber duck and common bug
 
 ---
 
+!!! info "When you'd use this"
+    Systematic debugging, scientific method, rubber duck and common bug patterns.
+
+    Debug systematically — reproduce, isolate, hypothesize, verify — instead of changing things at random.
+
+
 ## The scientific method for debugging
 
 ```

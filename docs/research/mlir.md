@@ -15,6 +15,12 @@ description: Lower Python to MLIR — multi-level IR, dialects and modern compil
 
 ---
 
+!!! info "When you'd use this"
+    Lower Python to MLIR — multi-level IR, dialects and modern compiler stacks.
+
+    Represent programs at multiple abstraction levels for ML/accelerator compilers — the stack behind JAX/XLA and PyTorch backends.
+
+
 ## What you'll learn
 
 - [x] What MLIR is and how it differs from LLVM IR

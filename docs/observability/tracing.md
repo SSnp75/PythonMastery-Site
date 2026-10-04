@@ -14,6 +14,12 @@ description: OpenTelemetry, spans, trace context propagation and debugging distr
 
 ---
 
+!!! info "When you'd use this"
+    OpenTelemetry, spans, trace context propagation and debugging distributed systems.
+
+    Trace a single request across functions and services to pinpoint where time and errors occur.
+
+
 ## What is distributed tracing?
 
 When a request passes through multiple services, tracing shows the full journey:

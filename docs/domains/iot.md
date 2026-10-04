@@ -15,6 +15,12 @@ description: Collect sensor data, message with MQTT, and run on edge devices
 
 ---
 
+!!! info "When you'd use this"
+    Collect sensor data, message with MQTT, and run on edge devices.
+
+    Connect and control IoT devices — sensors, actuators, telemetry — and move data to the cloud.
+
+
 ## What you'll learn
 
 - [x] The shape of an IoT system

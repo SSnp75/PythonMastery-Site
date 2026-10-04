@@ -15,6 +15,12 @@ description: OpenAI, Anthropic, local models, structured output, streaming and p
 
 ---
 
+!!! info "When you'd use this"
+    OpenAI, Anthropic, local models, structured output, streaming and production patterns.
+
+    Call LLM APIs (OpenAI, Anthropic) from Python — prompts, streaming, tools, structured output — to build AI features.
+
+
 ## OpenAI API
 
 ```python

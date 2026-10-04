@@ -14,6 +14,12 @@ description: Designing scalable systems — architecture patterns, trade-offs an
 
 ---
 
+!!! info "When you'd use this"
+    Designing scalable systems — architecture patterns, trade-offs and interview preparation.
+
+    Reason about building systems at scale — requirements, tradeoffs, components — for design interviews and real architecture.
+
+
 ## The system design framework
 
 ```

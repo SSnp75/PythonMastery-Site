@@ -15,6 +15,12 @@ description: Adapt pre-trained models to your data — OpenAI fine-tuning, LoRA,
 
 ---
 
+!!! info "When you'd use this"
+    Adapt pre-trained models to your data — OpenAI fine-tuning, LoRA, QLoRA and PEFT.
+
+    Adapt a pretrained model to your task/data with fine-tuning or LoRA when prompting alone isn't enough.
+
+
 ## When to fine-tune vs prompt engineering
 
 | Approach | Best for | Cost |

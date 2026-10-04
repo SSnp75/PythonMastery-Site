@@ -15,6 +15,12 @@ description: Compile Python to LLVM IR for native-speed execution
 
 ---
 
+!!! info "When you'd use this"
+    Compile Python to LLVM IR for native-speed execution.
+
+    Lower Python to LLVM IR to generate optimized native code — the compilation path used by Numba and others.
+
+
 ## What you'll learn
 
 - [x] What LLVM and LLVM IR are

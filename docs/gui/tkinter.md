@@ -14,6 +14,12 @@ description: Built-in GUI toolkit — windows, widgets, layouts and event handli
 
 ---
 
+!!! info "When you'd use this"
+    Built-in GUI toolkit — windows, widgets, layouts and event handling.
+
+    Build simple cross-platform desktop GUIs with Python's built-in toolkit — no extra dependencies.
+
+
 ## Basic window
 
 ```python

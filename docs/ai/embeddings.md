@@ -15,6 +15,12 @@ description: Text embeddings, similarity search, ChromaDB, Pinecone, pgvector an
 
 ---
 
+!!! info "When you'd use this"
+    Text embeddings, similarity search, ChromaDB, Pinecone, pgvector and semantic search.
+
+    Turn text into vectors and search them by meaning — the basis of semantic search, RAG, and recommendations.
+
+
 ## What are embeddings?
 
 Embeddings are **dense vector representations** of text (or images, audio) where semantically similar items are close in vector space.

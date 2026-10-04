@@ -14,6 +14,12 @@ description: ruff, mypy, black, isort, pre-commit hooks and enforcing standards
 
 ---
 
+!!! info "When you'd use this"
+    ruff, mypy, black, isort, pre-commit hooks and enforcing standards.
+
+    Enforce consistent, correct code automatically with linters, formatters, and type checkers (ruff, black, mypy) in CI.
+
+
 ## The modern Python quality stack
 
 | Tool | Purpose | Speed |

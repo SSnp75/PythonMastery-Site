@@ -14,6 +14,12 @@ description: Recursive thinking, backtracking patterns, memoization and tree rec
 
 ---
 
+!!! info "When you'd use this"
+    Recursive thinking, backtracking patterns, memoization and tree recursion.
+
+    Solve problems defined in terms of themselves — trees, backtracking, divide-and-conquer — with a clear base case.
+
+
 ## Recursion fundamentals
 
 ```python

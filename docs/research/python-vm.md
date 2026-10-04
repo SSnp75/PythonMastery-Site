@@ -15,6 +15,12 @@ description: Implement a bytecode virtual machine from scratch that executes Pyt
 
 ---
 
+!!! info "When you'd use this"
+    Implement a bytecode virtual machine from scratch that executes Python .pyc files.
+
+    Build a toy virtual machine to deeply understand how a bytecode interpreter executes code.
+
+
 ## Architecture of a Python VM
 
 ```

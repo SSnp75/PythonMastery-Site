@@ -15,6 +15,12 @@ description: New syntax and standard-library additions across recent Python vers
 
 ---
 
+!!! info "When you'd use this"
+    New syntax and standard-library additions across recent Python versions.
+
+    Stay current with newly added language features so you write modern Python and adopt improvements early.
+
+
 ## What you'll learn
 
 - [x] Structural pattern matching (`match`)

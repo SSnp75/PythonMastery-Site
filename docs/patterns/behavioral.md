@@ -14,6 +14,12 @@ description: Observer, Strategy, Command, State Machine, Chain of Responsibility
 
 ---
 
+!!! info "When you'd use this"
+    Observer, Strategy, Command, State Machine, Chain of Responsibility and Iterator.
+
+    Organize how objects collaborate — strategy, observer, state — to make behavior flexible and swappable.
+
+
 ## Observer — publish/subscribe
 
 ```python

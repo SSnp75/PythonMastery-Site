@@ -15,6 +15,12 @@ description: OpenCV, image processing, object detection, YOLO and image classifi
 
 ---
 
+!!! info "When you'd use this"
+    OpenCV, image processing, object detection, YOLO and image classification.
+
+    Work with images — detection, classification, segmentation — using Python vision libraries and models.
+
+
 ## OpenCV basics
 
 ```python

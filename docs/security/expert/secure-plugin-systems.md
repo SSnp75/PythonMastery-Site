@@ -15,6 +15,12 @@ description: Safely loading and running third-party plugins with isolation and t
 
 ---
 
+!!! info "When you'd use this"
+    Safely loading and running third-party plugins with isolation and trust boundaries.
+
+    Load third-party plugins without letting them compromise the host — permissions, isolation, and validation.
+
+
 ## What you'll learn
 
 - [x] The core plugin security problem

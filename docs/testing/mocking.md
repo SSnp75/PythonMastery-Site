@@ -15,6 +15,12 @@ description: unittest.mock, MagicMock, patch, side_effect and testing in isolati
 
 ---
 
+!!! info "When you'd use this"
+    unittest.mock, MagicMock, patch, side_effect and testing in isolation.
+
+    Isolate the code under test by replacing dependencies (APIs, DBs, time) with mocks so tests are fast and deterministic.
+
+
 ## Why mock?
 
 Mocks replace real objects with controlled fakes so you can:

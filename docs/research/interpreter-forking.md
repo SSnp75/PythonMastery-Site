@@ -15,6 +15,12 @@ description: Fork and modify CPython — custom builds, new opcodes and experime
 
 ---
 
+!!! info "When you'd use this"
+    Fork and modify CPython — custom builds, new opcodes and experimental runtimes.
+
+    Fork or embed the CPython interpreter to customize language behavior for research or specialized runtimes.
+
+
 ## What you'll learn
 
 - [x] What forking the interpreter means and why people do it

@@ -14,6 +14,12 @@ description: BFS, DFS, Dijkstra, topological sort and shortest path algorithms
 
 ---
 
+!!! info "When you'd use this"
+    BFS, DFS, Dijkstra, topological sort and shortest path algorithms.
+
+    Model and traverse networks — BFS/DFS, shortest paths — for routing, dependencies, and relationship problems.
+
+
 ## Graph representation
 
 ```python

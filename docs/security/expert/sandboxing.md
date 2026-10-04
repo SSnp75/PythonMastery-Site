@@ -14,6 +14,12 @@ description: RestrictedPython, seccomp, containers, resource limits and safe cod
 
 ---
 
+!!! info "When you'd use this"
+    RestrictedPython, seccomp, containers, resource limits and safe code execution.
+
+    Run untrusted code with restricted privileges to contain what it can do — for plugins, user scripts, and online judges.
+
+
 ## Why sandbox?
 
 When executing **untrusted code** (user submissions, plugins, REPL), you need to prevent:

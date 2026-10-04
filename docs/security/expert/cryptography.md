@@ -14,6 +14,12 @@ description: Hashing, symmetric/asymmetric encryption, digital signatures, TLS a
 
 ---
 
+!!! info "When you'd use this"
+    Hashing, symmetric/asymmetric encryption, digital signatures, TLS and secure communication.
+
+    Protect data correctly — hashing passwords, symmetric/asymmetric encryption, signatures — using vetted libraries, never rolling your own.
+
+
 ## Hashing — one-way functions
 
 ```python

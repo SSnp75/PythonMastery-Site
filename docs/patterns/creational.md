@@ -15,6 +15,12 @@ description: Factory, Builder, Singleton, Prototype and Abstract Factory in Pyth
 
 ---
 
+!!! info "When you'd use this"
+    Factory, Builder, Singleton, Prototype and Abstract Factory in Python.
+
+    Control how objects are created — factories, builders, singletons — when construction logic is complex or should be centralized.
+
+
 ## Factory Method
 
 Create objects without specifying the exact class — let subclasses decide.

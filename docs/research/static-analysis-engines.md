@@ -15,6 +15,12 @@ description: Analyze code without running it — AST walking, control flow and d
 
 ---
 
+!!! info "When you'd use this"
+    Analyze code without running it — AST walking, control flow and data flow.
+
+    Analyze code without running it — linters, type checkers, and security scanners built on the AST.
+
+
 ## What you'll learn
 
 - [x] What static analysis is and why it matters

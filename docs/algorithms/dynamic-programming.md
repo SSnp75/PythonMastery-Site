@@ -14,6 +14,12 @@ description: Memoization, tabulation, common DP patterns and problem-solving app
 
 ---
 
+!!! info "When you'd use this"
+    Memoization, tabulation, common DP patterns and problem-solving approach.
+
+    Avoid recomputation by caching subproblem results — for optimization problems with overlapping subproblems.
+
+
 ## The DP approach
 
 1. Define the **subproblem** (what are we computing?)

@@ -15,6 +15,12 @@ description: Analyze biological sequences and genomic data with Python and BioPy
 
 ---
 
+!!! info "When you'd use this"
+    Analyze biological sequences and genomic data with Python and BioPython.
+
+    Analyze biological data — sequences, genomics, structures — with Python tooling.
+
+
 ## What you'll learn
 
 - [x] Working with DNA/RNA/protein sequences

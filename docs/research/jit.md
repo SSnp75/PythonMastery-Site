@@ -15,6 +15,12 @@ description: Tracing JIT design, type specialization, guard insertion and LLVM b
 
 ---
 
+!!! info "When you'd use this"
+    Tracing JIT design, type specialization, guard insertion and LLVM backend.
+
+    Build a JIT compiler to turn hot code into machine code at runtime — the core idea behind PyPy and Numba.
+
+
 ## What is a JIT compiler?
 
 A JIT (Just-In-Time) compiler translates bytecode to native machine code **at runtime**, specializing for the actual types and values observed.

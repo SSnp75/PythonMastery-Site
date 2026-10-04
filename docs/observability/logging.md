@@ -14,6 +14,12 @@ description: stdlib logging, structlog, loguru, structured logging and log aggre
 
 ---
 
+!!! info "When you'd use this"
+    stdlib logging, structlog, loguru, structured logging and log aggregation.
+
+    Record what your app does with structured, leveled logs — the first tool you reach for when debugging production.
+
+
 ## stdlib logging — the foundation
 
 ```python

@@ -14,6 +14,12 @@ description: Environment variables, HashiCorp Vault, AWS Secrets Manager and sec
 
 ---
 
+!!! info "When you'd use this"
+    Environment variables, HashiCorp Vault, AWS Secrets Manager and secure configuration.
+
+    Store and access credentials safely — vaults, env vars, rotation — so secrets never end up in code or logs.
+
+
 ## The rules
 
 1. **NEVER** hardcode secrets in source code

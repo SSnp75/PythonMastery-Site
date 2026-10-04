@@ -15,6 +15,12 @@ description: Compute on encrypted data without ever decrypting it
 
 ---
 
+!!! info "When you'd use this"
+    Compute on encrypted data without ever decrypting it.
+
+    Run computations directly on encrypted data — for privacy-critical processing where data can't be decrypted.
+
+
 ## What you'll learn
 
 - [x] What homomorphic encryption enables

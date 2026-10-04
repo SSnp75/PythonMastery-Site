@@ -15,6 +15,12 @@ description: Control, sensing and motion planning with Python and ROS
 
 ---
 
+!!! info "When you'd use this"
+    Control, sensing and motion planning with Python and ROS.
+
+    Program robots — perception, control, planning — often via ROS and Python.
+
+
 ## What you'll learn
 
 - [x] The sense-plan-act loop

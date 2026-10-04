@@ -15,6 +15,12 @@ description: Making Python harder to reverse-engineer — techniques, limits and
 
 ---
 
+!!! info "When you'd use this"
+    Making Python harder to reverse-engineer — techniques, limits and honest reality.
+
+    Understand how Python bytecode is obfuscated (and its limits) for IP protection and reverse-engineering awareness.
+
+
 ## What you'll learn
 
 - [x] Why people obfuscate Python

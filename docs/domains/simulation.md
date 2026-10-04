@@ -15,6 +15,12 @@ description: Model complex systems with agent-based and discrete-event simulatio
 
 ---
 
+!!! info "When you'd use this"
+    Model complex systems with agent-based and discrete-event simulation.
+
+    Model and simulate real-world systems — physics, agents, queues — to study behavior without the real thing.
+
+
 ## What you'll learn
 
 - [x] The main simulation styles

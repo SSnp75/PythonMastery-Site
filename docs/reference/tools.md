@@ -15,6 +15,12 @@ description: The Python toolbox — editors, linters, formatters, type checkers,
 
 ---
 
+!!! info "When you'd use this"
+    The Python toolbox — editors, linters, formatters, type checkers, profilers and CI.
+
+    Find the right tool for a job — linters, formatters, profilers, package managers — with what each is for.
+
+
 A practical map of the tools that make Python development productive. Where the field has a clear modern default, it's noted.
 
 ---

@@ -14,6 +14,12 @@ description: JSON Web Tokens, access/refresh tokens, middleware and secure imple
 
 ---
 
+!!! info "When you'd use this"
+    JSON Web Tokens, access/refresh tokens, middleware and secure implementation.
+
+    Authenticate API requests with signed, stateless JWT tokens instead of server-side sessions.
+
+
 ## How JWT works
 
 ```

@@ -15,6 +15,12 @@ description: Reusable starting points — project layout, notes, experiment logs
 
 ---
 
+!!! info "When you'd use this"
+    Reusable starting points — project layout, notes, experiment logs and ADRs.
+
+    Start new projects/files from ready-made scaffolds — pyproject, CI, Dockerfile, module boilerplate.
+
+
 Reusable starting points so you don't reinvent structure every time. Copy, adapt, keep what helps.
 
 ---

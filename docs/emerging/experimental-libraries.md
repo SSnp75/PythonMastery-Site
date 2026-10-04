@@ -15,6 +15,12 @@ description: New and prototype tools worth watching — and how to evaluate them
 
 ---
 
+!!! info "When you'd use this"
+    New and prototype tools worth watching — and how to evaluate them.
+
+    Keep an eye on promising new libraries and tools before they become mainstream.
+
+
 ## What you'll learn
 
 - [x] Notable newer tools reshaping Python workflows

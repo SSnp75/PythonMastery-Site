@@ -15,6 +15,12 @@ description: Saga, event sourcing, CQRS, outbox pattern and distributed transact
 
 ---
 
+!!! info "When you'd use this"
+    Saga, event sourcing, CQRS, outbox pattern and distributed transactions.
+
+    Apply resilience patterns (circuit breakers, retries, bulkheads) so one failing service doesn't cascade across the system.
+
+
 ## Event Sourcing
 
 Instead of storing current state, store all **events** that led to the current state.

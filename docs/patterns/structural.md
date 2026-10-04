@@ -14,6 +14,12 @@ description: Adapter, Decorator, Facade, Proxy, Composite and Bridge in Python
 
 ---
 
+!!! info "When you'd use this"
+    Adapter, Decorator, Facade, Proxy, Composite and Bridge in Python.
+
+    Compose objects into larger structures — adapters, decorators, facades — to fit interfaces together and simplify complex subsystems.
+
+
 ## Adapter — make incompatible interfaces work together
 
 ```python

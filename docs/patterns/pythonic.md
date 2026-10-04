@@ -14,6 +14,12 @@ description: Python-specific patterns that differ from traditional GoF — proto
 
 ---
 
+!!! info "When you'd use this"
+    Python-specific patterns that differ from traditional GoF — protocols, mixins, descriptors, context managers as patterns.
+
+    Use Python's own idioms (duck typing, context managers, generators) instead of porting verbose patterns from other languages.
+
+
 ## Why Python patterns differ from GoF
 
 The Gang of Four patterns were designed for C++ and Java — languages with:

@@ -14,6 +14,12 @@ description: Active Python Enhancement Proposals, upcoming features and CPython 
 
 ---
 
+!!! info "When you'd use this"
+    Active Python Enhancement Proposals, upcoming features and CPython roadmap.
+
+    Follow how Python evolves by tracking PEPs — understanding upcoming features and the language's direction.
+
+
 ## Notable PEPs by Python version
 
 ### Python 3.13 (2024)

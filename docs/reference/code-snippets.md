@@ -15,6 +15,12 @@ description: Reusable, copy-paste Python snippets for common tasks
 
 ---
 
+!!! info "When you'd use this"
+    Reusable, copy-paste Python snippets for common tasks.
+
+    Grab small, copy-paste-ready solutions for common tasks instead of rewriting them each time.
+
+
 A curated collection of small, reusable Python snippets for tasks you hit again and again. Every snippet here uses the **standard library** and has been verified to run.
 
 ---

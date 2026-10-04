@@ -14,6 +14,12 @@ description: Prometheus, StatsD, Grafana dashboards and application metrics
 
 ---
 
+!!! info "When you'd use this"
+    Prometheus, StatsD, Grafana dashboards and application metrics.
+
+    Track numeric health signals (latency, throughput, errors) and alert on them to know how a system behaves over time.
+
+
 ## Prometheus metrics with Python
 
 ```python

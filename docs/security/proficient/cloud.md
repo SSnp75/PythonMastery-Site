@@ -15,6 +15,12 @@ description: boto3 (AWS), Azure SDK, GCP, serverless and cloud-native Python
 
 ---
 
+!!! info "When you'd use this"
+    boto3 (AWS), Azure SDK, GCP, serverless and cloud-native Python.
+
+    Manage cloud resources programmatically (AWS/GCP/Azure SDKs) — provisioning, serverless, and automation.
+
+
 ## AWS with boto3
 
 ```python

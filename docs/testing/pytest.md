@@ -15,6 +15,12 @@ description: Fixtures, parametrize, markers, plugins, conftest and test organiza
 
 ---
 
+!!! info "When you'd use this"
+    Fixtures, parametrize, markers, plugins, conftest and test organization.
+
+    Write and organize tests with minimal boilerplate — fixtures, parametrization, and plugins — the de-facto standard for Python testing.
+
+
 ## Why pytest?
 
 - Minimal boilerplate — just use `assert`

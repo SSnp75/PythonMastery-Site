@@ -15,6 +15,12 @@ description: Pods, deployments, services, config maps and Python apps on K8s
 
 ---
 
+!!! info "When you'd use this"
+    Pods, deployments, services, config maps and Python apps on K8s.
+
+    Run and scale containerized apps across a cluster with self-healing, rollouts, and service discovery.
+
+
 ## Core concepts
 
 | Resource | What it does |

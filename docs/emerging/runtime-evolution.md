@@ -15,6 +15,12 @@ description: How CPython is changing — the GIL, free-threading, subinterpreter
 
 ---
 
+!!! info "When you'd use this"
+    How CPython is changing — the GIL, free-threading, subinterpreters and faster CPython.
+
+    Track how CPython itself is getting faster (the Faster CPython work) and what it means for your code.
+
+
 ## What you'll learn
 
 - [x] What the GIL is and why it's being removed

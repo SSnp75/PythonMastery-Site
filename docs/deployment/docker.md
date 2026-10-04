@@ -14,6 +14,12 @@ description: Dockerfiles, multi-stage builds, docker-compose and container best 
 
 ---
 
+!!! info "When you'd use this"
+    Dockerfiles, multi-stage builds, docker-compose and container best practices.
+
+    Package an app and its dependencies into a reproducible container that runs the same everywhere.
+
+
 ## Dockerfile for Python apps
 
 ```dockerfile

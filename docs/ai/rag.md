@@ -15,6 +15,12 @@ description: Build systems that ground LLM responses in your own data — chunki
 
 ---
 
+!!! info "When you'd use this"
+    Build systems that ground LLM responses in your own data — chunking, embeddings, retrieval and generation.
+
+    Ground an LLM in your own documents — retrieve relevant chunks and feed them as context — to reduce hallucination and answer from private data.
+
+
 ## What is RAG?
 
 RAG combines retrieval (search your documents) with generation (LLM produces answer) so the model responds using **your data** instead of hallucinating.

@@ -15,6 +15,12 @@ description: Hypothesis library, strategies, stateful testing and finding edge c
 
 ---
 
+!!! info "When you'd use this"
+    Hypothesis library, strategies, stateful testing and finding edge cases automatically.
+
+    Let Hypothesis generate many inputs to find edge cases your example tests miss.
+
+
 ## What is property-based testing?
 
 Instead of writing specific test cases, you describe **properties** that should always hold, and the framework generates hundreds of random inputs to find violations.

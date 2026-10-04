@@ -15,6 +15,12 @@ description: Qubits, quantum circuits and algorithms with Python and Qiskit
 
 ---
 
+!!! info "When you'd use this"
+    Qubits, quantum circuits and algorithms with Python and Qiskit.
+
+    Explore quantum algorithms and simulation with Python SDKs like Qiskit.
+
+
 ## What you'll learn
 
 - [x] What a qubit is (and how it differs from a bit)

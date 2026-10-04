@@ -15,6 +15,12 @@ description: Red-green-refactor cycle, design benefits and TDD workflow
 
 ---
 
+!!! info "When you'd use this"
+    Red-green-refactor cycle, design benefits and TDD workflow.
+
+    Drive design by writing the test first — red/green/refactor — for well-specified, regression-proof code.
+
+
 ## The TDD cycle
 
 ```

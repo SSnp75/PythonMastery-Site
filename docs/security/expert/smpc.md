@@ -15,6 +15,12 @@ description: Secure multiparty computation — compute on data without revealing
 
 ---
 
+!!! info "When you'd use this"
+    Secure multiparty computation — compute on data without revealing it.
+
+    Compute on data split across parties without revealing it — for privacy-preserving analytics and collaboration.
+
+
 ## What you'll learn
 
 - [x] What SMPC enables

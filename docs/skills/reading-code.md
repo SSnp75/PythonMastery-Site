@@ -14,6 +14,12 @@ description: Strategies for understanding unfamiliar codebases efficiently
 
 ---
 
+!!! info "When you'd use this"
+    Strategies for understanding unfamiliar codebases efficiently.
+
+    Get productive in an unfamiliar codebase fast — strategies for tracing, mapping, and understanding code you didn't write.
+
+
 ## The systematic approach
 
 ### 1. Start from the entry point

@@ -14,6 +14,12 @@ description: TCP/UDP from scratch, client/server patterns and low-level networki
 
 ---
 
+!!! info "When you'd use this"
+    TCP/UDP from scratch, client/server patterns and low-level networking.
+
+    Build network programs at the TCP/UDP level — custom protocols, clients, and servers — when higher-level libraries don't fit.
+
+
 ## TCP server and client
 
 ```python

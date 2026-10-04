@@ -15,6 +15,12 @@ description: Trusted execution environments for protecting code and data in use
 
 ---
 
+!!! info "When you'd use this"
+    Trusted execution environments for protecting code and data in use.
+
+    Protect data in use with hardware-isolated enclaves for high-assurance workloads.
+
+
 ## What you'll learn
 
 - [x] What a secure enclave / TEE is

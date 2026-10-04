@@ -15,6 +15,12 @@ description: Build games with Pygame — game loops, input, and simple physics
 
 ---
 
+!!! info "When you'd use this"
+    Build games with Pygame — game loops, input, and simple physics.
+
+    Build games and interactive graphics in Python with engines like pygame.
+
+
 ## What you'll learn
 
 - [x] The game loop — the heart of every game

@@ -15,6 +15,12 @@ description: Time series, returns, risk and backtesting with Python
 
 ---
 
+!!! info "When you'd use this"
+    Time series, returns, risk and backtesting with Python.
+
+    Apply Python to finance — time series, backtesting, risk, quantitative analysis.
+
+
 ## What you'll learn
 
 - [x] Core financial math (compound interest, returns)

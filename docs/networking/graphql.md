@@ -14,6 +14,12 @@ description: Schema definition, resolvers, queries, mutations and Strawberry fra
 
 ---
 
+!!! info "When you'd use this"
+    Schema definition, resolvers, queries, mutations and Strawberry framework.
+
+    Expose a flexible query API where clients request exactly the fields they need — reducing over- and under-fetching.
+
+
 ## GraphQL with Strawberry (Python-native)
 
 ```python

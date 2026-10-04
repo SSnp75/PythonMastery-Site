@@ -15,6 +15,12 @@ description: pytest-cov, branch coverage, mutation testing with mutmut and quali
 
 ---
 
+!!! info "When you'd use this"
+    pytest-cov, branch coverage, mutation testing with mutmut and quality gates.
+
+    Measure which code your tests actually exercise, and use mutation testing to check the tests are meaningful.
+
+
 ## Code coverage with pytest-cov
 
 ```bash

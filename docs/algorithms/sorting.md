@@ -14,6 +14,12 @@ description: Comparison sorts, binary search, merge sort, quick sort and complex
 
 ---
 
+!!! info "When you'd use this"
+    Comparison sorts, binary search, merge sort, quick sort and complexity analysis.
+
+    Sort and search efficiently, and know when to lean on Python's built-ins versus a custom approach — a staple of interviews and performance work.
+
+
 ## Binary search — O(log n)
 
 ```python

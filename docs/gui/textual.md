@@ -14,6 +14,12 @@ description: Modern terminal user interfaces — rich widgets, CSS styling and a
 
 ---
 
+!!! info "When you'd use this"
+    Modern terminal user interfaces — rich widgets, CSS styling and async.
+
+    Build rich text-based user interfaces that run in the terminal — for dev tools and SSH-friendly apps.
+
+
 ## What is Textual?
 
 Textual builds beautiful terminal applications with CSS-like styling, mouse support and rich widgets — like a web framework for the terminal.

@@ -15,6 +15,12 @@ description: Docker SDK, Fabric, infrastructure automation, CI/CD and subprocess
 
 ---
 
+!!! info "When you'd use this"
+    Docker SDK, Fabric, infrastructure automation, CI/CD and subprocess management.
+
+    Automate infrastructure and deployments from Python — provisioning, config, and glue scripts across your toolchain.
+
+
 ## subprocess — running system commands
 
 ```python
