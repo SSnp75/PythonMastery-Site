@@ -43,7 +43,7 @@ pip install -r requirements.txt
 ```toml
 [build-system]
 requires = ["setuptools>=68.0"]
-build-backend = "setuptools.backends._legacy:_Backend"
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "mypackage"
@@ -77,13 +77,34 @@ mypackage/
 
 ---
 
+## uv — the fast modern workflow
+
+[`uv`](https://docs.astral.sh/uv/) is a fast, all-in-one package and project manager that
+replaces most `pip` + `venv` + `pip-tools` workflows:
+
+```bash
+uv init myproject          # scaffold a project with pyproject.toml
+uv add requests            # add a dependency and update the lockfile
+uv add --dev pytest ruff   # add dev dependencies
+uv run pytest              # run inside the managed environment
+uv sync                    # install exactly what the lockfile pins
+uv lock                    # regenerate uv.lock
+```
+
+`uv` creates and manages the virtual environment for you, and `uv.lock` gives reproducible
+installs across machines.
+
+---
+
 ## Publishing to PyPI
 
 ```bash
 pip install build twine
-python -m build
-twine upload dist/*
+python -m build            # produces dist/*.whl and dist/*.tar.gz
+twine upload dist/*        # upload to PyPI (use test.pypi.org first)
 ```
+
+With `uv` you can instead run `uv build` and `uv publish`.
 
 ---
 
