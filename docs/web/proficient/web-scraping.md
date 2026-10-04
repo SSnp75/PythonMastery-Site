@@ -23,6 +23,8 @@ description: BeautifulSoup, Scrapy, Playwright, handling pagination, proxies and
 
 ## BeautifulSoup — parsing static HTML
 
+*Parse and query server-rendered HTML — the fast path when the data is already in the page source.*
+
 ```python
 import httpx
 from bs4 import BeautifulSoup
@@ -94,6 +96,8 @@ def scrape_product(url: str) -> dict:
 
 ## Handling pagination
 
+*Follow 'next page' links or page params to scrape multi-page listings.*
+
 ```python
 import httpx
 from bs4 import BeautifulSoup
@@ -136,6 +140,8 @@ def scrape_all_pages(base_url: str) -> list[dict]:
 ---
 
 ## Playwright — JavaScript-rendered pages
+
+*Drive a real browser to scrape pages whose content is built by JavaScript.*
 
 ```python
 from playwright.sync_api import sync_playwright
@@ -196,6 +202,8 @@ async def scrape_multiple(urls: list[str]) -> list[dict]:
 
 ## Scrapy — production-grade scraping framework
 
+*A full framework for large crawls — concurrency, pipelines, and retries built in.*
+
 ```python
 # items.py
 import scrapy
@@ -241,6 +249,8 @@ scrapy crawl products -o products.csv
 
 ## Anti-scraping countermeasures and solutions
 
+*Common blocks (rate limits, bot detection) and how to scrape responsibly around them.*
+
 | Countermeasure | Solution |
 |---|---|
 | Rate limiting | Add delays (`time.sleep`), respect `Crawl-delay` |
@@ -282,6 +292,8 @@ def make_request(url: str) -> httpx.Response:
 
 ## Ethics and legality
 
+*Respect robots.txt, terms of service, and rate limits — scrape responsibly.*
+
 !!! warning "Be a responsible scraper"
 
     **Always:**
@@ -314,6 +326,8 @@ def check_robots(base_url: str, path: str) -> bool:
 ---
 
 ## Data cleaning and storage
+
+*Normalize and persist scraped data so it's usable downstream.*
 
 ```python
 import json

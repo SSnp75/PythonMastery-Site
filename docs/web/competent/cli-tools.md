@@ -23,6 +23,8 @@ description: Build command-line interfaces with argparse, click and typer
 
 ## argparse (built-in)
 
+*The standard-library parser — no dependencies. Use for scripts where you don't want to add a package.*
+
 ```python
 import argparse
 
@@ -43,6 +45,8 @@ python greet.py Alice --times 3
 
 ## click (third-party, declarative)
 
+*Build CLIs with decorators and automatic help — use for richer tools with subcommands and options.*
+
 ```python
 import click
 
@@ -62,6 +66,8 @@ if __name__ == "__main__":
 
 ## typer (modern, type-hint based)
 
+*Define commands with plain type-hinted functions — the least-boilerplate option, built on click.*
+
 ```python
 import typer
 
@@ -80,6 +86,8 @@ if __name__ == "__main__":
 ---
 
 ## When to use what
+
+*Pick argparse for zero-dependency scripts, click/typer for larger multi-command tools.*
 
 | Tool | Best for |
 |---|---|

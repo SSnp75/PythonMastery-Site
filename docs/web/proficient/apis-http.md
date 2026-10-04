@@ -23,6 +23,8 @@ description: REST principles, httpx, authentication, pagination, error handling 
 
 ## Making HTTP requests with httpx
 
+*Call external APIs — GET/POST with params, headers, JSON — the client side of integration work.*
+
 ```python
 import httpx
 
@@ -90,6 +92,8 @@ except httpx.RequestError as e:
 
 ## Async HTTP with httpx
 
+*Fire many requests concurrently without blocking — for high-throughput clients and scrapers.*
+
 ```python
 import asyncio
 import httpx
@@ -109,6 +113,8 @@ print(f"Fetched {len(results)} posts")   # 10 posts in parallel
 
 ## Client sessions (connection reuse)
 
+*Reuse a connection pool across requests to the same host for big speedups.*
+
 ```python
 import httpx
 
@@ -126,6 +132,8 @@ with httpx.Client(
 ---
 
 ## REST API design principles
+
+*Model resources with nouns + HTTP verbs and meaningful status codes — the conventions clients expect.*
 
 ### Resource naming
 
@@ -167,6 +175,8 @@ GET /deleteUser/123    ✗
 ---
 
 ## Pagination
+
+*Return large result sets in pages (offset or cursor) so responses stay fast and bounded.*
 
 ### Offset-based (simple)
 
@@ -235,6 +245,8 @@ async def list_users(cursor: str | None = None, limit: int = 20):
 ---
 
 ## Authentication patterns
+
+*Identify callers with API keys, bearer tokens, or OAuth — and never trust unauthenticated input.*
 
 ### API Key
 
@@ -309,6 +321,8 @@ async def github_callback(code: str):
 
 ## Error response format
 
+*Return consistent, machine-readable errors with the right status code so clients can handle failures.*
+
 ```python
 # Consistent error format
 {
@@ -337,6 +351,8 @@ async def value_error_handler(request: Request, exc: ValueError):
 ---
 
 ## Rate limiting
+
+*Cap how often a client can call you to protect the service and ensure fairness.*
 
 ```python
 import time
@@ -376,6 +392,8 @@ async def rate_limit_middleware(request: Request, call_next):
 ---
 
 ## API Versioning
+
+*Evolve an API without breaking existing clients by versioning the contract.*
 
 ```python
 # URL versioning (most common)

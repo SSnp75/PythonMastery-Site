@@ -23,6 +23,8 @@ description: Flask, FastAPI and Django — building production web applications 
 
 ## FastAPI (recommended for modern APIs)
 
+*Async, type-hint-driven framework with automatic validation and docs — the modern default for APIs.*
+
 ### Basic application
 
 ```python
@@ -167,6 +169,8 @@ async def notify(email: str, background_tasks: BackgroundTasks):
 
 ## Flask (lightweight, flexible)
 
+*A minimal framework you extend as needed — use for small apps and when you want control.*
+
 ### Basic application
 
 ```python
@@ -262,6 +266,8 @@ with app.app_context():
 
 ## Django (full-featured framework)
 
+*Batteries-included framework with ORM, admin, and auth — use for content-heavy, database-backed sites.*
+
 ### Project structure
 
 ```
@@ -324,6 +330,8 @@ urlpatterns = router.urls
 
 ## Framework comparison
 
+*How FastAPI, Flask, and Django differ so you can pick for your project's needs.*
+
 | Feature | FastAPI | Flask | Django |
 |---|---|---|---|
 | **Speed** | Very fast (async, Starlette) | Good | Good |
@@ -340,6 +348,8 @@ urlpatterns = router.urls
 ---
 
 ## Deployment patterns
+
+*Run a web app in production behind an ASGI/WSGI server and process manager.*
 
 ```python
 # FastAPI with Gunicorn + Uvicorn workers
@@ -366,6 +376,8 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 ---
 
 ## Testing web applications
+
+*Exercise routes with a test client so you can assert on responses without a live server.*
 
 ```python
 # FastAPI testing

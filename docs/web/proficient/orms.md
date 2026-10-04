@@ -23,6 +23,8 @@ description: SQLAlchemy 2.0, relationships, async, migrations and query optimiza
 
 ## SQLAlchemy 2.0 — Declarative Models
 
+*Map Python classes to tables so you work with objects instead of raw SQL.*
+
 ```python
 from sqlalchemy import create_engine, String, ForeignKey, func
 from sqlalchemy.orm import (
@@ -96,6 +98,8 @@ Base.metadata.create_all(engine)
 
 ## CRUD operations
 
+*Create, read, update, delete rows through the session — the everyday ORM operations.*
+
 ```python
 from sqlalchemy import select
 from sqlalchemy.orm import Session
@@ -167,6 +171,8 @@ with Session(engine) as session:
 
 ## Eager vs Lazy Loading
 
+*Control when related rows are fetched to avoid the N+1 query problem.*
+
 ```python
 from sqlalchemy.orm import selectinload, joinedload, lazyload
 
@@ -194,6 +200,8 @@ with Session(engine) as session:
 ---
 
 ## Async SQLAlchemy
+
+*Use the ORM with async/await for non-blocking database access in async apps.*
 
 ```python
 from sqlalchemy.ext.asyncio import (
@@ -233,6 +241,8 @@ async def read_user(user_id: int, db: AsyncSession = Depends(get_db)):
 ---
 
 ## Alembic — database migrations
+
+*Version and apply schema changes generated from your models.*
 
 ```bash
 # Initialize
@@ -277,6 +287,8 @@ def downgrade():
 ---
 
 ## Query optimization patterns
+
+*Shape queries and indexes to keep them fast as data grows.*
 
 ### Avoiding N+1
 

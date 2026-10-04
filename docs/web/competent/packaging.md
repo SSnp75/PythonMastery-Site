@@ -22,6 +22,8 @@ description: pip, venv, pyproject.toml and distributing your code
 
 ## Virtual environments
 
+*Isolate a project's dependencies from the system Python so projects don't conflict — always work inside one.*
+
 ```bash
 # Create
 python -m venv .venv
@@ -46,6 +48,8 @@ pip install -r requirements.txt
 
 ## pyproject.toml (modern standard)
 
+*The single config file declaring your project's metadata, dependencies, and build system.*
+
 ```toml
 [build-system]
 requires = ["setuptools>=68.0"]
@@ -68,6 +72,8 @@ mycommand = "mypackage.cli:main"
 ---
 
 ## Project structure
+
+*The conventional `src/` layout that keeps imports honest and tests separate.*
 
 ```
 mypackage/
@@ -103,6 +109,8 @@ installs across machines.
 ---
 
 ## Publishing to PyPI
+
+*Build a wheel and upload it so others can `pip install` your package.*
 
 ```bash
 pip install build twine

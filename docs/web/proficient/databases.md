@@ -23,6 +23,8 @@ description: sqlite3, PostgreSQL, connection pooling, transactions, migrations a
 
 ## sqlite3 (built-in) — complete guide
 
+*A zero-setup file database bundled with Python — perfect for local apps, tests, and prototypes.*
+
 ### CRUD operations
 
 ```python
@@ -133,6 +135,8 @@ with get_db() as db:
 
 ## PostgreSQL with psycopg (v3)
 
+*Connect to production-grade PostgreSQL — connections, parameterized queries, and transactions.*
+
 ```python
 import psycopg
 from psycopg.rows import dict_row
@@ -198,6 +202,8 @@ async def get_user(user_id: int):
 
 ## Query patterns
 
+*Common, safe query shapes — always parameterize to prevent SQL injection.*
+
 ### Parameterized queries (ALWAYS use these)
 
 ```python
@@ -245,6 +251,8 @@ with get_db() as db:
 ---
 
 ## Schema migrations
+
+*Evolve the database schema over time in versioned, repeatable steps.*
 
 ### Manual approach
 
