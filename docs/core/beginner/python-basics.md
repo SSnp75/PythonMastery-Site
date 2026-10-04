@@ -21,6 +21,12 @@ description: Variables, data types, operators and your first Python programs
 
 ---
 
+!!! info "When you'd use this"
+    Variables, data types, operators and your first Python programs.
+
+    Reach for these fundamentals on day one of any script: declaring variables, converting user input, doing arithmetic, and formatting output.
+
+
 ## What you'll learn
 
 - [x] Install Python and run your first script

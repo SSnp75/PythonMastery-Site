@@ -15,6 +15,12 @@ description: Write clean, idiomatic Python from day one
 
 ---
 
+!!! info "When you'd use this"
+    Write clean, idiomatic Python from day one.
+
+    Apply these idioms whenever you write Python: unpacking, EAFP, `enumerate`/`zip`, and truthiness checks make code shorter, clearer, and more idiomatic.
+
+
 ## Unpacking
 
 ```python

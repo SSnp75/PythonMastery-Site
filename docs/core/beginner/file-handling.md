@@ -15,6 +15,12 @@ description: Reading, writing and managing files in Python
 
 ---
 
+!!! info "When you'd use this"
+    Reading, writing and managing files in Python.
+
+    Read and write files — load config, parse logs, process CSVs, or persist results to disk, using `with open(...)` so handles always close.
+
+
 ## Reading files
 
 ```python

@@ -15,6 +15,12 @@ description: Classes, inheritance, polymorphism, encapsulation and abstract base
 
 ---
 
+!!! info "When you'd use this"
+    Classes, inheritance, polymorphism, encapsulation and abstract base classes.
+
+    Model entities with state and behavior — domain objects, plugins, stateful services — and use inheritance/polymorphism to share and specialize logic.
+
+
 ## Classes & Objects
 
 ```python

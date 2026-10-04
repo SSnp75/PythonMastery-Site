@@ -15,6 +15,12 @@ description: Closures, functools.wraps, class decorators and decorator patterns
 
 ---
 
+!!! info "When you'd use this"
+    Closures, functools.wraps, class decorators and decorator patterns.
+
+    Wrap behavior around functions without touching their code — logging, timing, caching, authentication, retries, and rate limiting.
+
+
 ## What is a decorator?
 
 A function that takes a function and returns a modified function.

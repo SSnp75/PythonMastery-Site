@@ -15,6 +15,12 @@ description: "with statement, __enter__/__exit__, contextlib, async context mana
 
 ---
 
+!!! info "When you'd use this"
+    with statement, __enter__/__exit__, contextlib, async context managers and real-world patterns.
+
+    Guarantee setup/teardown around a block — closing files/connections, acquiring locks, temporary state, or timing — via `with` and `@contextmanager`.
+
+
 ## The `with` statement protocol
 
 When you write `with X as Y:`, Python calls:

@@ -15,6 +15,12 @@ description: Essential built-in modules — collections, datetime, pathlib, re, 
 
 ---
 
+!!! info "When you'd use this"
+    Essential built-in modules — collections, datetime, pathlib, re, functools, itertools, subprocess.
+
+    Before adding a dependency, check the batteries-included stdlib — `collections`, `itertools`, `pathlib`, `datetime`, `json`, `subprocess` cover a huge amount.
+
+
 ## collections
 
 ### Counter — count anything

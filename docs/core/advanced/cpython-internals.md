@@ -15,6 +15,12 @@ description: Object model, reference counting, GIL, type slots and the C impleme
 
 ---
 
+!!! info "When you'd use this"
+    Object model, reference counting, GIL, type slots and the C implementation.
+
+    Understand the interpreter when you're profiling, debugging memory, writing C extensions, or reasoning about the GIL and reference counting.
+
+
 ## Everything is a PyObject
 
 In the C source, every Python object starts with a common header:

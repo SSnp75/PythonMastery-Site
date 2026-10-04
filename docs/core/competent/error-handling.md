@@ -15,6 +15,12 @@ description: Exceptions, try/except, raising errors and custom exceptions
 
 ---
 
+!!! info "When you'd use this"
+    Exceptions, try/except, raising errors and custom exceptions.
+
+    Make code robust: catch specific failures, add context with exception chaining, define a custom exception hierarchy, and clean up with `finally`.
+
+
 ## try / except / else / finally
 
 ```python

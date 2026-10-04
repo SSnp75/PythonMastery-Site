@@ -15,6 +15,12 @@ description: "type, __new__, __init_subclass__, __prepare__ and controlling clas
 
 ---
 
+!!! info "When you'd use this"
+    type, __new__, __init_subclass__, __prepare__ and controlling class creation.
+
+    Customize how classes themselves are built — used by ORMs, serializers, plugin registries, and frameworks that auto-wire classes. Rarely needed in app code.
+
+
 ## The fundamental truth: classes are objects
 
 In Python, everything is an object — including classes. A class is an instance of its metaclass.

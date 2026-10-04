@@ -21,6 +21,12 @@ description: Defining functions, parameters, scope, closures and lambda
 
 ---
 
+!!! info "When you'd use this"
+    Defining functions, parameters, scope, closures and lambda.
+
+    Factor repeated logic into named, reusable units — anytime you copy-paste code, a function (with parameters, defaults, or *args) is the fix.
+
+
 ## Defining & Calling
 
 ```python

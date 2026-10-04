@@ -15,6 +15,12 @@ description: Organising Python code into modules, packages and namespaces
 
 ---
 
+!!! info "When you'd use this"
+    Organising Python code into modules, packages and namespaces.
+
+    Organize a growing codebase: split a long script into modules, group modules into packages, and expose a clean public API with `__init__.py` and `__all__`.
+
+
 ## Modules
 
 A module is just a `.py` file. Import it by name.

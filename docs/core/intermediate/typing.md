@@ -15,6 +15,12 @@ description: Annotations, generics, Protocol, TypeVar, overload, ParamSpec and m
 
 ---
 
+!!! info "When you'd use this"
+    Annotations, generics, Protocol, TypeVar, overload, ParamSpec and mypy.
+
+    Add type hints to catch bugs early with `mypy`, document intent, and power editor autocomplete — especially valuable on larger or shared codebases.
+
+
 ## Why type hints?
 
 - Catch bugs **before runtime** with tools like `mypy`

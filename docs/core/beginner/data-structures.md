@@ -15,6 +15,12 @@ description: Lists, tuples, sets, dictionaries and when to use each
 
 ---
 
+!!! info "When you'd use this"
+    Lists, tuples, sets, dictionaries and when to use each.
+
+    Pick the right container for the job: lists for ordered sequences, dicts for key lookups, sets for uniqueness/membership, tuples for fixed records.
+
+
 ## Lists
 
 Ordered, mutable, allows duplicates.

@@ -15,6 +15,12 @@ description: if/elif/else, for loops, while loops and match-case
 
 ---
 
+!!! info "When you'd use this"
+    if/elif/else, for loops, while loops and match-case.
+
+    Use conditionals and loops to make decisions and repeat work — validating input, iterating over data, retrying until a condition holds, dispatching on a value.
+
+
 ## Conditionals
 
 ```python

@@ -15,6 +15,12 @@ description: Strings, encoding, bytes, regex, text normalization and real-world 
 
 ---
 
+!!! info "When you'd use this"
+    Strings, encoding, bytes, regex, text normalization and real-world text handling.
+
+    Handle real-world text safely: encodings, normalization, case-folding for comparisons, and formatting — essential for i18n, parsing, and data cleaning.
+
+
 ## str vs bytes — the fundamental distinction
 
 ```python

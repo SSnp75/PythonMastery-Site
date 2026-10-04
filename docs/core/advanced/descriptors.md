@@ -21,6 +21,12 @@ description: "__get__, __set__, __delete__ — the mechanism behind @property, c
 
 ---
 
+!!! info "When you'd use this"
+    __get__, __set__, __delete__ — the mechanism behind @property, classmethod, staticmethod and ORMs.
+
+    Control attribute access at the class level — the machinery behind `@property`, ORMs, validation, and lazy/computed attributes.
+
+
 ## What is a descriptor?
 
 A descriptor is any object that defines at least one of:
