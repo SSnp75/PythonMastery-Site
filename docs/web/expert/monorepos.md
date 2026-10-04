@@ -56,6 +56,8 @@ Google, Meta, and Microsoft run enormous monorepos. The appeal isn't scale for i
 
 ## Typical Python monorepo structure
 
+*A layout for many packages/services sharing tooling in one repo.*
+
 ```
 myorg/
 ├── pyproject.toml            # workspace root config
@@ -82,6 +84,8 @@ myorg/
 ---
 
 ## Dependency management
+
+*Manage shared and per-project dependencies without conflicts.*
 
 The key trick is letting one package in the repo depend on another **by local path**, so changes are picked up immediately without publishing to PyPI.
 
@@ -122,6 +126,8 @@ Now `core` resolves to `libs/core` in the same repo. Edit the lib, and the servi
 ---
 
 ## CI: only build what changed
+
+*Detect affected projects so CI runs just the relevant builds/tests.*
 
 The naive monorepo CI rebuilds and tests *everything* on every commit — which gets slow as the repo grows. The fix is **change detection**: run CI only for the packages a commit actually touched (and their dependents).
 

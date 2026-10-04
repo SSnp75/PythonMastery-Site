@@ -87,6 +87,8 @@ Starting from 0, the controller drives the value to ~10.29 — it reached the ta
 
 ## Sensing and fusion
 
+*Combine noisy sensors (e.g. with a Kalman filter) into a reliable estimate.*
+
 - **Sensors** — cameras, LIDAR (distance), IMU (orientation/acceleration), encoders (wheel rotation), each noisy and partial.
 - **Sensor fusion** — combining multiple noisy sensors into a better estimate than any alone. The classic tool is the **Kalman filter**, which fuses predictions with measurements weighted by their uncertainty. Libraries: `filterpy`, NumPy.
 - **Perception** — turning raw sensor data into meaning (detecting objects, mapping the environment), increasingly ML-based.
@@ -94,6 +96,8 @@ Starting from 0, the controller drives the value to ~10.29 — it reached the ta
 ---
 
 ## Motion planning
+
+*Compute collision-free paths from start to goal.*
 
 Getting from A to B without hitting things:
 
@@ -106,6 +110,8 @@ These often build on graph algorithms and geometry — general CS skills applied
 ---
 
 ## The ROS ecosystem
+
+*ROS nodes, topics, and tools for building robots.*
 
 !!! note "ROS/robotics libraries follow documented APIs"
     ROS 2 (`rclpy`), and robotics libraries aren't installed here, so those references are documented rather than run-verified. The PID controller above **is** run-verified, since control logic is pure math.

@@ -23,6 +23,8 @@ description: Layered design, dependency inversion, ports & adapters and testable
 
 ## The dependency rule
 
+*Dependencies point inward: business logic never imports frameworks or databases.*
+
 The core principle: **dependencies point inward**. Inner layers know nothing about outer layers.
 
 ```
@@ -40,6 +42,8 @@ The core principle: **dependencies point inward**. Inner layers know nothing abo
 ---
 
 ## Project structure
+
+*Layers (entities, use cases, adapters) arranged so the core stays independent.*
 
 ```
 src/
@@ -68,6 +72,8 @@ src/
 ---
 
 ## Full implementation
+
+*A worked example wiring the layers together end to end.*
 
 ### Layer 1: Domain (Entities)
 

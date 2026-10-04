@@ -76,6 +76,8 @@ The average slides over the last 3 readings: after 40, the window is (20, 30, 40
 
 ## Messaging with MQTT
 
+*The lightweight pub/sub protocol that connects devices to the cloud.*
+
 **MQTT** is the dominant IoT protocol — lightweight publish/subscribe designed for unreliable networks and tiny devices. A device *publishes* readings to a topic; backends *subscribe*. It's the same pub/sub decoupling as an [event bus](../web/expert/event-driven-architecture.md), tuned for constrained devices.
 
 ```python
@@ -103,6 +105,8 @@ client.loop_forever()
 
 ## Edge vs cloud
 
+*Process on-device for latency/privacy or in the cloud for scale.*
+
 A key IoT design decision is *where* processing happens:
 
 - **Edge (on the device)** — process data locally: smooth it, detect events, act immediately. Lower latency, less bandwidth, works offline. Constrained by the device's CPU/power.
@@ -113,6 +117,8 @@ Most real systems split the work: the edge filters/aggregates (like our moving a
 ---
 
 ## The ecosystem
+
+*paho-mqtt, MicroPython, and cloud IoT SDKs.*
 
 | Layer | Tools |
 |---|---|

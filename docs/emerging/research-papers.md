@@ -41,6 +41,8 @@ Most engineering knowledge is second-hand — blog posts summarizing summaries. 
 
 ## Foundational papers by topic
 
+*Key papers worth reading per area.*
+
 **Distributed systems** (see the Distributed Systems section)
 - *In Search of an Understandable Consensus Algorithm* (Ongaro & Ousterhout, 2014) — the **Raft** paper. Unusually readable; the best entry point to consensus.
 - *The Part-Time Parliament* / *Paxos Made Simple* (Lamport) — **Paxos**. Famously dense; read Raft first.
@@ -66,6 +68,8 @@ Most engineering knowledge is second-hand — blog posts summarizing summaries. 
 
 ## How to read a paper efficiently
 
+*Skim abstract/figures/conclusions first, then go deep selectively.*
+
 Don't read linearly front-to-back the first time. A widely-used three-pass method:
 
 ```
@@ -85,6 +89,8 @@ Most papers only need pass 1 or 2. Reserve pass 3 for the few that matter to you
 ---
 
 ## Where to find and track research
+
+*arXiv, conferences, and curated lists.*
 
 - **arXiv.org** — free preprints (cs.DC for distributed, cs.PL for languages, cs.LG for ML).
 - **Papers We Love** (paperswelove.org) — a curated community collection of great CS papers.

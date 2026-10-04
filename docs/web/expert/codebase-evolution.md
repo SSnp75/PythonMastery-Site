@@ -39,6 +39,8 @@ Code that lives for years faces a force nothing else does: **continuous change u
 
 ## Refactoring safely
 
+*Change structure without changing behavior, under the protection of tests.*
+
 Refactoring means changing *structure* without changing *behavior*. The only thing that makes it safe is a **test net** — tests that fail if behavior changes.
 
 The loop:
@@ -59,6 +61,8 @@ Keep refactoring commits **separate** from behavior-changing commits. A reviewer
 ---
 
 ## Deprecation: retiring an API gracefully
+
+*Warn, document, and give a migration path before removing an API.*
 
 You rarely delete a public function outright — callers depend on it. Instead you **deprecate**: keep it working, but warn users to move on, then remove it in a later release.
 
@@ -114,6 +118,8 @@ The old call keeps working (returns `42`) while telling the caller exactly what 
 
 ## Migrating with the strangler pattern
 
+*Grow a replacement around the old system and retire it piece by piece.*
+
 To replace a large old subsystem without a risky big-bang rewrite, use the **strangler fig** pattern (named after the vine that grows around a tree and gradually replaces it):
 
 ```
@@ -133,6 +139,8 @@ Feature flags (see [Hot-swappable Components](hot-swappable-components.md)) are 
 
 ## Managing architectural change
 
+*Introduce big changes incrementally without halting delivery.*
+
 Big structural shifts (new persistence layer, splitting a monolith, changing frameworks) need more than code discipline:
 
 - **Record decisions with ADRs.** An *Architecture Decision Record* is a short document capturing *what* was decided, *why*, and *what alternatives* were rejected. Years later, ADRs answer "why on earth is it built this way?" — preventing the team from re-litigating settled choices or, worse, undoing a decision without knowing its rationale.
@@ -143,6 +151,8 @@ Big structural shifts (new persistence layer, splitting a monolith, changing fra
 ---
 
 ## Documentation that survives
+
+*Keep docs close to code and automated so they don't rot.*
 
 Code outlives memory. What keeps a long-lived codebase maintainable:
 

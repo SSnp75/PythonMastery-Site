@@ -64,6 +64,8 @@ These are examples, not endorsements — the point is the *pattern*: Rust-accele
 
 ## How to evaluate a library
 
+*Check maintenance, adoption, docs, and API stability before depending on it.*
+
 Before adding any dependency, especially a newer one, check these signals:
 
 **Healthy signs:**
@@ -91,6 +93,8 @@ pip show <package>          # version, homepage, dependencies
 
 ## The adoption ladder
 
+*From experiment to production — how to bring new libraries in safely.*
+
 Match a library's maturity to where you'd use it:
 
 ```
@@ -106,6 +110,8 @@ Experimenting with a pre-1.0 library in a personal project is how you learn. Put
 ---
 
 ## Where to discover what's new
+
+*Newsletters, PyPI trends, and communities to watch.*
 
 - **Python Weekly, PyCoder's Weekly** — newsletters covering new releases and tools.
 - **PyPI trending / GitHub trending (Python)** — what's gaining traction.

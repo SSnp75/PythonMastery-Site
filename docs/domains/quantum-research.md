@@ -81,6 +81,8 @@ Applying Hadamard to `|0⟩` gives a 50/50 superposition — measure it and you 
 
 ## Superposition and entanglement
 
+*The two quantum phenomena that give quantum computing its power.*
+
 - **Superposition** (above) — a qubit being a blend of 0 and 1 until measured.
 - **Entanglement** — two qubits linked so that measuring one instantly determines the other, regardless of distance. This correlation, with no classical equivalent, is central to quantum algorithms. The "Bell state" is the simplest entangled pair.
 
@@ -89,6 +91,8 @@ These two phenomena — superposition for parallelism, entanglement for correlat
 ---
 
 ## Gates, circuits, and Qiskit
+
+*Build quantum circuits from gates and run them with Qiskit.*
 
 Quantum programs are **circuits**: sequences of gates applied to qubits, then measurement. **Qiskit** (IBM) is the leading Python framework:
 
@@ -109,6 +113,8 @@ qc.measure([0, 1], [0, 1])
 
 ## Famous quantum algorithms
 
+*Grover's search and Shor's factoring at a conceptual level.*
+
 - **Grover's search** — find an item in an unsorted database in ~√N steps (vs N classically).
 - **Shor's algorithm** — factor large numbers efficiently; famously threatens RSA encryption (see the Security section's Cryptography).
 - **Quantum simulation** — model quantum systems (chemistry, materials) — arguably the most practical near-term use.
@@ -118,6 +124,8 @@ These need many reliable qubits; today's hardware is "noisy intermediate-scale q
 ---
 
 ## The ecosystem
+
+*Qiskit, Cirq, and PennyLane.*
 
 | Need | Tool |
 |---|---|

@@ -35,6 +35,8 @@ Games are a fun, motivating way to practice OOP, state management, and real-time
 
 ## The game loop
 
+*The update-render cycle at the heart of every game.*
+
 Every game runs the same fundamental loop, forever, many times per second:
 
 ```
@@ -78,6 +80,8 @@ Each step the object falls a little faster (velocity accumulates), so the gaps b
 
 ## Pygame basics
 
+*Window, events, sprites, and drawing with pygame.*
+
 **Pygame** is the classic Python game library. The loop in Pygame form:
 
 ```python
@@ -113,6 +117,8 @@ pygame.quit()
 
 ## Core concepts beyond the loop
 
+*Collision, state, assets, and timing.*
+
 - **Sprites** — game objects with position, image, and behavior (a natural fit for OOP classes).
 - **Collision detection** — do two rectangles/circles overlap? Pygame has helpers (`Rect.colliderect`).
 - **Game state** — menu vs playing vs game-over; often a simple state machine.
@@ -121,6 +127,8 @@ pygame.quit()
 ---
 
 ## The ecosystem
+
+*pygame, Arcade, and Godot's Python bindings.*
 
 | Need | Tool |
 |---|---|

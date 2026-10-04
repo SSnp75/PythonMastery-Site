@@ -45,6 +45,8 @@ Plus the deployment-level answer — **rolling updates** — which achieves zero
 
 ## Level 1: swap a strategy at runtime
 
+*Change behavior by swapping an injected function/object — no restart.*
+
 If a component holds its behavior behind an interface, swapping it is just reassigning a reference. Runnable:
 
 ```python
@@ -88,6 +90,8 @@ The running `Checkout` object changed its pricing behavior mid-flight. No proces
 
 ## Level 2: feature flags
 
+*Toggle features at runtime for gradual rollout and quick rollback.*
+
 A feature flag is a runtime switch that selects which code path executes. It decouples **deploying** code from **releasing** it — you ship the new path dark, then flip it on when ready.
 
 ```python
@@ -126,6 +130,8 @@ In production the flag values come from a config service or a flag platform (Lau
 
 ## Level 3: reloading code with `importlib.reload`
 
+*Reload changed modules in a running process (with caveats).*
+
 Python can re-execute a module's source in a running process, replacing its code:
 
 ```python
@@ -149,6 +155,8 @@ This is what powers dev-server auto-reload and interactive workflows. But for pr
 
 ## Zero-downtime deploys: rolling updates
 
+*Replace instances gradually so the service never fully goes down.*
+
 The production-grade way to "hot swap" code is at the **infrastructure** level, not inside the Python process. Instead of reloading a module, you start new instances running the new code and retire the old ones gradually, so the service never fully goes down.
 
 ```
@@ -169,6 +177,8 @@ The application's job is to make this safe: start fast, expose a health/readines
 ---
 
 ## Choosing the right level
+
+*Match the swap mechanism to how dynamic you actually need to be.*
 
 | Need | Use | Restart? |
 |---|---|---|

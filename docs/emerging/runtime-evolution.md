@@ -46,6 +46,8 @@ The **Global Interpreter Lock (GIL)** is a mutex that lets only *one* thread exe
 
 ## Free-threaded Python (PEP 703)
 
+*An experimental build removing the GIL for true thread parallelism.*
+
 The biggest change: an official, experimental **free-threaded build** of CPython (3.13+) that **removes the GIL**, letting threads run Python code on multiple cores simultaneously. This has been in the works for years and is being introduced gradually as an opt-in build so the ecosystem can adapt.
 
 **Why it's hard:** the GIL protected reference counting and internal state. Removing it safely required rethinking object memory management throughout the interpreter — one of the most invasive changes ever made to CPython (see [Interpreter Forking](../research/interpreter-forking.md) for the fork history).
@@ -55,6 +57,8 @@ The biggest change: an official, experimental **free-threaded build** of CPython
 ---
 
 ## Subinterpreters (PEP 734)
+
+*Multiple isolated interpreters in one process for parallelism.*
 
 Another path to parallelism: **multiple independent interpreters in one process**, each with its own state (and, in newer versions, its own GIL). This gives isolation like `multiprocessing` but with lower overhead since it stays in one process.
 
@@ -75,6 +79,8 @@ Subinterpreters and free-threading are complementary approaches to the same goal
 
 ## Faster CPython
 
+*The ongoing project making the interpreter itself significantly faster.*
+
 Separately from concurrency, the **Faster CPython** project (backed by Microsoft, led partly by Guido van Rossum) has been making the interpreter itself faster with **no code changes required**:
 
 - **3.11** brought ~10-60% speedups via a "specializing adaptive interpreter" — the interpreter observes what your code does and optimizes hot paths (specializing, say, `+` for integers).
@@ -94,6 +100,8 @@ def hot_loop(n):
 ---
 
 ## What this means for your code
+
+*Practical implications of these runtime changes.*
 
 | Change | Do now | Watch for |
 |---|---|---|

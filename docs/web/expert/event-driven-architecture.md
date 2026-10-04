@@ -54,6 +54,8 @@ The key shift: an **event is a fact about the past** ("OrderPlaced"), not a comm
 
 ## An in-process event bus
 
+*Publish/subscribe within one process to decouple modules.*
+
 You don't need a message broker to get most of the decoupling benefit. Within a single process, a simple **event bus** already separates producers from consumers. Everything below is runnable.
 
 ### Define events
@@ -137,6 +139,8 @@ Shipping: A100 handed to courier
 
 ## Scaling out: message brokers
 
+*Move events across services via Kafka/RabbitMQ for distributed decoupling.*
+
 The in-process bus works within one program. When components are **separate services** (or must survive restarts, or need to buffer bursts), you move the events onto a **message broker** that sits between producers and consumers over the network.
 
 | Broker | Model | Best for |
@@ -210,6 +214,8 @@ Event-driven design is powerful but not free.
 ---
 
 ## Relationship to other patterns
+
+*How events relate to CQRS, event sourcing, and sagas.*
 
 - **Event Sourcing** stores the events themselves as the source of truth (state is rebuilt by replaying them) — see the Distributed Systems section.
 - **CQRS** often pairs with events: commands produce events; read models are updated by consuming them.

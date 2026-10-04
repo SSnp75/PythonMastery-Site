@@ -47,6 +47,8 @@ description: Service boundaries, communication patterns, orchestration and obser
 
 ## Service decomposition
 
+*Split a system along business capabilities, not technical layers.*
+
 ### Bounded contexts (from DDD)
 
 Each service owns a **bounded context** — a clear domain boundary:
@@ -70,6 +72,8 @@ E-commerce Platform:
 ---
 
 ## Communication patterns
+
+*Sync (HTTP/gRPC) vs async (events) and when to use each.*
 
 ### Synchronous — REST / gRPC
 
@@ -145,6 +149,8 @@ await bus.subscribe(handle_event)
 ---
 
 ## Patterns
+
+*Resilience patterns — circuit breakers, retries, timeouts — that keep services robust.*
 
 ### API Gateway
 
@@ -270,6 +276,8 @@ class OrderSaga:
 
 ## Observability
 
+*Logs, metrics, and traces to understand a distributed system.*
+
 ### Distributed tracing with OpenTelemetry
 
 ```python
@@ -303,6 +311,8 @@ async def create_order(data: OrderCreate):
 ---
 
 ## Docker Compose for local development
+
+*Run the whole service mesh locally with one file.*
 
 ```yaml
 # docker-compose.yml

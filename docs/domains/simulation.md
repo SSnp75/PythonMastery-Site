@@ -34,6 +34,8 @@ Simulation lets you study systems too complex, expensive, or dangerous to experi
 
 ## Styles of simulation
 
+*Discrete-event, agent-based, and continuous — pick by how the system evolves.*
+
 - **Agent-based** — model individual agents and their local rules; global behavior *emerges* (traffic jams, flocking, disease spread).
 - **Discrete-event** — jump between timestamped events (see the tested engine in [Hardware Simulation](../embedded/hardware-simulation.md)); great for queues, logistics.
 - **Continuous / numerical** — solve equations over time (physics, chemistry); needs NumPy/SciPy.
@@ -88,6 +90,8 @@ The horizontal blinker becomes vertical, then returns to horizontal — a period
 
 ## Discrete-event simulation
 
+*Advance time event by event (queues, logistics) with SimPy.*
+
 For systems that change at discrete moments (a customer arrives, a machine finishes), **discrete-event simulation** jumps from event to event rather than ticking through time. The [Hardware Simulation](../embedded/hardware-simulation.md) page has a full, tested event-queue engine — the same technique applies to modeling a bank queue, a factory line, or a network.
 
 For serious models, **`simpy`** provides resources, queues, and processes on top of Python generators:
@@ -111,6 +115,8 @@ teller = simpy.Resource(env, capacity=2)
 ---
 
 ## The ecosystem
+
+*SimPy, Mesa, and SciPy.*
 
 | Need | Tool |
 |---|---|

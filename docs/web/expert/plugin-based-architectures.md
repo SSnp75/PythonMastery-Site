@@ -50,6 +50,8 @@ You've used this everywhere: pytest fixtures/plugins, Flask extensions, VS Code 
 
 ## A registry with decorators
 
+*Let plugins self-register via a decorator so a factory can find them.*
+
 The simplest, most Pythonic plugin system: a dict registry populated by a decorator. Fully runnable.
 
 ```python
@@ -126,6 +128,8 @@ KeyError: "no plugin named 'xml'; available: ['csv', 'json']"
 
 ## Discovering plugins from separate packages
 
+*Load plugins shipped as independent packages via entry points.*
+
 A registry only knows about plugins whose module has been **imported**. For plugins shipped as their own installable packages, Python's standard mechanism is **entry points** declared in packaging metadata.
 
 A plugin package declares in its `pyproject.toml`:
@@ -163,6 +167,8 @@ There's also **directory scanning** (import every `.py` in a `plugins/` folder v
 ---
 
 ## Versioning and safety
+
+*Version the plugin API and validate plugins to avoid breakage.*
 
 Once third parties write plugins, you inherit responsibilities:
 

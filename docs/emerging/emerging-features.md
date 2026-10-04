@@ -87,6 +87,8 @@ Notice `case (x, 0)` both *matches* the shape (a 2-tuple ending in 0) and *binds
 
 ## Modern union types (3.10+)
 
+*Write `int | str` and `X | None` instead of `Union`/`Optional`.*
+
 Write union types with `|` instead of `typing.Union`, and `X | None` instead of `Optional[X]`:
 
 ```python
@@ -102,6 +104,8 @@ Cleaner and now the recommended style. See [Typing & Type Hints](../core/interme
 ---
 
 ## Exception groups & `except*` (3.11+)
+
+*Raise and selectively handle multiple simultaneous errors.*
 
 When multiple things can fail at once (e.g. concurrent tasks), `ExceptionGroup` bundles several exceptions, and `except*` handles them by type. Runnable:
 
@@ -129,6 +133,8 @@ Both handlers fire — `except*` processes *each* matching exception in the grou
 ---
 
 ## Built-in TOML reading (3.11+)
+
+*Parse TOML with the stdlib `tomllib` — no dependency.*
 
 `tomllib` reads TOML (the format of `pyproject.toml`) with no third-party dependency:
 
@@ -158,6 +164,8 @@ Note: `tomllib` is **read-only** by design; to *write* TOML you still need a thi
 
 ## Other notable recent additions
 
+*A roundup of smaller recent language and stdlib improvements.*
+
 - **f-string improvements (3.12)** — f-strings became more flexible (nested quotes, multiline expressions).
 - **`Self` type (3.11)** — annotate methods that return their own class cleanly.
 - **Faster CPython (3.11+)** — significant speed gains, no code change needed (see [Runtime Evolution](runtime-evolution.md)).
@@ -167,6 +175,8 @@ Note: `tomllib` is **read-only** by design; to *write* TOML you still need a thi
 ---
 
 ## Staying current
+
+*Where to track what's new each release.*
 
 - **What's New docs** — every release has an official "What's New in Python 3.x" page; the fastest way to see additions.
 - **PEPs** — accepted proposals show what's landing next (Research → PEP Tracker).

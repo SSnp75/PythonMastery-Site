@@ -58,6 +58,8 @@ The one rule: **dependencies point inward.** The domain knows nothing about the 
 
 ## Worked example: money transfer
 
+*A concrete walk-through showing ports and adapters in action.*
+
 We'll build a `TransferMoney` use case with **pure Python — no framework needed** so every line here is runnable and the outputs are real.
 
 ### The domain core
@@ -214,6 +216,8 @@ Both tests pass. The overdraft test confirms the domain rule fires and produces 
 ---
 
 ## Swapping adapters (plugin-like integrations)
+
+*Replace a DB or external service by swapping an adapter, core untouched.*
 
 The same use case works with a different notifier, chosen at wiring time:
 

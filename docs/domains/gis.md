@@ -66,6 +66,8 @@ Output:
 
 ## Vector vs raster
 
+*Points/lines/polygons vs pixel grids — the two geospatial data models.*
+
 Two fundamental data models in GIS:
 
 - **Vector** — geometry as points, lines, and polygons (a city as a point, a road as a line, a country as a polygon). Best for discrete features. Handled by **Shapely** (geometry) and **GeoPandas** (tables of geometries).
@@ -75,12 +77,16 @@ Two fundamental data models in GIS:
 
 ## Projections: the classic gotcha
 
+*Coordinate reference systems — get them wrong and distances/areas are nonsense.*
+
 !!! warning "Coordinate systems will trip you up"
     The single most common GIS bug is mixing **coordinate reference systems (CRS)**. Latitude/longitude (degrees) and projected coordinates (meters) are different systems; a projection flattens the round Earth onto a flat map, and *every* projection distorts something (area, shape, or distance). Two datasets in different CRSs won't line up. Always check and align the CRS before any spatial operation — GeoPandas makes you specify it for exactly this reason.
 
 ---
 
 ## GeoPandas + Shapely
+
+*DataFrame-style spatial analysis with geometry operations.*
 
 **GeoPandas** extends Pandas with geometry — a DataFrame where one column holds shapes:
 
@@ -107,6 +113,8 @@ cities["area_km2"] = cities.geometry.area / 1e6
 ---
 
 ## The ecosystem
+
+*GeoPandas, Shapely, rasterio, and Folium.*
 
 | Need | Tool |
 |---|---|

@@ -39,6 +39,8 @@ DDD is a software design approach that focuses on the **business domain** — al
 
 ## Value Objects
 
+*Immutable objects defined by their attributes (Money, DateRange) with no identity.*
+
 No identity — defined entirely by their attributes:
 
 ```python
@@ -102,6 +104,8 @@ print(total)   # $20.00 USD
 
 ## Entities
 
+*Objects with a persistent identity that changes over time (a User, an Order).*
+
 Have identity — two entities with same attributes but different IDs are different:
 
 ```python
@@ -139,6 +143,8 @@ class Customer:
 ---
 
 ## Aggregates
+
+*A cluster of entities with one root that enforces invariants and defines a transaction boundary.*
 
 An aggregate is a **consistency boundary** — a cluster of entities and value objects with one root entity that enforces all invariants.
 
@@ -231,6 +237,8 @@ class Order:
 
 ## Domain Events
 
+*Record that something meaningful happened in the domain, decoupling reactions.*
+
 Events represent **facts** — things that already happened:
 
 ```python
@@ -277,6 +285,8 @@ class OrderEventHandler:
 ---
 
 ## Repository Pattern
+
+*A collection-like interface for loading/saving aggregates, hiding persistence.*
 
 Repositories abstract persistence — the domain doesn't know about databases:
 
@@ -328,6 +338,8 @@ class SQLAlchemyOrderRepository:
 
 ## Bounded Contexts
 
+*Explicit boundaries where a model and its language are consistent.*
+
 Each context has its own model of the same real-world concept:
 
 ```python
@@ -367,6 +379,8 @@ These are **different models of the same thing** in different contexts. They com
 ---
 
 ## Use Case (Application Service)
+
+*Orchestrates domain objects to fulfill one application operation.*
 
 ```python
 class PlaceOrder:

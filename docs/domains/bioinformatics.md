@@ -80,6 +80,8 @@ print(transcribe("GATTACA"))    # -> GAUUACA
 
 ## FASTA/FASTQ and BioPython
 
+*Read standard sequence formats and manipulate them with BioPython.*
+
 Real sequence data comes in formats like **FASTA** (sequences) and **FASTQ** (sequences + quality scores). **BioPython** parses these and provides the field's toolkit:
 
 ```python
@@ -103,6 +105,8 @@ protein = dna.translate()      # DNA -> amino acids
 
 ## Bigger concepts
 
+*Alignment, phylogenetics, and variant analysis at a glance.*
+
 - **Sequence alignment** — finding how two sequences match up (mutations, insertions, deletions). Algorithms like Needleman-Wunsch (global) and Smith-Waterman (local) use dynamic programming (see the Algorithms section). Tools: BioPython, BLAST.
 - **Phylogenetics** — building evolutionary trees from sequence similarity.
 - **Genomic pipelines** — processing raw sequencer output through alignment, variant calling, and annotation, often orchestrated as a [data pipeline](../projects/advanced.md).
@@ -110,6 +114,8 @@ protein = dna.translate()      # DNA -> amino acids
 ---
 
 ## The ecosystem
+
+*BioPython, scikit-bio, and specialized tools.*
 
 | Need | Tool |
 |---|---|

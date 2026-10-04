@@ -41,6 +41,8 @@ The central challenge is **isolation**: tenant A must never, under any circumsta
 
 ## The three isolation strategies
 
+*Shared schema, schema-per-tenant, or database-per-tenant — isolation vs cost.*
+
 ```
 1. Shared DB, shared schema       2. Shared DB, schema-per-tenant   3. Database-per-tenant
    ┌───────────────────┐             ┌───────────────────┐             ┌────┐ ┌────┐ ┌────┐
@@ -61,6 +63,8 @@ The central challenge is **isolation**: tenant A must never, under any circumsta
 ---
 
 ## Strategy 1: shared schema, scoped by `tenant_id`
+
+*One schema, every query scoped by tenant — cheapest, needs discipline.*
 
 The most common approach — and the most dangerous if done sloppily, because isolation depends entirely on **every query being filtered**. Runnable example:
 
@@ -131,6 +135,8 @@ A plain global variable would be shared across all concurrent requests — tenan
 
 ## Tenant routing (resolving who's who)
 
+*Identify the current tenant from subdomain, header, or token.*
+
 Before you can scope anything, you must identify the tenant from the incoming request. Common sources:
 
 ```python
@@ -168,6 +174,8 @@ async def tenant_middleware(request, call_next):
 
 ## Cross-cutting concerns
 
+*Per-tenant config, limits, and migrations.*
+
 Multi-tenancy touches more than data reads:
 
 - **Noisy neighbors.** One heavy tenant can starve others of CPU/DB connections. Mitigate with per-tenant rate limits, connection-pool quotas, or moving big tenants to dedicated resources.
@@ -179,6 +187,8 @@ Multi-tenancy touches more than data reads:
 ---
 
 ## Security checklist
+
+*Guardrails so one tenant can never see another's data.*
 
 Because a mistake here is a cross-customer data leak, treat isolation as a security control:
 

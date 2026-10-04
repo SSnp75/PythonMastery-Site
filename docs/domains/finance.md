@@ -72,6 +72,8 @@ The price went up 10% then down 10% — note that leaves you *below* where you s
 
 ## Time series with Pandas
 
+*Index by date, resample, and compute rolling returns on market data.*
+
 Real finance work uses **Pandas** for time-indexed price data:
 
 ```python
@@ -92,6 +94,8 @@ sma_50 = prices["close"].rolling(50).mean()     # 50-day moving average
 ---
 
 ## Risk basics
+
+*Volatility, drawdown, and value-at-risk fundamentals.*
 
 A few standard risk measures:
 
@@ -130,6 +134,8 @@ Libraries like `backtrader`, `vectorbt`, and `zipline` provide realistic backtes
 ---
 
 ## The ecosystem
+
+*pandas, NumPy, statsmodels, and quant libraries.*
 
 | Need | Library |
 |---|---|
