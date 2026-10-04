@@ -28,9 +28,29 @@ other coroutines can progress. Every example below runs as-is.
 
 ---
 
+## The 8-layer mastery map
+
+*A learning arc from core primitives to ecosystem-level integration — use it to see where any async topic fits and to plan what to learn next.*
+
+| Layer | Focus | Covers |
+|---|---|---|
+| **1 · Foundations** | the primitives | event loop, coroutine lifecycle, `async def`/`await`, awaitables, cancellation, cooperative multitasking |
+| **2 · Context management** | deterministic cleanup | `async with`, `__aenter__`/`__aexit__`, teardown under cancellation, structured concurrency |
+| **3 · Concurrency tools** | orchestration | `create_task`/`gather`/`wait`, `Lock`/`Semaphore`/`Event`/`Condition`, `TaskGroup`, thread/async hybrids |
+| **4 · I/O & integration** | real work | `aiofiles`, `aiohttp`, async SQLAlchemy/`asyncpg`, async sockets, pools, backpressure |
+| **5 · Patterns & engineering** | robustness | structured concurrency, retry/backoff, failure containment, instrumentation, high-load HTTP |
+| **6 · Domain architectures** | applied | FastAPI, Kafka/SQS, WebSockets/real-time, cloud microservices, `pytest-asyncio` |
+| **7 · Meta-engineering** | scale | async design patterns, DI/context factories, CI/CD orchestration, profiling, error taxonomy |
+| **8 · Ecosystem integration** | the wider world | Trio/AnyIO/Curio, Starlette/Quart/Sanic, async ORMs, cloud SDKs, OpenTelemetry, 3.13+ evolution |
+
+The sections below work mostly at **layers 1–4** (the primitives you'll use daily); layers 5–8
+point to the broader topics covered across the Web, Distributed, and Observability tracks.
+
+---
+
 ## Vocabulary
 
-*Vocabulary in Asyncio & Concurrency — Deep Dive — what it is and when to use it.*
+*The core terms you need before writing async code — coroutine, task, future, event loop — and the crucial distinction between concurrency and parallelism.*
 
 | Term | Meaning |
 |---|---|
@@ -50,7 +70,7 @@ other coroutines can progress. Every example below runs as-is.
 
 ## Define and run
 
-*Define and run in Asyncio & Concurrency — Deep Dive — what it is and when to use it.*
+*The entry point: write a coroutine with `async def` and run it from sync code with `asyncio.run()`.*
 
 ```python
 import asyncio
@@ -66,7 +86,7 @@ print(asyncio.run(greet("alice")))   # hi alice
 
 ## `gather` — run coroutines concurrently and collect results
 
-*gather — run coroutines concurrently and collect results, part of Asyncio & Concurrency — Deep Dive.*
+*Run several coroutines at once and get their results back in argument order — the simplest way to parallelize independent I/O.*
 
 ```python
 import asyncio
@@ -87,7 +107,7 @@ print(asyncio.run(main()))   # [2, 4, 6]  (order preserved)
 
 ## `gather` vs `create_task`
 
-*gather vs create_task in Asyncio & Concurrency — Deep Dive — what it is and when to use it.*
+*Both run work concurrently; `gather` is the batch shortcut, while `create_task` hands you a task you can await, cancel, or inspect individually.*
 
 Both run work concurrently. `gather` is the batch shortcut; `create_task` gives you a handle
 you can await individually, cancel, or inspect.
@@ -124,7 +144,7 @@ print(asyncio.run(with_tasks()))    # ('coffee', 'bagel')
 
 ## `TaskGroup` — structured concurrency (3.11+)
 
-*TaskGroup — structured concurrency, part of Asyncio & Concurrency — Deep Dive.*
+*The modern, safe way to run a group of tasks: it awaits them all and cancels the rest if any fails — no orphaned tasks. Prefer it over bare `gather` (3.11+).*
 
 `TaskGroup` is the modern, safer way to run a group of tasks: it waits for all of them, and
 if any raises, it cancels the rest and propagates the error. No orphaned tasks.
@@ -149,7 +169,7 @@ print(asyncio.run(main()))   # [0, 1, 2]
 
 ## Timeouts
 
-*Timeouts in Asyncio & Concurrency — Deep Dive — what it is and when to use it.*
+*Bound how long an awaited operation may take and cancel it if it overruns — essential for network calls that could hang.*
 
 ```python
 import asyncio
@@ -173,7 +193,7 @@ For a single awaitable, `asyncio.wait_for(coro, timeout)` does the same.
 
 ## Synchronization primitives
 
-*Synchronization primitives in Asyncio & Concurrency — Deep Dive — what it is and when to use it.*
+*Even on one thread you need coordination when tasks share a resource — `Lock`, `Semaphore`, `Event`, and `Queue` manage access, concurrency limits, signaling, and handoff.*
 
 Even single-threaded, you need coordination when tasks share state or a limited resource.
 
@@ -275,7 +295,7 @@ print(asyncio.run(main()))   # [0, 10, 20]
 
 ## Running blocking code without freezing the loop
 
-*Running blocking code without freezing the loop in Asyncio & Concurrency — Deep Dive — what it is and when to use it.*
+*A blocking call stalls the whole event loop — offload it to a thread with `asyncio.to_thread` so other coroutines keep running.*
 
 A blocking call (CPU work, a non-async library) stalls the whole event loop. Offload it to a
 thread with `asyncio.to_thread`:
@@ -296,7 +316,7 @@ print(asyncio.run(main()))   # 499500
 
 ## Async context managers
 
-*Async context managers in Asyncio & Concurrency — Deep Dive — what it is and when to use it.*
+*`async with` for resources whose setup/teardown is itself async — HTTP sessions, DB connections, locks. Define one with `__aenter__`/`__aexit__` or `@asynccontextmanager`.*
 
 Resources with async setup/teardown use `async with`. Define one with
 `__aenter__`/`__aexit__` or the `@asynccontextmanager` decorator:
@@ -341,7 +361,7 @@ print(asyncio.run(main()))   # ['open', 'use', 'close']
 
 ## Async iteration
 
-*Async iteration in Asyncio & Concurrency — Deep Dive — what it is and when to use it.*
+*Consume values from an async source as they arrive with `async for` — for streaming responses, paginated APIs, and event feeds.*
 
 Consume an async generator with `async for`:
 
