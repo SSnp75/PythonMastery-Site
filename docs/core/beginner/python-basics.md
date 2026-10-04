@@ -53,11 +53,11 @@ print(type(age))         # <class 'int'>
 
 ```python
 x = "42"
-y = int(x)       # str → int
-z = float(x)     # str → float
-s = str(123)     # int → str
-b = bool(0)      # int → bool  (False)
-b2 = bool("hi")  # str → bool  (True — any non-empty string)
+print(int(x))       # 42      (str → int)
+print(float(x))     # 42.0    (str → float)
+print(str(123))     # '123'   (int → str)
+print(bool(0))      # False   (int → bool)
+print(bool("hi"))   # True    (any non-empty string is truthy)
 ```
 
 ---

@@ -33,7 +33,9 @@ else:
 ### Ternary (one-liner)
 
 ```python
+score = 85
 label = "pass" if score >= 50 else "fail"
+print(label)   # pass
 ```
 
 ### Truthy and Falsy values
@@ -68,12 +70,18 @@ for i in range(2, 10, 2):   # 2, 4, 6, 8
 # Enumerate — get index AND value
 for i, fruit in enumerate(fruits):
     print(f"{i}: {fruit}")
+# 0: apple
+# 1: banana
+# 2: cherry
 
 # Zip — iterate two lists together
 names  = ["Alice", "Bob", "Charlie"]
 scores = [95, 87, 72]
 for name, score in zip(names, scores):
     print(f"{name}: {score}")
+# Alice: 95
+# Bob: 87
+# Charlie: 72
 ```
 
 ---

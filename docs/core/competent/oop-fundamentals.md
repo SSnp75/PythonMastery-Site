@@ -100,6 +100,8 @@ class BankAccount:
 animals = [Cat("Whiskers"), Dog("Rex")]
 for animal in animals:
     print(animal.speak())   # each calls its own version
+# Whiskers says Meow!
+# Rex says Woof!
 ```
 
 ---
@@ -150,6 +152,11 @@ class Vector:
 
     def __len__(self):
         return int((self.x**2 + self.y**2) ** 0.5)
+
+v = Vector(1, 2) + Vector(3, 4)
+print(v)                       # Vector(4, 6)       — __add__ then __repr__
+print(Vector(3, 4) == Vector(3, 4))   # True        — __eq__
+print(len(Vector(3, 4)))       # 5                  — __len__ (magnitude)
 ```
 
 ---
