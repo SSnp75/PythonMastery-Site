@@ -74,8 +74,102 @@ class Circle:
 
 ---
 
+## Ordering & comparison
+
+`order=True` generates `__lt__`, `__le__`, etc., comparing fields as a tuple:
+
+```python
+from dataclasses import dataclass
+
+@dataclass(order=True)
+class Version:
+    major: int
+    minor: int
+
+print(Version(1, 2) < Version(1, 5))   # True
+print(sorted([Version(2, 0), Version(1, 9)]))
+# [Version(major=1, minor=9), Version(major=2, minor=0)]
+```
+
+---
+
+## `slots=True` — smaller, faster instances
+
+Python 3.10+ can generate `__slots__`, which drops the per-instance `__dict__`:
+
+```python
+from dataclasses import dataclass
+
+@dataclass(slots=True)
+class Point:
+    x: int
+    y: int
+
+p = Point(1, 2)
+print(hasattr(p, "__dict__"))   # False — attributes live in slots
+```
+
+---
+
+## Excluding a field from compare / repr
+
+```python
+from dataclasses import dataclass, field
+
+@dataclass
+class User:
+    name: str
+    password: str = field(repr=False, compare=False)
+
+u = User("alice", "secret")
+print(u)   # User(name='alice')  — password hidden from repr
+print(u == User("alice", "different"))   # True — password ignored in ==
+```
+
+---
+
+## Convert to dict / tuple
+
+```python
+from dataclasses import dataclass, asdict, astuple
+
+@dataclass
+class Point:
+    x: int
+    y: int
+
+p = Point(3, 4)
+print(asdict(p))    # {'x': 3, 'y': 4}
+print(astuple(p))   # (3, 4)
+```
+
+---
+
+## Post-init validation (runnable)
+
+```python
+from dataclasses import dataclass, field
+
+@dataclass
+class Circle:
+    radius: float
+    area: float = field(init=False)
+
+    def __post_init__(self):
+        if self.radius < 0:
+            raise ValueError("radius must be non-negative")
+        self.area = 3.14159 * self.radius ** 2
+
+c = Circle(2)
+print(round(c.area, 2))   # 12.57
+```
+
+---
+
 ## Practice exercises
 
 1. Convert a regular class with `__init__`, `__repr__`, `__eq__` into a `@dataclass`.
 2. Create a frozen `Color` dataclass with RGB values and a computed hex property.
 3. Build a `@dataclass` with validation in `__post_init__`.
+4. Use `order=True` to make a `Card` dataclass sortable by rank then suit.
+5. Use `asdict` to serialize a nested dataclass to JSON.

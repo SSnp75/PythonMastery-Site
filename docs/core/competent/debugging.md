@@ -51,12 +51,79 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-logger.debug("Variable x = %s", x)
+logger.debug("Variable x = %s", 42)
 logger.info("Processing started")
 logger.warning("Disk space low")
 logger.error("Failed to connect")
 logger.critical("System crash!")
 ```
+
+Use `%s` placeholders (not f-strings) so the string is only formatted if the level is active.
+
+---
+
+## Post-mortem: inspect a crash after it happens
+
+```python
+import pdb
+
+def boom():
+    x = 10
+    return x / 0
+
+try:
+    boom()
+except ZeroDivisionError:
+    # pdb.post_mortem()  # drops into the frame where it crashed
+    pass
+```
+
+`pdb.post_mortem()` opens the debugger at the exact frame that raised — you can inspect
+locals (`x` here) without re-running.
+
+---
+
+## Reading tracebacks programmatically
+
+```python
+import traceback
+
+try:
+    [][5]
+except IndexError:
+    tb = traceback.format_exc()
+    print("IndexError" in tb)   # True
+```
+
+`traceback.format_exc()` returns the full traceback as a string — handy for logging.
+
+---
+
+## Quick inspection helpers
+
+```python
+# What attributes/methods does an object have?
+print([m for m in dir("x") if not m.startswith("_")][:3])   # ['capitalize', 'casefold', 'center']
+
+# Where is this object in memory / what type?
+print(type(42).__name__)   # int
+
+# Introspect a function's signature
+import inspect
+def f(a, b=2): ...
+print(str(inspect.signature(f)))   # (a, b=2)
+```
+
+---
+
+## Debugging checklist
+
+!!! tip "A systematic approach"
+    1. Reproduce it reliably first.
+    2. Read the **full** traceback — bottom line is the error, top is where it started.
+    3. Narrow with `breakpoint()` or `print` at the boundary of good/bad state.
+    4. Check assumptions with `assert` or by printing types, not just values.
+    5. Fix the root cause, then add a test that would have caught it.
 
 ---
 

@@ -73,11 +73,97 @@ with open("model.pkl", "rb") as f:
 
 ---
 
+## JSON round-trip (runnable)
+
+```python
+import json
+
+data = {"name": "Alice", "scores": [95, 87, 92], "active": True}
+s = json.dumps(data)
+back = json.loads(s)
+print(back == data)        # True
+print(json.dumps({"a": 1}, sort_keys=True))   # {"a": 1}
+```
+
+Note the type mapping: Python `True` → JSON `true`, `None` → `null`, tuples → arrays.
+
+---
+
+## Custom JSON encoding
+
+`json` can't serialize arbitrary objects — supply a `default` function:
+
+```python
+import json
+from datetime import date
+
+def encode(obj):
+    if isinstance(obj, date):
+        return obj.isoformat()
+    raise TypeError(type(obj).__name__)
+
+print(json.dumps({"when": date(2026, 1, 15)}, default=encode))
+# {"when": "2026-01-15"}
+```
+
+---
+
+## CSV
+
+```python
+import csv, io
+
+buf = io.StringIO()
+writer = csv.writer(buf)
+writer.writerow(["name", "age"])
+writer.writerow(["Alice", 30])
+
+reader = csv.DictReader(io.StringIO(buf.getvalue()))
+rows = list(reader)
+print(rows)   # [{'name': 'Alice', 'age': '30'}]
+```
+
+CSV values are always strings on read — convert types yourself.
+
+---
+
+## TOML (read-only, stdlib 3.11+)
+
+```python
+import tomllib   # Python 3.11+
+
+doc = tomllib.loads('title = "demo"\n[server]\nport = 8080')
+print(doc["server"]["port"])   # 8080
+```
+
+Great for config (`pyproject.toml` uses it). For writing TOML, use the `tomli-w` package.
+
+---
+
+## pickle round-trip (runnable)
+
+```python
+import pickle
+
+obj = {"nums": [1, 2, 3], "nested": {"ok": True}}
+blob = pickle.dumps(obj)          # bytes
+restored = pickle.loads(blob)
+print(restored == obj)            # True
+```
+
+!!! warning "pickle executes code"
+    Never unpickle data from an untrusted source — a malicious payload can run arbitrary
+    code during `loads`. Use JSON for anything crossing a trust boundary.
+
+---
+
 ## When to use what
 
 | Format | Human-readable | Language-agnostic | Speed | Use case |
 |---|---|---|---|---|
 | JSON | Yes | Yes | Good | APIs, config, web |
-| YAML | Yes | Yes | Moderate | Config files |
-| pickle | No | No | Fast | Python-internal caching |
-| msgpack | No | Yes | Very fast | High-perf IPC |
+| CSV | Yes | Yes | Good | tabular data, spreadsheets |
+| TOML | Yes | Yes | Good | config files (pyproject.toml) |
+| YAML | Yes | Yes | Moderate | config files |
+| pickle | No | No | Fast | Python-internal caching (trusted) |
+| msgpack | No | Yes | Very fast | high-perf IPC |
