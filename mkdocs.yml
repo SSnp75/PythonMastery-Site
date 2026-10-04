@@ -419,6 +419,7 @@ nav:
   - Reference:
     - reference/index.md
     - reference/cheatsheets.md
+    - reference/generators-decorators-filter.md
     - reference/code-snippets.md
     - reference/templates.md
     - reference/tools.md

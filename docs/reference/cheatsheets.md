@@ -582,6 +582,7 @@ Quick-reference cards — print them (`Ctrl+P`), bookmark them, keep them open w
 
 <div class="pm-next">
 <strong>✅ Keep going</strong>
+<a href="generators-decorators-filter.md">Generators, Decorators & Filtering (deep dive)</a>
 <a href="code-snippets.md">Code Snippets</a>
 <a href="glossary.md">Glossary</a>
 <a href="tools.md">Tools</a>
