@@ -168,6 +168,20 @@ Quick-reference cards — print them (`Ctrl+P`), bookmark them, keep them open w
 | Dataclass | `@dataclass(frozen=True, slots=True)`, `field(default_factory=list)` |
 | Check | `mypy .`, `pyright` |
 
+### Pattern matching (`match`/`case`, 3.10+)
+
+| Pattern | Snippet |
+|---|---|
+| Literal / wildcard | `case 200:` ... `case _:` |
+| Or-pattern | `case "a" \| "e" \| "i":` |
+| Capture | `case [first, *rest]:`, `case {"id": x}:` |
+| Sequence | `case []:`, `case [x]:`, `case [a, b]:` |
+| Mapping | `case {"type": "click", "x": x}:` |
+| Class | `case Point(x=0, y=y):` |
+| Guard | `case n if n > 0:` |
+
+See the full [Pattern Matching lesson](../core/intermediate/pattern-matching.md) for destructuring and guards.
+
 ---
 
 ## [Standard Library & Tooling](../core/competent/index.md){ .pm-cheat-link }
