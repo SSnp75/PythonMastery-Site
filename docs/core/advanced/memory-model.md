@@ -67,6 +67,8 @@ print(id(x) == id(w))   # False
 
 ## Mutable vs Immutable
 
+*Whether an object can change in place drives Python's trickiest bugs — shared mutable defaults, aliasing, and surprising `==` vs `is` results. Immutables (int, str, tuple) are safe to share; mutables aren't.*
+
 | Immutable | Mutable |
 |---|---|
 | `int`, `float`, `bool` | `list` |

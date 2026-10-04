@@ -56,6 +56,8 @@ exec(interactive)   # prints: 42
 
 ## Generating classes dynamically
 
+*Build classes at runtime with `type(name, bases, namespace)` — for ORMs, schema-driven models, and factories that create types from data.*
+
 ```python
 def make_dataclass(class_name, fields):
     """Generate a class similar to @dataclass without the decorator."""

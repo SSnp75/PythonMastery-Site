@@ -71,6 +71,8 @@ gc.collect()
 
 ## Generational Collection
 
+*The cyclic collector groups objects into generations and checks young ones more often — based on the observation that most objects die young. Explains GC pauses and tuning knobs.*
+
 The cyclic GC uses 3 **generations** based on the hypothesis that most objects die young:
 
 | Generation | Contains | Collected |

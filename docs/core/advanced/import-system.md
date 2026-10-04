@@ -98,6 +98,8 @@ sys.path.insert(0, "/my/custom/path")
 
 ## Writing a custom Finder
 
+*Hook into `sys.meta_path` to control how modules are located — the basis of import plugins that load from zips, URLs, encrypted sources, or generate modules on the fly.*
+
 ```python
 import importlib.abc
 import importlib.util

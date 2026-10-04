@@ -104,6 +104,8 @@ print(co.co_code)        # b'd\x01S\x00' (opaque bytes)
 
 ## Frame Objects
 
+*Each function call creates a frame holding its locals, and the current instruction. Frames are what you inspect in a debugger and traceback — and what generators suspend and resume.*
+
 Every function call creates a frame. Frames are the runtime representation of code execution:
 
 ```python
@@ -241,6 +243,8 @@ dis.dis(broken)
 ---
 
 ## global and nonlocal
+
+*Rebind a name in an outer scope instead of creating a new local. Use `global` for module-level state and `nonlocal` for closure counters/accumulators — sparingly.*
 
 ```python
 counter = 0

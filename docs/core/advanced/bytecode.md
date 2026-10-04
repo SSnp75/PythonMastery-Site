@@ -45,6 +45,8 @@ Each line: `line_number | byte_offset | OPCODE | arg_index (human_name)`
 
 ## The `dis` module in depth
 
+*Disassemble a function to see the exact VM instructions it runs — use it to understand performance differences and how Python language features compile.*
+
 ```python
 import dis
 

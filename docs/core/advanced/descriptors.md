@@ -88,6 +88,8 @@ del p.age
 
 ## Data Descriptors vs Non-data Descriptors
 
+*The distinction decides precedence against the instance `__dict__`: data descriptors (define `__set__`/`__delete__`) win over instance attributes; non-data ones (only `__get__`) don't. It's why `@property` can't be shadowed but a cached value can.*
+
 This distinction controls **priority** in attribute lookup.
 
 | Type | Defines | Priority |
@@ -173,6 +175,8 @@ def object_getattribute(obj, name):
 ---
 
 ## `__set_name__` — knowing your own name
+
+*Python calls `__set_name__` at class creation so a descriptor learns the attribute name it's bound to — use it to pick a per-instance storage key automatically instead of hardcoding one.*
 
 Added in Python 3.6, called automatically when the class is created:
 

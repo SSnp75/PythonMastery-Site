@@ -98,6 +98,8 @@ Foo = metaclass("Foo", (Base,), namespace)
 
 ## Writing a custom metaclass
 
+*Subclass `type` and override `__new__`/`__init__` to intercept and customize class creation — the mechanism behind ORMs, serializers, and plugin registries. Use `__init_subclass__` instead when you only need to react to subclassing.*
+
 ```python
 class Meta(type):
     """Metaclass that prints when classes are created."""

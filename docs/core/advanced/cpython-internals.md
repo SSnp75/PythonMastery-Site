@@ -54,6 +54,8 @@ print(sys.getrefcount(x))   # 2
 
 ## Reference Counting
 
+*CPython frees an object the instant its reference count hits zero. Understanding it explains memory behavior, why cycles need a separate collector, and the cost of holding references.*
+
 CPython's primary memory management is **reference counting** — each object tracks how many references point to it:
 
 ```python
@@ -83,6 +85,8 @@ When refcount hits 0, the object is **immediately** deallocated — no waiting f
 ---
 
 ## The GIL (Global Interpreter Lock)
+
+*Only one thread runs Python bytecode at a time. This is why threads help I/O-bound work but not CPU-bound work — for CPU parallelism use multiprocessing.*
 
 The GIL is a mutex that allows only **one thread** to execute Python bytecode at a time.
 

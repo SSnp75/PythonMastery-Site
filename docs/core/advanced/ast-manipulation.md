@@ -92,6 +92,8 @@ Module(
 
 ## Walking the tree with `NodeVisitor`
 
+*Subclass `NodeVisitor` to read the tree without changing it — the pattern behind linters, complexity analyzers, and dependency extractors.*
+
 ```python
 import ast
 
@@ -148,6 +150,8 @@ for f in analyzer.functions:
 ---
 
 ## Transforming code with `NodeTransformer`
+
+*Subclass `NodeTransformer` to rewrite the tree — injecting instrumentation, optimizing, or desugaring — then compile the modified AST back to a code object.*
 
 `NodeTransformer` visits each node and replaces it with the returned node:
 
