@@ -16,6 +16,8 @@ description: JSON, YAML, pickle, msgpack and data interchange formats
 
 ## JSON
 
+*The default format for config and web APIs — human-readable and language-agnostic. Use `load`/`dump` for files, `loads`/`dumps` for strings.*
+
 ```python
 import json
 
@@ -39,6 +41,8 @@ with open("data.json", "r") as f:
 
 ## YAML
 
+*A more human-friendly config format (used by Docker Compose, CI, k8s). Always use `safe_load` on untrusted input. Needs the third-party `pyyaml`.*
+
 ```python
 import yaml  # pip install pyyaml
 
@@ -56,6 +60,8 @@ with open("config.yaml", "r") as f:
 ---
 
 ## pickle (Python-only, binary)
+
+*Serialize almost any Python object to bytes — handy for caching and inter-process transfer within trusted Python code. Never unpickle untrusted data.*
 
 ```python
 import pickle

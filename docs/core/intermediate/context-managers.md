@@ -23,6 +23,8 @@ description: "with statement, __enter__/__exit__, contextlib, async context mana
 
 ## The `with` statement protocol
 
+*The mechanics behind `with`: `__enter__` runs on entry, `__exit__` always runs on the way out (even on error). Use `with` for anything that must be released — files, locks, connections.*
+
 When you write `with X as Y:`, Python calls:
 
 1. `X.__enter__()` → return value assigned to `Y`
@@ -46,6 +48,8 @@ finally:
 ---
 
 ## Writing your own (class-based)
+
+*Implement `__enter__`/`__exit__` when the manager needs to hold state or expose methods. Use for custom resources: a DB transaction, a timer, a temporary setting.*
 
 ```python
 import time
@@ -80,6 +84,8 @@ print(f"That took {t.elapsed:.6f}s")
 
 ## Exception handling in `__exit__`
 
+*`__exit__` receives any exception raised in the block; return `True` to suppress it, `False`/`None` to let it propagate. Use it to clean up and decide whether to swallow errors.*
+
 ```python
 class Suppressor:
     """Suppress specific exceptions."""
@@ -112,6 +118,8 @@ The return value of `__exit__`:
 ---
 
 ## Generator-based context managers with `contextlib`
+
+*`@contextmanager` turns a generator into a context manager — code before `yield` is setup, after is teardown. The quickest way to write a simple one, no class needed.*
 
 ```python
 from contextlib import contextmanager
@@ -246,6 +254,8 @@ print(f"Got: {captured!r}")
 
 ## contextlib utilities
 
+*Ready-made helpers — `suppress`, `redirect_stdout`, `closing`, `ExitStack` — that cover common needs without writing a manager yourself.*
+
 ### suppress — catch and ignore exceptions
 
 ```python
@@ -317,6 +327,8 @@ def process(data, lock=None):
 
 ## Nested and multiple context managers
 
+*Open several resources in one `with` (comma-separated), or use `ExitStack` when the number is dynamic — e.g. opening a variable list of files.*
+
 ```python
 # Multiple in one line
 with open("input.txt") as fin, open("output.txt", "w") as fout:
@@ -379,6 +391,8 @@ async def main():
 ---
 
 ## Reentrant vs reusable context managers
+
+*Know the difference: a class-based manager can usually be re-entered/reused, but a `@contextmanager` generator is single-use — enter it twice and it's already exhausted.*
 
 ```python
 # REENTRANT: can be used in nested 'with' statements

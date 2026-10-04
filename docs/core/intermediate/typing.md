@@ -32,6 +32,8 @@ description: Annotations, generics, Protocol, TypeVar, overload, ParamSpec and m
 
 ## Basic annotations
 
+*Attach types to variables, parameters, and return values. Start here — `x: int`, `-> str` — on any shared code to get checking and autocomplete.*
+
 ```python
 # Variables
 name: str = "Alice"
@@ -52,6 +54,8 @@ def log(message: str) -> None:
 
 ## Collection types
 
+*Describe what's inside containers — `list[int]`, `dict[str, float]`, `tuple[int, ...]` — so callers and checkers know the element types.*
+
 ```python
 # Python 3.9+ — use built-in types directly
 names: list[str] = ["Alice", "Bob"]
@@ -70,6 +74,8 @@ config: dict[str, list[str]] = {"hosts": ["a", "b"]}
 ---
 
 ## Optional and Union
+
+*Express "this or that" — `str | None` for maybe-missing values, `int | str` for multiple accepted types. Forces callers (and you) to handle every case.*
 
 ```python
 from typing import Optional
@@ -92,6 +98,8 @@ def process(value: int | str | float) -> str:
 ---
 
 ## TypeVar — generic functions
+
+*Write functions that preserve the input type in the output — a `first(items: list[T]) -> T` keeps `int` in, `int` out — instead of losing precision with `Any`.*
 
 ```python
 from typing import TypeVar
@@ -124,6 +132,8 @@ def clone(animal: T_Animal) -> T_Animal:
 ---
 
 ## Generic classes
+
+*Build reusable containers/wrappers parameterized by type — a `Stack[int]` vs `Stack[str]` — so the checker tracks element types through your class.*
 
 ```python
 from typing import TypeVar, Generic
@@ -160,6 +170,8 @@ str_stack.push("hello")
 
 ## Protocol — structural subtyping (duck typing with types)
 
+*Type by shape, not inheritance: anything with the right methods satisfies the Protocol. Use it to type "anything file-like" or "anything with `.area()`" without a base class.*
+
 ```python
 from typing import Protocol, runtime_checkable
 
@@ -195,6 +207,8 @@ print(isinstance(Text(), Drawable))     # False
 
 ## Callable types
 
+*Type parameters that are themselves functions — `Callable[[int], str]` — for callbacks, handlers, and higher-order functions.*
+
 ```python
 from typing import Callable
 
@@ -218,6 +232,8 @@ def run_task(callback: OnComplete) -> None:
 
 ## TypedDict — typed dictionaries
 
+*Give a dict a fixed set of typed keys — ideal for JSON payloads and config where you want checking but not a full class.*
+
 ```python
 from typing import TypedDict, NotRequired
 
@@ -239,6 +255,8 @@ def process_user(u: UserDict) -> str:
 
 ## Literal types
 
+*Restrict a value to specific constants — `Literal["GET", "POST"]` — so the checker rejects anything else. Great for mode flags and enums-lite.*
+
 ```python
 from typing import Literal
 
@@ -257,6 +275,8 @@ def open_file(path: str, mode: Mode = "r") -> None:
 ---
 
 ## overload — multiple signatures
+
+*Declare several precise signatures for one function whose return type depends on its arguments — so callers get accurate types per call shape.*
 
 ```python
 from typing import overload
@@ -287,6 +307,8 @@ z: list[str] = process([1,2]) # returns list[str]
 
 ## ParamSpec — preserving function signatures
 
+*Keep a decorated function's exact parameter types through a wrapper — so a typed decorator doesn't erase the signature to `(*args, **kwargs)`.*
+
 ```python
 from typing import ParamSpec, TypeVar, Callable
 from functools import wraps
@@ -314,6 +336,8 @@ result: int = add(1, 2)
 
 ## TypeGuard — narrowing types
 
+*Teach the checker that a custom predicate narrows a type — after `if is_str_list(x):`, the checker treats `x` as `list[str]`.*
+
 ```python
 from typing import TypeGuard
 
@@ -330,6 +354,8 @@ def process(items: list[object]) -> None:
 ---
 
 ## Self type (Python 3.11+)
+
+*Type a method that returns its own instance (`-> Self`) — for fluent/builder APIs and `copy`-style methods — so subclasses get the right return type.*
 
 ```python
 from typing import Self
@@ -353,6 +379,8 @@ print(result)   # Hello World
 ---
 
 ## Running mypy
+
+*Type hints do nothing at runtime — run a checker like `mypy` (ideally in CI) to actually catch mismatches. Use `--strict` on new code.*
 
 ```bash
 # Install

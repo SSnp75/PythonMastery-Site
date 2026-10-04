@@ -48,6 +48,8 @@ say_hello("Alice")
 
 ## functools.wraps — always use it
 
+*Copies the wrapped function's name, docstring, and metadata onto the wrapper. Always apply it, or tools, tracebacks, and `help()` will show "wrapper" instead of the real function.*
+
 ```python
 from functools import wraps
 
@@ -75,6 +77,8 @@ print(slow_function.__name__)   # "slow_function" (not "wrapper")
 
 ## Decorators with arguments
 
+*A decorator that takes config needs an extra layer: a function returning a decorator. Use it for `@retry(times=3)`, `@route("/path")`, `@cache(ttl=60)`-style parameterized behavior.*
+
 ```python
 def repeat(n):
     def decorator(func):
@@ -96,6 +100,8 @@ greet("Alice")   # prints 3 times
 ---
 
 ## Class-based decorators
+
+*Use a class with `__call__` when the decorator must hold state across calls (counts, caches, registries) — cleaner than nested closures with `nonlocal`.*
 
 ```python
 class CountCalls:
@@ -121,6 +127,8 @@ print(say_hi.count)   # 2
 
 ## Stacking decorators
 
+*Apply several decorators to one function — they wrap bottom-up. Order matters: `@timer` over `@repeat(3)` times all three runs together.*
+
 ```python
 @timer
 @repeat(3)
@@ -134,6 +142,8 @@ def process():
 ---
 
 ## Real-world patterns
+
+*The payoff: cross-cutting concerns like retry, caching, auth, and rate limiting applied declaratively with one line, instead of cluttering every function body.*
 
 ```python
 # Retry decorator
