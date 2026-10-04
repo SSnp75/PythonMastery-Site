@@ -716,6 +716,71 @@ See the full [Pattern Matching lesson](../core/intermediate/pattern-matching.md)
 
 ---
 
+## [Scientific Computing](../scientific/index.md){ .pm-cheat-link }
+
+*Quick-reference card for Scientific Computing — the common commands at a glance.*
+
+| Task | Snippet / tool |
+|---|---|
+| Linear algebra | NumPy/SciPy call BLAS/LAPACK; `scipy.linalg.solve`, `eig`, `svd` |
+| Sparse matrices | `scipy.sparse` (CSR/CSC/COO) for mostly-zero data |
+| Integration / ODEs | `scipy.integrate.quad`, `solve_ivp` |
+| Optimization | `scipy.optimize.minimize`, root finding, curve fit |
+| Monte Carlo | `rng = np.random.default_rng()`, sample + average |
+| Autodiff | JAX `grad`, or build reverse-mode from scratch |
+| Visualization | Matplotlib 3D, PyVista/Mayavi for volumes |
+
+---
+
+## [Embedded & Systems](../embedded/index.md){ .pm-cheat-link }
+
+*Quick-reference card for Embedded & Systems — the common commands at a glance.*
+
+| Task | Snippet / tool |
+|---|---|
+| Microcontrollers | MicroPython / CircuitPython on ESP32, Pico |
+| GPIO | `machine.Pin`, or `RPi.GPIO` / `gpiozero` on Linux boards |
+| Serial | `pyserial`: `serial.Serial(port, baud)`, `.read()/.write()` |
+| Sensors / buses | I2C/SPI via `machine` or `smbus2` |
+| Real-time | mind GC pauses & GIL; offload timing-critical paths |
+| ROS | nodes + topics (pub/sub) with `rclpy` |
+| Daemons | run as a `systemd` service on embedded Linux |
+
+---
+
+## [Domains](../domains/index.md){ .pm-cheat-link }
+
+*Quick-reference card for domain applications — the go-to library per field.*
+
+| Domain | Key tools |
+|---|---|
+| Finance | pandas, NumPy, statsmodels; backtest on time series |
+| Bioinformatics | BioPython (FASTA/FASTQ), alignment, genomics |
+| GIS | GeoPandas, Shapely, rasterio, Folium; mind projections |
+| Game dev | pygame; the update/render game loop |
+| IoT | `paho-mqtt`, edge vs cloud processing |
+| Robotics | ROS, sensor fusion (Kalman), control loops |
+| Quantum | Qiskit / Cirq circuits, simulators |
+
+---
+
+## [Emerging Python](../emerging/index.md){ .pm-cheat-link }
+
+*Quick-reference card for emerging & evolving Python — what's new and coming.*
+
+| Feature | Note |
+|---|---|
+| `match`/`case` | structural pattern matching (3.10+) |
+| `X \| Y` unions | modern type unions (3.10+) |
+| Exception groups | `except*` for concurrent errors (3.11+) |
+| `tomllib` | stdlib TOML reader (3.11+) |
+| Free-threaded build | experimental no-GIL CPython (PEP 703) |
+| Subinterpreters | isolated interpreters per thread (PEP 734) |
+| Faster CPython | ongoing interpreter speedups |
+| JIT | experimental copy-and-patch JIT (3.13+) |
+
+---
+
 <div class="pm-next">
 <strong>✅ Keep going</strong>
 <a href="generators-decorators-filter.md">Generators, Decorators & Filtering (deep dive)</a>
