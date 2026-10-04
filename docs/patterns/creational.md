@@ -23,6 +23,8 @@ description: Factory, Builder, Singleton, Prototype and Abstract Factory in Pyth
 
 ## Factory Method
 
+*Centralize object creation behind a function/method so callers don't hardcode concrete classes — use when the type to build depends on input or config.*
+
 Create objects without specifying the exact class — let subclasses decide.
 
 ```python
@@ -72,6 +74,8 @@ notif.send("Hi!")      # SMS to +1234567890: Hi!
 ---
 
 ## Builder
+
+*Construct a complex object step by step — use when there are many optional parameters and a constructor would be unwieldy.*
 
 Construct complex objects step by step.
 
@@ -139,6 +143,8 @@ print(request)
 
 ## Singleton
 
+*Ensure one shared instance — use sparingly for truly global resources; in Python a module-level object usually suffices.*
+
 Ensure a class has only one instance.
 
 ```python
@@ -193,6 +199,8 @@ print(db2.url)       # postgres://localhost/mydb
 
 ## Prototype (clone)
 
+*Create new objects by copying an existing one — use when construction is expensive and you have a good template.*
+
 Create new objects by copying existing ones.
 
 ```python
@@ -231,6 +239,8 @@ print(unit2.skills)               # ['slash', 'block']
 ---
 
 ## Abstract Factory
+
+*Create families of related objects without naming concretes — use to swap whole product sets (e.g. a UI theme) at once.*
 
 Create families of related objects without specifying concrete classes.
 

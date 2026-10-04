@@ -22,6 +22,8 @@ description: Observer, Strategy, Command, State Machine, Chain of Responsibility
 
 ## Observer — publish/subscribe
 
+*Notify many dependents when a subject changes — use for event systems, UI updates, and decoupled reactions.*
+
 ```python
 from typing import Protocol, Any
 
@@ -74,6 +76,8 @@ bus.publish("order.placed", {"order_id": 123, "total": 99.99})
 ---
 
 ## Strategy — swap algorithms at runtime
+
+*Make an algorithm interchangeable — use when behavior should vary by context (sort key, pricing rule, payment method).*
 
 ```python
 from typing import Protocol
@@ -145,6 +149,8 @@ process_data(data, sort_func=lambda x: sorted(x, reverse=True))
 ---
 
 ## Command — encapsulate actions as objects
+
+*Package a request as an object — use for undo/redo, queuing, and logging of operations.*
 
 ```python
 from dataclasses import dataclass
@@ -219,6 +225,8 @@ print(editor.document)   # ['Hello', 'World']
 
 ## State Machine
 
+*Model an object whose behavior changes with its state — use for workflows, parsers, and protocols.*
+
 ```python
 from enum import Enum, auto
 
@@ -278,6 +286,8 @@ except ValueError as e:
 ---
 
 ## Chain of Responsibility
+
+*Pass a request along a chain until one handler takes it — use for middleware, validation pipelines, and event handling.*
 
 ```python
 from abc import ABC, abstractmethod

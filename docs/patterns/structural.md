@@ -22,6 +22,8 @@ description: Adapter, Decorator, Facade, Proxy, Composite and Bridge in Python
 
 ## Adapter — make incompatible interfaces work together
 
+*Wrap a class so it matches the interface your code expects — use to integrate third-party or legacy APIs without changing them.*
+
 ```python
 # Old payment system (can't change)
 class LegacyPaymentGateway:
@@ -56,6 +58,8 @@ print(result)   # {'success': True, 'reference': 'PAY-12345', 'amount': 29.99}
 ---
 
 ## Decorator (structural) — add behavior dynamically
+
+*Wrap an object to add responsibilities at runtime — use to layer features (logging, caching) without subclass explosions.*
 
 !!! note "Not the same as Python's `@decorator` syntax"
     The structural Decorator pattern wraps objects. Python's `@decorator` wraps functions. Same concept, different levels.
@@ -116,6 +120,8 @@ print(source.read())   # Hello, World! (transparently decrypted + decompressed)
 
 ## Facade — simplify complex subsystems
 
+*Expose one simple interface over a tangle of components — use to give callers an easy entry point.*
+
 ```python
 class VideoFile:
     def __init__(self, path): self.path = path
@@ -156,6 +162,8 @@ print(result)   # output.mp4
 
 ## Proxy — control access to an object
 
+*Stand in for another object to add lazy loading, caching, access control, or remoting.*
+
 ```python
 import time
 
@@ -194,6 +202,8 @@ db.query("SELECT * FROM users")   # Cache hit! — instant
 ---
 
 ## Composite — tree structures with uniform interface
+
+*Treat individual objects and groups the same way — use for hierarchies like file trees, UI widgets, or org charts.*
 
 ```python
 from abc import ABC, abstractmethod

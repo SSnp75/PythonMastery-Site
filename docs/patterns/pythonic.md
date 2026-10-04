@@ -34,6 +34,8 @@ Python has all of these, making many classic patterns unnecessary or much simple
 
 ## Strategy → just use functions
 
+*In Python a function is a first-class object, so pass the function directly instead of building a Strategy class hierarchy.*
+
 ```python
 # Java-style strategy (unnecessary in Python)
 class SortStrategy(ABC):
@@ -55,6 +57,8 @@ process(data, sort_fn=heapq.nsmallest)
 
 ## Singleton → module-level instance
 
+*A module is already a singleton — define the object at module level instead of a Singleton class.*
+
 ```python
 # Don't use metaclass singletons. Just use a module.
 
@@ -75,6 +79,8 @@ db = _Database()   # THE instance
 ---
 
 ## Mixin pattern — reusable behavior via multiple inheritance
+
+*Compose small behavior-only classes into a class — use to share cross-cutting methods without a deep hierarchy.*
 
 ```python
 import json
@@ -138,6 +144,8 @@ print(bad_user.validate())  # ['name: required', 'email: invalid']
 
 ## Registry pattern — auto-register subclasses
 
+*Have subclasses register themselves (via `__init_subclass__`) so a factory can find them by name — use for plugins and dispatch.*
+
 ```python
 class Serializer:
     """Base class that auto-registers all serializers by format name."""
@@ -179,6 +187,8 @@ print(Serializer._registry)   # {'json': JSONSerializer, 'csv': CSVSerializer, '
 
 ## Context manager as resource pattern
 
+*Model acquire/release as a `with`-block — the Pythonic way to guarantee cleanup for any resource.*
+
 ```python
 from contextlib import contextmanager
 
@@ -209,6 +219,8 @@ def temporary_setting(obj, attr, value):
 ---
 
 ## Descriptor as validator pattern
+
+*Reuse validation logic across attributes with a descriptor — the mechanism behind typed/validated fields.*
 
 ```python
 class Validated:
