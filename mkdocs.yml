@@ -156,6 +156,7 @@ nav:
     - Beginner:
       - core/beginner/index.md
       - core/beginner/python-basics.md
+      - core/beginner/virtual-environments.md
       - core/beginner/control-flow.md
       - core/beginner/functions.md
       - core/beginner/data-structures.md
