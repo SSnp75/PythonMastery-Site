@@ -23,7 +23,7 @@ description: Service boundaries, communication patterns, orchestration and obser
 
 ## When to use microservices
 
-*A core question explored in Microservices Architecture: When to use microservices.*
+*Microservices trade operational simplicity for independent scaling and deployment — worth it only past a certain scale. Start with a monolith and extract services when the signals below appear.*
 
 !!! warning "Start monolith, extract later"
     Don't start with microservices. Start with a well-structured monolith and extract services when you have:
@@ -53,6 +53,8 @@ description: Service boundaries, communication patterns, orchestration and obser
 
 ### Bounded contexts (from DDD)
 
+*Draw service boundaries around business capabilities (Catalog, Orders, Payment), each owning its own data — the decomposition that keeps services loosely coupled instead of sharing one database.*
+
 Each service owns a **bounded context** — a clear domain boundary:
 
 ```
@@ -78,6 +80,8 @@ E-commerce Platform:
 *Sync (HTTP/gRPC) vs async (events) and when to use each.*
 
 ### Synchronous — REST / gRPC
+
+*One service calls another and waits for the reply — simplest to reason about and fine for request/response flows, but it couples the caller's availability to the callee's.*
 
 ```python
 # Service A calls Service B via HTTP
@@ -110,6 +114,8 @@ class OrderService:
 ```
 
 ### Asynchronous — Event-driven
+
+*A service publishes an event and moves on; interested services react later — decouples producers from consumers so they scale and fail independently, at the cost of eventual consistency.*
 
 ```python
 # Using Redis Pub/Sub or a message broker
@@ -156,6 +162,8 @@ await bus.subscribe(handle_event)
 
 ### API Gateway
 
+*A single front door that routes incoming requests to the right internal service — centralizes auth, rate limiting, and routing so clients talk to one endpoint instead of many.*
+
 ```python
 # Single entry point that routes to services
 from fastapi import FastAPI, Request
@@ -186,6 +194,8 @@ async def proxy(service: str, path: str, request: Request):
 ```
 
 ### Circuit Breaker
+
+*Stop calling a failing service after N errors and fail fast until it recovers — prevents one sick service from cascading timeouts across the whole system.*
 
 ```python
 import time
@@ -238,6 +248,8 @@ async def call_payment_service(order_id):
 
 ### Saga Pattern (distributed transactions)
 
+*Coordinate a multi-service transaction as a sequence of local steps, each with a compensating undo — how you get all-or-nothing behavior when there's no shared database to roll back.*
+
 ```python
 class OrderSaga:
     """Coordinate a multi-step business process across services."""
@@ -281,6 +293,8 @@ class OrderSaga:
 *Logs, metrics, and traces to understand a distributed system.*
 
 ### Distributed tracing with OpenTelemetry
+
+*Attach a trace ID to a request and record spans as it hops across services — the only practical way to see where latency or errors occur in a call that spans many microservices.*
 
 ```python
 from opentelemetry import trace

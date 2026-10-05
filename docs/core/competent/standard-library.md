@@ -27,6 +27,8 @@ description: Essential built-in modules — collections, datetime, pathlib, re, 
 
 ### Counter — count anything
 
+*Tally occurrences of hashable items in one call and get the most common ones — perfect for word frequencies, vote counts, or histogramming any iterable.*
+
 ```python
 from collections import Counter
 
@@ -45,6 +47,8 @@ print(c2 - c3)   # Counter({'a': 2, 'b': 1})  — only positive counts
 ```
 
 ### defaultdict — dict with auto-creation
+
+*A dict that creates a default value on first access to a missing key — eliminates the `if key not in d` boilerplate when grouping items or accumulating counts.*
 
 ```python
 from collections import defaultdict
@@ -71,6 +75,8 @@ tree["fruits"]["yellow"].append("banana")
 
 ### deque — fast double-ended queue
 
+*Add and remove from both ends in O(1) (a list is O(n) at the front) — the right structure for queues, sliding windows, and fixed-size "last N items" buffers via `maxlen`.*
+
 ```python
 from collections import deque
 
@@ -94,6 +100,8 @@ print(list(recent))   # [7, 8, 9]  — only last 3 kept
 
 ### namedtuple — lightweight immutable class
 
+*An immutable record with named fields and tuple behavior — clearer than a bare tuple (`p.x` vs `p[0]`) and lighter than a class when you just need to bundle a few values.*
+
 ```python
 from collections import namedtuple
 
@@ -110,6 +118,8 @@ print(c)   # Config(host='localhost', port=8080, debug=False)
 ```
 
 ### OrderedDict — insertion-ordered dict (mostly redundant since 3.7)
+
+*Still useful for its `move_to_end` method and order-sensitive equality — the basis for a simple LRU cache, even though plain dicts now preserve insertion order.*
 
 ```python
 from collections import OrderedDict
@@ -139,6 +149,8 @@ class LRU(OrderedDict):
 ```
 
 ### ChainMap — merged view of multiple dicts
+
+*Search several dicts as one, first-match-wins, without copying them — ideal for layered configuration (CLI args → user prefs → defaults).*
 
 ```python
 from collections import ChainMap

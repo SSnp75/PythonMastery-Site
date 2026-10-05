@@ -77,6 +77,8 @@ src/
 
 ### Layer 1: Domain (Entities)
 
+*The innermost layer — pure business objects and rules with zero dependencies on frameworks, databases, or the web. This is the part of your system that would survive swapping every piece of infrastructure.*
+
 ```python
 # domain/entities.py
 from dataclasses import dataclass, field
@@ -108,6 +110,8 @@ class DuplicateEmailError(Exception):
 ```
 
 ### Layer 2: Application (Use Cases + Ports)
+
+*Orchestrates the domain to perform use cases, and declares *ports* (interfaces) for what it needs from the outside — depending on abstractions, never on concrete databases or APIs.*
 
 ```python
 # application/interfaces.py
@@ -184,6 +188,8 @@ class CreateUser:
 
 ### Layer 3: Infrastructure (Adapters)
 
+*Concrete implementations of the ports — the actual database, email provider, message queue. Swapping Postgres for an in-memory fake here changes nothing in the inner layers.*
+
 ```python
 # infrastructure/database/user_repository.py
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -246,6 +252,8 @@ class FakeEmailSender:
 
 ### Layer 4: Presentation (API)
 
+*The outermost layer that exposes use cases to the world (HTTP routes here) — it translates requests into use-case calls and results back into responses, holding no business logic itself.*
+
 ```python
 # presentation/api/routes.py
 from fastapi import APIRouter, Depends, HTTPException
@@ -279,6 +287,8 @@ async def create_user(
 ```
 
 ### Dependency Injection (wiring it together)
+
+*The composition root where concrete adapters are plugged into the ports and handed to the use cases — the one place that knows about every layer, keeping the rest decoupled.*
 
 ```python
 # presentation/dependencies.py
