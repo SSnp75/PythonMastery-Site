@@ -9,7 +9,7 @@ description: Control, sensing and motion planning with Python and ROS
   <strong>🌍 Domain Applications</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~2 weeks</span>
-    <span>📚 Prereqs: <a href="../embedded/robotics-middleware.md">Robotics Middleware</a>, <a href="../embedded/real-time-systems.md">Real-time Systems</a></span>
+    <span>📚 Prerequisites: <a href="../embedded/robotics-middleware.md">Robotics Middleware</a>, <a href="../embedded/real-time-systems.md">Real-time Systems</a></span>
   </div>
 </div>
 

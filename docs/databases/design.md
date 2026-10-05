@@ -9,6 +9,7 @@ description: Normalization, schema design, relationships, indexes and data model
   <strong>🗄️ Databases · Level 4</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~3 days</span>
+    <span>📚 Prerequisites: <a href="../web/proficient/databases.md">Database Programming</a></span>
   </div>
 </div>
 

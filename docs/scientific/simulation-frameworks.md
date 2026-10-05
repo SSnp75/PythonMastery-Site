@@ -9,7 +9,7 @@ description: Tools for discrete-event, agent-based and continuous simulation in 
   <strong>🔬 Scientific Computing</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~4 days</span>
-    <span>📚 Prereqs: <a href="../domains/simulation.md">Python for Simulation</a>, <a href="computational-physics.md">Computational Physics</a></span>
+    <span>📚 Prerequisites: <a href="../domains/simulation.md">Python for Simulation</a>, <a href="computational-physics.md">Computational Physics</a></span>
   </div>
 </div>
 

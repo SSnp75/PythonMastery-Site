@@ -9,7 +9,7 @@ description: Low-level and DevOps tooling — monitors, tracers, CLI tools and i
   <strong>🛠️ Projects</strong>
   <div class="pm-topic-meta">
     <span>⏱️ Days to weeks each</span>
-    <span>📚 Prereqs: <a href="../embedded/system-monitoring.md">System Monitoring</a>, <a href="../systems/advanced/profiling.md">Profiling</a></span>
+    <span>📚 Prerequisites: <a href="../embedded/system-monitoring.md">System Monitoring</a>, <a href="../systems/advanced/profiling.md">Profiling</a></span>
   </div>
 </div>
 

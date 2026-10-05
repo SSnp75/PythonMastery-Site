@@ -9,7 +9,7 @@ description: Frontier experiments — JITs, interpreters, novel runtimes and lan
   <strong>🛠️ Projects</strong>
   <div class="pm-topic-meta">
     <span>⏱️ Weeks to months each</span>
-    <span>📚 Prereqs: <a href="../core/advanced/bytecode.md">Bytecode</a>, <a href="../core/advanced/cpython-internals.md">CPython Internals</a>, <a href="../research/peg-parser.md">PEG Parsers</a></span>
+    <span>📚 Prerequisites: <a href="../core/advanced/bytecode.md">Bytecode</a>, <a href="../core/advanced/cpython-internals.md">CPython Internals</a>, <a href="../research/peg-parser.md">PEG Parsers</a></span>
   </div>
 </div>
 

@@ -9,7 +9,7 @@ description: Qubits, quantum circuits and algorithms with Python and Qiskit
   <strong>🌍 Domain Applications</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~2 weeks</span>
-    <span>📚 Prereqs: <a href="../scientific/index.md">Scientific Computing</a>, linear algebra</span>
+    <span>📚 Prerequisites: <a href="../scientific/index.md">Scientific Computing</a>, linear algebra</span>
   </div>
 </div>
 

@@ -9,6 +9,7 @@ description: Hashing, symmetric/asymmetric encryption, digital signatures, TLS a
   <strong>🔒 Security & DevOps Track · Level 6</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~1 week</span>
+    <span>📚 Prerequisites: <a href="../index.md">Security intro</a></span>
   </div>
 </div>
 

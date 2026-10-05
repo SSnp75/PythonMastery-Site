@@ -9,6 +9,7 @@ description: CTEs, window functions, subqueries, indexing and query optimization
   <strong>🗄️ Databases · Level 4</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~1 week</span>
+    <span>📚 Prerequisites: <a href="design.md">Database Design</a></span>
   </div>
 </div>
 

@@ -9,7 +9,7 @@ description: Real applications — web apps, APIs, dashboards and automation sui
   <strong>🛠️ Projects</strong>
   <div class="pm-topic-meta">
     <span>⏱️ Days to weeks each</span>
-    <span>📚 Prereqs: <a href="../core/competent/oop-fundamentals.md">OOP</a>, <a href="../web/proficient/frameworks.md">Web Frameworks</a>, <a href="../web/proficient/databases.md">Databases</a></span>
+    <span>📚 Prerequisites: <a href="../core/competent/oop-fundamentals.md">OOP</a>, <a href="../web/proficient/frameworks.md">Web Frameworks</a>, <a href="../web/proficient/databases.md">Databases</a></span>
   </div>
 </div>
 

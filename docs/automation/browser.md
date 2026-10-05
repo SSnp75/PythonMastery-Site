@@ -9,7 +9,7 @@ description: Drive real browsers with Selenium and Playwright for testing and sc
   <strong>🤖 Automation Track</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~4 days</span>
-    <span>📚 Prereqs: Automation & Scripting, APIs & HTTP</span>
+    <span>📚 Prerequisites: Automation & Scripting, APIs & HTTP</span>
   </div>
 </div>
 

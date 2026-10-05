@@ -9,7 +9,7 @@ description: Sequence analysis, structural biology and genomics with Python
   <strong>🔬 Scientific Computing</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~1 week</span>
-    <span>📚 Prereqs: <a href="../domains/bioinformatics.md">Python for Bioinformatics</a>, <a href="../algorithms/dynamic-programming.md">Dynamic Programming</a></span>
+    <span>📚 Prerequisites: <a href="../domains/bioinformatics.md">Python for Bioinformatics</a>, <a href="../algorithms/dynamic-programming.md">Dynamic Programming</a></span>
   </div>
 </div>
 

@@ -9,6 +9,7 @@ description: DAGs, operators, scheduling, dependencies and workflow orchestratio
   <strong>🔄 Data Engineering · Level 4</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~1 week</span>
+    <span>📚 Prerequisites: <a href="etl.md">ETL Pipelines</a></span>
   </div>
 </div>
 

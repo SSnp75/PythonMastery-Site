@@ -9,7 +9,7 @@ description: Offload work to thread and process pools with concurrent.futures
   <strong>⚙️ Performance & Systems</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~2 days</span>
-    <span>📚 Prereqs: <a href="threading.md">Threading</a>, <a href="multiprocessing.md">Multiprocessing</a></span>
+    <span>📚 Prerequisites: <a href="threading.md">Threading</a>, <a href="multiprocessing.md">Multiprocessing</a></span>
   </div>
 </div>
 

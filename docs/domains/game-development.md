@@ -9,7 +9,7 @@ description: Build games with Pygame — game loops, input, and simple physics
   <strong>🌍 Domain Applications</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~1 week</span>
-    <span>📚 Prereqs: <a href="../core/competent/oop-fundamentals.md">OOP Fundamentals</a></span>
+    <span>📚 Prerequisites: <a href="../core/competent/oop-fundamentals.md">OOP Fundamentals</a></span>
   </div>
 </div>
 

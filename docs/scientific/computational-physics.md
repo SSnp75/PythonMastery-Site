@@ -9,7 +9,7 @@ description: Numerical integration, ODEs and Monte Carlo methods for physics
   <strong>🔬 Scientific Computing</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~1 week</span>
-    <span>📚 Prereqs: calculus, <a href="numerical-optimization.md">Numerical Optimization</a></span>
+    <span>📚 Prerequisites: calculus, <a href="numerical-optimization.md">Numerical Optimization</a></span>
   </div>
 </div>
 

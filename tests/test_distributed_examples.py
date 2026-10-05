@@ -46,6 +46,37 @@ def test_gcounter_merge_idempotent():
     assert a.value() == 8
 
 
+def test_gcounter_same_update_twice_is_identical():
+    # "Why these merges are safe (demonstrated)" — idempotency.
+    # Applying the same update a second time leaves state byte-for-byte identical.
+    a, b = GCounter("A"), GCounter("B")
+    a.increment(3)
+    b.increment(5)
+    a.merge(b)
+    first = dict(a.counts)
+    a.merge(b)  # duplicate delivery of the same update
+    second = dict(a.counts)
+    assert first == second == {"A": 3, "B": 5}
+
+
+def test_gcounter_merge_is_commutative():
+    # "Why these merges are safe (demonstrated)" — commutativity.
+    # Folding the same replicas in opposite orders converges to the same state.
+    def merge_in_order(order: list[str]) -> dict[str, int]:
+        reps = {"X": GCounter("X"), "Y": GCounter("Y"), "Z": GCounter("Z")}
+        reps["X"].increment(1)
+        reps["Y"].increment(2)
+        reps["Z"].increment(4)
+        target = GCounter("T")
+        for name in order:
+            target.merge(reps[name])
+        return target.counts
+
+    forward = merge_in_order(["X", "Y", "Z"])
+    reverse = merge_in_order(["Z", "Y", "X"])
+    assert forward == reverse == {"X": 1, "Y": 2, "Z": 4}
+
+
 @dataclass
 class LWWRegister:
     value: str = ""

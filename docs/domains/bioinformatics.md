@@ -9,7 +9,7 @@ description: Analyze biological sequences and genomic data with Python and BioPy
   <strong>🌍 Domain Applications</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~1 week</span>
-    <span>📚 Prereqs: <a href="../core/beginner/data-structures.md">Data Structures</a>, <a href="../core/beginner/file-handling.md">File Handling</a></span>
+    <span>📚 Prerequisites: <a href="../core/beginner/data-structures.md">Data Structures</a>, <a href="../core/beginner/file-handling.md">File Handling</a></span>
   </div>
 </div>
 

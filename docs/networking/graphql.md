@@ -9,6 +9,7 @@ description: Schema definition, resolvers, queries, mutations and Strawberry fra
   <strong>🌐 Networking · Level 4</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~3 days</span>
+    <span>📚 Prerequisites: <a href="../web/proficient/apis-http.md">APIs & HTTP</a>, <a href="../web/proficient/frameworks.md">Web Frameworks</a></span>
   </div>
 </div>
 

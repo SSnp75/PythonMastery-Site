@@ -160,6 +160,76 @@ A CRDT merge works because it has three mathematical properties. Any operation w
 
 ---
 
+## Why these merges are safe (demonstrated)
+
+*Two short runs that prove the G-Counter merge is idempotent and commutative — the properties the table above claims.*
+
+The table says a safe merge is idempotent (duplicates are harmless) and commutative (order doesn't matter). Those aren't just claims — they're observable. Both runs reuse the `GCounter` from above.
+
+**Idempotent — merging the same update twice does nothing the second time.** This is what makes CRDTs safe under at-least-once delivery: a re-delivered merge message can't corrupt state.
+
+```python
+a = GCounter("A")
+b = GCounter("B")
+a.increment(3)
+b.increment(5)
+
+a.merge(b)
+first = dict(a.counts)      # state after merging once
+a.merge(b)                  # the SAME update arrives again (duplicate delivery)
+second = dict(a.counts)     # state after merging twice
+
+print("after 1 merge: ", first)
+print("after 2 merges:", second)
+print("idempotent (unchanged):", first == second)
+```
+
+Output:
+
+```text
+after 1 merge:  {'A': 3, 'B': 5}
+after 2 merges: {'A': 3, 'B': 5}
+idempotent (unchanged): True
+```
+
+The second merge sees nothing it hasn't already applied — `max(x, x) == x` per node — so the state is byte-for-byte identical.
+
+**Commutative — merge order doesn't matter.** Three replicas increment independently; merging them in opposite orders converges to the same result, so messages can arrive however the network delivers them.
+
+```python
+def merge_in_order(order: list[str]) -> dict[str, int]:
+    reps = {"X": GCounter("X"), "Y": GCounter("Y"), "Z": GCounter("Z")}
+    reps["X"].increment(1)
+    reps["Y"].increment(2)
+    reps["Z"].increment(4)
+    target = GCounter("T")
+    for name in order:
+        target.merge(reps[name])    # fold replicas in the given order
+    return target.counts
+
+forward = merge_in_order(["X", "Y", "Z"])
+reverse = merge_in_order(["Z", "Y", "X"])
+
+print("forward order:", forward)
+print("reverse order:", reverse)
+print("commutative (same result):", forward == reverse)
+```
+
+Output:
+
+```text
+forward order: {'X': 1, 'Y': 2, 'Z': 4}
+reverse order: {'Z': 4, 'Y': 2, 'X': 1}
+commutative (same result): True
+```
+
+The two dicts list their keys in different orders, but Python dict equality ignores insertion order, so `forward == reverse` is `True` — both orderings reach the same state. (In Python, `==` on dicts compares keys and values, not order.)
+
+!!! tip "This is the whole point"
+    Idempotent + commutative + associative means replicas can gossip updates in any order, drop duplicates in, and still land on identical state — no locks, no coordinator. If you build your own CRDT, test these three properties the way these snippets do; a merge that fails any one of them will silently diverge in production.
+
+---
+
 ## The CRDT family
 
 *Counters, registers, sets, and maps — the common building blocks and what each is for.*

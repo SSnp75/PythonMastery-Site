@@ -9,7 +9,7 @@ description: Build automatic differentiation from scratch — the engine behind 
   <strong>🔬 Scientific Computing</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~1 week</span>
-    <span>📚 Prereqs: calculus (chain rule), <a href="numerical-optimization.md">Numerical Optimization</a></span>
+    <span>📚 Prerequisites: calculus (chain rule), <a href="numerical-optimization.md">Numerical Optimization</a></span>
   </div>
 </div>
 

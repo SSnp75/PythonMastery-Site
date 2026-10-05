@@ -9,7 +9,7 @@ description: File system automation, task scheduling, batch processing and OS in
   <strong>🤖 Automation Track</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~4 days</span>
-    <span>📚 Prereqs: File Handling, Functions</span>
+    <span>📚 Prerequisites: File Handling, Functions</span>
   </div>
 </div>
 

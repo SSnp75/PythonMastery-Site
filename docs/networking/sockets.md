@@ -9,6 +9,7 @@ description: TCP/UDP from scratch, client/server patterns and low-level networki
   <strong>🌐 Networking · Level 4</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~4 days</span>
+    <span>📚 Prerequisites: <a href="index.md">Networking intro</a>, <a href="../systems/proficient/asyncio.md">Asyncio</a></span>
   </div>
 </div>
 

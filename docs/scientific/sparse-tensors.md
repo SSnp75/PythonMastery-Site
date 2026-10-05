@@ -9,7 +9,7 @@ description: Store and compute on mostly-zero data efficiently
   <strong>🔬 Scientific Computing</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~3 days</span>
-    <span>📚 Prereqs: <a href="../data/intermediate/numpy.md">NumPy</a>, <a href="blas-lapack.md">BLAS & LAPACK</a></span>
+    <span>📚 Prerequisites: <a href="../data/intermediate/numpy.md">NumPy</a>, <a href="blas-lapack.md">BLAS & LAPACK</a></span>
   </div>
 </div>
 

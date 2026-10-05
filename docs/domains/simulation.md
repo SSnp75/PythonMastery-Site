@@ -9,7 +9,7 @@ description: Model complex systems with agent-based and discrete-event simulatio
   <strong>🌍 Domain Applications</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~1 week</span>
-    <span>📚 Prereqs: <a href="../core/intermediate/iterators-generators.md">Iterators & Generators</a></span>
+    <span>📚 Prerequisites: <a href="../core/intermediate/iterators-generators.md">Iterators & Generators</a></span>
   </div>
 </div>
 

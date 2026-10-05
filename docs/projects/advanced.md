@@ -9,7 +9,7 @@ description: Production-grade builds — async services, distributed workers and
   <strong>🛠️ Projects</strong>
   <div class="pm-topic-meta">
     <span>⏱️ Weeks each</span>
-    <span>📚 Prereqs: <a href="../systems/proficient/asyncio.md">Asyncio</a>, <a href="../distributed/queues.md">Queues</a>, <a href="../web/expert/clean-architecture.md">Clean Architecture</a></span>
+    <span>📚 Prerequisites: <a href="../systems/proficient/asyncio.md">Asyncio</a>, <a href="../distributed/queues.md">Queues</a>, <a href="../web/expert/clean-architecture.md">Clean Architecture</a></span>
   </div>
 </div>
 

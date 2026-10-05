@@ -9,6 +9,7 @@ description: RestrictedPython, seccomp, containers, resource limits and safe cod
   <strong>🔒 Security & DevOps Track · Level 6</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~4 days</span>
+    <span>📚 Prerequisites: <a href="../index.md">Security intro</a>, <a href="../../core/advanced/execution-model.md">Execution Model</a></span>
   </div>
 </div>
 

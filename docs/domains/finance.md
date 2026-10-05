@@ -9,7 +9,7 @@ description: Time series, returns, risk and backtesting with Python
   <strong>🌍 Domain Applications</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~1 week</span>
-    <span>📚 Prereqs: <a href="../data/intermediate/pandas.md">Pandas</a>, <a href="../data/intermediate/statistics.md">Statistics</a></span>
+    <span>📚 Prerequisites: <a href="../data/intermediate/pandas.md">Pandas</a>, <a href="../data/intermediate/statistics.md">Statistics</a></span>
   </div>
 </div>
 

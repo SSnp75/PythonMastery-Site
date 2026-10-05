@@ -9,6 +9,7 @@ description: Distributed data processing with Spark DataFrames, SQL and transfor
   <strong>🔄 Data Engineering · Level 5</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~1 week</span>
+    <span>📚 Prerequisites: <a href="../data/intermediate/pandas.md">Pandas</a>, <a href="etl.md">ETL Pipelines</a></span>
   </div>
 </div>
 

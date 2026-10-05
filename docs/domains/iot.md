@@ -9,7 +9,7 @@ description: Collect sensor data, message with MQTT, and run on edge devices
   <strong>🌍 Domain Applications</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~1 week</span>
-    <span>📚 Prereqs: <a href="../embedded/embedded-python.md">Embedded Python</a>, <a href="../automation/scripting.md">Automation & Scripting</a></span>
+    <span>📚 Prerequisites: <a href="../embedded/embedded-python.md">Embedded Python</a>, <a href="../automation/scripting.md">Automation & Scripting</a></span>
   </div>
 </div>
 

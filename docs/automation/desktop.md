@@ -9,7 +9,7 @@ description: Control the mouse, keyboard and screen with PyAutoGUI
   <strong>🤖 Automation Track</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~2 days</span>
-    <span>📚 Prereqs: Automation & Scripting</span>
+    <span>📚 Prerequisites: Automation & Scripting</span>
   </div>
 </div>
 

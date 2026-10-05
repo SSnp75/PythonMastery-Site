@@ -9,7 +9,7 @@ description: Geospatial analysis and mapping with Python, GeoPandas and Shapely
   <strong>🌍 Domain Applications</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~1 week</span>
-    <span>📚 Prereqs: <a href="../data/intermediate/pandas.md">Pandas</a></span>
+    <span>📚 Prerequisites: <a href="../data/intermediate/pandas.md">Pandas</a></span>
   </div>
 </div>
 

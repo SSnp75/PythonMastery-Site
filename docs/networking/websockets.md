@@ -9,6 +9,7 @@ description: Real-time bidirectional communication with websockets library and F
   <strong>🌐 Networking · Level 4</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~3 days</span>
+    <span>📚 Prerequisites: <a href="sockets.md">Sockets</a>, <a href="../systems/proficient/asyncio.md">Asyncio</a></span>
   </div>
 </div>
 

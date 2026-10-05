@@ -9,7 +9,7 @@ description: Concurrency via isolated actors that communicate only by messages
   <strong>⚙️ Performance & Systems</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~3 days</span>
-    <span>📚 Prereqs: <a href="threading.md">Threading</a>, <a href="../../web/expert/event-driven-architecture.md">Event-driven Architecture</a></span>
+    <span>📚 Prerequisites: <a href="threading.md">Threading</a>, <a href="../../web/expert/event-driven-architecture.md">Event-driven Architecture</a></span>
   </div>
 </div>
 

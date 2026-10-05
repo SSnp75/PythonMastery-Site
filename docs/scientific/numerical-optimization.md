@@ -9,7 +9,7 @@ description: Find minima, roots and best fits with gradient and gradient-free me
   <strong>🔬 Scientific Computing</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~1 week</span>
-    <span>📚 Prereqs: calculus basics, <a href="index.md">Scientific Computing intro</a></span>
+    <span>📚 Prerequisites: calculus basics, <a href="index.md">Scientific Computing intro</a></span>
   </div>
 </div>
 

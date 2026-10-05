@@ -9,7 +9,7 @@ description: The linear algebra engines that make NumPy fast
   <strong>🔬 Scientific Computing</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~3 days</span>
-    <span>📚 Prereqs: <a href="../data/intermediate/numpy.md">NumPy</a>, linear algebra basics</span>
+    <span>📚 Prerequisites: <a href="../data/intermediate/numpy.md">NumPy</a>, linear algebra basics</span>
   </div>
 </div>
 

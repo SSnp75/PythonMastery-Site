@@ -9,7 +9,7 @@ description: Small, finishable projects to build Python confidence
   <strong>🛠️ Projects</strong>
   <div class="pm-topic-meta">
     <span>⏱️ Hours to a few days each</span>
-    <span>📚 Prereqs: <a href="../core/beginner/python-basics.md">Python Basics</a> → <a href="../core/beginner/file-handling.md">File Handling</a></span>
+    <span>📚 Prerequisites: <a href="../core/beginner/python-basics.md">Python Basics</a> → <a href="../core/beginner/file-handling.md">File Handling</a></span>
   </div>
 </div>
 

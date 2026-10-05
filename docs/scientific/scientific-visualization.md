@@ -9,7 +9,7 @@ description: Plot data and render results with Matplotlib and beyond
   <strong>🔬 Scientific Computing</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~4 days</span>
-    <span>📚 Prereqs: <a href="../data/intermediate/matplotlib.md">Matplotlib</a></span>
+    <span>📚 Prerequisites: <a href="../data/intermediate/matplotlib.md">Matplotlib</a></span>
   </div>
 </div>
 

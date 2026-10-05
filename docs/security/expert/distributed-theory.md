@@ -9,6 +9,7 @@ description: CAP theorem, consistency models, Raft consensus, vector clocks and 
   <strong>🔒 Security & DevOps Track · Level 6</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~2 weeks</span>
+    <span>📚 Prerequisites: <a href="../../distributed/raft.md">Raft</a>, <a href="../../distributed/index.md">Distributed Systems intro</a></span>
   </div>
 </div>
 

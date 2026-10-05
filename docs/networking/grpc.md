@@ -9,6 +9,7 @@ description: High-performance RPC with protobuf, streaming and service definitio
   <strong>🌐 Networking · Level 4</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~4 days</span>
+    <span>📚 Prerequisites: <a href="sockets.md">Sockets</a>, <a href="../web/proficient/apis-http.md">APIs & HTTP</a></span>
   </div>
 </div>
 

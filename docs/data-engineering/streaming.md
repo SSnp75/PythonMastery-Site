@@ -9,6 +9,7 @@ description: Real-time data pipelines with Kafka, producers, consumers and strea
   <strong>🔄 Data Engineering · Level 5</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~4 days</span>
+    <span>📚 Prerequisites: <a href="../distributed/queues.md">Distributed Queues</a>, <a href="etl.md">ETL Pipelines</a></span>
   </div>
 </div>
 

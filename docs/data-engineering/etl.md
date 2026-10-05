@@ -9,6 +9,7 @@ description: Extract-Transform-Load patterns, data validation and pipeline orche
   <strong>🔄 Data Engineering · Level 4</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~4 days</span>
+    <span>📚 Prerequisites: <a href="../data/intermediate/pandas.md">Pandas</a>, <a href="index.md">Data Engineering intro</a></span>
   </div>
 </div>
 

@@ -9,6 +9,7 @@ description: Environment variables, HashiCorp Vault, AWS Secrets Manager and sec
   <strong>🔒 Security & DevOps Track · Level 6</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~3 days</span>
+    <span>📚 Prerequisites: <a href="../index.md">Security intro</a>, <a href="../../deployment/docker.md">Docker</a></span>
   </div>
 </div>
 

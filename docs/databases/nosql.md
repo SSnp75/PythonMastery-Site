@@ -9,6 +9,7 @@ description: Key-value stores, document databases, caching patterns and when to 
   <strong>🗄️ Databases · Level 4</strong>
   <div class="pm-topic-meta">
     <span>⏱️ ~4 days</span>
+    <span>📚 Prerequisites: <a href="design.md">Database Design</a></span>
   </div>
 </div>
 
