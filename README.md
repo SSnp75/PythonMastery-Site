@@ -7,7 +7,7 @@
 
 4	**Proficient**	Design full applications, APIs, data pipelines
 
-5	**Advanced	**Understand Python from the inside (internals, concurrency)
+5	**Advance**    Understand Python from the inside (internals, concurrency)
 
 6	**Expert**	Architecture, distributed systems, performance at scale
 
