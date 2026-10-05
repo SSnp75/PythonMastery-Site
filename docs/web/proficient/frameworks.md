@@ -27,6 +27,8 @@ description: Flask, FastAPI and Django — building production web applications 
 
 ### Basic application
 
+*A full CRUD API in one file — Pydantic models validate input automatically, and the type hints generate interactive OpenAPI docs with zero extra work.*
+
 ```python
 from fastapi import FastAPI, HTTPException, Depends, Query
 from pydantic import BaseModel, Field
@@ -141,6 +143,8 @@ The payoff is testability: in a test you override `get_current_user` and `get_db
 
 ### Middleware
 
+*Code that runs on every request/response — use it for cross-cutting concerns like timing, logging, CORS, or auth that shouldn't be duplicated in each route.*
+
 ```python
 import time
 from fastapi import Request
@@ -155,6 +159,8 @@ async def timing_middleware(request: Request, call_next):
 ```
 
 ### Background Tasks
+
+*Return a response immediately and run slow work (sending email, writing logs) after — so the client isn't left waiting on a task whose result it doesn't need.*
 
 ```python
 from fastapi import BackgroundTasks
@@ -178,6 +184,8 @@ async def notify(email: str, background_tasks: BackgroundTasks):
 *A minimal framework you extend as needed — use for small apps and when you want control.*
 
 ### Basic application
+
+*The same CRUD API in Flask — explicit routes and manual JSON handling, with `errorhandler` for consistent error responses. Compare the hand-written validation here to FastAPI's automatic version above.*
 
 ```python
 from flask import Flask, request, jsonify, abort
@@ -227,6 +235,8 @@ if __name__ == "__main__":
 
 ### Flask Blueprints (modular structure)
 
+*Split a growing app into self-contained modules, each with its own routes and URL prefix, then register them on the main app — the standard way to keep large Flask projects organized.*
+
 ```python
 # users/routes.py
 from flask import Blueprint, jsonify
@@ -250,6 +260,8 @@ app.register_blueprint(users_bp)
 ```
 
 ### Flask with SQLAlchemy
+
+*Add a database to Flask by defining models as Python classes — Flask-SQLAlchemy maps them to tables and gives you an ORM, since Flask (unlike Django) ships without one.*
 
 ```python
 from flask import Flask
@@ -276,6 +288,8 @@ with app.app_context():
 
 ### Project structure
 
+*How a Django project is laid out — a top-level project package for settings/URLs, and one or more "apps" each holding their own models, views, and tests. Knowing this layout is key to navigating any Django codebase.*
+
 ```
 myproject/
 ├── manage.py
@@ -292,6 +306,8 @@ myproject/
 ```
 
 ### Django REST Framework — API views
+
+*Build a full REST API from a model with almost no boilerplate — a `ModelViewSet` plus a router gives you list/create/retrieve/update/delete endpoints, filtering, and search for free.*
 
 ```python
 # models.py
@@ -369,6 +385,8 @@ urlpatterns = router.urls
 ```
 
 ### Docker deployment
+
+*Package the app and its dependencies into a reproducible image so it runs identically on any host — the standard unit of deployment for modern web services.*
 
 ```dockerfile
 FROM python:3.13-slim

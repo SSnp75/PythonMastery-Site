@@ -27,6 +27,8 @@ description: sqlite3, PostgreSQL, connection pooling, transactions, migrations a
 
 ### CRUD operations
 
+*Create, read, update, and delete rows — the four operations behind almost every data-backed app. Note every query uses `?` placeholders, never string formatting, to stay injection-safe.*
+
 ```python
 import sqlite3
 
@@ -92,6 +94,8 @@ conn.close()
 
 ### Context manager pattern
 
+*Wrap connection setup, commit/rollback, and close in a `with` block so every caller gets automatic cleanup — commit on success, rollback on exception, close no matter what.*
+
 ```python
 from contextlib import contextmanager
 
@@ -118,6 +122,8 @@ with get_db() as db:
 ```
 
 ### Transactions
+
+*Group multiple writes so they either all succeed or all roll back — essential for operations like money transfers where a partial update would corrupt your data.*
 
 ```python
 with get_db() as db:
@@ -163,6 +169,8 @@ conn.close()
 
 ### Connection pooling
 
+*Reuse a fixed set of open connections instead of opening a new one per request — opening a Postgres connection is expensive, so pooling is critical for throughput under load.*
+
 ```python
 from psycopg_pool import ConnectionPool
 
@@ -182,6 +190,8 @@ def get_users():
 ```
 
 ### Async PostgreSQL
+
+*Query without blocking the event loop — use the async API inside `async def` handlers (FastAPI, aiohttp) so one worker can serve many concurrent requests while queries are in flight.*
 
 ```python
 import asyncio
@@ -206,6 +216,8 @@ async def get_user(user_id: int):
 
 ### Parameterized queries (ALWAYS use these)
 
+*Pass user input as parameters, never by string-formatting it into the SQL — the driver escapes values safely, which is the single most important defense against SQL injection.*
+
 ```python
 # SAFE — parameterized
 cursor.execute("SELECT * FROM users WHERE name = ?", (user_input,))
@@ -215,6 +227,8 @@ cursor.execute(f"SELECT * FROM users WHERE name = '{user_input}'")   # NEVER!
 ```
 
 ### Bulk operations
+
+*Insert thousands of rows in one call with `executemany` instead of looping — far fewer round-trips to the database, so batch loads run in a fraction of the time.*
 
 ```python
 # executemany — efficient batch insert
@@ -228,6 +242,8 @@ with get_db() as db:
 ```
 
 ### Full-text search (SQLite FTS5)
+
+*Search text columns by relevance (not just exact matches) using SQLite's built-in FTS5 engine — add keyword search to an app without standing up Elasticsearch.*
 
 ```python
 with get_db() as db:
@@ -255,6 +271,8 @@ with get_db() as db:
 *Evolve the database schema over time in versioned, repeatable steps.*
 
 ### Manual approach
+
+*Track a schema version number in the database and apply only the migrations newer than it — a dependency-free way to evolve your schema repeatably across environments.*
 
 ```python
 MIGRATIONS = [

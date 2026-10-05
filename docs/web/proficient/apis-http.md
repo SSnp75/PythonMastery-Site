@@ -137,6 +137,8 @@ with httpx.Client(
 
 ### Resource naming
 
+*Name endpoints after resources (plural nouns) and let the HTTP verb express the action — predictable URLs that any client developer can guess without reading your docs.*
+
 ```
 # Good — nouns, plural
 GET    /users          → list users
@@ -180,6 +182,8 @@ GET /deleteUser/123    ✗
 
 ### Offset-based (simple)
 
+*Page through results with `page` + `per_page` — simplest to implement and ideal for small, stable datasets, but it drifts and slows down on large tables where rows are inserted/deleted mid-paging.*
+
 ```python
 # Request
 GET /users?page=2&per_page=20
@@ -197,6 +201,8 @@ GET /users?page=2&per_page=20
 ```
 
 ### Cursor-based (better for large datasets)
+
+*Page using an opaque pointer to the last row seen rather than an offset — stays fast and consistent on huge, actively-changing datasets, which is why feeds (Twitter, Slack) use it.*
 
 ```python
 # Request
@@ -250,6 +256,8 @@ async def list_users(cursor: str | None = None, limit: int = 20):
 
 ### API Key
 
+*A simple shared secret identifying the caller — easy to issue for server-to-server access, but send it in a header (not the URL, where it leaks into logs) and treat it like a password.*
+
 ```python
 # In header
 headers = {"X-API-Key": "sk_live_abc123"}
@@ -259,6 +267,8 @@ GET /data?api_key=sk_live_abc123
 ```
 
 ### JWT (JSON Web Tokens)
+
+*A signed, self-contained token carrying the user's identity and an expiry — the server verifies the signature without a database lookup, which makes it the common choice for stateless API auth.*
 
 ```python
 import jwt
@@ -291,6 +301,8 @@ print(payload["sub"])   # 42
 ```
 
 ### OAuth2 flow (simplified)
+
+*Let users log in via a third party (GitHub, Google) without handing you their password — you exchange a short-lived code for an access token, then call the provider's API on their behalf.*
 
 ```python
 # 1. Redirect user to provider

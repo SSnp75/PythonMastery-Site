@@ -139,6 +139,8 @@ with managed_file("data.txt", "w") as f:
 
 ### The pattern:
 
+*The skeleton every `@contextmanager` follows — setup before `yield`, teardown in `finally` so it always runs, and re-raise in `except` if you need to react to errors without swallowing them.*
+
 ```python
 @contextmanager
 def my_context():
@@ -158,9 +160,11 @@ def my_context():
 
 ## Real-world patterns
 
-*Real-world patterns in Context Managers — what it is and when to use it.*
+*Practical context managers you'll actually reach for — each guarantees some state is restored no matter how the block exits.*
 
 ### Temporary working directory
+
+*Change into a directory for the duration of a block and always `chdir` back — so a function that must run somewhere else can't leave the rest of your program in the wrong directory.*
 
 ```python
 import os
@@ -183,6 +187,8 @@ print(os.getcwd())       # back to original
 
 ### Database transaction
 
+*Commit the whole block on success, roll back on any exception, and always close — the canonical use of a context manager, turning correct transaction handling into one `with` line.*
+
 ```python
 @contextmanager
 def transaction(connection):
@@ -203,6 +209,8 @@ with transaction(get_connection()) as conn:
 ```
 
 ### Temporary environment variable
+
+*Set an env var just for a block and restore the previous value (or remove it) on exit — invaluable in tests that need to override config without leaking it into other tests.*
 
 ```python
 import os
@@ -227,6 +235,8 @@ with env_var("DATABASE_URL", "sqlite:///test.db"):
 ```
 
 ### Redirecting stdout
+
+*Capture everything printed inside a block into a string — handy for testing a function's console output, or grabbing output from code you can't modify.*
 
 ```python
 import sys
@@ -260,6 +270,8 @@ print(f"Got: {captured!r}")
 
 ### suppress — catch and ignore exceptions
 
+*Replace a `try/except/pass` with one readable line when you genuinely want to ignore a specific exception — e.g. deleting a file that may not exist.*
+
 ```python
 from contextlib import suppress
 import os
@@ -277,6 +289,8 @@ except FileNotFoundError:
 
 ### redirect_stdout / redirect_stderr
 
+*The standard-library version of the stdout-capture pattern above — point `print` output at any file-like object (a `StringIO`, a log file) for the duration of the block.*
+
 ```python
 from contextlib import redirect_stdout
 from io import StringIO
@@ -289,6 +303,8 @@ print(f.getvalue())   # "captured!\n"
 
 ### closing — add close() to objects without context manager
 
+*Wrap an object that has a `.close()` but no `with` support so it still gets closed automatically — bridges older APIs into the `with` idiom.*
+
 ```python
 from contextlib import closing
 from urllib.request import urlopen
@@ -298,6 +314,8 @@ with closing(urlopen("https://example.com")) as page:
 ```
 
 ### ExitStack — dynamic context manager composition
+
+*Enter a variable number of context managers decided at runtime (e.g. open a list of files whose length you don't know in advance) and still guarantee every one is cleaned up.*
 
 ```python
 from contextlib import ExitStack
@@ -314,6 +332,8 @@ process_files(["a.txt", "b.txt", "c.txt"])
 ```
 
 ### nullcontext — a no-op context manager
+
+*A placeholder that does nothing, so you can write one `with` branch that optionally uses a real manager (a lock, a transaction) or nothing — avoids duplicating the body in an if/else.*
 
 ```python
 from contextlib import nullcontext
@@ -349,7 +369,7 @@ with (
 
 ## Async context managers
 
-*Async context managers in Context Managers — what it is and when to use it.*
+*The `async with` version — implement `__aenter__`/`__aexit__` (or use `@asynccontextmanager`) when setup or teardown is itself awaitable, like opening an async DB connection.*
 
 ```python
 import asyncio
@@ -375,6 +395,8 @@ asyncio.run(main())
 ```
 
 ### Generator-based async context manager:
+
+*The async twin of `@contextmanager` — `@asynccontextmanager` turns an async generator into an `async with` manager, with `await`able setup before `yield` and teardown after.*
 
 ```python
 from contextlib import asynccontextmanager
