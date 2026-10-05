@@ -16,7 +16,7 @@ description: List, dict, set and generator comprehensions
 
 ## List comprehension
 
-*List comprehension in Comprehensions — what it is and when to use it.*
+*Build a list from an iterable in one expression, optionally filtering — the Pythonic replacement for a loop that appends.*
 
 ```python
 # [expression for item in iterable if condition]
@@ -29,7 +29,7 @@ words   = [w.upper() for w in sentence.split() if len(w) > 3]
 
 ## Dict comprehension
 
-*Dict comprehension in Comprehensions — what it is and when to use it.*
+*Construct or filter a dict in one expression — e.g. keep only entries matching a condition.*
 
 ```python
 # {key_expr: value_expr for item in iterable}
@@ -42,7 +42,7 @@ passed = {k: v for k, v in scores.items() if v >= 80}
 
 ## Set comprehension
 
-*Set comprehension in Comprehensions — what it is and when to use it.*
+*Build a set (deduplicated) in one expression — handy for collecting unique derived values.*
 
 ```python
 unique_lengths = {len(w) for w in words}
@@ -52,7 +52,7 @@ unique_lengths = {len(w) for w in words}
 
 ## Generator expression
 
-*Generator expression in Comprehensions — what it is and when to use it.*
+*Same syntax as a list comp but with `()` — lazy, so it never builds the full list in memory. Ideal for feeding `sum`/`any`/`max` over huge inputs.*
 
 ```python
 # Like list comp but with () — lazy evaluation
@@ -63,7 +63,7 @@ total = sum(x**2 for x in range(1000000))   # no list in memory
 
 ## Nested comprehensions
 
-*Nested comprehensions in Comprehensions — what it is and when to use it.*
+*Flatten or build 2D structures with multiple `for` clauses — powerful, but stop and use a loop once it stops being readable.*
 
 ```python
 # Flatten a matrix
@@ -82,7 +82,7 @@ grid = [[0 for _ in range(3)] for _ in range(3)]
 
 ## Conditional expression inside the output
 
-*Conditional expression inside the output in Comprehensions — what it is and when to use it.*
+*Put a ternary in the expression part to transform items (vs an `if` at the end, which filters) — and the two can be combined.*
 
 Put a ternary in the **expression** part to transform (not filter):
 
@@ -102,7 +102,7 @@ print(result)   # [0, 6, 12, 18]
 
 ## Invert / transform a dict
 
-*Invert / transform a dict in Comprehensions — what it is and when to use it.*
+*Swap keys and values (or remap them) in one dict comprehension — a common data-reshaping one-liner.*
 
 ```python
 scores = {"Alice": 95, "Bob": 87}
@@ -114,7 +114,7 @@ print(inverted)   # {95: 'Alice', 87: 'Bob'}
 
 ## Walrus operator in comprehensions
 
-*Walrus operator in comprehensions in Comprehensions — what it is and when to use it.*
+*Use `:=` to compute a value once and both test and keep it — avoids calling an expensive function twice in a comprehension (3.8+).*
 
 Reuse a computed value without recomputing it (Python 3.8+):
 
@@ -130,7 +130,7 @@ print(results)   # [16, 25]
 
 ## The classic nested-loop ordering gotcha
 
-*The classic nested-loop ordering gotcha — a key concept in Comprehensions.*
+*In a multi-`for` comprehension the clauses read left-to-right, exactly like nested loops — getting the order backwards is a classic mistake.*
 
 `for` clauses read **left to right**, same as nested loops:
 
@@ -143,7 +143,7 @@ print(pairs)   # [(1, 'a'), (1, 'b'), (2, 'a'), (2, 'b')]
 
 ## Generator vs list memory
 
-*Generator vs list memory in Comprehensions — what it is and when to use it.*
+*A quick demonstration that a generator expression uses far less memory than the equivalent list — it holds one item at a time.*
 
 ```python
 import sys
