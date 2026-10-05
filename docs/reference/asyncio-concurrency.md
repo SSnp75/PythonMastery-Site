@@ -199,6 +199,8 @@ Even single-threaded, you need coordination when tasks share state or a limited 
 
 ### Lock — mutual exclusion
 
+*Ensure only one coroutine at a time is inside a critical section — needed when tasks mutate shared state across an `await` point.*
+
 ```python
 import asyncio
 
@@ -220,6 +222,8 @@ print(asyncio.run(main()))
 ```
 
 ### Semaphore — limit concurrency to N
+
+*Cap how many coroutines run a section at once — the async way to throttle, e.g. "no more than 10 concurrent downloads".*
 
 ```python
 import asyncio
@@ -245,6 +249,8 @@ print(asyncio.run(main()))   # 2  (never more than 2 concurrent)
 
 ### Event — one task signals others
 
+*A flag coroutines can await; one task calls `set()` to wake everyone waiting — for "data ready" or "go" signals between tasks.*
+
 ```python
 import asyncio
 
@@ -268,6 +274,8 @@ print(asyncio.run(main()))   # ['set', 'resumed']
 ```
 
 ### Queue — producer/consumer
+
+*An async-aware queue for handing work between producer and consumer coroutines, with awaitable `put`/`get` that apply natural backpressure when full or empty.*
 
 ```python
 import asyncio

@@ -23,7 +23,7 @@ description: Build systems that ground LLM responses in your own data — chunki
 
 ## What is RAG?
 
-*Introduces RAG and where it fits in RAG (Retrieval-Augmented Generation).*
+*Retrieval-Augmented Generation pairs document search with an LLM so answers come from your own data rather than the model's training — the standard pattern for reducing hallucination and answering from private knowledge.*
 
 RAG combines retrieval (search your documents) with generation (LLM produces answer) so the model responds using **your data** instead of hallucinating.
 
@@ -38,6 +38,8 @@ User Question → Embed → Search Vector DB → Top K chunks → LLM (question 
 *Chunk, embed, retrieve, and prompt — the end-to-end flow with no framework.*
 
 ### Step 1: Load and chunk documents
+
+*Split documents into overlapping chunks small enough to embed and fit in a prompt — chunk size and overlap are the first knobs that affect retrieval quality.*
 
 ```python
 from pathlib import Path
@@ -82,6 +84,8 @@ print(f"Loaded {len(docs)} documents → {len(all_chunks)} chunks")
 
 ### Step 2: Generate embeddings
 
+*Convert each chunk into a vector capturing its meaning, batching the API calls for efficiency — these vectors are what retrieval searches over.*
+
 ```python
 from openai import OpenAI
 import numpy as np
@@ -108,6 +112,8 @@ print(f"Embedding matrix shape: {embedding_matrix.shape}")  # (n_chunks, 1536)
 ```
 
 ### Step 3: Search (retrieval)
+
+*Embed the user's question and return the most similar chunks by cosine similarity — the "retrieval" half that finds the context to answer from.*
 
 ```python
 def cosine_similarity(a: np.ndarray, b: np.ndarray) -> float:
@@ -137,6 +143,8 @@ def search(query: str, top_k: int = 5) -> list[dict]:
 ```
 
 ### Step 4: Generate answer
+
+*Feed the retrieved chunks to the LLM as context with an instruction to answer only from them — the "generation" half, where grounding and source citation happen.*
 
 ```python
 def ask(question: str, top_k: int = 5) -> str:

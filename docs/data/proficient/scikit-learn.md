@@ -159,6 +159,8 @@ print(f"Test F1: {results['test_f1_macro'].mean():.4f}")
 
 ### GridSearchCV
 
+*Exhaustively try every combination of a parameter grid with cross-validation and keep the best — thorough but can be slow for large grids.*
+
 ```python
 from sklearn.model_selection import GridSearchCV
 
@@ -184,6 +186,8 @@ best_model = grid_search.best_estimator_
 ```
 
 ### RandomizedSearchCV (faster for large search spaces)
+
+*Sample a fixed number of random parameter combinations instead of trying every one — finds a near-best model far faster when the grid is large.*
 
 ```python
 from sklearn.model_selection import RandomizedSearchCV
@@ -216,6 +220,8 @@ random_search.fit(X_train, y_train)
 
 ### Classification metrics
 
+*Accuracy, precision, recall, F1, and the confusion matrix — use precision/recall/F1 (not raw accuracy) when classes are imbalanced.*
+
 ```python
 from sklearn.metrics import (
     accuracy_score, precision_score, recall_score, f1_score,
@@ -240,6 +246,8 @@ print(cm)
 ```
 
 ### Regression metrics
+
+*MSE/RMSE/MAE measure error magnitude, R² measures variance explained — RMSE is in the target's units, MAE is robust to outliers.*
 
 ```python
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
@@ -279,7 +287,7 @@ for i in perm_importance.importances_mean.argsort()[::-1][:10]:
 
 ## Common algorithms cheat sheet
 
-*Common algorithms cheat sheet in Scikit-Learn — what it is and when to use it.*
+*A quick map of sklearn's main estimators to their task (classification, regression, clustering, dimensionality reduction) and when to reach for each.*
 
 | Algorithm | Type | Use case |
 |---|---|---|

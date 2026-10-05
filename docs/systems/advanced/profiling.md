@@ -103,12 +103,16 @@ Output:
 
 ### From command line:
 
+*Run cProfile over a whole script without editing it — handy for a quick top-level profile or to save results for later analysis.*
+
 ```bash
 python -m cProfile -s cumulative my_script.py
 python -m cProfile -o profile.prof my_script.py   # save for analysis
 ```
 
 ### Visualize with snakeviz:
+
+*Turn a saved cProfile file into an interactive browser visualization — far easier to explore than raw text stats for a large call tree.*
 
 ```bash
 pip install snakeviz
@@ -182,6 +186,8 @@ Flame graphs show call stacks — wider bars mean more time spent.
 
 ### tracemalloc (built-in)
 
+*The standard-library memory profiler — snapshot allocations by line and diff two snapshots to pinpoint what's leaking, with no extra install.*
+
 ```python
 import tracemalloc
 
@@ -208,6 +214,8 @@ for stat in diff[:5]:
 ```
 
 ### memory_profiler
+
+*A third-party tool that reports memory usage line-by-line via a `@profile` decorator — clearer than tracemalloc for seeing exactly which line allocates how much.*
 
 ```python
 # pip install memory_profiler
