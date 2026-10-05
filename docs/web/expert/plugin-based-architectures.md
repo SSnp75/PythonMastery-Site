@@ -96,6 +96,9 @@ class CsvExporter(Exporter):
 
 ### The core uses plugins by name
 
+*The host application looks up and invokes plugins through a registry by name — so it stays decoupled from any specific plugin implementation.*
+
+
 ```python
 def get_exporter(name: str) -> Exporter:
     if name not in registry:

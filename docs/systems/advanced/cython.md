@@ -151,6 +151,9 @@ def find_primes(int limit):
 
 ### Memoryview vs NumPy indexing:
 
+*Typed memoryviews give Cython direct, bounds-check-free access to array buffers — far faster than going through NumPy's Python-level indexing in hot loops.*
+
+
 ```cython
 # SLOW — Python object indexing
 def slow(numpy_array):

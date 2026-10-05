@@ -54,6 +54,9 @@ if missing:
 
 ### python-dotenv (for local development)
 
+*Load secrets from a local `.env` file into environment variables during development — keeps credentials out of code, but use a real secrets manager in production.*
+
+
 ```python
 # .env file (NEVER commit this!)
 # DB_PASSWORD=super_secret_123

@@ -50,6 +50,9 @@ TOTAL                      80     11    86%
 
 ### Branch coverage (more thorough)
 
+*Measures whether both the true and false side of each branch ran, not just whether each line executed — catches untested paths that line coverage misses.*
+
+
 ```bash
 pytest --cov=src --cov-branch --cov-report=term-missing
 ```

@@ -240,6 +240,9 @@ instr.is_jump_target  # True if another instruction jumps here
 
 ### Python's peephole optimizer
 
+*Small optimizations CPython applies to bytecode at compile time — constant folding and the like — visible when you disassemble with `dis`.*
+
+
 ```python
 # Constant folding
 def f():

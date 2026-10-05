@@ -79,6 +79,9 @@ if rank == 0:
 
 ### Running MPI programs:
 
+*Launch a Python MPI script across many processes/nodes with `mpiexec` — the standard way to run `mpi4py` code on a cluster.*
+
+
 ```bash
 # Run with 4 processes
 mpirun -n 4 python my_mpi_script.py
@@ -155,6 +158,9 @@ result = df.groupby("category")["amount"].mean().compute()
 ```
 
 ### Dask on SLURM:
+
+*Spin up a Dask cluster through the SLURM job scheduler so your parallel work runs as managed HPC jobs rather than on one machine.*
+
 
 ```python
 from dask_jobqueue import SLURMCluster

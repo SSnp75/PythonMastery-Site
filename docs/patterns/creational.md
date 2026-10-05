@@ -176,6 +176,9 @@ config = _Config()   # THE singleton instance
 
 ### Metaclass singleton (when you need stricter control):
 
+*Enforce a single instance at class-creation time via a metaclass — stricter than a module-level instance, but reach for it only when simpler options won't do.*
+
+
 ```python
 class SingletonMeta(type):
     _instances = {}

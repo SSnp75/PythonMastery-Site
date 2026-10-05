@@ -157,6 +157,9 @@ model.save_pretrained("./my-lora-adapter")
 
 ### Load and use the adapter:
 
+*Load a trained LoRA/PEFT adapter onto the base model for inference — you ship the small adapter weights, not a full fine-tuned copy of the model.*
+
+
 ```python
 from peft import PeftModel
 

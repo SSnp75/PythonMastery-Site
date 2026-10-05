@@ -138,6 +138,9 @@ print(result)   # [1, 2, 5, 8, 9]
 
 ### Pythonic strategy (just use functions):
 
+*In Python the Strategy pattern often collapses to passing a function — first-class functions make the full class hierarchy unnecessary.*
+
+
 ```python
 def process_data(data: list, sort_func=sorted) -> list:
     return sort_func(data)

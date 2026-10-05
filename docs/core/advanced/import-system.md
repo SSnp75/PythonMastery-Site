@@ -93,6 +93,9 @@ for p in sys.path:
 
 ### Modifying sys.path at runtime:
 
+*Add directories to `sys.path` so Python can find modules in non-standard locations — occasionally necessary, but prefer packaging over this in production.*
+
+
 ```python
 import sys
 sys.path.insert(0, "/my/custom/path")
@@ -276,6 +279,9 @@ What happens when you `import a`:
 6. `b.py` tries `a.x` → AttributeError! (`x` hasn't been defined yet)
 
 ### Solutions:
+
+*Concrete fixes for circular-import problems — deferring imports, restructuring modules, or importing inside functions.*
+
 
 ```python
 # Solution 1: Import inside functions (deferred)

@@ -411,6 +411,9 @@ warn_unused_configs = true
 
 ### Common mypy errors and fixes:
 
+*The errors mypy reports most often and how to resolve them — so a first encounter with the type checker isn't baffling.*
+
+
 ```python
 # Error: Incompatible return value type (got "Optional[str]", expected "str")
 def get_name() -> str:

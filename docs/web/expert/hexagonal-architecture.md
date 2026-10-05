@@ -115,6 +115,9 @@ Notice these describe *capabilities*, not technologies. There's no mention of SQ
 
 ### The use case (driving port)
 
+*The application's entry interface — what the outside world can ask it to do — defined independently of how it's triggered (HTTP, CLI, test).*
+
+
 ```python
 class TransferMoney:
     def __init__(self, repo: AccountRepository, notifier: Notifier) -> None:
@@ -162,6 +165,9 @@ class FakeNotifier:                    # test adapter
 In a real app the repository adapter would use SQLAlchemy and the notifier would send email — but the use case wouldn't change one character.
 
 ### Wiring and running it
+
+*The composition root that plugs concrete adapters into the ports and runs the use case — the one place aware of all the moving parts.*
+
 
 ```python
 repo = InMemoryAccountRepository()

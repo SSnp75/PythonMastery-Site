@@ -218,6 +218,9 @@ Tools like `protoc` generate Python classes from `.proto` schema files — these
 
 ### Pattern 2: ORM model generation
 
+*Generate ORM model classes programmatically from a schema definition — eliminates hand-writing boilerplate that must stay in sync with the database.*
+
+
 ```python
 def generate_model_class(table_name, columns):
     """Generate a SQLAlchemy-style model class dynamically."""
@@ -250,6 +253,9 @@ print(u.email)   # alice@example.com
 ```
 
 ### Pattern 3: API client generation from OpenAPI spec
+
+*Turn an OpenAPI spec into a typed Python client automatically — the client stays in lockstep with the API contract instead of drifting.*
+
 
 ```python
 def generate_api_method(endpoint, method, params):

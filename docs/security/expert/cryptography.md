@@ -119,6 +119,9 @@ except Exception:
 
 ### AES (lower-level, more control)
 
+*Direct AES encryption when you need to manage modes and IVs yourself — more control than Fernet, but also more ways to get it dangerously wrong.*
+
+
 ```python
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives import padding

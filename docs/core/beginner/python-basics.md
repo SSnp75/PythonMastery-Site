@@ -59,6 +59,9 @@ print(type(age))         # <class 'int'>
 
 ### Type conversion
 
+*Convert between types explicitly with `int()`, `str()`, `float()`, `bool()` — essential when turning user input (always strings) into numbers.*
+
+
 ```python
 x = "42"
 print(int(x))       # 42      (str → int)

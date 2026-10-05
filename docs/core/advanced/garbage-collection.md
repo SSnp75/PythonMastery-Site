@@ -193,6 +193,9 @@ class Resource:
 
 ### Best practice: use context managers, not `__del__`
 
+*Why `__del__` is unreliable for cleanup (timing isn't guaranteed) and context managers (`with`) are the correct, deterministic way to release resources.*
+
+
 ```python
 # Bad
 class BadFile:

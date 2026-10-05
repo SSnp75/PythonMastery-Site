@@ -23,7 +23,7 @@ description: unittest.mock, MagicMock, patch, side_effect and testing in isolati
 
 ## Why mock?
 
-*A core question explored in Mocking & Patching: Why mock.*
+*Replacing real dependencies (APIs, DBs, the filesystem, time) with controllable fakes keeps tests fast, deterministic, and able to simulate errors — and lets you assert how your code called them.*
 
 Mocks replace real objects with controlled fakes so you can:
 
@@ -134,6 +134,8 @@ def test_get_user_name(mock_get):
 
 ### patch as context manager:
 
+*Scope the patch to a `with` block instead of the whole test — useful when you only need the mock active for part of the test.*
+
 ```python
 def test_with_context_manager():
     with patch("services.requests.get") as mock_get:
@@ -145,6 +147,8 @@ def test_with_context_manager():
 ```
 
 ### patch as decorator with pytest fixture (recommended):
+
+*Wrap the patch in a fixture so many tests share the same mock setup — the cleanest pattern when several tests need the same dependency faked.*
 
 ```python
 @pytest.fixture
@@ -306,7 +310,7 @@ async def test_fetch_data():
 
 ## When to mock vs when NOT to mock
 
-*A core question explored in Mocking & Patching: When to mock vs when NOT to mock.*
+*Mock slow or external boundaries (APIs, DBs, I/O, time, randomness); never mock your own pure logic — if a test is mostly mock setup, you're testing the mocks, not the code.*
 
 | Mock | Don't mock |
 |---|---|

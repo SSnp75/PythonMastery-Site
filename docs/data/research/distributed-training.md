@@ -99,6 +99,9 @@ mp.spawn(train, args=(world_size,), nprocs=world_size)
 
 ### How DDP works internally:
 
+*What DistributedDataParallel does under the hood — each GPU holds a full model replica and gradients are all-reduced across devices every step to keep them in sync.*
+
+
 ```
 GPU 0: forward → loss → backward → [all-reduce gradients] → optimizer.step()
 GPU 1: forward → loss → backward → [all-reduce gradients] → optimizer.step()
@@ -144,6 +147,9 @@ def train_fsdp(rank, world_size):
 ```
 
 ### FSDP memory savings:
+
+*How Fully Sharded Data Parallel shards parameters, gradients, and optimizer state across GPUs to train models too large to fit on any single device.*
+
 
 ```
 Model: 7B parameters (28 GB in fp32)

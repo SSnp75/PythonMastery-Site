@@ -199,6 +199,9 @@ print(a.is_concurrent(b))   # True — A:3 and B:2 are concurrent
 
 ### CRDT example: G-Counter (grow-only counter)
 
+*A conflict-free replicated counter where each node tracks its own count and merges take the per-node max — converges without coordination. (See the [CRDTs](../../distributed/crdts.md) page for the full treatment.)*
+
+
 ```python
 class GCounter:
     """Grow-only counter — always mergeable without conflicts."""

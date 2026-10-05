@@ -164,6 +164,9 @@ deploy(conn)
 
 ### GitHub Actions (generate workflow from Python)
 
+*Produce a CI workflow YAML programmatically from Python — handy when many repos need consistent, templated pipelines.*
+
+
 ```python
 import yaml
 

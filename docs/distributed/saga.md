@@ -122,6 +122,9 @@ class Saga:
 
 ### Happy path — everything commits
 
+*The success case where every saga step completes and commits in order — the baseline before we look at how failures trigger compensations.*
+
+
 ```python
 log = []
 def step_fns(name, fail=False):

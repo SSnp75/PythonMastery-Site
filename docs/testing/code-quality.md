@@ -83,6 +83,9 @@ indent-style = "space"
 
 ### Common ruff fixes:
 
+*Typical issues ruff flags and auto-fixes — unused imports, bad ordering, style violations — so you see what the linter actually does for you.*
+
+
 ```python
 # Before ruff
 from typing import List, Dict, Optional

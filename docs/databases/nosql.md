@@ -69,6 +69,9 @@ for message in pubsub.listen():
 
 ### Caching pattern:
 
+*The cache-aside pattern with Redis — check the cache first, fall back to the database on a miss, then populate the cache — the most common way to cut read load.*
+
+
 ```python
 import json
 

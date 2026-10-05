@@ -204,6 +204,9 @@ print(a + col)
 
 ### Broadcasting visualized:
 
+*How NumPy stretches mismatched-but-compatible shapes to operate element-wise without copying — the rule behind adding a vector to every row of a matrix.*
+
+
 ```
 a:   (2, 3)    → [[1, 2, 3], [4, 5, 6]]
 row: (   3)    → [[100, 200, 300]]       ← broadcast over rows

@@ -195,6 +195,9 @@ def risky_function():
 
 ### What to log:
 
+*Guidance on which events and fields are worth logging — and what to leave out (like secrets) — so logs are useful without being noisy or unsafe.*
+
+
 ```python
 # Good — actionable, structured
 logger.info("order_created", order_id=123, user_id=42, total=99.99, items=3)

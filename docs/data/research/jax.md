@@ -86,6 +86,9 @@ print(f"With JIT: {time.time() - start:.4f}s")  # 10-100x faster
 
 ### JIT tracing and static shapes
 
+*How `jax.jit` traces your function once into a compiled graph — and why shapes must be static, a key constraint that trips up newcomers.*
+
+
 ```python
 # JIT traces with abstract shapes — concrete values become static
 @jax.jit
@@ -139,6 +142,9 @@ print(grads["b"])   # gradient w.r.t. bias
 ```
 
 ### Value and gradient together
+
+*Compute a function's output and its gradient in one pass with `value_and_grad` — the efficient pattern for training loops that need both.*
+
 
 ```python
 loss_val, grads = jax.value_and_grad(mse_loss)(params, x, y)

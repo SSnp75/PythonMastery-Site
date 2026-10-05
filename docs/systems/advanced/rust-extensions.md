@@ -59,6 +59,9 @@ maturin init --bindings pyo3
 
 ### Cargo.toml
 
+*The Rust project manifest configuring PyO3 and the extension-module build — the glue that lets a Rust crate compile into an importable Python module.*
+
+
 ```toml
 [package]
 name = "my_rust_module"
@@ -122,6 +125,9 @@ fn my_rust_module(m: &Bound<'_, PyModule>) -> PyResult<()> {
 ```
 
 ### Build and use:
+
+*Compile the Rust extension with maturin and import it from Python like any module — the final step that puts your fast Rust code to work.*
+
 
 ```bash
 maturin develop   # builds and installs in current venv

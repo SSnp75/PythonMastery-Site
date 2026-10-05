@@ -40,6 +40,8 @@ else:
 
 ### Ternary (one-liner)
 
+*Pick one of two values inline with `a if cond else b` — concise for simple either/or assignments.*
+
 ```python
 score = 85
 label = "pass" if score >= 50 else "fail"
@@ -47,6 +49,8 @@ print(label)   # pass
 ```
 
 ### Truthy and Falsy values
+
+*Any value can be tested in an `if` — empty containers, `0`, `None`, and `""` are falsy; everything else is truthy. This underlies idioms like `if items:`.*
 
 ```python
 # Falsy: False, None, 0, 0.0, "", [], {}, set()
