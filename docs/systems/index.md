@@ -1,5 +1,6 @@
 ---
 title: Performance & Systems
+description: Make Python fast — threading, multiprocessing, asyncio, profiling, vectorization, Cython, Numba, Rust extensions and GPU kernels.
 ---
 
 # ⚙️ Performance & Systems

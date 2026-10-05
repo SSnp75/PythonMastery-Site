@@ -1,5 +1,6 @@
 ---
 title: Security & DevOps
+description: Secure, deploy and operate Python systems at scale — cryptography, sandboxing, secrets management, vulnerability scanning, cloud and DevOps.
 ---
 
 # 🔒 Security & DevOps

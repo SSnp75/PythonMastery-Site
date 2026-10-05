@@ -1,5 +1,6 @@
 ---
 title: "Level 3 · Intermediate"
+description: "Level 3 of Python Mastery — write expressive, reusable Python with decorators, generators, type hints and functional patterns."
 ---
 
 # Level 3 · Intermediate <span class="pm-badge pm-badge-intermediate">Intermediate</span>

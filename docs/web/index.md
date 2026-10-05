@@ -1,5 +1,6 @@
 ---
 title: Web & APIs
+description: Build web backends, REST APIs, scrapers and large-scale architectures in Python — from CLI tools and frameworks to microservices and clean architecture.
 ---
 
 # 🌐 Web & APIs

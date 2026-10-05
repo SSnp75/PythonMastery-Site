@@ -1,5 +1,6 @@
 ---
 title: "Level 7 · Research"
+description: "Level 7 of Python Mastery — work at the edge of what Python can do: building compilers, modifying the interpreter, and engineering new language features."
 ---
 
 # Level 7 · Research <span class="pm-badge pm-badge-research">Research</span>

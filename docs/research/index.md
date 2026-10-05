@@ -1,5 +1,6 @@
 ---
 title: Research & Compilers
+description: Work at the edge of Python — JIT compilers, bytecode rewriting, interpreter forking, PEG parsers, transpilers and language engineering.
 ---
 
 # 🔬 Research & Compilers

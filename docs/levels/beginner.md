@@ -1,5 +1,6 @@
 ---
 title: "Level 1 · Beginner"
+description: "Level 1 of Python Mastery — write simple scripts, understand Python syntax, and work with basic data structures."
 ---
 
 # Level 1 · Beginner <span class="pm-badge pm-badge-beginner">Beginner</span>

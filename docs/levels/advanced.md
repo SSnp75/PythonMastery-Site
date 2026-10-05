@@ -1,5 +1,6 @@
 ---
 title: "Level 5 · Advanced"
+description: "Level 5 of Python Mastery — understand Python from the inside: the object model, memory management, bytecode and performance bottlenecks."
 ---
 
 # Level 5 · Advanced <span class="pm-badge pm-badge-advanced">Advanced</span>

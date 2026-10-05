@@ -1,5 +1,6 @@
 ---
 title: "Level 4 · Proficient"
+description: "Level 4 of Python Mastery — build production-ready systems: APIs, async services, ML pipelines and concurrent applications."
 ---
 
 # Level 4 · Proficient <span class="pm-badge pm-badge-proficient">Proficient</span>

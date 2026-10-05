@@ -1,5 +1,6 @@
 ---
 title: "Level 6 · Expert"
+description: "Level 6 of Python Mastery — design systems that last: secure, scalable, maintainable architectures at cloud scale."
 ---
 
 # Level 6 · Expert <span class="pm-badge pm-badge-expert">Expert</span>

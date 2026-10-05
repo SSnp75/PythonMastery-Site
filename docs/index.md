@@ -2,6 +2,7 @@
 hide:
   - navigation
   - toc
+description: A complete, free Python learning resource — from your first variable to compiler design, across 7 skill levels and 25+ tracks with runnable, tested examples.
 ---
 
 <div class="pm-hero">

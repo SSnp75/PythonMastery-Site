@@ -1,5 +1,6 @@
 ---
 title: "Level 2 · Competent"
+description: "Level 2 of Python Mastery — build small real-world projects with OOP, proper error handling, and well-organised modules."
 ---
 
 # Level 2 · Competent <span class="pm-badge pm-badge-competent">Competent</span>
