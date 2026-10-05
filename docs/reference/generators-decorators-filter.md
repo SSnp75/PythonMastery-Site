@@ -30,7 +30,7 @@ below runs as-is.
 
 ## Generators
 
-*Generators in Generators, Decorators & Filtering — Deep Dive — what it is and when to use it.*
+*Lazy producers that yield values one at a time — covered here from infinite sequences and `yield from` delegation to streaming pipelines that process huge inputs with flat memory.*
 
 ### Infinite generators
 
@@ -175,6 +175,8 @@ print(next(pipeline))   # 16
 
 ### Streaming: files, logs, sockets
 
+*Yield data a piece at a time from files, a `tail -f`-style log follower, or a socket — the pattern behind chunked downloads and real-time feeds that never load everything into memory.*
+
 ```python
 # Stream CSV rows without loading the whole file
 def read_csv(filename):
@@ -209,13 +211,15 @@ def stream_socket(sock):
 
 ## Decorators
 
-*Decorators in Generators, Decorators & Filtering — Deep Dive — what it is and when to use it.*
+*Functions that wrap other functions to add behavior without changing them — from the basic mental model through argument-taking factories and stateful class-based decorators.*
 
 A decorator is a function that **takes a function, adds behavior, and returns a new function** —
 without modifying the original. Common uses: logging, timing, authentication, caching,
 validation, retry logic, resource management.
 
 ### Mental model
+
+*`@decorator` is just syntactic sugar for `f = decorator(f)` — once you see that, every decorator makes sense.*
 
 ```python
 @decorator
@@ -249,6 +253,8 @@ greet()
 ---
 
 ### Practical example: logging
+
+*A real decorator that logs each call, using `@wraps` to preserve the wrapped function's name and docstring — the template most practical decorators follow.*
 
 ```python
 from functools import wraps
@@ -351,9 +357,11 @@ greet()
 
 ## Filtering with `filter`, `map`, `reduce`
 
-*Filtering with filter, map, reduce in Generators, Decorators & Filtering — Deep Dive — what it is and when to use it.*
+*The functional trio for transforming, selecting, and folding sequences — plus a large catalog of real filtering patterns and the common truthiness bug to avoid.*
 
 ### The three building blocks
+
+*`map` transforms every element, `filter` keeps the ones matching a predicate, `reduce` folds them to a single value — the functional alternatives to explicit loops.*
 
 ```python
 from functools import reduce

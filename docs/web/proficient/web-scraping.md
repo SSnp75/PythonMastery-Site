@@ -57,6 +57,8 @@ page_text = soup.get_text(separator="\n", strip=True)
 
 ### Navigating the tree
 
+*Move around the parsed HTML — up to parents, across siblings, down to children — and use CSS selector patterns to target exactly the elements you want.*
+
 ```python
 # Parent, siblings, children
 element = soup.find("span", class_="score")
@@ -76,6 +78,8 @@ soup.select("p.intro, p.summary")       # multiple selectors
 ```
 
 ### Extracting structured data
+
+*Pull multiple fields from a page into a clean dict — the typical end goal of scraping, turning messy HTML into a structured record you can store or process.*
 
 ```python
 def scrape_product(url: str) -> dict:
@@ -174,6 +178,8 @@ def scrape_dynamic_page(url: str) -> list[dict]:
 
 ### Async Playwright
 
+*The async API for driving browsers — lets you scrape many pages concurrently instead of one at a time, a big speedup when crawling lots of JS-rendered URLs.*
+
 ```python
 import asyncio
 from playwright.async_api import async_playwright
@@ -262,6 +268,8 @@ scrapy crawl products -o products.csv
 | robots.txt blocking | **Respect it** (ethical obligation) |
 
 ### Rotating headers and proxies
+
+*Vary the User-Agent and source IP across requests to avoid trivial bot-blocking — use judiciously and within a site's terms, not to defeat access controls.*
 
 ```python
 import random
