@@ -17,7 +17,7 @@ description: "@dataclass for clean data containers with less boilerplate"
 
 ## Basic usage
 
-*Basic usage in Dataclasses — what it is and when to use it.*
+*Decorate a class with `@dataclass` and it auto-generates `__init__`, `__repr__`, and `__eq__` from your annotated fields — no boilerplate.*
 
 ```python
 from dataclasses import dataclass
@@ -36,7 +36,7 @@ print(p == Point(3.0, 4.0))   # True — auto __eq__
 
 ## Default values & fields
 
-*Default values & fields in Dataclasses — what it is and when to use it.*
+*Give fields defaults, and use `field(default_factory=...)` for mutable defaults like lists — never a bare `[]`, which would be shared across instances.*
 
 ```python
 from dataclasses import dataclass, field
@@ -52,7 +52,7 @@ class Config:
 
 ## Frozen (immutable)
 
-*Frozen (immutable) in Dataclasses — what it is and when to use it.*
+*`frozen=True` makes instances read-only (and hashable) — ideal for value objects and dict keys where accidental mutation would be a bug.*
 
 ```python
 @dataclass(frozen=True)
@@ -68,7 +68,7 @@ c.lat = 0   # FrozenInstanceError!
 
 ## Post-init processing
 
-*Post-init processing in Dataclasses — what it is and when to use it.*
+*`__post_init__` runs after the generated `__init__` — use it to compute derived fields (marked `init=False`) from the supplied ones.*
 
 ```python
 @dataclass
@@ -84,7 +84,7 @@ class Circle:
 
 ## Ordering & comparison
 
-*Ordering & comparison in Dataclasses — what it is and when to use it.*
+*`order=True` generates comparison methods that compare instances field-by-field as a tuple — so they sort naturally without a custom `__lt__`.*
 
 `order=True` generates `__lt__`, `__le__`, etc., comparing fields as a tuple:
 
@@ -105,7 +105,7 @@ print(sorted([Version(2, 0), Version(1, 9)]))
 
 ## `slots=True` — smaller, faster instances
 
-*slots=True — smaller, faster instances, part of Dataclasses.*
+*`slots=True` (3.10+) drops each instance's `__dict__` for lower memory and faster attribute access — valuable when you create many instances.*
 
 Python 3.10+ can generate `__slots__`, which drops the per-instance `__dict__`:
 
@@ -125,7 +125,7 @@ print(hasattr(p, "__dict__"))   # False — attributes live in slots
 
 ## Excluding a field from compare / repr
 
-*Excluding a field from compare / repr in Dataclasses — what it is and when to use it.*
+*Use `field(repr=False, compare=False)` to hide sensitive or irrelevant fields (like a password) from the string form and equality checks.*
 
 ```python
 from dataclasses import dataclass, field
@@ -144,7 +144,7 @@ print(u == User("alice", "different"))   # True — password ignored in ==
 
 ## Convert to dict / tuple
 
-*Convert to dict / tuple in Dataclasses — what it is and when to use it.*
+*`asdict` and `astuple` recursively convert a dataclass to plain containers — the easy path to JSON serialization or unpacking.*
 
 ```python
 from dataclasses import dataclass, asdict, astuple
@@ -163,7 +163,7 @@ print(astuple(p))   # (3, 4)
 
 ## Post-init validation (runnable)
 
-*Post-init validation (runnable) in Dataclasses — what it is and when to use it.*
+*A runnable example using `__post_init__` to validate inputs and reject bad values — the standard place to enforce invariants on a dataclass.*
 
 ```python
 from dataclasses import dataclass, field
