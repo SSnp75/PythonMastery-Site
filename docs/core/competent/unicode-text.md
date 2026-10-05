@@ -23,7 +23,7 @@ description: Strings, encoding, bytes, regex, text normalization and real-world 
 
 ## str vs bytes — the fundamental distinction
 
-*str vs bytes — the fundamental distinction, part of Unicode & Text Processing.*
+*`str` is human-readable text (Unicode code points); `bytes` is raw binary. Knowing which you hold — and encoding/decoding at the boundary — prevents the most common text bugs.*
 
 ```python
 # str — sequence of Unicode code points (text)
@@ -51,7 +51,7 @@ print(decoded == text)   # True
 
 ## Encoding schemes
 
-*Encoding schemes in Unicode & Text Processing — what it is and when to use it.*
+*The common ways text maps to bytes (ASCII, Latin-1, the UTF family) and when each applies — in practice, use UTF-8 everywhere unless a legacy system forces otherwise.*
 
 | Encoding | Bytes/char | Coverage | Use case |
 |---|---|---|---|
@@ -79,7 +79,7 @@ text.encode("ascii", errors="xmlcharrefreplace")  # b'Caf&#233; &#9749;'
 
 ## Unicode code points and names
 
-*Unicode code points and names in Unicode & Text Processing — what it is and when to use it.*
+*Convert between characters and their numeric code points (`ord`/`chr`), write them by escape or name, and inspect their category — useful for parsing, validation, and emoji/symbol handling.*
 
 ```python
 # Every character has a code point (integer) and a name
@@ -107,7 +107,7 @@ print(unicodedata.category("!"))   # Po (Punctuation, other)
 
 ## Text normalization
 
-*Text normalization in Unicode & Text Processing — what it is and when to use it.*
+*The same visible character can have multiple byte representations; normalizing (NFC/NFD/NFKC/NFKD) collapses them to one form so comparisons and searches behave — always normalize user input before comparing.*
 
 The same visual character can have different byte representations:
 
@@ -155,9 +155,11 @@ print(unicodedata.normalize("NFKC", "Ⅳ"))    # IV (Roman numeral → letters)
 
 ## String methods — complete reference
 
-*String methods — complete reference, part of Unicode & Text Processing.*
+*The core `str` toolbox grouped by purpose — searching, transforming, splitting/joining, and testing — the methods you'll use in nearly every program that touches text.*
 
 ### Searching
+
+*Locate or count substrings — `find`/`index` for position, `count` for frequency, `startswith`/`endswith` for prefixes/suffixes — the building blocks of any text parsing.*
 
 ```python
 s = "Hello, World! Hello, Python!"
@@ -174,6 +176,8 @@ s.endswith(("!", "?", "."))  # True (accepts tuple)
 ```
 
 ### Transforming
+
+*Reshape strings — trim whitespace, change case, pad/align, and replace substrings — the everyday cleanup you do on user input and before display.*
 
 ```python
 s = "  Hello, World!  "
@@ -218,6 +222,8 @@ s.strip(" !")      # "Hello, World"  — strip these chars
 
 ### Splitting and joining
 
+*Turn a string into a list and back — `split`/`splitlines` to parse delimited data, `join` to assemble output, `partition` to break on the first separator.*
+
 ```python
 "a,b,c".split(",")           # ['a', 'b', 'c']
 "a  b  c".split()            # ['a', 'b', 'c']  (splits on any whitespace)
@@ -235,6 +241,8 @@ s.strip(" !")      # "Hello, World"  — strip these chars
 
 ### Testing
 
+*Check what a string contains — all digits, all letters, valid identifier — before converting or using it, so you validate input instead of catching exceptions later.*
+
 ```python
 "123".isdigit()       # True
 "abc".isalpha()       # True
@@ -251,7 +259,7 @@ s.strip(" !")      # "Hello, World"  — strip these chars
 
 ## f-strings — advanced formatting
 
-*f-strings — advanced formatting, part of Unicode & Text Processing.*
+*Embed expressions directly in string literals with precise control over decimals, padding, alignment, and number formatting — the modern, readable way to build output.*
 
 ```python
 name = "Alice"
@@ -298,9 +306,11 @@ f"{'hello':^{width}}"             # "       hello        "
 
 ## Real-world text processing patterns
 
-*Real-world text processing patterns in Unicode & Text Processing — what it is and when to use it.*
+*Three tasks you'll hit in real projects — generating URL slugs, detecting a file's encoding, and stripping accents — each combining the primitives above.*
 
 ### Slug generation (URL-safe strings)
+
+*Turn an arbitrary title into a clean, lowercase, hyphenated URL slug — the exact transformation blogs and CMSs apply to post titles to build readable links.*
 
 ```python
 import re
@@ -321,6 +331,8 @@ print(slugify("Python 3.13: What's New"))  # "python-313-whats-new"
 
 ### Detecting encoding
 
+*Guess the encoding of an unknown text file before decoding it — the practical fix when you receive data files from other systems with no declared charset.*
+
 ```python
 # pip install chardet
 import chardet
@@ -333,6 +345,8 @@ with open("mystery.txt", "rb") as f:
 ```
 
 ### Stripping accents
+
+*Reduce accented letters to their plain ASCII base (`café` → `cafe`) by decomposing and dropping the combining marks — useful for search, sorting, and legacy-system compatibility.*
 
 ```python
 import unicodedata

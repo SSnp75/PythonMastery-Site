@@ -23,7 +23,7 @@ description: Threads, locks, race conditions, synchronization primitives and the
 
 ## When to use threads
 
-*A core question explored in Threading: When to use threads.*
+*Threads help when work waits on I/O (network, disk) because the GIL is released during those waits — but they can't speed up pure CPU work. This table is the quick decision guide.*
 
 | Workload | Use threads? | Why |
 |---|---|---|
@@ -152,6 +152,8 @@ print(f"Result: {counter:,}")   # exactly 4,000,000
 
 ### RLock (re-entrant lock)
 
+*A lock the same thread can acquire more than once without deadlocking — needed when a locked method calls another locked method, or in recursive code holding the lock.*
+
 ```python
 rlock = threading.RLock()
 
@@ -170,6 +172,8 @@ def recursive_function(n):
 *Events, conditions, semaphores, and barriers for coordinating threads beyond a plain lock.*
 
 ### Semaphore — limit concurrent access
+
+*Cap how many threads can enter a section at once (a lock allows one, a semaphore allows N) — use it to throttle access to a limited resource like a connection pool or an API rate limit.*
 
 ```python
 import threading
@@ -191,6 +195,8 @@ for t in threads: t.join()
 ```
 
 ### Event — signal between threads
+
+*A simple on/off flag threads can wait on — one thread calls `set()` to release every thread blocked in `wait()`, ideal for "data is ready" or "start now" signals.*
 
 ```python
 import threading
@@ -219,6 +225,8 @@ for t in threads: t.join()
 ```
 
 ### Condition — complex signaling
+
+*A lock plus a wait/notify mechanism for "wait until some state changes" — the right tool for a bounded producer/consumer buffer where threads must wait when it's full or empty.*
 
 ```python
 import threading
@@ -250,6 +258,8 @@ def consumer(name):
 ```
 
 ### Barrier — synchronize N threads at a point
+
+*Make a group of threads all wait until every one has reached the same point before any continue — used for phased/parallel algorithms where each stage must finish before the next begins.*
 
 ```python
 import threading
@@ -353,6 +363,8 @@ for t in threads: t.join()
 *Worker pools, producer/consumer, and periodic tasks done safely.*
 
 ### Thread pool with result collection
+
+*Fan work out to a pool and gather results as each finishes with `as_completed`, handling per-task failures individually — the standard shape for concurrent I/O like batch downloads.*
 
 ```python
 from concurrent.futures import ThreadPoolExecutor, as_completed

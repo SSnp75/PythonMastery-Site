@@ -17,7 +17,7 @@ description: Object layout, id(), references, copying, __slots__ and memory inte
 
 ## Variables are references, not boxes
 
-*Variables are references, not boxes in Memory Model — what it is and when to use it.*
+*A Python variable is a name bound to an object, not a container holding a value — grasping this explains aliasing, in-place mutation, and why two names can see each other's changes.*
 
 In Python, variables don't "contain" values — they're **name tags** pointing to objects:
 
@@ -33,6 +33,8 @@ print(a is b)            # True — identity check
 ```
 
 ### Assignment rebinds the name, it doesn't copy:
+
+*Assigning to a variable points the name at a different object; it never mutates what the name previously referred to — the key distinction behind "why didn't my other variable change?"*
 
 ```python
 a = [1, 2, 3]
@@ -160,6 +162,8 @@ print(sys.getsizeof("hello"))      # 54
 
 ### True deep size:
 
+*`sys.getsizeof` only counts the container itself, not its contents; this recursive helper walks the whole object graph (guarding against cycles) to get the real total — what you want when profiling a large data structure.*
+
 ```python
 def deep_getsizeof(obj, seen=None):
     """Recursively compute total memory of an object graph."""
@@ -223,6 +227,8 @@ Top 5 memory consumers:
 
 ### Use `__slots__` for data-heavy classes:
 
+*Declaring `__slots__` drops each instance's per-object `__dict__`, cutting memory roughly 3× — a big win when you create millions of small objects (points, records, nodes).*
+
 ```python
 class PointSlots:
     __slots__ = ('x', 'y', 'z')
@@ -244,6 +250,8 @@ print(f"Dict:  {sys.getsizeof(dict_list[0]) + sys.getsizeof(dict_list[0].__dict_
 
 ### Use generators instead of lists for streaming:
 
+*Yield items one at a time instead of building a full list, so memory stays flat no matter how large the input — the standard fix for processing huge files or streams.*
+
 ```python
 # Bad — stores all in memory
 all_lines = [line.strip() for line in open("huge.txt")]
@@ -256,6 +264,8 @@ def stripped_lines(path):
 ```
 
 ### Use `array.array` for homogeneous numeric data:
+
+*Store millions of same-type numbers in a compact C array instead of a list of boxed Python ints — about half the memory, and the gateway to NumPy for even more.*
 
 ```python
 import array, sys
@@ -296,6 +306,8 @@ print(weak())          # None — object was collected
 ```
 
 ### WeakValueDictionary — cache that doesn't prevent GC:
+
+*A cache whose entries vanish once nothing else references the value — gives you memoization without the memory leak of a dict that pins every object it ever stored.*
 
 ```python
 cache = weakref.WeakValueDictionary()

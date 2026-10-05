@@ -60,6 +60,8 @@ print(p.parts)     # ('reports', '2026', 'summary.txt')
 
 ### Reading & writing
 
+*Read or write a whole file in a single call with `read_text`/`write_text` — no `open()`/`close()` boilerplate — ideal for small config files, notes, and quick scripts.*
+
 ```python
 from pathlib import Path
 
@@ -78,6 +80,8 @@ print(f.stat().st_size)  # size in bytes
     Without it, Python uses the platform default, which differs between Windows and Linux and is a common source of "works on my machine" bugs.
 
 ### Finding files with `glob`
+
+*Match files by wildcard pattern instead of listing and filtering by hand — `glob` for one level, `rglob` to recurse — the fast way to collect "every `.py` under here".*
 
 ```python
 from pathlib import Path
@@ -159,6 +163,8 @@ archive_path = shutil.make_archive("backup-2026", "zip", "src")
 
 ### Real example: rotating backups
 
+*Combine `shutil` and `datetime` to make a timestamped zip archive — the core of any "nightly backup" job, where each run produces a uniquely named file.*
+
 ```python
 import shutil
 from datetime import datetime
@@ -220,6 +226,8 @@ with open("out.csv", "w", newline="", encoding="utf-8") as fh:
 
 ### JSON files
 
+*Read a JSON file into a Python dict, edit it, and write it back — the usual pattern for updating config or state files that both humans and programs touch.*
+
 ```python
 import json
 from pathlib import Path
@@ -237,6 +245,8 @@ Path("config.json").write_text(
 ```
 
 ### Real example: batch-rename with a counter
+
+*Rename a whole folder of files to a clean, zero-padded sequence (`vacation_001.jpg`, …) — a common chore for photos, scans, or exported data that arrives with messy names.*
 
 ```python
 from pathlib import Path
@@ -297,6 +307,8 @@ print(result.returncode)  # 0 on success
 
 ### Real example: run a command with a timeout
 
+*Wrap `subprocess.run` so a hung or failing command returns a clean error string instead of crashing your script — essential when automating tools that might stall.*
+
 ```python
 import subprocess
 
@@ -353,6 +365,8 @@ py myscript.py
 Two approaches: schedule from **inside** a long-running Python process, or let the **operating system** run your script on a timer.
 
 ### In-process scheduling with `sched`
+
+*Schedule callbacks to fire after a delay from within a running Python program using the standard-library `sched` module — use when the timing is part of a larger app rather than a system-level cron job.*
 
 ```python
 import sched, time
@@ -464,7 +478,7 @@ log.error("Failed to connect to server")
 
 ## Putting it together
 
-*Putting it together in Automation & Scripting — what it is and when to use it.*
+*A realistic maintenance script that combines file cleanup, backup, logging, and a CLI — showing how the individual pieces above fit into one unattended job.*
 
 A realistic maintenance script combining several pieces — clean old files, back up, and log:
 
@@ -517,7 +531,7 @@ if __name__ == "__main__":
 
 ## Quick reference
 
-*Quick reference in Automation & Scripting — what it is and when to use it.*
+*A lookup table mapping each common automation task to the standard-library tool and a one-line example — scan it when you know what you want to do but not which function does it.*
 
 | Task | Tool | Example |
 |---|---|---|
