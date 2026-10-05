@@ -23,7 +23,7 @@ description: Fixtures, parametrize, markers, plugins, conftest and test organiza
 
 ## Why pytest?
 
-*A core question explored in pytest: Why pytest.*
+*What makes pytest the de-facto standard — plain `assert`, powerful fixtures, parametrization, and a huge plugin ecosystem, all with far less boilerplate than unittest.*
 
 - Minimal boilerplate — just use `assert`
 - Powerful fixtures for setup/teardown
@@ -36,7 +36,7 @@ description: Fixtures, parametrize, markers, plugins, conftest and test organiza
 
 ## Your first test
 
-*Your first test in pytest — what it is and when to use it.*
+*The minimal shape of a pytest test — a function named `test_*` with a plain `assert`, plus `pytest.raises` for expected errors — and the commands to run them.*
 
 ```python
 # math_utils.py
@@ -115,6 +115,8 @@ E     At index 4 diff: 5 != 6
 
 ### Common assertions:
 
+*The assertion patterns you'll use most — equality, truthiness, containment, approximate float comparison, type, and length.*
+
 ```python
 # Equality
 assert result == expected
@@ -176,6 +178,8 @@ def test_find_alice(db_connection):
 
 ### Fixture scopes:
 
+*Control how often a fixture is created — per test, per class, per module, or once per session — to share expensive setup (like a DB) without leaking state between tests.*
+
 ```python
 @pytest.fixture(scope="function")   # default — fresh per test
 def per_test(): ...
@@ -191,6 +195,8 @@ def per_session(): ...
 ```
 
 ### Fixture dependencies (fixtures using fixtures):
+
+*Fixtures can request other fixtures, so you compose setup in layers (`app` → `client` → `auth_client`) — each test asks only for the top-level one it needs.*
 
 ```python
 @pytest.fixture

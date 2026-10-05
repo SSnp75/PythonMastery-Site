@@ -292,6 +292,8 @@ def downgrade():
 
 ### Avoiding N+1
 
+*The most common ORM performance bug: lazy-loading a relationship inside a loop fires one query per row. Eager-load with `selectinload` to collapse it to two queries.*
+
 ```python
 # BAD — N+1 queries (1 query for users + N queries for posts)
 users = session.scalars(select(User)).all()
@@ -306,6 +308,8 @@ users = session.scalars(
 
 ### Selecting only needed columns
 
+*Fetch just the columns you use instead of whole ORM objects — less data over the wire and no object-hydration overhead for read-heavy queries.*
+
 ```python
 # Instead of loading full objects:
 stmt = select(User.name, User.email).where(User.age > 25)
@@ -314,6 +318,8 @@ results = session.execute(stmt).all()
 ```
 
 ### Pagination
+
+*Return results in bounded pages with `offset`/`limit` plus a total count — keeps response size and query cost flat as the table grows.*
 
 ```python
 def paginate(session, query, page: int, per_page: int = 20):

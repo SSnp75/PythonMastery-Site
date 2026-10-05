@@ -217,6 +217,8 @@ response = local_client.chat.completions.create(
 
 ### Retry with exponential backoff
 
+*Retry transient failures (rate limits, API errors) with increasing waits — LLM APIs rate-limit aggressively, so this is essential for reliability.*
+
 ```python
 import time
 from openai import OpenAI, RateLimitError, APIError
@@ -239,6 +241,8 @@ def call_with_retry(client, messages, max_retries=3):
 ```
 
 ### Token counting and cost estimation
+
+*Count tokens with tiktoken before you call, so you can stay within context limits and predict spend — critical for budgeting and chunking.*
 
 ```python
 import tiktoken
@@ -263,6 +267,8 @@ print(f"Estimated cost: ${cost:.4f}")   # $0.0125
 ```
 
 ### Prompt templating
+
+*Keep prompts as reusable templates with placeholders instead of inline f-strings — easier to version, test, and tweak as your app grows.*
 
 ```python
 from string import Template

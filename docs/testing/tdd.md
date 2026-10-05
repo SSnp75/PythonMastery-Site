@@ -43,6 +43,8 @@ Each cycle takes **1-5 minutes**. You always have working code.
 
 ### Cycle 1: push and peek
 
+*First red-green pass: write failing tests for an empty stack and push/peek, then add just enough code to make them pass.*
+
 ```python
 # test_stack.py — Step 1: RED (write failing test)
 import pytest
@@ -85,6 +87,8 @@ pytest   # PASSES ✓
 
 ### Cycle 2: pop
 
+*Next failing test drives the `pop` method — including the empty-stack error case, written as a test before the code exists.*
+
 ```python
 # test_stack.py — add new failing test
 def test_pop_returns_last_pushed():
@@ -112,6 +116,8 @@ def pop(self):
 ```
 
 ### Cycle 3: size
+
+*One more cycle adds `__len__`, driven by a test — showing how each small feature enters only after a test demands it.*
 
 ```python
 def test_size():

@@ -22,9 +22,11 @@ description: Strategies for understanding unfamiliar codebases efficiently
 
 ## The systematic approach
 
-*The systematic approach — a key concept in Reading Other People's Code.*
+*A repeatable order for understanding any unfamiliar codebase — entry point, tests, architecture map, then tooling — instead of reading files at random.*
 
 ### 1. Start from the entry point
+
+*Find what runs first — `main`, the app object, the CLI script — and read outward from there, so you follow the real execution path rather than guessing.*
 
 ```
 What runs first?
@@ -44,6 +46,8 @@ Tests tell you:
 
 ### 3. Map the architecture
 
+*Build a mental model from folder structure, imports, and domain objects before reading line by line — understand the shape before the details.*
+
 ```
 ┌── Read folder structure (what's the organization?)
 ├── Read imports (what depends on what?)
@@ -53,6 +57,8 @@ Tests tell you:
 ```
 
 ### 4. Use tools
+
+*Let grep, dependency trees, and call-graph generators do the mechanical tracing — far faster than following references by hand.*
 
 ```bash
 # Find where something is defined
@@ -73,7 +79,7 @@ pyan3 src/**/*.py --dot | dot -Tpng -o callgraph.png
 
 ## Strategies for different situations
 
-*Strategies for different situations in Reading Other People's Code — what it is and when to use it.*
+*Which reading strategy to use depending on why you're here — fixing a bug, adding a feature, reviewing a PR, or onboarding to a new codebase.*
 
 | Situation | Strategy |
 |---|---|

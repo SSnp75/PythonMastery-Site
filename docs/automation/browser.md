@@ -67,6 +67,8 @@ Modern Selenium (4.6+) includes **Selenium Manager**, which downloads the right 
 
 ### First script
 
+*The minimal Selenium program — launch a browser, open a page, read an element, and always `quit()` in a `finally` so no orphaned browser is left running.*
+
 ```python
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -128,6 +130,8 @@ email.send_keys("user@example.com")
 
 ### Complete example: log in and read a result
 
+*A realistic end-to-end flow — fill a login form, submit, wait for the result, and read it — tying together locating, interacting, and explicit waits.*
+
 ```python
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -160,7 +164,7 @@ def login_and_get_welcome(url: str, user: str, pw: str) -> str:
 
 ## Playwright
 
-*Playwright in Browser Automation — what it is and when to use it.*
+*A modern browser-automation library with built-in auto-waiting and managed browsers — generally less flaky and lower-setup than Selenium for new projects.*
 
 ```bash
 pip install playwright
@@ -170,6 +174,8 @@ playwright install          # downloads Chromium, Firefox, WebKit
 The `playwright install` step grabs the browsers Playwright manages itself, so there's no separate driver to match.
 
 ### First script
+
+*The Playwright equivalent — the `with sync_playwright()` context manager handles browser startup/teardown for you, so there's no manual cleanup.*
 
 ```python
 from playwright.sync_api import sync_playwright

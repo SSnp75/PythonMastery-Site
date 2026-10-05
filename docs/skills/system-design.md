@@ -22,7 +22,7 @@ description: Designing scalable systems — architecture patterns, trade-offs an
 
 ## The system design framework
 
-*The system design framework — a key concept in System Design.*
+*A five-step structure for any design question — requirements, estimation, high-level design, deep dives, and tradeoffs — so you cover the ground interviewers (and real projects) expect.*
 
 ```
 1. REQUIREMENTS   — What exactly are we building? (functional + non-functional)
@@ -36,7 +36,7 @@ description: Designing scalable systems — architecture patterns, trade-offs an
 
 ## Example: Design a URL shortener
 
-*Example: Design a URL shortener in System Design — what it is and when to use it.*
+*The framework applied end to end to a classic problem — from requirements and estimation through data model, the base-62 encoding algorithm, and scaling choices.*
 
 ### Requirements
 - Shorten a URL → return short code (7 chars)
@@ -46,6 +46,8 @@ description: Designing scalable systems — architecture patterns, trade-offs an
 
 ### High-level design
 
+*The major components and how requests flow between them — sketch this box diagram before diving into any single piece.*
+
 ```
 Client → Load Balancer → API Server → Database
                               ↓
@@ -53,6 +55,8 @@ Client → Load Balancer → API Server → Database
 ```
 
 ### Data model
+
+*The core entity and its fields — deciding what you store (and what's the primary key) shapes every downstream choice about indexing and sharding.*
 
 ```python
 # URL mapping
@@ -65,6 +69,8 @@ class URL:
 ```
 
 ### Core algorithm
+
+*The heart of the design — base-62 encoding an auto-increment ID into a short code, with the hash-based alternative and its collision tradeoff.*
 
 ```python
 import hashlib
@@ -107,7 +113,7 @@ def shorten(original_url: str) -> str:
 
 ## Key trade-offs to discuss
 
-*Key trade-offs to discuss in System Design — what it is and when to use it.*
+*The recurring either/or decisions in any system design — SQL vs NoSQL, sync vs async, consistency vs availability — and what each side buys you.*
 
 | Decision | Option A | Option B |
 |---|---|---|
@@ -121,7 +127,7 @@ def shorten(original_url: str) -> str:
 
 ## Common system design problems
 
-*Common system design problems in System Design — what it is and when to use it.*
+*A menu of frequently-asked design problems and the core challenge each one tests — use it to spot which concepts a given prompt is really about.*
 
 | Problem | Key challenges |
 |---|---|

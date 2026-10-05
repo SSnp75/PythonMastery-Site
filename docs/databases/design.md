@@ -72,12 +72,18 @@ CREATE TABLE profiles (
 *Reusable designs for timestamps, soft deletes, hierarchies, and audit trails.*
 
 ### Soft delete
+
+*Mark rows deleted with a timestamp instead of removing them — preserves history and lets you "undelete", at the cost of filtering `deleted_at IS NULL` everywhere.*
+
 ```sql
 ALTER TABLE users ADD COLUMN deleted_at TIMESTAMP NULL;
 -- Query: WHERE deleted_at IS NULL
 ```
 
 ### Audit trail
+
+*A log table recording who changed what and when (old vs new values) — essential for compliance, debugging, and reconstructing history.*
+
 ```sql
 CREATE TABLE audit_log (
     id SERIAL PRIMARY KEY,
@@ -92,6 +98,9 @@ CREATE TABLE audit_log (
 ```
 
 ### Polymorphic associations
+
+*Let one table (e.g. comments) attach to several parent types via a type+id pair — flexible, but trades away true foreign-key integrity, so index the pair and weigh the tradeoff.*
+
 ```sql
 -- Instead of separate foreign keys per type:
 CREATE TABLE comments (

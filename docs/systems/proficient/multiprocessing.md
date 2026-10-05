@@ -23,7 +23,7 @@ description: Processes, Pool, Queue, shared memory, ProcessPoolExecutor and true
 
 ## Why multiprocessing?
 
-*A core question explored in Multiprocessing: Why multiprocessing.*
+*Each process gets its own interpreter and GIL, so CPU-bound work runs truly in parallel across cores — the escape hatch from the GIL that threads can't offer.*
 
 Each process has its own Python interpreter and GIL — true parallelism for CPU-bound work.
 
@@ -118,6 +118,8 @@ with mp.Pool(processes=4, initializer=init_worker) as pool:
 
 ### Queue
 
+*A process-safe queue for many-producer/many-consumer handoff — the general-purpose way to stream work items between processes (data is pickled across the boundary).*
+
 ```python
 import multiprocessing as mp
 import time
@@ -143,6 +145,8 @@ p.join(); c.join()
 ```
 
 ### Pipe (faster for 2 processes)
+
+*A direct two-way channel between exactly two processes — lower overhead than a Queue when you only need point-to-point communication.*
 
 ```python
 import multiprocessing as mp
@@ -206,6 +210,8 @@ shm.unlink()
 ```
 
 ### Value and Array (simpler shared state)
+
+*Share a single number or a fixed array across processes with a lock — the lightweight option when you don't need full shared-memory numpy buffers.*
 
 ```python
 import multiprocessing as mp
