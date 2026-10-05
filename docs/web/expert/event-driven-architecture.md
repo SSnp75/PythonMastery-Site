@@ -33,7 +33,7 @@ description: Decouple components with events, handlers and message brokers
 
 ## The idea
 
-*The idea — a key concept in Event-driven Architecture.*
+*The core inversion: instead of a component calling everything it depends on, it announces that something happened and others react if they care — producers stop knowing about consumers.*
 
 In a traditional design, a component *calls* the components it depends on: place an order, then directly call email, inventory, and analytics. Everything is wired together and knows about everything else.
 
@@ -62,6 +62,8 @@ You don't need a message broker to get most of the decoupling benefit. Within a 
 
 ### Define events
 
+*Model each thing that can happen as an immutable dataclass carrying the relevant facts — events are records of the past, not commands.*
+
 ```python
 from dataclasses import dataclass
 
@@ -81,6 +83,8 @@ class OrderShipped(Event):
 Events are immutable (`frozen=True`) data — they record what happened and carry the relevant facts.
 
 ### The bus
+
+*The tiny core: a registry mapping event types to handler lists, with `subscribe` to register and `publish` to dispatch — the whole pub/sub mechanism in a dozen lines.*
 
 ```python
 from collections import defaultdict
@@ -104,6 +108,8 @@ The bus maps each event type to a list of interested handlers. `publish` looks u
 
 ### Handlers
 
+*Plain functions that react to an event — each one does its own job (email, inventory, shipping) and knows nothing about the others.*
+
 ```python
 def send_confirmation(e: OrderPlaced) -> None:
     print(f"Email: order {e.order_id} confirmed (${e.amount})")
@@ -116,6 +122,8 @@ def notify_shipping(e: OrderShipped) -> None:
 ```
 
 ### Wire it up and publish
+
+*Register handlers against event types, then publish events — the producer just states facts and every subscribed handler fires automatically.*
 
 ```python
 bus = EventBus()
@@ -197,7 +205,7 @@ channel.start_consuming()   # blocks, waiting for messages
 
 ## The honest tradeoffs
 
-*The honest tradeoffs — a key concept in Event-driven Architecture.*
+*What you gain (loose coupling, extensibility, buffering) weighed against the real costs (harder-to-follow flow, eventual consistency, distributed debugging) — so you adopt events deliberately, not reflexively.*
 
 Event-driven design is powerful but not free.
 

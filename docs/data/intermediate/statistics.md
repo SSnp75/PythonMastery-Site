@@ -100,6 +100,8 @@ print(poisson.pmf(k=5, mu=3))          # P(5 events when average is 3)
 
 ### One-sample t-test
 
+*Test whether a sample's mean differs from a known reference value — e.g. "is average height different from 170cm?"*
+
 ```python
 # Question: Is the average height different from 170cm?
 heights = np.array([172, 168, 175, 171, 169, 174, 167, 173, 170, 176,
@@ -118,6 +120,8 @@ else:
 
 ### Two-sample t-test
 
+*Compare the means of two independent groups (or paired before/after measurements) to see if they differ significantly.*
+
 ```python
 # Question: Do two groups have different means?
 group_a = np.array([85, 90, 78, 92, 88, 76, 95, 89, 91, 84])
@@ -132,6 +136,8 @@ t_stat, p_value = stats.ttest_rel(group_a, group_b)
 ```
 
 ### Chi-squared test (independence)
+
+*Test whether two categorical variables are related — e.g. "does product preference depend on gender?" — from a contingency table of counts.*
 
 ```python
 # Question: Is there a relationship between gender and product preference?
@@ -148,6 +154,8 @@ print(f"Expected frequencies:\n{expected}")
 ```
 
 ### ANOVA (multiple groups)
+
+*Compare the means of three or more groups at once — avoids the inflated error rate of running many pairwise t-tests.*
 
 ```python
 # Question: Do 3+ groups have different means?

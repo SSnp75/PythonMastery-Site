@@ -68,6 +68,8 @@ print(fib_tab(50))   # 12586269025 (instant!)
 
 ### 1. Climbing stairs (n ways to climb n steps, 1 or 2 at a time)
 
+*The simplest DP: ways to reach step n equal ways to reach n-1 plus n-2 (it's Fibonacci in disguise) — a gentle intro to recurrences.*
+
 ```python
 def climb_stairs(n: int) -> int:
     if n <= 2: return n
@@ -80,6 +82,8 @@ print(climb_stairs(5))   # 8 ways
 ```
 
 ### 2. Coin change (minimum coins to make amount)
+
+*Fewest coins to reach a target amount — a classic "unbounded" DP where each amount's answer builds on smaller amounts; returns -1 when impossible.*
 
 ```python
 def coin_change(coins: list[int], amount: int) -> int:
@@ -98,6 +102,8 @@ print(coin_change([2], 3))                # -1 (impossible)
 ```
 
 ### 3. Longest Common Subsequence
+
+*Longest sequence common to two strings (not necessarily contiguous) — a 2D DP that underpins diff tools and DNA alignment.*
 
 ```python
 def lcs(text1: str, text2: str) -> int:
@@ -119,6 +125,8 @@ print(lcs("abc", "def"))        # 0
 ```
 
 ### 4. 0/1 Knapsack
+
+*Maximize value packed into a weight-limited bag, each item taken or not — the archetypal constrained-optimization DP.*
 
 ```python
 def knapsack(weights: list[int], values: list[int], capacity: int) -> int:

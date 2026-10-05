@@ -23,7 +23,7 @@ description: Lists, tuples, sets, dictionaries and when to use each
 
 ## Lists
 
-*Lists in Data Structures — what it is and when to use it.*
+*Ordered, mutable sequences that allow duplicates — the default container for a collection of items you'll add to, index, slice, and iterate.*
 
 Ordered, mutable, allows duplicates.
 
@@ -51,6 +51,8 @@ fruits.count("apple")        # count occurrences
 
 ### List comprehensions
 
+*Build a list from an iterable in one readable expression, optionally filtering — the Pythonic replacement for a `for`-loop that appends.*
+
 ```python
 squares = [x**2 for x in range(10)]
 evens   = [x for x in range(20) if x % 2 == 0]
@@ -61,7 +63,7 @@ matrix  = [[0]*3 for _ in range(3)]   # 3x3 grid
 
 ## Tuples
 
-*Tuples in Data Structures — what it is and when to use it.*
+*Ordered but immutable sequences — use for fixed records, multiple return values, and anywhere you need a hashable value (like a dict key).*
 
 Ordered, **immutable**, allows duplicates.
 
@@ -81,7 +83,7 @@ def min_max(nums):
 
 ## Sets
 
-*Sets in Data Structures — what it is and when to use it.*
+*Unordered collections of unique items with fast membership tests — use for deduplication and for union/intersection/difference operations.*
 
 Unordered, mutable, **no duplicates**.
 
@@ -108,7 +110,7 @@ if "green" in colors:
 
 ## Dictionaries
 
-*Dictionaries in Data Structures — what it is and when to use it.*
+*Key-value mappings with fast lookup by key — the workhorse for structured records, caches, and anything JSON-like.*
 
 Key-value pairs, ordered (3.7+), mutable, keys are unique.
 
@@ -141,7 +143,7 @@ squares = {x: x**2 for x in range(6)}
 
 ## When to use what
 
-*A core question explored in Data Structures: When to use what.*
+*A side-by-side comparison of list/tuple/set/dict on ordering, mutability, and duplicates — the quick guide to picking the right container.*
 
 | Structure | Ordered | Mutable | Duplicates | Best for |
 |---|---|---|---|---|
@@ -179,11 +181,13 @@ schedule = {
 
 ## The `collections` module
 
-*The collections module — a key concept in Data Structures.*
+*Specialized containers that extend the built-ins — `Counter` for tallying, `defaultdict` for auto-initialized values, `namedtuple` for readable records.*
 
 The standard library's `collections` adds specialized containers beyond the built-ins.
 
 ### `Counter` — count things
+
+*Tally how often each item appears in an iterable, with `most_common` for rankings — ideal for word/character frequencies.*
 
 ```python
 from collections import Counter
@@ -197,6 +201,8 @@ print(sorted(c.elements()))  # ['a', 'a', 'a', 'b', 'n', 'n']
 
 ### `defaultdict` — automatic default values
 
+*A dict that auto-creates a default (empty list, zero, etc.) on first access to a missing key — removes the "check if key exists" boilerplate when grouping or counting.*
+
 ```python
 from collections import defaultdict
 
@@ -207,6 +213,8 @@ print(dict(groups))        # {'x': [1, 2]}
 ```
 
 ### `namedtuple` — readable records
+
+*A tuple whose fields have names — access by `.name` instead of `[0]`, giving self-documenting records without writing a full class.*
 
 ```python
 from collections import namedtuple
@@ -222,7 +230,7 @@ print(u._asdict())         # {'id': 1, 'name': 'alice'}
 
 ## `deque` — fast queue / stack
 
-*deque — fast queue / stack, part of Data Structures.*
+*A double-ended queue with O(1) operations at both ends — use for queues, stacks, and fixed-size "last N items" sliding windows.*
 
 A `deque` (double-ended queue) adds and removes from **both ends** in O(1), unlike a list
 which is O(n) at the front.
@@ -262,7 +270,7 @@ For a thread-safe FIFO queue, use `queue.Queue`; for priorities, `queue.Priority
 
 ## Tuple vs list: memory
 
-*Tuple vs list: memory in Data Structures — what it is and when to use it.*
+*Why an immutable tuple uses less memory than an equivalent list — the list over-allocates to make `append` fast, while a tuple allocates exactly what it needs.*
 
 Tuples are immutable, so Python stores them more compactly than lists:
 
