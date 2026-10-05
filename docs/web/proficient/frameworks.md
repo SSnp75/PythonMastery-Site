@@ -108,6 +108,10 @@ uvicorn main:app --reload
 
 ### Dependency Injection
 
+*Declare what a route needs (a DB session, the current user) as a parameter, and FastAPI supplies it — centralizing shared setup and making routes trivial to test with fakes.*
+
+FastAPI's `Depends` lets a route *ask* for the things it needs instead of building them itself. You write a small provider function once, then any route that needs it adds a parameter — FastAPI calls the provider, passes in the result, and (for generator dependencies like `get_db`) runs the cleanup afterwards.
+
 ```python
 from fastapi import Depends, Header, HTTPException
 
@@ -132,6 +136,8 @@ async def get_current_user(authorization: str = Header(...)):
 async def profile(user = Depends(get_current_user), db = Depends(get_db)):
     return db.query(User).filter_by(id=user.id).first()
 ```
+
+The payoff is testability: in a test you override `get_current_user` and `get_db` with fakes (`app.dependency_overrides[get_db] = fake_db`), so the route runs with no real database or token — the same decoupling you'd get from passing collaborators into a constructor, but wired by the framework.
 
 ### Middleware
 
