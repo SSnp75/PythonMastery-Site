@@ -30,13 +30,15 @@ inline.
 
 ## Lambda patterns
 
-*Lambda patterns in Lambda, reduce & Function Calls — Deep Dive — what it is and when to use it.*
+*A catalog of the small, recurring shapes anonymous functions take — composition, currying, dispatch tables, sort keys — and the classic closure-in-a-loop trap to avoid.*
 
 A `lambda` is a single-expression anonymous function. Reach for it when the logic is small
 and passed directly to another function. Use a named `def` when logic is complex, needs
 multiple statements, or benefits from a name/docstring.
 
 ### Higher-order lambdas
+
+*Lambdas that take or return other functions — the basis of composition and factories.*
 
 ```python
 apply_twice = lambda f, x: f(f(x))
@@ -49,12 +51,16 @@ print(add5(10))                           # 15
 
 ### Currying
 
+*Turn a multi-arg function into a chain of single-arg calls, so you can fix arguments one at a time.*
+
 ```python
 curried_add = lambda x: lambda y: x + y
 print(curried_add(3)(4))   # 7
 ```
 
 ### Function composition
+
+*Combine two functions into one that applies them in sequence — the building block of pipelines.*
 
 ```python
 compose = lambda f, g: lambda x: f(g(x))
@@ -66,6 +72,8 @@ print(f(5))                # 12
 
 ### Keys for sorting / min / max
 
+*The most common real use of lambda — a throwaway `key=` function to sort or pick by a computed field.*
+
 ```python
 users = [{"name": "Bob", "age": 35}, {"name": "Alice", "age": 25}]
 print(sorted(users, key=lambda u: u["age"])[0]["name"])   # Alice
@@ -74,12 +82,16 @@ print(max(users, key=lambda u: u["age"])["name"])         # Bob
 
 ### Ternary (conditional expression)
 
+*Branch inside a single-expression lambda using `a if cond else b` — the only form of "if" a lambda allows.*
+
 ```python
 parity = lambda x: "even" if x % 2 == 0 else "odd"
 print(parity(4), parity(7))   # even odd
 ```
 
 ### Dispatch table
+
+*Map keys to small functions in a dict — a clean replacement for a long if/elif chain selecting behavior.*
 
 ```python
 ops = {
@@ -91,6 +103,8 @@ print(ops["mul"](3, 4))   # 12
 ```
 
 ### Closures capturing outer variables
+
+*A lambda remembers variables from its enclosing scope — the mechanism behind function factories like `multiplier`.*
 
 ```python
 def multiplier(n):
@@ -116,12 +130,16 @@ print([f(10) for f in good])           # [10, 11, 12]
 
 ### Delayed execution (thunk)
 
+*Wrap work in a zero-arg lambda so it runs only when called — the basis of lazy evaluation and deferred callbacks.*
+
 ```python
 thunk = lambda: sum(range(1000))   # nothing runs yet
 print(thunk())                     # 499500  (runs on call)
 ```
 
 ### Exception-safe wrapper
+
+*Guard a risky operation with a ternary so it returns a safe default instead of raising — e.g. avoiding division by zero.*
 
 ```python
 safe_div = lambda a, b: (a / b) if b else None
@@ -143,7 +161,7 @@ print(safe_div(10, 0))   # None
 
 ## The `reduce` toolbox
 
-*The reduce toolbox — a key concept in Lambda, reduce & Function Calls — Deep Dive.*
+*Every useful fold `reduce` can express — from arithmetic to state machines to tree flattening — plus a guide to when a built-in like `sum`/`min` or a plain loop reads better.*
 
 `reduce(func, iterable[, initializer])` folds an iterable into a single value by applying a
 two-argument function cumulatively.
@@ -153,6 +171,8 @@ from functools import reduce
 ```
 
 ### Arithmetic
+
+*Fold numbers into a single value — sum, product, or a running min/max.*
 
 ```python
 from functools import reduce
@@ -164,6 +184,8 @@ print(reduce(lambda a, b: a if a < b else b, [5, 2, 9, 1]))   # 1 (min)
 
 ### With an initializer
 
+*Supply a starting accumulator so the fold is safe on empty input and controls the result type.*
+
 The initializer is the starting accumulator and the result for an empty iterable.
 
 ```python
@@ -174,6 +196,8 @@ print(reduce(lambda a, b: a + b, [], 10))   # 10  (safe on empty input)
 
 ### Strings
 
+*Concatenate or join pieces into one string (though `"".join` is usually clearer for plain concatenation).*
+
 ```python
 from functools import reduce
 
@@ -182,6 +206,8 @@ print(reduce(lambda a, b: f"{a}, {b}", ["a", "b", "c"]))      # a, b, c
 ```
 
 ### Lists & sets
+
+*Flatten lists or combine sets with union/intersection across a whole collection.*
 
 ```python
 from functools import reduce
@@ -192,6 +218,8 @@ print(reduce(lambda a, b: a | b, [{1, 2}, {2, 3}, {3, 4}]))     # {1, 2, 3, 4}
 ```
 
 ### Dictionaries
+
+*Merge a sequence of dicts into one, or build a frequency count as you fold.*
 
 ```python
 from functools import reduce
@@ -206,6 +234,8 @@ print(freq)     # {'b': 1, 'a': 3, 'n': 2}
 
 ### Booleans
 
+*Fold with `and`/`or` to express all/any (though the built-in `all()`/`any()` short-circuit and read better).*
+
 ```python
 from functools import reduce
 
@@ -214,6 +244,8 @@ print(reduce(lambda a, b: a or b, [False, False, True]))   # True   (any)
 ```
 
 ### Multi-value accumulators
+
+*Carry a tuple as the accumulator to compute several results (sum+count, or min/max/sum) in a single pass.*
 
 ```python
 from functools import reduce
@@ -233,6 +265,8 @@ print((lo, hi, s))   # (1, 9, 17)
 
 ### Composition pipeline
 
+*Fold a list of functions into one that applies them in order — turning a sequence of steps into a single callable.*
+
 ```python
 from functools import reduce
 
@@ -242,6 +276,8 @@ print(pipeline(10))   # ((10 + 2) * 3) - 5 = 31
 ```
 
 ### State machine (finite automaton)
+
+*Fold a sequence of inputs through a transition table, carrying the current state as the accumulator.*
 
 ```python
 from functools import reduce
@@ -260,6 +296,8 @@ print(end)   # end
 
 ### Tree flatten (nested lists)
 
+*Recursively fold a nested structure into a flat list — reduce calling itself on sublists.*
+
 ```python
 from functools import reduce
 
@@ -273,6 +311,8 @@ print(reduce(flatten, [1, [2, 3], [4, [5]]], []))   # [1, 2, 3, 4, 5]
 
 ### Object building
 
+*Construct a value incrementally — reverse a string, or assemble digits into a number.*
+
 ```python
 from functools import reduce
 
@@ -281,6 +321,8 @@ print(reduce(lambda a, b: a * 10 + b, [1, 2, 3, 4]))   # 1234 (digits -> number)
 ```
 
 ### Math algorithms
+
+*Fold a pairwise operation across many values — e.g. gcd/lcm of a whole list.*
 
 ```python
 from functools import reduce
@@ -316,7 +358,7 @@ print(reduce(lambda a, b: a * b // gcd(a, b), [4, 6, 8]))      # 24 (lcm)
 
 ## A composable `Pipeline` class
 
-*A composable Pipeline class — a key concept in Lambda, reduce & Function Calls — Deep Dive.*
+*A small reusable class that chains functions left-to-right (with `|` operator support) — a practical application of `reduce` for building readable data-transformation pipelines.*
 
 A small reusable class that chains callables left to right, supports `|` chaining, and can
 compose right to left.
@@ -362,7 +404,7 @@ print(p.compose()(10))    # ((10 - 5) * 3) + 2 = 17
 
 ## Every way to call a function
 
-*Every way to call a function in Lambda, reduce & Function Calls — Deep Dive — what it is and when to use it.*
+*An exhaustive reference of how a callable can be invoked in Python — direct, unpacked, dynamic, async, threaded, via FFI — handy for recognizing unfamiliar call syntax in real code.*
 
 | Call type | Example |
 |---|---|
@@ -429,7 +471,7 @@ print(globals()["greet"]())                      # hi  (globals holds module-lev
 
 ## Complete string-methods reference
 
-*Complete string-methods reference in Lambda, reduce & Function Calls — Deep Dive — what it is and when to use it.*
+*Every `str` method grouped by purpose (case, search, validate, trim, split, format, encode) — a scannable lookup for "which method does X" with a few runnable examples at the end.*
 
 Grouped list of every `str` method. (`ord`/`chr` are built-in functions, not methods, but
 belong in the same mental bucket.)
@@ -521,6 +563,8 @@ belong in the same mental bucket.)
 
 ### A few in action
 
+*Runnable examples of the most-used string methods above, with their output inline — strip, split, join, partition, removeprefix, zfill, casefold, and translate.*
+
 ```python
 print("  Hello World  ".strip())                 # Hello World
 print("a,b,c".split(","))                         # ['a', 'b', 'c']
@@ -534,6 +578,8 @@ print("cab".translate(table))                      # zxy
 ```
 
 ### Three ways to format
+
+*The three string-formatting styles side by side — old `%`, `.format()`, and modern f-strings — with f-strings being the recommended default for new code.*
 
 ```python
 var = "Tom"
